@@ -1,4 +1,3 @@
-<!--p(var):void-->
 <?php
 //定义方法
 function p($var)

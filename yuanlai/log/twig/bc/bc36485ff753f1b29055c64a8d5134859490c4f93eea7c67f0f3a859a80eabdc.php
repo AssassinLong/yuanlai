@@ -527,7 +527,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
                 </li>
             </ul>
             <p class=\"tac co3 fs12 mt20\">
-                世纪佳缘 m.jiayuan.com
+                缘来社交 m.jiayuan.com
             </p>
             <p class=\"tac co3 fs12 mt8\">
                 红娘专线：010-64459575
@@ -538,12 +538,12 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
         <!--<a href=\"#\" class=\"jy-top\"></a>-->
         <!--top--end-->
     </div>
-    <script type=\"text/javascript\">
+    <!--<script type=\"text/javascript\">
         /*20:3 创建于 2014-12-26*/
         var cpro_id = \"u1879755\";
     </script>
     <script src=\"http://cpro.baidustatic.com/cpro/ui/cm.js\" type=\"text/javascript\">
-    </script>
+    </script>-->
 </body>
 
 </html>";
@@ -1072,7 +1072,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
                 </li>
             </ul>
             <p class=\"tac co3 fs12 mt20\">
-                世纪佳缘 m.jiayuan.com
+                缘来社交 m.jiayuan.com
             </p>
             <p class=\"tac co3 fs12 mt8\">
                 红娘专线：010-64459575
@@ -1083,12 +1083,12 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
         <!--<a href=\"#\" class=\"jy-top\"></a>-->
         <!--top--end-->
     </div>
-    <script type=\"text/javascript\">
+    <!--<script type=\"text/javascript\">
         /*20:3 创建于 2014-12-26*/
         var cpro_id = \"u1879755\";
     </script>
     <script src=\"http://cpro.baidustatic.com/cpro/ui/cm.js\" type=\"text/javascript\">
-    </script>
+    </script>-->
 </body>
 
 </html>";
