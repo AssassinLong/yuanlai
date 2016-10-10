@@ -4,9 +4,14 @@ use app\model\cModel;
 use app\model\kModel;
 use core\lib\conf;
 use core\lib\model;
-
+session_start();
 class indexCtrl extends \core\imooc
 {
+    public function index()
+    {
+
+        $this->display('index.html');
+    }
     public function login()
     {
         if(post('username')){
