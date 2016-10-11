@@ -36,7 +36,7 @@ class __TwigTemplate_a5f2e5494ecccf50f55f47e50903d20ff01258e765717a62b380d55bf93
                 <div class=\"pa per-top-r\"  onclick='document.location.href=\"?r=home/index\";' >
 -->
 
-\t\t\t\t<div class=\"pa per-top-r\">
+\t\t\t\t<div class=\"pa per-top-r\"  onclick='document.location.href=\"?r=home/index\";'>
                 \t<!--弹层--start-->
                     <div class=\"pa pla-pop clearfix dn\">
                         <ul class=\"fl\">
@@ -144,7 +144,7 @@ class __TwigTemplate_a5f2e5494ecccf50f55f47e50903d20ff01258e765717a62b380d55bf93
                 <div class=\"pa per-top-r\"  onclick='document.location.href=\"?r=home/index\";' >
 -->
 
-\t\t\t\t<div class=\"pa per-top-r\">
+\t\t\t\t<div class=\"pa per-top-r\"  onclick='document.location.href=\"?r=home/index\";'>
                 \t<!--弹层--start-->
                     <div class=\"pa pla-pop clearfix dn\">
                         <ul class=\"fl\">

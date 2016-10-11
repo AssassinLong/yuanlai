@@ -31,9 +31,9 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
         echo "\t\t<div class=\"jy pr\">
         \t<!--顶部导航--start-->
             \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pr per-top-nav fs12\">
-            \t<div class=\"pa per-top-l\" onclick='document.location.href=\"/\";'></div>
+                    <div class=\"pa per-top-l\" onclick='document.location.href=history.go(-1);'></div>
 
-\t\t\t\t<div class=\"pa per-top-r\" onclick='document.location.href=\"/\";'>
+                    <div class=\"pa per-top-r\"  onclick='document.location.href=\"?r=home/index\";' >
                 \t<!--弹层--start-->
                     <div class=\"pa pla-pop clearfix dn\">
                         <ul class=\"fl\">
@@ -105,9 +105,9 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
 \t\t<div class=\"jy pr\">
         \t<!--顶部导航--start-->
             \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pr per-top-nav fs12\">
-            \t<div class=\"pa per-top-l\" onclick='document.location.href=\"/\";'></div>
+                    <div class=\"pa per-top-l\" onclick='document.location.href=history.go(-1);'></div>
 
-\t\t\t\t<div class=\"pa per-top-r\" onclick='document.location.href=\"/\";'>
+                    <div class=\"pa per-top-r\"  onclick='document.location.href=\"?r=home/index\";' >
                 \t<!--弹层--start-->
                     <div class=\"pa pla-pop clearfix dn\">
                         <ul class=\"fl\">
