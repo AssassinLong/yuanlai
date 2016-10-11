@@ -16,7 +16,7 @@ define('APP',IMOOC.'/app');
 define('MODULE','app');
 //是否开启调试模式
 define('DEBUG',true);
-
+date_default_timezone_set('PRC');
 //需要安装composer/下载扩展
 //引入文件
 include "vendor/autoload.php";
