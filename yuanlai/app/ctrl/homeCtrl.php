@@ -37,6 +37,10 @@ class homeCtrl extends \core\imooc
     {
         $this->display('fossa.html');
     }
+    public function shaixuan()
+    {
+        $this->display('shaixuan.html');
+    }
 }
      
 

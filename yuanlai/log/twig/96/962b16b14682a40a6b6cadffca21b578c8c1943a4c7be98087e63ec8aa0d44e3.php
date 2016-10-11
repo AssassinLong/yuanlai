@@ -7,74 +7,28 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("layout2.html", "index.html", 1);
         $this->blocks = array(
+            'content' => array($this, 'block_content'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "layout2.html";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 1
-        echo "<!DOCTYPE html>
-<html lang=\"en\">
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
 
-<head>
-    <meta charset=\"utf-8\" />
-    <title>
-        缘来交友
-    </title>
-    <meta content=\"initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width\"
-          name=\"viewport\" />
-    <link rel=\"stylesheet\" href=\"./web/css/css.css\" />
-    <link rel=\"stylesheet\" href=\"./web/css/jy.css\" />
-</head>
-
-<body>
-<div class=\"jy\">
-    <p class=\"jy-sy-top lh30 fs12 co13\">
-                <span class=\"channel_29\">
-                    <a class=\"fs12 co13\" href=\"#\">
-                        你没有照片,征友成功率会降低.立即上传
-                    </a>
-                </span>
-    </p>
-    <img src=\"http://images1c.jyimg.com/w4/wap/i/m/2013/04/top-img.jpg\" width=\"320\"
-         class='dpb' />
-    <!--nav--start-->
-    <ul class=\"jy-nav clearfix\">
-        <li class=\"current\">
-            <a href=\"#\">
-                首页
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                搜索
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                邮箱
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                购买
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                佳缘广场
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                个人中心
-            </a>
-        </li>
-    </ul>
-    <!--nav--end-->
+    // line 2
+    public function block_content($context, array $blocks = array())
+    {
+        // line 3
+        echo "    <!--nav--end-->
     <!--tab--start-->
     <div class=\"jy-tab-img\">
         <div id=\"slides\">
@@ -508,45 +462,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
         <!--谁看过我--end-->
         <!--首页产品--end-->
         <!--footer--start-->
-        <div class=\"jy-fo\">
-            <ul class=\"clearfix\">
-                <li class=\"fl fo-l\">
-                    <a href=\"#\" class=\"fs12 co5\">
-                        触屏版
-                    </a>
-                </li>
-                <li class=\"fl\">
-                            <span class=\"co3\">
-                                |
-                            </span>
-                </li>
-                <li class=\"fl fo-r\">
-                    <a href=\"#\" class=\"fs12 co3\">
-                        彩版
-                    </a>
-                </li>
-            </ul>
-            <p class=\"tac co3 fs12 mt20\">
-                缘来社交 m.jiayuan.com
-            </p>
-            <p class=\"tac co3 fs12 mt8\">
-                红娘专线：010-64459575
-            </p>
-        </div>
-        <!--footer--end-->
-        <!--top--start-->
-        <!--<a href=\"#\" class=\"jy-top\"></a>-->
-        <!--top--end-->
-    </div>
-    <!--<script type=\"text/javascript\">
-        /*20:3 创建于 2014-12-26*/
-        var cpro_id = \"u1879755\";
-    </script>
-    <script src=\"http://cpro.baidustatic.com/cpro/ui/cm.js\" type=\"text/javascript\">
-    </script>-->
-</body>
-
-</html>";
+        ";
     }
 
     public function getTemplateName()
@@ -554,71 +470,20 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
         return "index.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  31 => 3,  28 => 2,  11 => 1,);
     }
 
     public function getSource()
     {
-        return "<!DOCTYPE html>
-<html lang=\"en\">
-
-<head>
-    <meta charset=\"utf-8\" />
-    <title>
-        缘来交友
-    </title>
-    <meta content=\"initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width\"
-          name=\"viewport\" />
-    <link rel=\"stylesheet\" href=\"./web/css/css.css\" />
-    <link rel=\"stylesheet\" href=\"./web/css/jy.css\" />
-</head>
-
-<body>
-<div class=\"jy\">
-    <p class=\"jy-sy-top lh30 fs12 co13\">
-                <span class=\"channel_29\">
-                    <a class=\"fs12 co13\" href=\"#\">
-                        你没有照片,征友成功率会降低.立即上传
-                    </a>
-                </span>
-    </p>
-    <img src=\"http://images1c.jyimg.com/w4/wap/i/m/2013/04/top-img.jpg\" width=\"320\"
-         class='dpb' />
-    <!--nav--start-->
-    <ul class=\"jy-nav clearfix\">
-        <li class=\"current\">
-            <a href=\"#\">
-                首页
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                搜索
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                邮箱
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                购买
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                佳缘广场
-            </a>
-        </li>
-        <li>
-            <a href=\"#\">
-                个人中心
-            </a>
-        </li>
-    </ul>
+        return "{% extends \"layout2.html\"%}
+{% block content %}
     <!--nav--end-->
     <!--tab--start-->
     <div class=\"jy-tab-img\">
@@ -1053,44 +918,6 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
         <!--谁看过我--end-->
         <!--首页产品--end-->
         <!--footer--start-->
-        <div class=\"jy-fo\">
-            <ul class=\"clearfix\">
-                <li class=\"fl fo-l\">
-                    <a href=\"#\" class=\"fs12 co5\">
-                        触屏版
-                    </a>
-                </li>
-                <li class=\"fl\">
-                            <span class=\"co3\">
-                                |
-                            </span>
-                </li>
-                <li class=\"fl fo-r\">
-                    <a href=\"#\" class=\"fs12 co3\">
-                        彩版
-                    </a>
-                </li>
-            </ul>
-            <p class=\"tac co3 fs12 mt20\">
-                缘来社交 m.jiayuan.com
-            </p>
-            <p class=\"tac co3 fs12 mt8\">
-                红娘专线：010-64459575
-            </p>
-        </div>
-        <!--footer--end-->
-        <!--top--start-->
-        <!--<a href=\"#\" class=\"jy-top\"></a>-->
-        <!--top--end-->
-    </div>
-    <!--<script type=\"text/javascript\">
-        /*20:3 创建于 2014-12-26*/
-        var cpro_id = \"u1879755\";
-    </script>
-    <script src=\"http://cpro.baidustatic.com/cpro/ui/cm.js\" type=\"text/javascript\">
-    </script>-->
-</body>
-
-</html>";
+        {% endblock %}";
     }
 }

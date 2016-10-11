@@ -1,0 +1,294 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+        <link rel="stylesheet" type="text/css" href="web/js/css.css">
+        <!--引用Jquery-->
+        <script src="web/js/jquery.js"></script>
+        <script src="web/js/min.js" /></script>
+	    <script src="web/js/core.js" /></script>
+        <script>
+            $(window).ready(function () {
+                (function ($) {
+                    $('body').on('tap', '.link', function (event) {
+                    var url = this.getAttribute('href');
+                    var blank = this.getAttribute('target');
+                    if (blank == '_blank') {
+                        window.open(url);
+                    } else {
+                        window.location.href = url;
+                    }
+                    });
+                })(mui);
+                var lab = document.getElementsByClassName('site-nav')[0];
+                if (lab) {
+                    var nav = getCookie('tab_item');
+                    if (nav) {
+                            var as = lab.getElementsByTagName('a');
+                            for (var i; i < as.length; i++) {
+                               as[i].className = 'link'
+                            }
+                            as[nav - 1].className = 'link mui-active'
+                    }
+                }
+                function getCookie(name) {
+                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                    if (arr = document.cookie.match(reg))
+                        return unescape(arr[2]);
+                    else
+                        return null;
+                }
+            })
+        </script>
+
+<title>同城交友 找男朋友 找女朋友 离异 我主良缘征婚交友平台</title><meta content="同城交友,同城找男朋友" name="keywords">
+</head>
+	<body class="backgroud-white">
+		<!-- 导航栏开始 -->
+		<header class="mui-bar mui-bar-nav">
+			<a class=""></a>
+			<h1 class="mui-title">筛选会员</h1>
+			<a href="javascript:void(0);" id="confirm" class="mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-right">确定</a>
+		</header>
+		<!-- 导航栏结束 -->
+		
+		<div class="mui-content">
+			<form action="http://m.7799520.com/recommend" method="post" id="searchForm">
+				<!-- 筛选会员开始 -->
+				<div class="form-search">
+					<div class="padding">
+						<div class="">
+							<input type="search" name="userName" class="mui-input-clear" placeholder="请输入会员ID或昵称">
+						</div>
+					</div>
+					
+					<hr />
+					
+					<div class="padding form-list">
+						<div id="GenderPicker" class="mui-input-row">
+							<input type="hidden" name="gender" id="gender" value="0">
+							<label>性别</label>
+							<font>不限</font>
+						</div>
+						<div id="AgePicker" class="mui-input-row">
+							<input type="hidden" name="ageValue" id="startAge" value="0">
+							<label>年龄范围</label>
+							<font>不限</font>
+						</div>
+						<div id="HeightPicker" class="mui-input-row">
+							<input type="hidden" name="heightValue" id="startHeight" value="0">
+							<label>身高范围</label>
+							<font class="mui-pull-right">不限</font>
+						</div>
+						<div id="EduPicker" class="mui-input-row">
+							<input type="hidden" name="education" id="education" value="0">
+							<label>最低学历</label>
+							<font class="mui-pull-right">不限</font>
+						</div>
+						<div id="EarnPicker" class="mui-input-row">
+							<input type="hidden" id="salary" name="salary" value="0">
+							<label>收入范围</label>
+							<font class="mui-pull-right">不限</font>
+						</div>
+						<div id="CityPicker" class="mui-input-row">
+							<input type="hidden" id="provinceid" name="provinceid" value="0">
+							<input type="hidden" id="cityid" name="cityid" value="0">
+							<label>居住地</label>
+							<font class="mui-pull-right">不限</font>
+						</div>
+					</div>
+				</div>
+			</form>
+			<link href="web/css/mui.picker.css" rel="stylesheet" />
+			<link href="web/css/mui.poppicker.css" rel="stylesheet" />
+			<script src="web/js/mui.picker.js"></script>
+			<script src="web/js/mui.poppicker.js"></script>
+			<script src="web/js/city.data.js" type="text/javascript" charset="utf-8"></script>
+			<script>
+				(function($, doc) {
+					$.init();
+					$.ready(function() {
+						//性别
+						var GenderPicker = new $.PopPicker();
+						GenderPicker.setData([{
+							value: '0',
+							text: '不限'
+						}, {
+							value: '1',
+							text: '男'
+						}, {
+							value: '2',
+							text: '女'
+						}]);
+						var GenderPickerButton = doc.getElementById('GenderPicker');
+						GenderPickerButton.addEventListener('tap', function(event) {
+							GenderPicker.show(function(items) {
+								GenderPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
+								var gender = items[0].value;
+								document.getElementById('gender').value = gender; 						
+							});	
+						}, false);
+
+						//年龄范围
+						var AgePicker = new $.PopPicker();
+						AgePicker.setData([{
+							value: '0',
+							text: '不限'
+						}, {
+							value: '1',
+							text: '20 - 30岁'
+						}, {
+							value: '2',
+							text: '31 - 40岁'
+						}, {
+							value: '3',
+							text: '41 - 50岁'
+						}, {
+							value: '4',
+							text: '51 - 60岁'
+						}, {
+							value: '5',
+							text: '61 - 70岁'
+						}]);
+						var AgePickerButton = doc.getElementById('AgePicker');
+						AgePickerButton.addEventListener('tap', function(event) {
+							AgePicker.show(function(items) {
+								AgePickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
+								var ageVlue = items[0].value;
+								document.getElementById('startAge').value = ageVlue; 						
+							});	
+						}, false);
+						
+						//身高范围
+						var HeightPicker = new $.PopPicker();
+						HeightPicker.setData([{
+							value: '0',
+							text: '不限'
+						}, {
+							value: '1',
+							text: '140CM - 150CM'
+						}, {
+							value: '2',
+							text: '151CM - 160CM'
+						}, {
+							value: '3',
+							text: '161CM - 170CM'
+						}, {
+							value: '4',
+							text: '171CM - 180CM'
+						}, {
+							value: '5',
+							text: '181CM - 190CM'
+						}]);
+						var HeightPickerButton = doc.getElementById('HeightPicker');
+						HeightPickerButton.addEventListener('tap', function(event) {
+							HeightPicker.show(function(items) {
+								HeightPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
+								var heightValue = items[0].value;
+								document.getElementById('startHeight').value = heightValue;
+							});
+						}, false);
+						
+						//学历范围
+						var EduPicker = new $.PopPicker();
+						EduPicker.setData([{
+							value: '0',
+							text: '不限'
+						}, {
+							value: '10',
+							text: '初中'
+						}, {
+							value: '20',
+							text: '高中'
+						}, {
+							value: '25',
+							text: '中专'
+						}, {
+							value: '30',
+							text: '大专'
+						}, {
+							value: '40',
+							text: '本科'
+						}, {
+							value: '50',
+							text: '硕士'
+						}, {
+							value: '60',
+							text: '博士'
+						}, {
+							value: '70',
+							text: '院士'
+						}]);
+						var EduPickerButton = doc.getElementById('EduPicker');
+						EduPickerButton.addEventListener('tap', function(event) {
+							EduPicker.show(function(items) {
+								EduPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
+								document.getElementById('education').value = items[0].value;
+							});
+						}, false);
+						
+						//收入范围
+						var EarnPicker = new $.PopPicker();
+						EarnPicker.setData([{
+							value: '0',
+							text: '不限'
+						}, {
+							value: '1',
+							text: '2000元以下'
+						}, {
+							value: '2',
+							text: '2000 - 5000元'
+						}, {
+							value: '3',
+							text: '5000 - 10000元'
+						}, {
+							value: '4',
+							text: '10000 - 20000元'
+						}, {
+							value: '5',
+							text: '20000元以上'
+						}]);
+						var EarnPickerButton = doc.getElementById('EarnPicker');
+						EarnPickerButton.addEventListener('tap', function(event) {
+							EarnPicker.show(function(items) {
+								EarnPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
+								document.getElementById('salary').value = items[0].value;
+							});
+						}, false);
+						
+						//居住地
+						var CityPicker = new $.PopPicker({
+							layer: 2
+						});
+						CityPicker.setData(cityData);
+						var CityPickerButton = doc.getElementById('CityPicker');
+						CityPickerButton.addEventListener('tap', function(event) {
+							CityPicker.show(function(items) {
+								CityPickerButton.getElementsByTagName('font')[0].innerText = items[0].text + " - " + items[1].text;
+								document.getElementById('provinceid').value = items[0].value;
+								document.getElementById('cityid').value = items[1].value;							
+							});
+						}, false);
+					});
+				})(mui, document);
+			</script>
+			<script type="text/javascript">
+				$(function(){
+					$("#confirm").click(function(){
+						$("#searchForm").submit();
+					})
+				})
+			</script>
+			<!-- 筛选会员结束 -->
+		</div>
+		<!-- CNZZ代码 -->
+	<img src="http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Frecommend&rnd=597939736" width="0" height="0"/>	</body>
+	<!--引用自定义脚本-->
+	<script src="web/js/core1.js"></script> 
+
+</html>
