@@ -60,7 +60,7 @@ class __TwigTemplate_b8b041ae431e4352cbc75e6e484c383adec7f04a0d277199cb7049793c3
             </a>
         </li>
         <li>
-            <a href=\"?r=home/gift\" readonly=\"readonly\">
+            <a href=\"?r=home/gift\" onclick=\"return false\">
                 礼物
             </a>
         </li>
@@ -184,7 +184,7 @@ class __TwigTemplate_b8b041ae431e4352cbc75e6e484c383adec7f04a0d277199cb7049793c3
             </a>
         </li>
         <li>
-            <a href=\"?r=home/gift\" readonly=\"readonly\">
+            <a href=\"?r=home/gift\" onclick=\"return false\">
                 礼物
             </a>
         </li>

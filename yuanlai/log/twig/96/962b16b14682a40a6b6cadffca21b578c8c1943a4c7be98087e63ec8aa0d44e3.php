@@ -7,462 +7,263 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
     {
         parent::__construct($env);
 
-        // line 1
-        $this->parent = $this->loadTemplate("layout2.html", "index.html", 1);
-        $this->blocks = array(
-            'content' => array($this, 'block_content'),
-        );
-    }
+        $this->parent = false;
 
-    protected function doGetParent(array $context)
-    {
-        return "layout2.html";
+        $this->blocks = array(
+        );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
-    }
+        // line 1
+        echo "
+ <!DOCTYPE html>
+<html>
+<head>
+        <meta charset=\"utf-8\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no\">
+        <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">
+        <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
+\t\t<!--标准mui.css-->
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
+        <!--引用Jquery-->
+        <script src=\"web/js/jquery.js\"></script>
+        <script src=\"web/js/min.js\" /></script>
+\t    <script src=\"web/js/core.js\" /></script>
+        <script>
+            \$(window).ready(function () {
+                (function (\$) {
+                    \$('body').on('tap', '.link', function (event) {
+                    var url = this.getAttribute('href');
+                    var blank = this.getAttribute('target');
+                    if (blank == '_blank') {
+                        window.open(url);
+                    } else {
+                        window.location.href = url;
+                    }
+                    });
+                })(mui);
+                var lab = document.getElementsByClassName('site-nav')[0];
+                if (lab) {
+                    var nav = getCookie('tab_item');
+                    if (nav) {
+                            var as = lab.getElementsByTagName('a');
+                            for (var i; i < as.length; i++) {
+                               as[i].className = 'link'
+                            }
+                            as[nav - 1].className = 'link mui-active'
+                    }
+                }
+                function getCookie(name) {
+                    var arr, reg = new RegExp(\"(^| )\" + name + \"=([^;]*)(;|\$)\");
+                    if (arr = document.cookie.match(reg))
+                        return unescape(arr[2]);
+                    else
+                        return null;
+                }
+            })
+        </script>
 
-    // line 2
-    public function block_content($context, array $blocks = array())
-    {
-        // line 3
-        echo "    <!--nav--end-->
-    <!--tab--start-->
-    <div class=\"jy-tab-img\">
-        <div id=\"slides\">
-            <div>
-                <a href=\"#\">
-                    <img src=\"http://images1.jyimg.com//w4/wap/i/p/images/wtouch/b/i_0710_7.gif\"
-                         width=\"320\" border=0 />
+<title>我主良缘：中国高端婚恋交友_征婚相亲直营连锁创导者</title><meta content=\"征婚交友,相亲,征婚,交友网站,相亲网,婚恋交友网\" name=\"keywords\">
+<meta content=\"征婚交友_相亲找对象就上【我主良缘】婚介网,中国大型实体同城婚恋交友标杆企业,找对象快,好单身多！是单身男女交友,找老公-找老婆-找老伴的婚姻介绍网站,我主良缘公司于2007年在福建福州创立,目前已在多个城市开设了直营分公司,其营业规模、团队数量和服务品质均处于行业前沿.\" name=\"description\">
+</head>
+\t<body>
+\t\t<!-- 导航栏开始 -->
+\t\t<header class=\"mui-bar mui-bar-nav index\">
+\t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
+\t\t\t<h1 class=\"mui-title\">
+\t\t\t\t<div class=\"logo\">
+\t\t\t\t\t<img src=\"http://img.7799520.com/img/logo.png\">
+\t\t\t\t</div>
+\t\t\t</h1>
+\t\t\t<a href=\"http://m.7799520.com/city?tag=index\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
+\t\t\t\t\t\t\t\t北京\t\t\t<span></span>
+\t\t\t</a>
+\t\t</header>
+\t\t<!-- 导航栏结束 -->
+
+\t\t<!-- 跟随内容开始 -->
+\t\t<div class=\"fix\">
+\t\t\t<!-- 在线咨询开始 -->
+\t\t\t<div class=\"fix-team-msg\">
+\t\t\t\t<a href=\"http://kefu5.kuaishang.cn/bs/im/67780/59167/602875.htm\" class=\"link\"></a>
+\t\t\t</div>
+\t\t\t<!-- 在线咨询结束 -->
+\t\t</div>
+\t\t<!-- 跟随内容结束 -->
+
+\t\t
+\t\t<div id=\"pullrefresh\" class=\"mui-scroll-wrapper\">
+\t\t\t<div class=\"mui-scroll\">
+\t\t\t\t<!-- 图片轮播开始 -->
+\t\t\t\t<div id=\"slider\" class=\"mui-slider\">
+\t\t\t\t\t<div class=\"mui-slider-group mui-slider-loop\">
+
+\t<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+
+\t<div class=\"mui-slider-item mui-slider-item-duplicate\">
+
+\t\t<a href=\"http://m.7799520.com/sign\" class=\"link\">
+
+\t\t\t<img src=\"http://img.7799520.com/img/slide-sign.png\">
+\t\t</a>
+
+\t</div>
+
+
+
+\t <div class=\"mui-slider-item\">
+                <a href=\"http://m.7799520.com/top\" class=\"link\">
+                        <img src=\"http://img.7799520.com/tmp/top1.png\">
                 </a>
-            </div>
         </div>
-    </div>
-    <!--tab--end-->
-    <!--快速导航--start-->
-    <!--快速导航--end-->
-    <!--首页产品--start-->
-    <!--爱神之箭--start-->
-    <div class=\"m-20-10 jy-cu-ar\">
-        <a href='#'>
-            <img src=\"http://images1c.jyimg.com/w4/wap/i/m/2013/04/cupid-arrow.jpg\"
-                 width=\"300\" border=0 />
-        </a>
-    </div>
-    <!--爱神之箭--end-->
-    <!--今日缘份--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea1\">
-            今日的缘分究竟是谁
-        </h2>
-        <div class=\"clearfix m10\">
-            <dl class=\"fl jy-today-fate\">
-                <dt class=\"fl\">
-                    <a href=\"/product/yf/?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;seluid=97245593&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_yf|\">
-                        <img src=\"http://a1c.jyimg.com/20/bd/523971dc1020a22bf7d594485254/avatar_wap.jpg\"
-                             width=\"74\" height=\"90\" border=0 />
-                    </a>
-                </dt>
-            </dl>
-            <div class=\"fl ml10\">
-                <p class=\"fs12 co2 fwb\">
-                    <a class='co2' href=\"/product/yf/?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_yf|\">
-                        平平淡淡
-                    </a>
-                </p>
-                <p class=\"fs12 co3 mt8\" onclick='window.location.href=\"/product/yf/?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;seluid=97245593&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_yf|\";return false;'>
-                            <span class=\"mr10\">
-                                北京
-                            </span>
-                    |
-                            <span class=\"mr10 ml10\">
-                                19岁
-                            </span>
-                    |
-                            <span class=\"mr10 ml10\">
-                                167厘米
-                            </span>
-                    |
-                            <span class=\"co3 ml10\">
-                                未婚
-                            </span>
-                </p>
-                <p class=\"fs12 mt6\" onclick='window.location.href=\"/product/yf/?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;seluid=97245593&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_yf|\";return false;'>
-                            <span class=\"co3\">
-                                2000元以下
-                            </span>
-                </p>
-                <BR>
-                <p class=\"fs12 co4 mt5\">
-                    缘分指数:82
-                </p>
-            </div>
+
+
+\t<div class=\"mui-slider-item\">
+                <a href=\"http://m.7799520.com/sign\" class=\"link\">
+\t\t\t<img src=\"http://img.7799520.com/img/slide-sign.png\">
+                </a>
         </div>
-    </div>
-    <!--今日缘份--end-->
-    <!--心电感应--start-->
-    <!--心电感应--end-->
-    <!--印象--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea2\">
-            你对TA的印象是
-        </h2>
-        <div class=\"m10\">
-            <div class=\"jy-imp-o\">
-                <div class=\"clearfix jy-imp\">
-                    <dl class=\"clearfix\">
-                        <dt class=\"fl\">
-                            <a href=\"\">
-                                <img src=\"http://a2c.jyimg.com/86/34/1b96caqbcca267e99a6451fe69b6/avatar_wap.jpg\"
-                                     width=\"74\" height=\"90\" border=0 />
-                            </a>
-                        </dt>
-                        <dd class=\"fl ml10\">
-                            <p class=\"fs12 co2 fwb\">
-                                潇猪猪
-                            </p>
-                            <p class=\"fs12 co3 mt10\">
-                                        <span class=\"mr10\">
-                                            北京
-                                        </span>
-                                |
-                                        <span class=\"mr10 ml10\">
-                                            18岁
-                                        </span>
-                                |
-                                        <span class=\"mr10 ml10\">
-                                            160厘米
-                                        </span>
-                                |
-                                        <span class=\"co3 ml10\">
-                                        </span>
-                            </p>
-                            <p class=\"fs12 mt6\">
-                                        <span class=\"co3\">
-                                            2000 - 5000
-                                        </span>
-                            </p>
-                            <BR>
-                            <p class=\"fs12 co4 mt5\">
-                                缘分指数:92
-                            </p>
-                        </dd>
-                    </dl>
-                    <dl class=\"clearfix\">
-                        <dt class=\"fl\">
-                            <a href=\"\">
-                                <img src=\"\" width=\"74\" height=\"90\" />
-                            </a>
-                        </dt>
-                        <dd class=\"fl ml10\">
-                            <p class=\"fs12 co2 fwb\">
-                                222
-                            </p>
-                            <p class=\"fs12 co3 mt10\">
-                                        <span class=\"mr10\">
-                                            北京
-                                        </span>
-                                |
-                                        <span class=\"mr10 ml10\">
-                                            18岁
-                                        </span>
-                                |
-                                        <span class=\"mr10 ml10\">
-                                            160厘米
-                                        </span>
-                                |
-                                        <span class=\"co3 ml10\">
-                                        </span>
-                            </p>
-                            <p class=\"fs12 mt6\">
-                                        <span class=\"co3\">
-                                            2000 - 5000
-                                        </span>
-                            </p>
-                            <p class=\"clearfix mt6\">
-                                        <span class=\"fs12 co3 fl lh20 mr10\">
-                                            会员身份:
-                                        </span>
-                                        <span class=\"fl jy-me-sh ms1 mr6\">
-                                        </span>
-                                        <span class=\"fl jy-me-sh ms2 mr6\">
-                                        </span>
-                                        <span class=\"fl jy-me-sh ms3\">
-                                        </span>
-                            </p>
-                        </dd>
-                    </dl>
-                </div>
-            </div>
-            <div class=\"clearfix mt10 imp bor1\">
-                <a href=\"#\" onclick=\"dyyx_pl(7);return false;\" class=\"b-c-1\">
-                    时尚
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(2);return false;\" class=\"b-c-2\">
-                    古灵精怪
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(17);return false;\" class=\"b-c-3\">
-                    秀外慧中
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(4);return false;\" class=\"b-c-4\">
-                    妩媚
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(23);return false;\" class=\"b-c-3\">
-                    超凡脱俗
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(16);return false;\" class=\"b-c-1\">
-                    高挑
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(14);return false;\" class=\"b-c-2\">
-                    绝佳身材
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(22);return false;\" class=\"b-c-1\">
-                    睿智高雅
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(13);return false;\" class=\"b-c-4\">
-                    羞涩
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(24);return false;\" class=\"b-c-2\">
-                    活泼开朗
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(12);return false;\" class=\"b-c-3\">
-                    文静
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(6);return false;\" class=\"b-c-4\">
-                    性感风情
-                </a>
-            </div>
-        </div>
-    </div>
-    <!--印象--end-->
-    <!--速配星座--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea2\">
-            今日你的速配星座－白羊座
-        </h2>
-        <ul class=\"bor1 p10 m6 jy-ind\" onclick='window.location.href=\"/product/zodiac/today_th.php?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_xzsp_1|\";return false;'>
-            <li class=\"clearfix fir\">
-                        <span class=\"fl co2 fs12 fir\">
-                            魅力指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            较亲切，颇有魅力！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-up fs12\">
-                    <div class=\"pa btn-a a-up\">
-                    </div>
-                    57
-                </div>
-            </li>
-            <li class=\"clearfix sec\">
-                        <span class=\"fl co2 fs12 fir\">
-                            浪漫指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            时而沉寂，时而激情！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-up fs12\">
-                    <div class=\"pa btn-a a-up\">
-                    </div>
-                    54
-                </div>
-            </li>
-            <li class=\"clearfix thi\">
-                        <span class=\"fl co2 fs12 fir\">
-                            邂逅指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            桃花若隐若现，须把握！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-up fs12\">
-                    <div class=\"pa btn-a a-up\">
-                    </div>
-                    55
-                </div>
-            </li>
-            <li class=\"clearfix sec\">
-                        <span class=\"fl co2 fs12 fir\">
-                            孤寂指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            内心平静，偶感寂寞！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-down fs12\">
-                    <div class=\"pa btn-a a-down\">
-                    </div>
-                    60
-                </div>
-            </li>
-            <li class=\"clearfix thi\">
-                        <span class=\"fl co2 fs12 fir\">
-                            一夜情指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            有色心没色胆，想而不碰！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-down fs12\">
-                    <div class=\"pa btn-a a-down\">
-                    </div>
-                    62
-                </div>
-            </li>
-        </ul>
-        <ul class=\"clearfix mt10\">
-            <li class=\"fl ml8\">
-                <a href=\"#\">
-                    <img src=\"http://a2c.jyimg.com/f2/c2/83d8505ed97da653788dfa732c54/avatar_wap.jpg\"
-                         width=\"74\" height=\"90\" border=0>
-                </a>
-            </li>
-            <li class=\"fl ml8\">
-                <a href=\"#\">
-                    <img src=\"http://a2c.jyimg.com/fb/81/62be902e56cdfe3c59940eca6d7f/avatar_wap.jpg\"
-                         width=\"74\" height=\"90\" border=0>
-                </a>
-            </li>
-            <li class=\"fl ml8\">
-                <a href=\"#\">
-                    <img src=\"http://a2c.jyimg.com/f3/71/e5eb5a9dcb8fd0eed65a006210aa/avatar_wap.jpg\"
-                         width=\"74\" height=\"90\" border=0>
-                </a>
-            </li>
-            <li class=\"pr fl ml6 bgc2\">
-                <p class=\"co6 fs12 lh18 tx_g\" onclick=\"window.location.href=&quot;/search/search_horoscope.php?pin=97389349_110110240_1374079719_2bc30b745a1ed461e5fcb31c88135ec8a1580d36&amp;v=6&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_xzsp_3|&quot;;return false;\">
-                    快
-                            <span>
-                                去
-                            </span>
-                    <br>
-                    看看TA
-                </p>
-                <div class=\"pa box_g cir_g2\">
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!--速配星座--end-->
-    <!--快速搜索--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea3\">
-            快速搜索
-        </h2>
-        <div class=\"clearfix m10 pr qu-sea\">
-            <div class=\"pa tx1\">
-                <a href=\"#\" title=\"最新注册\">
-                    最新注册
-                </a>
-            </div>
-            <div class=\"pa tx2\">
-                <a href=\"#\" title=\"认证会员\">
-                    认证会员
-                </a>
-            </div>
-            <div class=\"pa tx3\">
-                <a href=\"#\" title=\"同城搜索\">
-                    同城搜索
-                </a>
-            </div>
-            <div class=\"pa tx5\">
-                <a href=\"#\" title=\"生肖搜索\">
-                    生肖搜索
-                </a>
-            </div>
-            <div class=\"pa tx6\">
-                <a href=\"#\" title=\"有房有车\">
-                    有房车
-                </a>
-            </div>
-            <div class=\"pa tx7\">
-                <a href=\"#\" title=\"星座搜索\">
-                    星座搜索
-                </a>
-            </div>
-            <div class=\"pa tx8\">
-                <a href=\"#\" title=\"谁中意我\">
-                    谁中意我
-                </a>
-            </div>
-            <div class=\"pa tx9\">
-                <a href=\"#\" title=\"标签搜索\">
-                    标签搜索
-                </a>
-            </div>
-            <div class=\"pa tx10\">
-                <a href=\"#\" title=\"更多搜索\">
-                    更多搜索
-                </a>
-            </div>
-            <div class=\"pa tx11\">
-                <a href=\"#\" title=\"同乡会\">
-                    同乡
-                </a>
-            </div>
-            <div class=\"pa tx12\">
-                <a href=\"#\" title=\"印象词\">
-                    印象词
-                </a>
-            </div>
-        </div>
-    </div>
-    <!--快速搜索--end-->
-    <!--今日速配--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea3\">
-            今日速配
-        </h2>
-        <div class=\"pr ever-w\">
-            <ul class=\"clearfix mt10\">
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a2.jyimg.com/e3/b7/3d471c8d80b6846ac8cd727f3db9/3d471c8d8_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a1.jyimg.com/3f/aa/f92f77dcf79aqbb6afb5bb3cf2cd/f92f77dcf_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a2.jyimg.com/85/57/7c61176a1654597b15cbd7fc46cc/7c61176a1_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a1.jyimg.com/34/a9/f7d14cb4efdf592c96b1b464cc00/f7d14cb4e_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a1.jyimg.com/44/06/578a19d3a66668b9514595d96a30/578a19d3a_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                </li>
-            </ul>
-        </div>
-        <!--今日速配--end-->
-        <!--谁看过我--start-->
-        <!--谁看过我--end-->
-        <!--首页产品--end-->
-        <!--footer--start-->
-        ";
+
+
+        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+\t<div class=\"mui-slider-item mui-slider-item-duplicate\">
+\t\t<a href=\"http://m.7799520.com/top\" class=\"link\">
+\t\t\t<img src=\"http://img.7799520.com/tmp/top1.png\">
+\t\t</a>
+\t</div>
+
+
+</div>
+
+<div class=\"mui-slider-indicator\">
+
+\t<div class=\"mui-indicator mui-active\"></div>
+
+\t<div class=\"mui-indicator\"></div>
+
+</div>
+\t\t\t\t</div>
+\t\t\t\t<script type=\"text/javascript\" charset=\"utf-8\">
+\t\t\t\t\tvar slider = mui(\"#slider\");
+\t\t\t\t\tslider.slider({
+\t\t\t\t\t\tinterval: 5000
+\t\t\t\t\t});
+\t\t\t\t</script>
+\t\t\t\t<!-- 图片轮播结束 -->
+
+\t\t\t\t<!-- 导航按钮开始 -->
+\t\t\t\t<div class=\"index-ico\">
+\t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t\t<span class=\"icon-coffee\"></span>
+\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/party\" class=\"link\">
+\t\t\t<span class=\"icon-heart\"></span>
+\t\t\t<div class=\"mui-media-body\">相亲活动</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/news\" class=\"link\">
+\t\t\t<span class=\"icon-doctor\"></span>
+\t\t\t<div class=\"mui-media-body\">婚恋课堂</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/team\" class=\"link\">
+\t\t\t<span class=\"icon-team\"></span>
+\t\t\t<div class=\"mui-media-body\">红娘团队</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/weibo\" class=\"link\">
+\t\t\t<span class=\"icon-vip\"></span>
+\t\t\t<div class=\"mui-media-body\">心情微博</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/story\" class=\"link\">
+\t\t\t<span class=\"icon-skirt\"></span>
+\t\t\t<div class=\"mui-media-body\">成功故事</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/about\" class=\"link\">
+\t\t\t<span class=\"icon-brand\"></span>
+\t\t\t<div class=\"mui-media-body\">品牌荣誉</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/address\" class=\"link\">
+\t\t\t<span class=\"icon-locate\"></span>
+\t\t\t<div class=\"mui-media-body\">门店地址</div>
+\t\t</a>
+\t</li>
+</ul>\t\t\t\t</div>
+\t\t\t\t<!-- 导航按钮结束 -->
+
+\t\t\t\t<!-- banner开始 -->
+\t\t\t\t<div class=\"banner\">
+\t\t\t\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t\t\t\t\t<img src=\"http://img.7799520.com/img/banner1.png\" />
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t\t<!-- banner结束 -->
+
+\t\t\t\t<!-- 会员开始 -->
+\t\t\t\t<div class=\"index-member\">
+\t\t
+\t\t<div class=\"tabs\">
+\t
+</div>
+<!-- 切换标签结束 -->
+
+
+
+
+
+\t
+
+\t\t\t
+
+\t\t\t\t<!-- 文字内容开始 -->
+\t\t\t\t<div class=\"index-summary\">
+\t<p>
+\t\t服务<b>9</b>个城市 超过<b>900</b>万认证会员 成就<b>200</b>万情侣
+\t</p>
+\t<p class=\"hotline\">
+\t\t联系人热线：15201595926
+\t</p>
+\t<p>
+\t\t<a href=\"http://m.7799520.com/about\" class=\"link\">关于我们</a>|<a href=\"http://m.7799520.com/invite\" class=\"link\">人才招聘</a>|<a href=\"http://kefu5.kuaishang.cn/bs/im/67780/59167/602875.htm\" class=\"link\">帮助中心</a>|<a href=\"\">客户端</a>
+\t</p>
+\t<p>
+\t\t缘来社交 版权所有
+\t</p>
+</div>\t\t\t\t<!-- 文字内容结束 -->
+\t\t\t</div>
+\t\t</div>
+
+\t\t<style type=\"text/css\">
+\t\t\t.mui-pull {
+\t\t\t\tdisplay: none;
+\t\t\t}
+\t\t</style>
+\t\t<!-- <script src=\"/js/??/core-pull.js,lazyload.js,index.js\"></script> -->
+\t<!--引用自定义脚本-->
+\t
+\t\t<!-- CNZZ代码 -->
+\t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=&rnd=1919918879\" width=\"0\" height=\"0\"/>\t</body>
+\t<!--引用自定义脚本-->
+\t<script src=\"web/js/core1.js\"></script> 
+\t
+
+
+</html>";
     }
 
     public function getTemplateName()
@@ -470,454 +271,260 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
         return "index.html";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  31 => 3,  28 => 2,  11 => 1,);
+        return array (  19 => 1,);
     }
 
     public function getSource()
     {
-        return "{% extends \"layout2.html\"%}
-{% block content %}
-    <!--nav--end-->
-    <!--tab--start-->
-    <div class=\"jy-tab-img\">
-        <div id=\"slides\">
-            <div>
-                <a href=\"#\">
-                    <img src=\"http://images1.jyimg.com//w4/wap/i/p/images/wtouch/b/i_0710_7.gif\"
-                         width=\"320\" border=0 />
+        return "
+ <!DOCTYPE html>
+<html>
+<head>
+        <meta charset=\"utf-8\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no\">
+        <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">
+        <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
+\t\t<!--标准mui.css-->
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
+        <!--引用Jquery-->
+        <script src=\"web/js/jquery.js\"></script>
+        <script src=\"web/js/min.js\" /></script>
+\t    <script src=\"web/js/core.js\" /></script>
+        <script>
+            \$(window).ready(function () {
+                (function (\$) {
+                    \$('body').on('tap', '.link', function (event) {
+                    var url = this.getAttribute('href');
+                    var blank = this.getAttribute('target');
+                    if (blank == '_blank') {
+                        window.open(url);
+                    } else {
+                        window.location.href = url;
+                    }
+                    });
+                })(mui);
+                var lab = document.getElementsByClassName('site-nav')[0];
+                if (lab) {
+                    var nav = getCookie('tab_item');
+                    if (nav) {
+                            var as = lab.getElementsByTagName('a');
+                            for (var i; i < as.length; i++) {
+                               as[i].className = 'link'
+                            }
+                            as[nav - 1].className = 'link mui-active'
+                    }
+                }
+                function getCookie(name) {
+                    var arr, reg = new RegExp(\"(^| )\" + name + \"=([^;]*)(;|\$)\");
+                    if (arr = document.cookie.match(reg))
+                        return unescape(arr[2]);
+                    else
+                        return null;
+                }
+            })
+        </script>
+
+<title>我主良缘：中国高端婚恋交友_征婚相亲直营连锁创导者</title><meta content=\"征婚交友,相亲,征婚,交友网站,相亲网,婚恋交友网\" name=\"keywords\">
+<meta content=\"征婚交友_相亲找对象就上【我主良缘】婚介网,中国大型实体同城婚恋交友标杆企业,找对象快,好单身多！是单身男女交友,找老公-找老婆-找老伴的婚姻介绍网站,我主良缘公司于2007年在福建福州创立,目前已在多个城市开设了直营分公司,其营业规模、团队数量和服务品质均处于行业前沿.\" name=\"description\">
+</head>
+\t<body>
+\t\t<!-- 导航栏开始 -->
+\t\t<header class=\"mui-bar mui-bar-nav index\">
+\t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
+\t\t\t<h1 class=\"mui-title\">
+\t\t\t\t<div class=\"logo\">
+\t\t\t\t\t<img src=\"http://img.7799520.com/img/logo.png\">
+\t\t\t\t</div>
+\t\t\t</h1>
+\t\t\t<a href=\"http://m.7799520.com/city?tag=index\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
+\t\t\t\t\t\t\t\t北京\t\t\t<span></span>
+\t\t\t</a>
+\t\t</header>
+\t\t<!-- 导航栏结束 -->
+
+\t\t<!-- 跟随内容开始 -->
+\t\t<div class=\"fix\">
+\t\t\t<!-- 在线咨询开始 -->
+\t\t\t<div class=\"fix-team-msg\">
+\t\t\t\t<a href=\"http://kefu5.kuaishang.cn/bs/im/67780/59167/602875.htm\" class=\"link\"></a>
+\t\t\t</div>
+\t\t\t<!-- 在线咨询结束 -->
+\t\t</div>
+\t\t<!-- 跟随内容结束 -->
+
+\t\t
+\t\t<div id=\"pullrefresh\" class=\"mui-scroll-wrapper\">
+\t\t\t<div class=\"mui-scroll\">
+\t\t\t\t<!-- 图片轮播开始 -->
+\t\t\t\t<div id=\"slider\" class=\"mui-slider\">
+\t\t\t\t\t<div class=\"mui-slider-group mui-slider-loop\">
+
+\t<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+
+\t<div class=\"mui-slider-item mui-slider-item-duplicate\">
+
+\t\t<a href=\"http://m.7799520.com/sign\" class=\"link\">
+
+\t\t\t<img src=\"http://img.7799520.com/img/slide-sign.png\">
+\t\t</a>
+
+\t</div>
+
+
+
+\t <div class=\"mui-slider-item\">
+                <a href=\"http://m.7799520.com/top\" class=\"link\">
+                        <img src=\"http://img.7799520.com/tmp/top1.png\">
                 </a>
-            </div>
         </div>
-    </div>
-    <!--tab--end-->
-    <!--快速导航--start-->
-    <!--快速导航--end-->
-    <!--首页产品--start-->
-    <!--爱神之箭--start-->
-    <div class=\"m-20-10 jy-cu-ar\">
-        <a href='#'>
-            <img src=\"http://images1c.jyimg.com/w4/wap/i/m/2013/04/cupid-arrow.jpg\"
-                 width=\"300\" border=0 />
-        </a>
-    </div>
-    <!--爱神之箭--end-->
-    <!--今日缘份--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea1\">
-            今日的缘分究竟是谁
-        </h2>
-        <div class=\"clearfix m10\">
-            <dl class=\"fl jy-today-fate\">
-                <dt class=\"fl\">
-                    <a href=\"/product/yf/?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;seluid=97245593&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_yf|\">
-                        <img src=\"http://a1c.jyimg.com/20/bd/523971dc1020a22bf7d594485254/avatar_wap.jpg\"
-                             width=\"74\" height=\"90\" border=0 />
-                    </a>
-                </dt>
-            </dl>
-            <div class=\"fl ml10\">
-                <p class=\"fs12 co2 fwb\">
-                    <a class='co2' href=\"/product/yf/?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_yf|\">
-                        平平淡淡
-                    </a>
-                </p>
-                <p class=\"fs12 co3 mt8\" onclick='window.location.href=\"/product/yf/?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;seluid=97245593&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_yf|\";return false;'>
-                            <span class=\"mr10\">
-                                北京
-                            </span>
-                    |
-                            <span class=\"mr10 ml10\">
-                                19岁
-                            </span>
-                    |
-                            <span class=\"mr10 ml10\">
-                                167厘米
-                            </span>
-                    |
-                            <span class=\"co3 ml10\">
-                                未婚
-                            </span>
-                </p>
-                <p class=\"fs12 mt6\" onclick='window.location.href=\"/product/yf/?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;seluid=97245593&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_yf|\";return false;'>
-                            <span class=\"co3\">
-                                2000元以下
-                            </span>
-                </p>
-                <BR>
-                <p class=\"fs12 co4 mt5\">
-                    缘分指数:82
-                </p>
-            </div>
+
+
+\t<div class=\"mui-slider-item\">
+                <a href=\"http://m.7799520.com/sign\" class=\"link\">
+\t\t\t<img src=\"http://img.7799520.com/img/slide-sign.png\">
+                </a>
         </div>
-    </div>
-    <!--今日缘份--end-->
-    <!--心电感应--start-->
-    <!--心电感应--end-->
-    <!--印象--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea2\">
-            你对TA的印象是
-        </h2>
-        <div class=\"m10\">
-            <div class=\"jy-imp-o\">
-                <div class=\"clearfix jy-imp\">
-                    <dl class=\"clearfix\">
-                        <dt class=\"fl\">
-                            <a href=\"\">
-                                <img src=\"http://a2c.jyimg.com/86/34/1b96caqbcca267e99a6451fe69b6/avatar_wap.jpg\"
-                                     width=\"74\" height=\"90\" border=0 />
-                            </a>
-                        </dt>
-                        <dd class=\"fl ml10\">
-                            <p class=\"fs12 co2 fwb\">
-                                潇猪猪
-                            </p>
-                            <p class=\"fs12 co3 mt10\">
-                                        <span class=\"mr10\">
-                                            北京
-                                        </span>
-                                |
-                                        <span class=\"mr10 ml10\">
-                                            18岁
-                                        </span>
-                                |
-                                        <span class=\"mr10 ml10\">
-                                            160厘米
-                                        </span>
-                                |
-                                        <span class=\"co3 ml10\">
-                                        </span>
-                            </p>
-                            <p class=\"fs12 mt6\">
-                                        <span class=\"co3\">
-                                            2000 - 5000
-                                        </span>
-                            </p>
-                            <BR>
-                            <p class=\"fs12 co4 mt5\">
-                                缘分指数:92
-                            </p>
-                        </dd>
-                    </dl>
-                    <dl class=\"clearfix\">
-                        <dt class=\"fl\">
-                            <a href=\"\">
-                                <img src=\"\" width=\"74\" height=\"90\" />
-                            </a>
-                        </dt>
-                        <dd class=\"fl ml10\">
-                            <p class=\"fs12 co2 fwb\">
-                                222
-                            </p>
-                            <p class=\"fs12 co3 mt10\">
-                                        <span class=\"mr10\">
-                                            北京
-                                        </span>
-                                |
-                                        <span class=\"mr10 ml10\">
-                                            18岁
-                                        </span>
-                                |
-                                        <span class=\"mr10 ml10\">
-                                            160厘米
-                                        </span>
-                                |
-                                        <span class=\"co3 ml10\">
-                                        </span>
-                            </p>
-                            <p class=\"fs12 mt6\">
-                                        <span class=\"co3\">
-                                            2000 - 5000
-                                        </span>
-                            </p>
-                            <p class=\"clearfix mt6\">
-                                        <span class=\"fs12 co3 fl lh20 mr10\">
-                                            会员身份:
-                                        </span>
-                                        <span class=\"fl jy-me-sh ms1 mr6\">
-                                        </span>
-                                        <span class=\"fl jy-me-sh ms2 mr6\">
-                                        </span>
-                                        <span class=\"fl jy-me-sh ms3\">
-                                        </span>
-                            </p>
-                        </dd>
-                    </dl>
-                </div>
-            </div>
-            <div class=\"clearfix mt10 imp bor1\">
-                <a href=\"#\" onclick=\"dyyx_pl(7);return false;\" class=\"b-c-1\">
-                    时尚
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(2);return false;\" class=\"b-c-2\">
-                    古灵精怪
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(17);return false;\" class=\"b-c-3\">
-                    秀外慧中
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(4);return false;\" class=\"b-c-4\">
-                    妩媚
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(23);return false;\" class=\"b-c-3\">
-                    超凡脱俗
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(16);return false;\" class=\"b-c-1\">
-                    高挑
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(14);return false;\" class=\"b-c-2\">
-                    绝佳身材
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(22);return false;\" class=\"b-c-1\">
-                    睿智高雅
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(13);return false;\" class=\"b-c-4\">
-                    羞涩
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(24);return false;\" class=\"b-c-2\">
-                    活泼开朗
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(12);return false;\" class=\"b-c-3\">
-                    文静
-                </a>
-                <a href=\"#\" onclick=\"dyyx_pl(6);return false;\" class=\"b-c-4\">
-                    性感风情
-                </a>
-            </div>
-        </div>
-    </div>
-    <!--印象--end-->
-    <!--速配星座--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea2\">
-            今日你的速配星座－白羊座
-        </h2>
-        <ul class=\"bor1 p10 m6 jy-ind\" onclick='window.location.href=\"/product/zodiac/today_th.php?pin=97389349_110110240_1374078045_8f39fdcda00286c9c25e1af7ddae941642dc296d&amp;v=6&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_xzsp_1|\";return false;'>
-            <li class=\"clearfix fir\">
-                        <span class=\"fl co2 fs12 fir\">
-                            魅力指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            较亲切，颇有魅力！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-up fs12\">
-                    <div class=\"pa btn-a a-up\">
-                    </div>
-                    57
-                </div>
-            </li>
-            <li class=\"clearfix sec\">
-                        <span class=\"fl co2 fs12 fir\">
-                            浪漫指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            时而沉寂，时而激情！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-up fs12\">
-                    <div class=\"pa btn-a a-up\">
-                    </div>
-                    54
-                </div>
-            </li>
-            <li class=\"clearfix thi\">
-                        <span class=\"fl co2 fs12 fir\">
-                            邂逅指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            桃花若隐若现，须把握！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-up fs12\">
-                    <div class=\"pa btn-a a-up\">
-                    </div>
-                    55
-                </div>
-            </li>
-            <li class=\"clearfix sec\">
-                        <span class=\"fl co2 fs12 fir\">
-                            孤寂指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            内心平静，偶感寂寞！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-down fs12\">
-                    <div class=\"pa btn-a a-down\">
-                    </div>
-                    60
-                </div>
-            </li>
-            <li class=\"clearfix thi\">
-                        <span class=\"fl co2 fs12 fir\">
-                            一夜情指数
-                        </span>
-                        <span class=\"fl fs12 co3 sec\">
-                            有色心没色胆，想而不碰！
-                        </span>
-                <div class=\"pa arr\">
-                </div>
-                <div class=\"pa jy-btn jy-down fs12\">
-                    <div class=\"pa btn-a a-down\">
-                    </div>
-                    62
-                </div>
-            </li>
-        </ul>
-        <ul class=\"clearfix mt10\">
-            <li class=\"fl ml8\">
-                <a href=\"#\">
-                    <img src=\"http://a2c.jyimg.com/f2/c2/83d8505ed97da653788dfa732c54/avatar_wap.jpg\"
-                         width=\"74\" height=\"90\" border=0>
-                </a>
-            </li>
-            <li class=\"fl ml8\">
-                <a href=\"#\">
-                    <img src=\"http://a2c.jyimg.com/fb/81/62be902e56cdfe3c59940eca6d7f/avatar_wap.jpg\"
-                         width=\"74\" height=\"90\" border=0>
-                </a>
-            </li>
-            <li class=\"fl ml8\">
-                <a href=\"#\">
-                    <img src=\"http://a2c.jyimg.com/f3/71/e5eb5a9dcb8fd0eed65a006210aa/avatar_wap.jpg\"
-                         width=\"74\" height=\"90\" border=0>
-                </a>
-            </li>
-            <li class=\"pr fl ml6 bgc2\">
-                <p class=\"co6 fs12 lh18 tx_g\" onclick=\"window.location.href=&quot;/search/search_horoscope.php?pin=97389349_110110240_1374079719_2bc30b745a1ed461e5fcb31c88135ec8a1580d36&amp;v=6&amp;_WAP_TJ_STR=m|touch_logged_index|touch_idxa_xzsp_3|&quot;;return false;\">
-                    快
-                            <span>
-                                去
-                            </span>
-                    <br>
-                    看看TA
-                </p>
-                <div class=\"pa box_g cir_g2\">
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!--速配星座--end-->
-    <!--快速搜索--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea3\">
-            快速搜索
-        </h2>
-        <div class=\"clearfix m10 pr qu-sea\">
-            <div class=\"pa tx1\">
-                <a href=\"#\" title=\"最新注册\">
-                    最新注册
-                </a>
-            </div>
-            <div class=\"pa tx2\">
-                <a href=\"#\" title=\"认证会员\">
-                    认证会员
-                </a>
-            </div>
-            <div class=\"pa tx3\">
-                <a href=\"#\" title=\"同城搜索\">
-                    同城搜索
-                </a>
-            </div>
-            <div class=\"pa tx5\">
-                <a href=\"#\" title=\"生肖搜索\">
-                    生肖搜索
-                </a>
-            </div>
-            <div class=\"pa tx6\">
-                <a href=\"#\" title=\"有房有车\">
-                    有房车
-                </a>
-            </div>
-            <div class=\"pa tx7\">
-                <a href=\"#\" title=\"星座搜索\">
-                    星座搜索
-                </a>
-            </div>
-            <div class=\"pa tx8\">
-                <a href=\"#\" title=\"谁中意我\">
-                    谁中意我
-                </a>
-            </div>
-            <div class=\"pa tx9\">
-                <a href=\"#\" title=\"标签搜索\">
-                    标签搜索
-                </a>
-            </div>
-            <div class=\"pa tx10\">
-                <a href=\"#\" title=\"更多搜索\">
-                    更多搜索
-                </a>
-            </div>
-            <div class=\"pa tx11\">
-                <a href=\"#\" title=\"同乡会\">
-                    同乡
-                </a>
-            </div>
-            <div class=\"pa tx12\">
-                <a href=\"#\" title=\"印象词\">
-                    印象词
-                </a>
-            </div>
-        </div>
-    </div>
-    <!--快速搜索--end-->
-    <!--今日速配--start-->
-    <div class=\"m-20-10\">
-        <h2 class=\"jy-h2 hea3\">
-            今日速配
-        </h2>
-        <div class=\"pr ever-w\">
-            <ul class=\"clearfix mt10\">
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a2.jyimg.com/e3/b7/3d471c8d80b6846ac8cd727f3db9/3d471c8d8_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a1.jyimg.com/3f/aa/f92f77dcf79aqbb6afb5bb3cf2cd/f92f77dcf_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a2.jyimg.com/85/57/7c61176a1654597b15cbd7fc46cc/7c61176a1_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a1.jyimg.com/34/a9/f7d14cb4efdf592c96b1b464cc00/f7d14cb4e_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                <li class=\"fl ml8\">
-                    <a href=\"#\">
-                        <img src=\"http://a1.jyimg.com/44/06/578a19d3a66668b9514595d96a30/578a19d3a_avatar_wap.jpg\"
-                             width=\"50\" height=\"60\" border=0>
-                    </a>
-                </li>
-                </li>
-            </ul>
-        </div>
-        <!--今日速配--end-->
-        <!--谁看过我--start-->
-        <!--谁看过我--end-->
-        <!--首页产品--end-->
-        <!--footer--start-->
-        {% endblock %}";
+
+
+        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+\t<div class=\"mui-slider-item mui-slider-item-duplicate\">
+\t\t<a href=\"http://m.7799520.com/top\" class=\"link\">
+\t\t\t<img src=\"http://img.7799520.com/tmp/top1.png\">
+\t\t</a>
+\t</div>
+
+
+</div>
+
+<div class=\"mui-slider-indicator\">
+
+\t<div class=\"mui-indicator mui-active\"></div>
+
+\t<div class=\"mui-indicator\"></div>
+
+</div>
+\t\t\t\t</div>
+\t\t\t\t<script type=\"text/javascript\" charset=\"utf-8\">
+\t\t\t\t\tvar slider = mui(\"#slider\");
+\t\t\t\t\tslider.slider({
+\t\t\t\t\t\tinterval: 5000
+\t\t\t\t\t});
+\t\t\t\t</script>
+\t\t\t\t<!-- 图片轮播结束 -->
+
+\t\t\t\t<!-- 导航按钮开始 -->
+\t\t\t\t<div class=\"index-ico\">
+\t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t\t<span class=\"icon-coffee\"></span>
+\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/party\" class=\"link\">
+\t\t\t<span class=\"icon-heart\"></span>
+\t\t\t<div class=\"mui-media-body\">相亲活动</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/news\" class=\"link\">
+\t\t\t<span class=\"icon-doctor\"></span>
+\t\t\t<div class=\"mui-media-body\">婚恋课堂</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/team\" class=\"link\">
+\t\t\t<span class=\"icon-team\"></span>
+\t\t\t<div class=\"mui-media-body\">红娘团队</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/weibo\" class=\"link\">
+\t\t\t<span class=\"icon-vip\"></span>
+\t\t\t<div class=\"mui-media-body\">心情微博</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/story\" class=\"link\">
+\t\t\t<span class=\"icon-skirt\"></span>
+\t\t\t<div class=\"mui-media-body\">成功故事</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/about\" class=\"link\">
+\t\t\t<span class=\"icon-brand\"></span>
+\t\t\t<div class=\"mui-media-body\">品牌荣誉</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"http://m.7799520.com/address\" class=\"link\">
+\t\t\t<span class=\"icon-locate\"></span>
+\t\t\t<div class=\"mui-media-body\">门店地址</div>
+\t\t</a>
+\t</li>
+</ul>\t\t\t\t</div>
+\t\t\t\t<!-- 导航按钮结束 -->
+
+\t\t\t\t<!-- banner开始 -->
+\t\t\t\t<div class=\"banner\">
+\t\t\t\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t\t\t\t\t<img src=\"http://img.7799520.com/img/banner1.png\" />
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t\t<!-- banner结束 -->
+
+\t\t\t\t<!-- 会员开始 -->
+\t\t\t\t<div class=\"index-member\">
+\t\t
+\t\t<div class=\"tabs\">
+\t
+</div>
+<!-- 切换标签结束 -->
+
+
+
+
+
+\t
+
+\t\t\t
+
+\t\t\t\t<!-- 文字内容开始 -->
+\t\t\t\t<div class=\"index-summary\">
+\t<p>
+\t\t服务<b>9</b>个城市 超过<b>900</b>万认证会员 成就<b>200</b>万情侣
+\t</p>
+\t<p class=\"hotline\">
+\t\t联系人热线：15201595926
+\t</p>
+\t<p>
+\t\t<a href=\"http://m.7799520.com/about\" class=\"link\">关于我们</a>|<a href=\"http://m.7799520.com/invite\" class=\"link\">人才招聘</a>|<a href=\"http://kefu5.kuaishang.cn/bs/im/67780/59167/602875.htm\" class=\"link\">帮助中心</a>|<a href=\"\">客户端</a>
+\t</p>
+\t<p>
+\t\t缘来社交 版权所有
+\t</p>
+</div>\t\t\t\t<!-- 文字内容结束 -->
+\t\t\t</div>
+\t\t</div>
+
+\t\t<style type=\"text/css\">
+\t\t\t.mui-pull {
+\t\t\t\tdisplay: none;
+\t\t\t}
+\t\t</style>
+\t\t<!-- <script src=\"/js/??/core-pull.js,lazyload.js,index.js\"></script> -->
+\t<!--引用自定义脚本-->
+\t
+\t\t<!-- CNZZ代码 -->
+\t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=&rnd=1919918879\" width=\"0\" height=\"0\"/>\t</body>
+\t<!--引用自定义脚本-->
+\t<script src=\"web/js/core1.js\"></script> 
+\t
+
+
+</html>";
     }
 }
