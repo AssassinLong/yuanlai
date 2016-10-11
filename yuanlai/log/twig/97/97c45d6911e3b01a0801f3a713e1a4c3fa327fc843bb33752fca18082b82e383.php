@@ -91,7 +91,6 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
                            <li class=\"t4\"><a href=\"#\" class=\"fs12 co2\">征友状态</a></li>
                         </ul>
                         <ul class=\"bbw p10 mt20 jy-per-cen\">
-                           <li class=\"t5 bb1\"><a href=\"#\" class=\"fs12 co2\">手机验证</a></li>
                            <li class=\"t5 bb1\"><a href=\"#\" class=\"fs12 co2\">我的评价</a></li>
                            <li class=\"t5\"><a href=\"#\" class=\"fs12 co2\">意见反馈</a></li>
                         </ul>
@@ -191,7 +190,6 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
                            <li class=\"t4\"><a href=\"#\" class=\"fs12 co2\">征友状态</a></li>
                         </ul>
                         <ul class=\"bbw p10 mt20 jy-per-cen\">
-                           <li class=\"t5 bb1\"><a href=\"#\" class=\"fs12 co2\">手机验证</a></li>
                            <li class=\"t5 bb1\"><a href=\"#\" class=\"fs12 co2\">我的评价</a></li>
                            <li class=\"t5\"><a href=\"#\" class=\"fs12 co2\">意见反馈</a></li>
                         </ul>

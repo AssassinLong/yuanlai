@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div data-role="header">
+        <!--{% if( name.name ) %}
+        {% else %}
+        <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">登录</a>
+        {% endif %}-->
+        <h1>欢迎登录幻想嘉年华</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>你想明白生命的真正意义吗？你想真正的......活着吗?</p>
+    </div>
+<script>
+    $(document).ready(function(){
+        var pop=$('#pop').text();
+        if(pop!=''){
+            //location.replace(location.href);
+            }else{
+
+            }
+            //alert(pop);
+        });
+</script>
+{% endblock %}
+

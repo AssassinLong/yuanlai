@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% block content %}
+<div data-role="header">
+    <h1>文章展示</h1>
+</div>
+<a href="#" data-role="button" data-rel="back" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext">上一页</a>
+<button onclick="showBg()" class="ui-btn">添加</button>
+<div class="ui-grid-b">
+    <div class="ui-block-a">标题:</div>
+    <div class="ui-block-b">内容:</div>
+    <div class="ui-block-b">操作:</div>
+</div>
+{% for val in data %}
+<div class="ui-grid-b">
+    <div class="ui-block-a">{{ val.name }}</div>
+    <div class="ui-block-b"><a href="?index/details/id/{{ val.id }}">详情</a></div>
+    <div class="ui-block-b"><a href="?index/del/id/{{ val.id }}">删除</a></div>
+</div>
+{% endfor %}
+<style type="text/css">
+    body {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:12px;
+        margin:0;
+    }
+    #main {
+        height:1800px;
+        padding-top:90px;
+        text-align:center;
+    }
+    #fullbg {
+        background-color:gray;
+        left:0;
+        opacity:0.5;
+        position:absolute;
+        top:0;
+        z-index:3;
+        filter:alpha(opacity=50);
+        -moz-opacity:0.5;
+        -khtml-opacity:0.5;
+    }
+    #dialog {
+        background-color:#fff;
+        border:5px solid rgba(0,0,0, 0.4);
+        height:300px;
+        left:63%;
+        margin:-200px 0 0 -200px;
+        padding:1px;
+        position:fixed !important; /* 浮动对话框 */
+        position:absolute;
+        top:50%;
+        width:300px;
+        z-index:5;
+        border-radius:5px;
+        display:none;
+    }
+    #dialog p {
+        margin:0 0 12px;
+        height:20px;
+        line-height:20px;
+        background:#CCCCCC;
+    }
+    #dialog p.close {
+        text-align:right;
+        padding-right:10px;
+    }
+    #dialog p.close a {
+        color:#fff;
+        text-decoration:none;
+    }
+
+</style>
+
+<script type="text/javascript">
+    //显示灰色 jQuery 遮罩层
+    function showBg() {
+        var bh = $("body").height();
+        var bw = $("body").width();
+        $("#fullbg").css({
+            height:bh,
+            width:bw,
+            display:"block"
+        });
+        $("#dialog").show();
+    }
+    //关闭灰色 jQuery 遮罩
+    function closeBg() {
+        $("#fullbg,#dialog").hide();
+    }
+</script>
+<div>
+    <div id="fullbg"></div>
+    <div id="dialog">
+        <p class="close"><a href="#" onclick="closeBg();">关闭</a></p>
+        <div>
+            <form action="?index/add" method="post">
+                <ul data-role="listview" data-theme="e">
+                    <label>标  题：</label>
+                    <input type="text" name="name" required="required">
+                    <label>内  容：</label>
+                    <textarea name="text" required="required"></textarea>
+                    <center>
+                        <div data-role="main" class="ui-content">
+                            <input type="submit" value="提交">
+                        </div>
+                    </center>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

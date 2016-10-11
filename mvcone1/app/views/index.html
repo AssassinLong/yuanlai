@@ -1,0 +1,24 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<center>
+    <form>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>留言内容</td>
+                <td>留言时间</td>
+                <td>操作</td>
+            </tr>
+{% for val in data %}
+            <tr>
+                <td>{{ val.name }}</td>
+                <td>{{ val.text }}</td>
+                <td>{{ val.datatime }}</td>
+                <td><a href="?index/del/id/{{ val.id }}">删除</a></td>
+            </tr>
+{% endfor %}
+    </table>
+    </form>
+</center>
+{% endblock %}

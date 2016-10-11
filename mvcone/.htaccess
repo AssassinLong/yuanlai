@@ -1,0 +1,16 @@
+#<IfModule authz_core_module>
+#	Require all denied
+#</IfModule>
+#
+#  #开启重写引擎
+#  RewriteEngine on
+#   #写重写规则
+#   RewriteRule   cat_(\d+).html   index.php/user/index/$1?title=$2 [L,NC]
+#   RewriteRule   cat_(\d+)_(.*).html   index.php/user/index/$1?title=$2 [L,NC]
+#   RewriteRule   cat_index.html   index.php/user/index [L,NC]
+
+#   <IfModule mod_rewrite.c>
+#    RewriteEngine on
+#    RewriteCond %{REQUEST_FILENAME} !-f
+#    RewriteRule ^(.*)$ index.php? [QSA,PT,L]
+#   </IfModule>

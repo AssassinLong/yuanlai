@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+<div data-role="header">
+    <h1>修改信息</h1>
+</div>
+<div data-role="main" class="ui-content">
+    <a href="#" data-role="button" data-rel="back" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext">上一页</a>
+    <div class="ui-grid-b"><input type="hidden" value="{{ onep.id }}">
+        <div class="ui-block-b"><img src="{{ onep.imgpath }}" alt="Paris" width="200" height="150"></div>
+    </div>
+    <div class="ui-grid-b">
+    <div class="ui-block-a">姓名:</div>
+    <div class="ui-block-b"><span>{{ onep.name }}</span></div>
+    </div>
+    <div class="ui-grid-b">
+        <div class="ui-block-a">手机号:</div>
+        <div class="ui-block-b"><span>{{ onep.phones }}</span></div>
+    </div>
+    <div class="ui-grid-b">
+        <div class="ui-block-a">地址:</div>
+        <div class="ui-block-b"><span>{{ onep.site }}</span></div>
+    </div>
+</div>
+<script type="text/javascript">
+        $(document).on('click', 'span', function () {
+            var old_val = $(this).text();
+            $(this).parent().html("<input type='text' value=" + old_val + ">");
+            $('input').focus();
+        });
+        $(document).on('blur','input',function () {
+            var is=$(this);
+            var val=$(this).val();
+            var id=$('input[type="hidden"]').val();
+            //alert(id);
+            if(val.match('^[\u4e00-\u9fa5]{4,17}$')){
+                var site=val;
+                var str=val;
+            }else if(val.match('^[0-9]*$')){
+                var phones=val;
+                var str=val;
+            }else{
+                var name=val;
+                var str=val;
+            }
+            //alert(site);die;
+            $.ajax({
+                type:'post',
+                url:'?index/save',
+                data:{
+                    id:id,
+                    name:name,
+                    phones:phones,
+                    site:site
+                },
+                success:function(msg){
+                    //alert(msg);
+                    if(msg=='1'){
+                        is.parent().html("<span>"+str+"</span>");
+                        $('input').focus();
+                    }
+                }
+            });
+        });
+</script>
+{% endblock %}
