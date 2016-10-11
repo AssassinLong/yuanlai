@@ -10,11 +10,7 @@ class indexCtrl extends \core\imooc
     //登录页面
     public function login()
     {
-        if(post('username')){
-            echo post('username');
-        }else{
             $this->display('login.html');
-        }
     }
     //验证登录
     public function login_in()
