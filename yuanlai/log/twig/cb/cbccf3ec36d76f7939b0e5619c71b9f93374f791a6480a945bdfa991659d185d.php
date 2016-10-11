@@ -44,21 +44,23 @@ class __TwigTemplate_804f8817b52a0a7b85c1dafeb52e6be165713e41213880443c43f68c889
         // line 24
         $this->displayBlock('content', $context, $blocks);
         // line 27
-        echo "<div class=\"footer\">
+        echo "</content>
+
+<div class=\"footer\">
 
     <div class=\"gezifooter\">
 
-        <a href=\"#\" class=\"ui-link\">酒店预订</a> <font color=\"#878787\">|</font>
+        <a href=\"http://www.hotels.cn/jiu-dian-you-hui/globalgeneric-cn/?dateless=true&PSRC=SEMU&rffrid=sem.hcom.CN.baidu.003.00.03.1.kwrd%3DZzZz.17IC3AR7S.0.5361722491.10203p79948.d.c\" class=\"ui-link\">酒店预订</a> <font color=\"#878787\">|</font> 
 
-        <a href=\"?r=index/login\" class=\"ui-link\">立即登录</a> <font color=\"#878787\">|</font>
+            
 
-        <a href=\"?r=index/register\" class=\"ui-link\">免费注册</a> <font color=\"#878787\">|</font>        <a href=\"#\" class=\"ui-link\">电脑版</a>
+        <a href=\"?index/register\"\" class=\"ui-link\">免费注册</a> <font color=\"#878787\">
 
     </div>
 
     <div class=\"gezifooter\">
 
-        <p style=\"color:#bbb;\">缘来社交 &copy; 版权所有 </p>
+        <p style=\"color:#bbb;\">缘来社交 &copy; 版权所有 2016</p>
 
     </div>
 
@@ -68,7 +70,7 @@ class __TwigTemplate_804f8817b52a0a7b85c1dafeb52e6be165713e41213880443c43f68c889
 
 </body>
 
-</html><!-- <script type=\"text/javascript\">/*20:3 创建于 2014-12-26*/var cpro_id = \"u1879755\";</script><script src=\"http://cpro.baidustatic.com/cpro/ui/cm.js\" type=\"text/javascript\"></script>-->";
+</html>";
     }
 
     // line 24
@@ -86,7 +88,7 @@ class __TwigTemplate_804f8817b52a0a7b85c1dafeb52e6be165713e41213880443c43f68c889
 
     public function getDebugInfo()
     {
-        return array (  78 => 25,  75 => 24,  47 => 27,  45 => 24,  20 => 1,);
+        return array (  80 => 25,  77 => 24,  47 => 27,  45 => 24,  20 => 1,);
     }
 
     public function getSource()
@@ -117,21 +119,23 @@ class __TwigTemplate_804f8817b52a0a7b85c1dafeb52e6be165713e41213880443c43f68c889
 {% block content %}
 
 {% endblock %}
+</content>
+
 <div class=\"footer\">
 
     <div class=\"gezifooter\">
 
-        <a href=\"#\" class=\"ui-link\">酒店预订</a> <font color=\"#878787\">|</font>
+        <a href=\"http://www.hotels.cn/jiu-dian-you-hui/globalgeneric-cn/?dateless=true&PSRC=SEMU&rffrid=sem.hcom.CN.baidu.003.00.03.1.kwrd%3DZzZz.17IC3AR7S.0.5361722491.10203p79948.d.c\" class=\"ui-link\">酒店预订</a> <font color=\"#878787\">|</font> 
 
-        <a href=\"?r=index/login\" class=\"ui-link\">立即登录</a> <font color=\"#878787\">|</font>
+            
 
-        <a href=\"?r=index/register\" class=\"ui-link\">免费注册</a> <font color=\"#878787\">|</font>        <a href=\"#\" class=\"ui-link\">电脑版</a>
+        <a href=\"?index/register\"\" class=\"ui-link\">免费注册</a> <font color=\"#878787\">
 
     </div>
 
     <div class=\"gezifooter\">
 
-        <p style=\"color:#bbb;\">缘来社交 &copy; 版权所有 </p>
+        <p style=\"color:#bbb;\">缘来社交 &copy; 版权所有 2016</p>
 
     </div>
 
@@ -141,6 +145,6 @@ class __TwigTemplate_804f8817b52a0a7b85c1dafeb52e6be165713e41213880443c43f68c889
 
 </body>
 
-</html><!-- <script type=\"text/javascript\">/*20:3 创建于 2014-12-26*/var cpro_id = \"u1879755\";</script><script src=\"http://cpro.baidustatic.com/cpro/ui/cm.js\" type=\"text/javascript\"></script>-->";
+</html>";
     }
 }
