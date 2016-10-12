@@ -28,8 +28,8 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
+        <script src=\"web/js/min.js\" ></script>
+\t    <script src=\"web/js/core.js\" ></script>
         <script>
             \$(window).ready(function () {
                 (function (\$) {
@@ -76,7 +76,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t\t\t\t<img src=\"http://img.7799520.com/img/logo.png\">
 \t\t\t\t</div>
 \t\t\t</h1>
-\t\t\t<a href=\"http://m.7799520.com/city?tag=index\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
+\t\t\t<a href=\"\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
 \t\t\t\t\t\t\t\t北京\t\t\t<span></span>
 \t\t\t</a>
 \t\t</header>
@@ -174,9 +174,9 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/team\" class=\"link\">
+\t\t<a href=\"?r=home/fossa\" class=\"link\">
 \t\t\t<span class=\"icon-team\"></span>
-\t\t\t<div class=\"mui-media-body\">红娘团队</div>
+\t\t\t<div class=\"mui-media-body\">个人中心</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -290,8 +290,8 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
+        <script src=\"web/js/min.js\" ></script>
+\t    <script src=\"web/js/core.js\" ></script>
         <script>
             \$(window).ready(function () {
                 (function (\$) {
@@ -338,7 +338,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t\t\t\t<img src=\"http://img.7799520.com/img/logo.png\">
 \t\t\t\t</div>
 \t\t\t</h1>
-\t\t\t<a href=\"http://m.7799520.com/city?tag=index\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
+\t\t\t<a href=\"\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
 \t\t\t\t\t\t\t\t北京\t\t\t<span></span>
 \t\t\t</a>
 \t\t</header>
@@ -436,9 +436,9 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/team\" class=\"link\">
+\t\t<a href=\"?r=home/fossa\" class=\"link\">
 \t\t\t<span class=\"icon-team\"></span>
-\t\t\t<div class=\"mui-media-body\">红娘团队</div>
+\t\t\t<div class=\"mui-media-body\">个人中心</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
