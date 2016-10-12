@@ -1,80 +1,737 @@
-{% extends "layout3.html"%}
-{% block content %}
 
-		<div class="jy pr">
-        	<!--顶部导航--start-->
-            													<div class="pr per-top-nav fs12">
-                <div class="pa per-top-l" onclick='document.location.href=history.go(-1);'></div>
+ <!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+        <link rel="stylesheet" type="text/css" href="web/js/css.css">
+        <!--引用Jquery-->
+        <script src="web/js/jquery.js"></script>
+        <script src="web/js/min.js" /></script>
+	    <script src="web/js/core.js" /></script>
+        <script>
+            $(window).ready(function () {
+                (function ($) {
+                    $('body').on('tap', '.link', function (event) {
+                    var url = this.getAttribute('href');
+                    var blank = this.getAttribute('target');
+                    if (blank == '_blank') {
+                        window.open(url);
+                    } else {
+                        window.location.href = url;
+                    }
+                    });
+                })(mui);
+                var lab = document.getElementsByClassName('site-nav')[0];
+                if (lab) {
+                    var nav = getCookie('tab_item');
+                    if (nav) {
+                            var as = lab.getElementsByTagName('a');
+                            for (var i; i < as.length; i++) {
+                               as[i].className = 'link'
+                            }
+                            as[nav - 1].className = 'link mui-active'
+                    }
+                }
+                function getCookie(name) {
+                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                    if (arr = document.cookie.match(reg))
+                        return unescape(arr[2]);
+                    else
+                        return null;
+                }
+            })
+        </script>
 
-                <div class="pa per-top-r"  onclick='document.location.href="?r=home/index";' >
-                	<!--弹层--start-->
-                    <div class="pa pla-pop clearfix dn">
-                        <ul class="fl">
-                            
-                        </ul>   	
-                    </div>
-                    <!--弹层--end-->
-                </div>
 
-                <p class="fs12">个人中心</p>
+<title>个人资料</title>
 
-            </div>
-            <!--顶部导航--end-->
-            <!--主要部分--start-->
-            <div class="">
-            	<!--个人信息--start-->
-                <div class="clearfix m-20-14">
-                    <div class="fl jy-today-fate">
-                        <img src="http://images1.jyimg.com/w4/global/i/nopic_m_t.jpg" width="74" height="90" />
-                    </div>
-                    <div class="fl ml10">
-                        <p class="fs12 co2 fwb">懒人模板</p>
-                        <p class="fs12 co3 mt8">佳缘ID: 97389349</p>
-                        <p class="fs12 co3 mt8"><span class="mr10">北京</span>|<span class="mr10 ml10">23岁</span>|<span class="mr10 ml10">170厘米</span>|<span class="co3 ml10">未婚</span></p>
-                        <p class="fs12 mt6"><span class="co3">5000～10000元</span></p>
-                        <p class="clearfix mt5">
-                            <span class="fs12 co3 fl lh20 mr10">会员身份:</span><span class="fl jy-me-sh ms3-g mr4" onclick="window.location.href='http://m.jiayuan.com/payment/index.php?pin=97389349_110110240_1374084157_61e68572f0c658fbaadebf5f3f030fe3a458beb4&v=6&action=product&function=category&category=zshy&s=ee5e6b';return false;"></span><span class="fl jy-me-sh ms7-g mr4" onclick="window.location.href='http://m.jiayuan.com/payment/index.php?pin=97389349_110110240_1374084157_61e68572f0c658fbaadebf5f3f030fe3a458beb4&v=6&action=product&function=category&category=fxby&s=ee5e6b';return false;"></span><span class="fl jy-me-sh ms2-g" onclick="window.location.href='http://m.jiayuan.com/payment/index.php?pin=97389349_110110240_1374084157_61e68572f0c658fbaadebf5f3f030fe3a458beb4&v=6&action=product&function=category&category=kxby&s=ee5e6b';return false;"></span>
-                        </p>
-                    </div>
-                </div>
-				<div class='fs12 mt10' style=''><a href='#' style='color:red;text-decoration:underline;'>收到[1]位美女关注哦</a></div>
-                <!--个人信息--end-->
-                <div class="pt1 bt1 mt20">
-					<div class="main-bg p-20-14 pr">
-                        <ul class="pa bbw jy-per-cen-n clearfix">
-                        	<li class=""><img src="http://images1c.jyimg.com/w4/wap/i/m/2013/04/per-cen/new1.jpg" /></li>
-                            <li class="lh24 ml10"><span class="fs12 co10">0张</span></li>
-                            <li class=""><img src="http://images1c.jyimg.com/w4/wap/i/m/2013/04/per-cen/new2.jpg" /></li>
-                            <li class="lh24 ml10"><span class="fs12 co8">0张</span></li>
-                            <li class=""><img src="http://images1c.jyimg.com/w4/wap/i/m/2013/04/per-cen/new3.jpg" /></li>
-                            <li class="lh24 ml10"><span class="fs12 co13">1张</span></li>
-                        </ul>
-                        <div class="pa bbw cen-n-n1"></div>
-                        <div class="pa bbw cen-n-n2"></div>
-                        <ul class="bbw p10 jy-per-cen mt50">
-                           <li class="t6 bb1"><a href="#" class="fs12 co2">购买邮票</a></li>
-                           <li class="t7"><a href="#" class="fs12 co2">购买服务</a></li>
-                           <!--<li class="t8"><a href="#" class="fs12 co2">优惠频道</a></li>-->
-                        </ul>
-                    	<ul class="bbw p10 jy-per-cen mt20">
-                           <li class="t1 bb1"><a href="#" class="fs12 co2">我的相册</a></li>
-                           <li class="t2 bb1"><a href="#" class="fs12 co2">修改资料</a></li>
-                           <li class="t3 bb1"><a href="#" class="fs12 co2">择偶条件</a></li>
-                           <li class="t4"><a href="#" class="fs12 co2">征友状态</a></li>
-                        </ul>
-                        <ul class="bbw p10 mt20 jy-per-cen">
-                           <li class="t5 bb1"><a href="#" class="fs12 co2">我的评价</a></li>
-                           <li class="t5"><a href="#" class="fs12 co2">意见反馈</a></li>
-                        </ul>
-                        <div class="mt20">
-                            <div class="jy-btn-d">
-                                <a class="jy-btn" href="#">切换/退出帐户</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--主要部分--end-->
-            <!--footer--start-->
-                        <!--footer--start-->
-            {% endblock %}
+</head>
+
+
+
+	<body class="backgroud-white">
+
+		<div class="mui-content">
+
+			<!-- 导航栏开始 -->
+
+			<header class="mui-bar mui-bar-nav nav-hide">
+
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+
+			</header>
+
+			<!-- 导航栏结束 -->
+
+
+
+			<!-- 弹出层开始 -->
+
+			<div class="layer">
+
+				<div class="layer-file-upload">
+
+					<label class="layer-close"><span class="mui-icon mui-icon-close"></span></label>
+
+					<img src="/img/upload.png" />
+
+					<p class="title">上传照片</p>
+
+					<p>95%的会员选择有照片的用户进行联系哦</p>
+
+					<button class="mui-btn do-upload" type="button">立即上传</button>
+
+				</div>
+
+			</div>
+
+			<!-- 弹出层结束 -->
+
+
+
+			<!-- 个人标签卡开始 -->
+
+			<div class="file-area">
+
+				<div class="file-avatar">
+
+					
+					<div class="clip-bg do-avatar-upload" style="background: 
+
+					url(/img/avata-1.png);">
+
+					</div>
+
+					
+					<p>
+						<b>li李先森</b>
+
+						
+						<span class="ico ico-ident"></span>
+
+						
+
+						
+						<span class="ico ico-msg"></span>
+
+						
+
+						
+						<span class="ico ico-mobile-active"></span>
+
+						
+						<br />21 &nbsp;北京北京 &nbsp;180CM
+					</p>
+
+				</div>
+
+
+
+				<img src="web/images/file-bg.png" />
+
+
+
+				<div class="file-total">
+
+					<ul class="mui-table-view mui-grid-view boder-none">
+
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+
+							<a href="#"><b>0</b>微博
+
+							</a>
+
+						</li>
+
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+
+							<a href="#">
+
+							<b>
+
+								0
+							</b>人气</a>
+
+							<div></div>
+
+						</li>
+
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+
+							<a href="#"><b>0</b>粉丝</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<!-- 个人标签卡结束 -->
+
+
+
+			<!-- 个人照片开始 -->
+
+			<div class="file-photo">
+
+				<ul class="mui-table-view mui-grid-view boder-none">
+
+					
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+
+						<a href="javascript:;" class="do-layer-file-upload">
+
+							<img src="web/images/file-upload.png" />
+
+						</a>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			<!-- 个人照片结束 -->
+
+
+
+			<!-- 个人资料开始 -->
+
+			<div class="file-list">
+
+				<div>						
+
+					<h4>
+
+						内心独白
+
+						<span class="dot dot-pink"></span>
+
+						<a href="http://m.7799520.com/edit/monolog" class="link">
+
+							<span class="mui-icon mui-icon-compose"></span>
+
+							编辑独白
+
+						</a>
+
+					</h4>
+
+					<p class="mui-text-left">
+
+						我一直在这里，没有离开，我一直在等待，等着那个和我终生相伴相爱一生的你的出现。因缘而聚，我始终这样认为，所以觉得这里真的很好，美丽的缘分，也许就是给我的最美丽的暗示吧。</p>
+
+					</p>
+
+					
+
+					<h4>基本资料<span class="dot dot-orange"></span><a class="link" href="http://m.7799520.com/edit/baseInfo"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					<p><font class="mui-pull-left">身高</font>180CM</p>
+
+					<p><font class="mui-pull-left">地区</font>北京-北京</p>
+
+					<p><font class="mui-pull-left">月薪</font>2000-5000</p>
+
+					<p><font class="mui-pull-left">星座</font>处女座</p>
+
+					<p><font class="mui-pull-left">籍贯</font>
+
+														未透露
+						
+					<p><font class="mui-pull-left">学历</font>大专</p>
+
+					<p><font class="mui-pull-left">婚姻状况</font>未婚</p>
+
+					
+
+					<h4>个人标签<span class="dot dot-blue"></span><a href="http://m.7799520.com/edit/label" class="link"><span class="mui-icon mui-icon-compose"></span>添加标签</a></h4>
+
+				
+
+					<p class="mui-text-left">
+
+						<button class="mui-btn mui-btn-warning mui-btn-outlined" 	type="button">处女座
+						</button>
+
+						<button class="mui-btn mui-btn-warning mui-btn-outlined" 	type="button">90后
+
+						</button>
+
+						
+					</p>
+
+					
+
+					<h4>征友条件<span class="dot dot-light-pink"></span><a href="http://m.7799520.com/edit/cond" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					<p>
+
+						<font class="mui-pull-left">性别</font>
+
+						不限
+						<span class="ico ico-on"></span>
+
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">年龄范围</font>
+
+						不限
+						~
+
+						不限					
+
+						<span class="ico ico-on"></span>
+
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">照片要求</font>
+
+						不限
+						<span class="ico ico-on"></span>
+
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">交友类型</font>
+
+						不限
+						<span class="ico ico-on"></span>
+
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">身高范围</font>
+
+						不限
+							~
+
+						不限
+						<span class="ico ico-on"></span>
+
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">婚姻状况</font>
+
+						不限
+						<span class="ico ico-on"></span>
+
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">学历要求</font>
+
+						不限
+						<span class="ico ico-on"></span>
+
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">所在地区</font>
+
+						
+							不限
+
+						
+						<span class="ico ico-on"></span>
+
+					</p>
+
+					
+
+					<h4>性格外貌<span class="dot dot-yellow"></span><a href="http://m.7799520.com/edit/profile" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					<p>
+
+						<font class="mui-pull-left">个性描述</font>
+
+						未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">相貌自评</font>未透露
+					</p>
+
+					<p>
+
+
+
+						<font class="mui-pull-left">体重</font>
+
+						
+							未透露
+
+						
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">体型</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">魅力部位</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">发型</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">发色</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">脸型</font>未透露
+					</p>
+
+					
+
+					<h4>详细资料<span class="dot dot-light-purple"></span><a href="http://m.7799520.com/edit/particular" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					<p>
+
+						<font class="mui-pull-left">生肖</font>狗
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">血型</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">民族</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">有无子女</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">购车情况</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">住房情况</font>未透露
+					</p>
+
+					
+
+					<h4>工作学习<span class="dot dot-light-orange"></span><a href="http://m.7799520.com/edit/work" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					<p>
+
+						<font class="mui-pull-left">公司名称</font>
+
+						
+							未透露
+
+						
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">所学专业</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">语言能力</font>
+
+						<em>未透露</em>
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">工作情况</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">教育程度</font>大专
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">公司类型</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">收入描述</font>未透露
+					</p>
+
+					
+
+					<h4>生活描述<span class="dot dot-light-purple"></span><a href="http://m.7799520.com/edit/live" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					<p>
+
+						<font class="mui-pull-left">家中排行</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">最大消费</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">是否吸烟</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">锻炼习惯</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">是否喝酒</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">作息习惯</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">喜欢制造浪漫</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">是否要孩子</font>未透露
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">生活技能</font>
+
+						<em>未透露</em>
+					</p>
+
+					
+
+					<h4>兴趣爱好<span class="dot dot-cyan"></span><a href="http://m.7799520.com/edit/hobbies" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					<p>
+
+						<font class="mui-pull-left">喜欢的运动</font>
+
+						<em>未透露</em>
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">喜欢的电影</font>
+
+						<em>未透露</em>
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">喜欢的食物</font>
+
+						<em>未透露</em>
+
+
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">喜欢的书籍</font>
+
+						<em>未透露</em>
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">业余爱好</font>
+
+						<em>未透露</em>
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">喜欢的旅游</font>
+
+						<em>未透露</em>
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">关注的节目</font>
+
+						<em>未透露</em>
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">娱乐休闲</font>
+
+						<em>未透露</em>
+					</p>
+
+				</div>
+
+			</div>
+
+			<!-- 个人资料结束 -->
+
+			<div class="make-upload" object="avatar" param="avatar"></div>
+
+			<div class="make-upload" object="album" param="album"></div>
+
+
+
+			<script src="/js/upload.js"></script>
+
+			<script type="text/javascript">
+
+				$(function() {
+
+					//判断照片是否超过10张
+
+					if($('.do-layer-file-upload').parents('ul').find('li').size() > 10) {
+
+						$('.do-layer-file-upload').hide();
+
+					}
+
+					//上传头像
+
+					$('.file-avatar').on('tap', '.do-avatar-upload', function(event) {
+
+						$('.make-upload').eq(0).find('input').click();
+
+					});
+
+					//上传背景
+
+					$('.file-area').on('tap', 'img', function(event) {
+
+						return false;
+
+					});
+
+					//变更背景
+
+					$('.file-total input').change(function() {
+
+						//文件上传判断
+
+						var chk = checkImgType(this);
+
+						if (!chk) {
+
+							return false;
+
+						}
+
+						$('.file-area img').attr('src', '/tmp/file-bg-1.png');
+
+					});
+
+					//弹窗
+
+					$('.do-layer-file-upload').click(function() {
+
+						$('.layer').fadeIn();
+
+					});
+
+					//本地上传
+
+					$('.do-upload').click(function() {
+
+						$('.make-upload').eq(1).find('input').click();
+
+					});
+
+					//导航栏显示/隐藏
+
+					$(window).scroll(function() {
+
+						var h = $(window).scrollTop();
+
+						if (h > $(window).height() / 2) {
+
+							$('header').removeClass('nav-hide');
+
+						} else {
+
+							$('header').addClass('nav-hide');
+
+						}
+
+					});
+
+					//关闭弹窗
+
+					$('.layer-close').click(function() {
+
+						$('.layer').fadeOut(300);
+
+					});
+
+				});
+
+			</script>
+
+
+
+			<link rel="stylesheet" type="text/css" href="/css/mui.previewimage.css" />
+
+			<script src="/js/mui.zoom.js"></script>
+
+			<script src="/js/mui.previewimage.js"></script>
+
+			<script>
+
+				mui.previewImage();
+
+			</script>
+
+		</div>
+
+		<!-- CNZZ代码 -->
+	<img src="http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself&rnd=69160430" width="0" height="0"/>	</body>
+	<!--引用自定义脚本-->
+	<script src="/js/core.js"></script> 
+
+
+	<!--引用自定义脚本-->
+
+	
+
+
+
+
+</html>
