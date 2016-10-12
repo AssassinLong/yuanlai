@@ -4,7 +4,7 @@ use app\model\userModel;
 use app\model\kModel;
 use core\lib\conf;
 use core\lib\model;
-session_start();
+
 class indexCtrl extends \core\imooc
 {
     //登录页面
@@ -15,6 +15,7 @@ class indexCtrl extends \core\imooc
     //验证登录
     public function login_in()
     {
+        session_start();
         $data['username']=post('username');
         $data['password']=post('password');
         //dump($data['username']);die;
@@ -22,9 +23,9 @@ class indexCtrl extends \core\imooc
 
             $model=new userModel();
             $arr=$model->user_phone($data);
-            //dump($arr);die;
+//            dump($arr);die;
             if($arr[0]['password']==$data['password']){
-
+                $_SESSION['username']=$arr[0]['name'];
                 jump('?r=home/index');
             }else{
 
@@ -38,7 +39,7 @@ class indexCtrl extends \core\imooc
             $arr=$model->user_email($data);
             //dump($arr);die;
             if($arr[0]['password']==$data['password']){
-
+                $_SESSION['username']=$arr[0]['name'];
                 jump('?r=home/index');
             }else{
 
@@ -48,9 +49,9 @@ class indexCtrl extends \core\imooc
 
             $model=new userModel();
             $arr=$model->user_name($data);
-            //dump($arr);die;
+//            dump($arr);die;
             if($arr[0]['password']==$data['password']){
-
+                $_SESSION['username']=$arr[0]['name'];
                 jump('?r=home/index');
             }else{
 
