@@ -23,17 +23,29 @@ class homeCtrl extends \core\imooc
     //
     public function datum()
     {
-        $this->display('datum.html');
+        if(isset($_SESSION['username'])){
+            $this->display('datum.html');
+        }else{
+            $this->display('login.html');
+        }
     }
     //内部搜索
     public function seek()
     {//echo '1';
-        $this->display('seek.html');
+        if(isset($_SESSION['username'])){
+            $this->display('seek.html');
+        }else{
+            $this->display('login.html');
+        }
     }
     //消息
     public function advices()
     {
-        $this->display('advices.html');
+        if(isset($_SESSION['username'])){
+            $this->display('advices.html');
+        }else{
+            $this->display('login.html');
+        }
     }
     //礼物(暂定)
     public function gift()
