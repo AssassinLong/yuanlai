@@ -174,7 +174,10 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/team\" class=\"link\">
+\t\t<a href=\"";
+        // line 159
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "fossa", array()), "html", null, true);
+        echo "\" class=\"link\">
 \t\t\t<span class=\"icon-team\"></span>
 \t\t\t<div class=\"mui-media-body\">红娘团队</div>
 \t\t</a>
@@ -271,9 +274,14 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
         return "index.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  179 => 159,  19 => 1,);
     }
 
     public function getSource()
@@ -436,7 +444,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/team\" class=\"link\">
+\t\t<a href=\"{{ url.fossa }}\" class=\"link\">
 \t\t\t<span class=\"icon-team\"></span>
 \t\t\t<div class=\"mui-media-body\">红娘团队</div>
 \t\t</a>
