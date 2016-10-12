@@ -11,7 +11,7 @@ class homeCtrl extends \core\imooc
     {
         if(isset($_SESSION['username'])){
         $url=array(
-            'fossa' => '?r=index/fossa'
+            'fossa' => '?r=home/fossa'
         );}else{
             $url=array(
                 'fossa' => '?r=index/login'
