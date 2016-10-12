@@ -1,0 +1,117 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+        <link rel="stylesheet" type="text/css" href="web/js/css.css">
+        <!--引用Jquery-->
+        <script src="web/js/jquery.js"></script>
+        <script src="web/js/min.js" /></script>
+	    <script src="web/js/core.js" /></script>
+        <script>
+            $(window).ready(function () {
+                (function ($) {
+                    $('body').on('tap', '.link', function (event) {
+                    var url = this.getAttribute('href');
+                    var blank = this.getAttribute('target');
+                    if (blank == '_blank') {
+                        window.open(url);
+                    } else {
+                        window.location.href = url;
+                    }
+                    });
+                })(mui);
+                var lab = document.getElementsByClassName('site-nav')[0];
+                if (lab) {
+                    var nav = getCookie('tab_item');
+                    if (nav) {
+                            var as = lab.getElementsByTagName('a');
+                            for (var i; i < as.length; i++) {
+                               as[i].className = 'link'
+                            }
+                            as[nav - 1].className = 'link mui-active'
+                    }
+                }
+                function getCookie(name) {
+                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                    if (arr = document.cookie.match(reg))
+                        return unescape(arr[2]);
+                    else
+                        return null;
+                }
+            })
+        </script>
+
+<title>编辑基本资料</title>
+</head>
+
+	<body class="backgroud-white">
+		<!-- 导航栏开始 -->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">基本资料</h1>
+			<a href="javascript:;" class="mui-btn-link mui-btn-nav mui-pull-right do-submit" ajax-url="" href-url="" dialog="保存成功">保存</a>
+		</header>
+		<!-- 导航栏结束 -->
+
+		<div class="mui-content">
+			<!-- 基本资料开始 -->
+			<form action="" method="post">
+				<div class="form form-search">
+					<div class="padding form-list">
+						<div class="mui-input-row">
+							<label>身高</label>
+							<font class="mui-pull-right">180CM</font>
+						</div>
+						<div id="CityPicker" class="mui-input-row">
+							<label>地区</label>
+							<font class="mui-pull-right">北京 - 北京</font>
+							<input name="provinceid" type="hidden" value="" />
+							<input name="cityid" type="hidden" value="" />
+						</div>
+						<div id="SalaryPicker" class="mui-input-row">
+							<label>月薪</label>
+							<font class="mui-pull-right">2000-5000</font>
+							<input name="salary" type="hidden" value="" />
+						</div>
+						<div id="AstroPicker" class="mui-input-row">
+							<label>星座</label>
+							<font class="mui-pull-right">处女座</font>
+							<input name="astro" type="hidden" value="" />
+						</div>
+						<div id="NationPicker" class="mui-input-row">
+							<label>籍贯</label>
+							<font class="mui-pull-right">-</font>
+							<input name="nationprovinceid" type="hidden" value="" />
+							<input name="nationcityid" type="hidden" value="" />
+						</div>
+						<div class="mui-input-row">
+							<label>学历</label>
+							<font class="mui-pull-right">初中</font>
+						</div>
+						<div id="MarryPicker" class="mui-input-row">
+							<label>婚姻状况</label>
+							<font class="mui-pull-right">未婚</font>
+							<input name="marrystatus" type="hidden" value="" />
+						</div>
+					</div>
+				</div>
+			</form>
+
+			
+			
+			<!-- 基本资料结束 -->
+		</div>
+		<!-- CNZZ代码 -->
+	<img src="http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself%2F377537.html&rnd=1671377287" width="0" height="0"/>	</body>
+	<!--引用自定义脚本-->
+	<script src="js/core1.js"></script> 
+	<!--引用自定义脚本-->
+	
+
+
+</html>

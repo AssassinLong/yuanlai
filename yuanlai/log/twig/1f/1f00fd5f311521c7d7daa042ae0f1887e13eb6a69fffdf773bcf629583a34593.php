@@ -231,7 +231,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<span class=\"dot dot-pink\"></span>
 
-\t\t\t\t\t\t<a href=\"http://m.7799520.com/edit/monolog\" class=\"link\">
+\t\t\t\t\t\t<a href=\"?r=fossa/dubai\" class=\"link\">
 
 \t\t\t\t\t\t\t<span class=\"mui-icon mui-icon-compose\"></span>
 
@@ -249,7 +249,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"http://m.7799520.com/edit/baseInfo\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"?r=fossa/jibenjieshao\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p><font class=\"mui-pull-left\">身高</font>180CM</p>
 
@@ -271,7 +271,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"http://m.7799520.com/edit/particular\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p>
 
@@ -307,7 +307,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"http://m.7799520.com/edit/live\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p>
 
@@ -358,66 +358,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t<h4>兴趣爱好<span class=\"dot dot-cyan\"></span><a href=\"http://m.7799520.com/edit/hobbies\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的运动</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的电影</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的食物</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-
-
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的书籍</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">业余爱好</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的旅游</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">关注的节目</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">娱乐休闲</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
+\t\t\t\t\t
 \t\t\t\t</div>
 
 \t\t\t</div>
@@ -783,7 +724,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<span class=\"dot dot-pink\"></span>
 
-\t\t\t\t\t\t<a href=\"http://m.7799520.com/edit/monolog\" class=\"link\">
+\t\t\t\t\t\t<a href=\"?r=fossa/dubai\" class=\"link\">
 
 \t\t\t\t\t\t\t<span class=\"mui-icon mui-icon-compose\"></span>
 
@@ -801,7 +742,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"http://m.7799520.com/edit/baseInfo\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"?r=fossa/jibenjieshao\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p><font class=\"mui-pull-left\">身高</font>180CM</p>
 
@@ -823,7 +764,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"http://m.7799520.com/edit/particular\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p>
 
@@ -859,7 +800,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"http://m.7799520.com/edit/live\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p>
 
@@ -910,66 +851,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t<h4>兴趣爱好<span class=\"dot dot-cyan\"></span><a href=\"http://m.7799520.com/edit/hobbies\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的运动</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的电影</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的食物</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-
-
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的书籍</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">业余爱好</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢的旅游</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">关注的节目</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">娱乐休闲</font>
-
-\t\t\t\t\t\t<em>未透露</em>
-\t\t\t\t\t</p>
-
+\t\t\t\t\t
 \t\t\t\t</div>
 
 \t\t\t</div>

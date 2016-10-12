@@ -47,7 +47,7 @@ class homeCtrl extends \core\imooc
     }
     //个人中心
     public function fossa()
-    {
+    {   
         $this->display('fossa.html');
     }
     public function shaixuan()
