@@ -3,14 +3,27 @@ namespace app\ctrl;
 use app\model\userModel;
 use core\lib\conf;
 use core\lib\model;
-
+session_start();
 class homeCtrl extends \core\imooc
 {
     //主页
     public function index()
     {
-      
+        if(isset($_SESSION['username'])){
+        $url=array(
+            'fossa' => '?r=index/fossa'
+        );}else{
+            $url=array(
+                'fossa' => '?r=index/login'
+            );
+        }
+      $this->assign('url',$url);
       $this->display('index.html');
+    }
+    //
+    public function datum()
+    {
+        $this->display('datum.html');
     }
     //内部搜索
     public function seek()
@@ -34,7 +47,7 @@ class homeCtrl extends \core\imooc
     }
     //个人中心
     public function fossa()
-    {
+    {   
         $this->display('fossa.html');
     }
     public function shaixuan()
