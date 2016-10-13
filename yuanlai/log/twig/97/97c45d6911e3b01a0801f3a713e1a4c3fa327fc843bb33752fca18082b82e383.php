@@ -28,8 +28,8 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
+        <script src=\"web/js/min.js\"  ></script>
+\t    <script src=\"web/js/core.js\" ></script>
         <script>
             \$(window).ready(function () {
                 (function (\$) {
@@ -93,9 +93,9 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 
 \t\t\t\t<div class=\"layer-file-upload\">
 
-\t\t\t\t\t<label class=\"layer-close\"><span class=\"mui-icon mui-icon-close\"></span></label>
+\t\t\t\t\t<label class=\"layer-close\"><span class=\"mui-icon mui-icon-close\">X</span></label>
 
-\t\t\t\t\t<img src=\"/img/upload.png\" />
+\t\t\t\t\t<img src=\"web/img/33.png\" />
 
 \t\t\t\t\t<p class=\"title\">上传照片</p>
 
@@ -200,7 +200,6 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 
 \t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 
-\t\t\t\t\t
 \t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"do-layer-file-upload\">
@@ -242,12 +241,12 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 \t\t\t\t\t</h4>
 
 \t\t\t\t\t<p class=\"mui-text-left\">
-
-\t\t\t\t\t\t我一直在这里，没有离开，我一直在等待，等着那个和我终生相伴相爱一生的你的出现。因缘而聚，我始终这样认为，所以觉得这里真的很好，美丽的缘分，也许就是给我的最美丽的暗示吧。</p>
-
+                        ";
+        // line 226
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["dubai"]) ? $context["dubai"] : null), "mono", array()), "html", null, true);
+        echo "
 \t\t\t\t\t</p>
 
-\t\t\t\t\t
 
 \t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"?r=fossa/jibenjieshao\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
@@ -502,9 +501,14 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
         return "fossa.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  246 => 226,  19 => 1,);
     }
 
     public function getSource()
@@ -521,8 +525,8 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
+        <script src=\"web/js/min.js\"  ></script>
+\t    <script src=\"web/js/core.js\" ></script>
         <script>
             \$(window).ready(function () {
                 (function (\$) {
@@ -586,9 +590,9 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 
 \t\t\t\t<div class=\"layer-file-upload\">
 
-\t\t\t\t\t<label class=\"layer-close\"><span class=\"mui-icon mui-icon-close\"></span></label>
+\t\t\t\t\t<label class=\"layer-close\"><span class=\"mui-icon mui-icon-close\">X</span></label>
 
-\t\t\t\t\t<img src=\"/img/upload.png\" />
+\t\t\t\t\t<img src=\"web/img/33.png\" />
 
 \t\t\t\t\t<p class=\"title\">上传照片</p>
 
@@ -693,7 +697,6 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 
 \t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 
-\t\t\t\t\t
 \t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"do-layer-file-upload\">
@@ -735,12 +738,9 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 \t\t\t\t\t</h4>
 
 \t\t\t\t\t<p class=\"mui-text-left\">
-
-\t\t\t\t\t\t我一直在这里，没有离开，我一直在等待，等着那个和我终生相伴相爱一生的你的出现。因缘而聚，我始终这样认为，所以觉得这里真的很好，美丽的缘分，也许就是给我的最美丽的暗示吧。</p>
-
+                        {{ dubai.mono }}
 \t\t\t\t\t</p>
 
-\t\t\t\t\t
 
 \t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"?r=fossa/jibenjieshao\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 

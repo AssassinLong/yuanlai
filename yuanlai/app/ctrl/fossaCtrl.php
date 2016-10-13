@@ -3,14 +3,31 @@
    use core\lib\model;
    use app\model\xiangModel;
    use app\model\shengModel;
-
+   use app\model\monoModel;
    session_start();
    class fossaCtrl extends \core\imooc
    {
 
        public function dubai()
        {
-           $this->display('dubai.html');
+           if(post('monolog')){
+               $data['text']=post('monolog');
+               $data['datatime']=date('Y-m-d H:i:s',time());
+               $data['u_id']=$_SESSION['id'];
+               //var_dump($data);
+               $model=new monoModel();
+               $str=$model->addOne($data);
+               //var_dump($str);
+               if($str>0){
+                   $model->save(['mono'=>$data['text']],['u_id'=>$data['u_id']]);
+                   echo '1';
+               }else{
+                   echo '0';
+               }
+           }else{
+
+               $this->display('dubai.html');
+           }
        }
        public function jibenjieshao()
        {
@@ -29,8 +46,6 @@
                 }else{
                     $this->display('xiangxiziliao.html');
                 }
-                
-
            }else{
 
                jump('?r=index/login');

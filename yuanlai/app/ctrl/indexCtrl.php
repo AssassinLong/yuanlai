@@ -27,6 +27,7 @@ class indexCtrl extends \core\imooc
             if($arr[0]['password']==$data['password']){
                 $_SESSION['username']=$arr[0]['name'];
                 $_SESSION['id']=$arr[0]['id'];
+
                 jump('?r=home/index');
             }else{
 

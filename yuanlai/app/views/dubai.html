@@ -10,9 +10,9 @@
         <link rel="stylesheet" type="text/css" href="web/js/css.css">
         <!--引用Jquery-->
         <script src="web/js/jquery.js"></script>
-        <script src="web/js/mui.js" /></script>
-	    <script src="web/js/core.js" /></script>
-       
+        <script src="web/js/mui.js" ></script>
+	    <script src="web/js/core.js" ></script>
+
 
 <title>编辑内心独白</title>
 </head>
@@ -20,7 +20,7 @@
 	<body class="backgroud-white">
 		<!-- 导航栏开始 -->
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="javascript:history.back(-1);"></a>
 			<h1 class="mui-title">内心独白</h1>
 		</header>
 		<!-- 导航栏结束 -->
@@ -28,13 +28,13 @@
 		<div class="mui-content">
 			<!-- 内心独白开始 -->
 			<div class="form form-list">
-				<form action="" method="post">
+				<form action="?r=fossa/dubai" method="post">
 					<div class="mui-input-row boder-none">
-						<textarea name="content" value="" rows="3" placeholder="我的内心独白">我一直在这里，没有离开，我一直在等待，等着那个和我终生相伴相爱一生的你的出现。因缘而聚，我始终这样认为，所以觉得这里真的很好，美丽的缘分，也许就是给我的最美丽的暗示吧。</textarea>
+						<textarea name="content" value="" rows="3" about="" required="required" placeholder="我的内心独白"></textarea>
 						<span class="mui-text-right mui-block"><span id="total">0</span>/<span id="limit"></span></span>
 					</div>
 					<div class="mui-button-row">
-						<button class="mui-btn mui-btn-warning mui-btn-block do-submit" type="button" ajax-url="http://m.7799520.com/edit/monolog" href-url="http://m.7799520.com/self/293411.html" dialog="保存成功">保存</button>
+						<button class="mui-btn mui-btn-warning mui-btn-block do-submit" type="button" ajax-url="?r=fossa/dubai" href-url="?r=home/fossa" dialog="保存成功">保存</button>
 					</div>
 				</form>
 			</div>
@@ -60,25 +60,27 @@
 						var ct = $('form textarea[name="content"]');
 						//判断内容是否填写
 						if (ct.val() == '') {
-							mui.toast('请填写内心独白');
+							alert('请填写内心独白');
 							ct.focus();
 							return false;
 						}
 						var url = $(this).attr('ajax-url');
 						var msg = $(this).attr('dialog');
 						var link = $(this).attr('href-url');
-						mui.ajax(url, {
+                        //alert(url);
+                        $.ajax(url, {
 							data: {
-								'monolog': ct.val(),
+								'monolog': ct.val()
 							},
-							dataType: 'json',
+							//dataType: 'json',
 							type: 'post',
 							success: function(data) {
-								if (data.status == 1) {
-									mui.toast(msg);
+                                //alert(data);
+								if (data == 1) {
+									alert(msg);
 									setTimeout("window.location.href='" + link + "';", 1000);
 								} else {
-									mui.toast('编辑内心独白失败');
+									alert('编辑内心独白失败');
 								}
 							},
 							error: function(xhr, type, errorThrown) {
