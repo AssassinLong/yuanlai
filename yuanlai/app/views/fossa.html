@@ -320,57 +320,89 @@
 					</p>
 
                     {% endif %}
+             
+
+                    
+                    {% if sheng %}
+                    {% for v in sheng %}
+                      <h4>生活描述<span class="dot dot-light-purple"></span><a href="?r=fossa/shenghuomiaoshu" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					
+
+					
+
+					<p>
+
+						<font class="mui-pull-left">是否吸烟</font>{{ v.smoke }}
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">是否喝酒</font>{{ v.drink }}
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">是否锻炼</font>{{ v.fitness }}
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">作息习惯</font>{{ v.rest }}
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">喜欢制造浪漫</font>{{ v.askchild }}
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">生活技能</font>{{ v.lifeskill }}
+					</p>
+
+                    {% endfor %}
+					{% else %}
 					<h4>生活描述<span class="dot dot-light-purple"></span><a href="?r=fossa/shenghuomiaoshu" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
 
+					
+
+					
+
 					<p>
 
-						<font class="mui-pull-left">家中排行</font>未透露
+						<font class="mui-pull-left">是否吸烟</font>未填写
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">最大消费</font>未透露
+						<font class="mui-pull-left">是否喝酒</font>未填写
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">是否吸烟</font>未透露
+						<font class="mui-pull-left">是否锻炼</font>未填写
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">锻炼习惯</font>未透露
+						<font class="mui-pull-left">作息习惯</font>未填写
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">是否喝酒</font>未透露
+						<font class="mui-pull-left">喜欢制造浪漫</font>未填写
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">作息习惯</font>未透露
-					</p>
-
-					<p>
-
-						<font class="mui-pull-left">喜欢制造浪漫</font>未透露
-					</p>
-
-					<p>
-
-						<font class="mui-pull-left">是否要孩子</font>未透露
-					</p>
-
-					<p>
-
-						<font class="mui-pull-left">生活技能</font>
-
-						<em>未透露</em>
+						<font class="mui-pull-left">生活技能</font>未填写
 					</p>
 
 					
 
+					
+                    {% endif %}
 					
 				</div>
 

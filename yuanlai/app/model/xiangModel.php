@@ -36,7 +36,7 @@ class xiangModel extends model
                ]);
             return $arr;
       }
-      public function xiang_update($data)
+      public function xiang_update($data,$id)
       {
           
             $arr = $this->update($this->table,[
@@ -46,6 +46,9 @@ class xiangModel extends model
                  "children" => $data['children'],
                  "vehicle" => $data['vehicle'],
                  "house" => $data['house'], 
+               ],[
+
+                  "u_id"=>$id
                ]);
             return $arr;
       }

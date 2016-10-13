@@ -12,7 +12,9 @@
         <script src="web/js/jquery.js"></script>
         <script src="web/js/mui.js" /></script>
 	    <script src="web/js/core.js" /></script>
-        
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <title>编辑生活描述</title>
 </head>
@@ -22,69 +24,49 @@
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">生活描述</h1>
-			<a href="javascript:;" class="mui-btn-link mui-btn-nav mui-pull-right do-submit" ajax-url="" href-url="" dialog="保存成功">保存</a>
+			
 		</header>
 		<!-- 导航栏结束 -->
 
 		<div class="mui-content">
 			<!-- 生活描述开始 -->
-			<form action="" method="post">
-				<div class="form form-search">
-					<div class="padding form-list">
-						<div id="HomePicker" class="mui-input-row">
-							<label>家中排行</label>
-							<font>未透露</font>
-							<input name="tophome" type="hidden" value="" />
-						</div>
-						<div id="ConsumePicker" class="mui-input-row">
-							<label>最大消费</label>
-							<font>未透露</font>
-							<input name="consume" type="hidden" value="" />
-						</div>
-						<div id="SmokePicker" class="mui-input-row">
-							<label>是否吸烟</label>
-							<font>未透露</font>
-							<input name="smoking" type="hidden" value="" />
-						</div>
-						<div id="FaithPicker" class="mui-input-row">
-							<label>宗教信仰</label>
-							<font>未透露</font>
-							<input name="faith" type="hidden" value="" />
-						</div>
-						<div id="WorkoutPicker" class="mui-input-row">
-							<label>锻炼习惯</label>
-							<font>未透露</font>
-							<input name="workout" type="hidden" value="" />
-						</div>
-						<div id="DrinkPicker" class="mui-input-row">
-							<label>是否喝酒</label>
-							<font>未透露</font>
-							<input name="drinking" type="hidden" value="" />
-						</div>
-						<div id="RestPicker" class="mui-input-row">
-							<label>作息习惯</label>
-							<font>未透露</font>
-							<input name="rest" type="hidden" value="" />
-						</div>
-						<div id="RomanticPicker" class="mui-input-row">
-							<label>喜欢制造浪漫</label>
-							<font>未透露</font>
-							<input name="romantic" type="hidden" value="" />
-						</div>
-						<div id="ChildrenPicker" class="mui-input-row">
-							<label>是否要孩子</label>
-							<font>未透露</font>
-							<input name="havechildren" type="hidden" value="" />
-						</div>
-						<div id="LivePicker" class="mui-input-row">
-							<label>与对方父母同住</label>
-							<font>未透露</font>
-							<input name="talive" type="hidden" value="" />
-						</div>
-						
-						
-					</div>
-				</div>
+			<form action="?r=fossa/sheng_add" method="post">
+			{% if re %}
+			   {% for v in re %}
+			    <span class="input-group-addon">是否吸烟</span>
+			    <input type="text" name="smoke" class="form-control" value="{{ v.smoke }}">
+			    <span class="input-group-addon">是否喝酒</span>
+			    <input type="text" name="drink" class="form-control" value="{{ v.drink }}">
+			    <span class="input-group-addon">锻炼习惯</span>
+			    <input type="text" name="fitness" class="form-control" value="{{ v.fitness }}">
+                <span class="input-group-addon">作息习惯</span>
+			    <input type="text" name="rest" class="form-control" value="{{ v.rest }}">
+				<span class="input-group-addon">是否喜爱浪漫</span>
+			    <input type="text" name="askchild" class="form-control" value="{{ v.askchild }}">
+			    <span class="input-group-addon">生活技能</span>
+			    <input type="text" name="lifeskill" class="form-control" value="{{ v.lifeskill }}">
+                <center>
+			    <input type="submit" value="完成">
+			    </center>
+			     {% endfor %}
+			   {% else %}
+
+                 <span class="input-group-addon">是否吸烟</span>
+			    <input type="text" name="smoke" class="form-control" value="">
+			    <span class="input-group-addon">是否喝酒</span>
+			    <input type="text" name="drink" class="form-control" value="">
+			    <span class="input-group-addon">锻炼习惯</span>
+			    <input type="text" name="fitness" class="form-control" value="">
+                <span class="input-group-addon">作息习惯</span>
+			    <input type="text" name="rest" class="form-control" value="">
+				<span class="input-group-addon">是否喜爱浪漫</span>
+			    <input type="text" name="askchild" class="form-control" value="">
+			    <span class="input-group-addon">生活技能</span>
+			    <input type="text" name="lifeskill" class="form-control" value="">
+                <center>
+			    <input type="submit" value="完成">
+			    </center> 
+			   {% endif %}
 			</form>
 
 			

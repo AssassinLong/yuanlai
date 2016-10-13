@@ -372,58 +372,124 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
                     ";
         }
         // line 323
-        echo "\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+        echo "             
+
+                    
+                    ";
+        // line 326
+        if ((isset($context["sheng"]) ? $context["sheng"] : null)) {
+            // line 327
+            echo "                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["sheng"]) ? $context["sheng"] : null));
+            foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
+                // line 328
+                echo "                      <h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+
+\t\t\t\t\t
+
+\t\t\t\t\t
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">家中排行</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否吸烟</font>";
+                // line 336
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "smoke", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">最大消费</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否喝酒</font>";
+                // line 341
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "drink", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">是否吸烟</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否锻炼</font>";
+                // line 346
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "fitness", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">锻炼习惯</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">作息习惯</font>";
+                // line 351
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "rest", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">是否喝酒</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢制造浪漫</font>";
+                // line 356
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "askchild", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">作息习惯</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">生活技能</font>";
+                // line 361
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "lifeskill", array()), "html", null, true);
+                echo "
+\t\t\t\t\t</p>
+
+                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['v'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 365
+            echo "\t\t\t\t\t";
+        } else {
+            // line 366
+            echo "\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+
+\t\t\t\t\t
+
+\t\t\t\t\t
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否吸烟</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢制造浪漫</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否喝酒</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">是否要孩子</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否锻炼</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">生活技能</font>
+\t\t\t\t\t\t<font class=\"mui-pull-left\">作息习惯</font>未填写
+\t\t\t\t\t</p>
 
-\t\t\t\t\t\t<em>未透露</em>
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢制造浪漫</font>未填写
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">生活技能</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t
 
 \t\t\t\t\t
+                    ";
+        }
+        // line 406
+        echo "\t\t\t\t\t
 \t\t\t\t</div>
 
 \t\t\t</div>
@@ -574,7 +640,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
     public function getDebugInfo()
     {
-        return array (  375 => 323,  339 => 289,  336 => 288,  327 => 285,  319 => 280,  311 => 275,  303 => 270,  295 => 265,  287 => 260,  281 => 256,  276 => 255,  274 => 254,  19 => 1,);
+        return array (  492 => 406,  450 => 366,  447 => 365,  437 => 361,  429 => 356,  421 => 351,  413 => 346,  405 => 341,  397 => 336,  387 => 328,  382 => 327,  380 => 326,  375 => 323,  339 => 289,  336 => 288,  327 => 285,  319 => 280,  311 => 275,  303 => 270,  295 => 265,  287 => 260,  281 => 256,  276 => 255,  274 => 254,  19 => 1,);
     }
 
     public function getSource()
@@ -901,57 +967,89 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t</p>
 
                     {% endif %}
+             
+
+                    
+                    {% if sheng %}
+                    {% for v in sheng %}
+                      <h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+
+\t\t\t\t\t
+
+\t\t\t\t\t
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否吸烟</font>{{ v.smoke }}
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否喝酒</font>{{ v.drink }}
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否锻炼</font>{{ v.fitness }}
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">作息习惯</font>{{ v.rest }}
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢制造浪漫</font>{{ v.askchild }}
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">生活技能</font>{{ v.lifeskill }}
+\t\t\t\t\t</p>
+
+                    {% endfor %}
+\t\t\t\t\t{% else %}
 \t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
+\t\t\t\t\t
+
+\t\t\t\t\t
+
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">家中排行</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否吸烟</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">最大消费</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否喝酒</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">是否吸烟</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">是否锻炼</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">锻炼习惯</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">作息习惯</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">是否喝酒</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢制造浪漫</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">作息习惯</font>未透露
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢制造浪漫</font>未透露
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">是否要孩子</font>未透露
-\t\t\t\t\t</p>
-
-\t\t\t\t\t<p>
-
-\t\t\t\t\t\t<font class=\"mui-pull-left\">生活技能</font>
-
-\t\t\t\t\t\t<em>未透露</em>
+\t\t\t\t\t\t<font class=\"mui-pull-left\">生活技能</font>未填写
 \t\t\t\t\t</p>
 
 \t\t\t\t\t
 
+\t\t\t\t\t
+                    {% endif %}
 \t\t\t\t\t
 \t\t\t\t</div>
 
