@@ -269,45 +269,110 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t
-
-\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t";
+        // line 254
+        if ((isset($context["re"]) ? $context["re"] : null)) {
+            // line 255
+            echo "                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["re"]) ? $context["re"] : null));
+            foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
+                // line 256
+                echo "\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">生肖</font>狗
+\t\t\t\t\t\t<font class=\"mui-pull-left\">生肖</font>";
+                // line 260
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "nature", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">血型</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">血型</font>";
+                // line 265
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "bloodtype", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">民族</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">民族</font>";
+                // line 270
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "nation", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">有无子女</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">有无子女</font>";
+                // line 275
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "children", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">购车情况</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">购车情况</font>";
+                // line 280
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "vehicle", array()), "html", null, true);
+                echo "
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">住房情况</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">住房情况</font>";
+                // line 285
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "house", array()), "html", null, true);
+                echo "
+\t\t\t\t\t</p>
+                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['v'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 288
+            echo "\t\t\t\t\t";
+        } else {
+            // line 289
+            echo " 
+\t\t\t\t\t <h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">生肖</font>未填写
 \t\t\t\t\t</p>
 
-\t\t\t\t\t
+\t\t\t\t\t<p>
 
-\t\t\t\t\t
+\t\t\t\t\t\t<font class=\"mui-pull-left\">血型</font>未填写
+\t\t\t\t\t</p>
 
-\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">民族</font>未填写
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">有无子女</font>未填写
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">购车情况</font>未填写
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">住房情况</font>未填写
+\t\t\t\t\t</p>
+
+                    ";
+        }
+        // line 323
+        echo "\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p>
 
@@ -502,9 +567,14 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
         return "fossa.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  375 => 323,  339 => 289,  336 => 288,  327 => 285,  319 => 280,  311 => 275,  303 => 270,  295 => 265,  287 => 260,  281 => 256,  276 => 255,  274 => 254,  19 => 1,);
     }
 
     public function getSource()
@@ -762,44 +832,75 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t
 
-\t\t\t\t\t
-
+\t\t\t\t\t{% if re %}
+                    {% for v in re %}
 \t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">生肖</font>狗
+\t\t\t\t\t\t<font class=\"mui-pull-left\">生肖</font>{{ v.nature }}
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">血型</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">血型</font>{{ v.bloodtype }}
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">民族</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">民族</font>{{ v.nation }}
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">有无子女</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">有无子女</font>{{ v.children }}
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">购车情况</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">购车情况</font>{{ v.vehicle }}
 \t\t\t\t\t</p>
 
 \t\t\t\t\t<p>
 
-\t\t\t\t\t\t<font class=\"mui-pull-left\">住房情况</font>未透露
+\t\t\t\t\t\t<font class=\"mui-pull-left\">住房情况</font>{{ v.house }}
+\t\t\t\t\t</p>
+                    {% endfor %}
+\t\t\t\t\t{% else %}
+ 
+\t\t\t\t\t <h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">生肖</font>未填写
 \t\t\t\t\t</p>
 
-\t\t\t\t\t
+\t\t\t\t\t<p>
 
-\t\t\t\t\t
+\t\t\t\t\t\t<font class=\"mui-pull-left\">血型</font>未填写
+\t\t\t\t\t</p>
 
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">民族</font>未填写
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">有无子女</font>未填写
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">购车情况</font>未填写
+\t\t\t\t\t</p>
+
+\t\t\t\t\t<p>
+
+\t\t\t\t\t\t<font class=\"mui-pull-left\">住房情况</font>未填写
+\t\t\t\t\t</p>
+
+                    {% endif %}
 \t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t<p>

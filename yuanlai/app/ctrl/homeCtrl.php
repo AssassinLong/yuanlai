@@ -1,6 +1,7 @@
 <?php
 namespace app\ctrl;
 use app\model\userModel;
+use app\model\xiangModel;
 use core\lib\conf;
 use core\lib\model;
 session_start();
@@ -60,7 +61,15 @@ class homeCtrl extends \core\imooc
     //个人中心
     public function fossa()
     {   
-        $this->display('fossa.html');
+        $model=new xiangModel();
+        $id=$_SESSION['id'];
+        $re=$model->xiang($id); 
+        if($re){
+            $this->assign('re',$re);
+            $this->display('fossa.html');
+        }else{
+            $this->display('fossa.html');
+        }
     }
     public function shaixuan()
     {

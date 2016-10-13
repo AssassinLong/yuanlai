@@ -23,9 +23,10 @@ class indexCtrl extends \core\imooc
 
             $model=new userModel();
             $arr=$model->user_phone($data);
-//            dump($arr);die;
+            //dump($arr);die;
             if($arr[0]['password']==$data['password']){
                 $_SESSION['username']=$arr[0]['name'];
+                $_SESSION['id']=$arr[0]['id'];
                 jump('?r=home/index');
             }else{
 
@@ -40,6 +41,7 @@ class indexCtrl extends \core\imooc
             //dump($arr);die;
             if($arr[0]['password']==$data['password']){
                 $_SESSION['username']=$arr[0]['name'];
+                $_SESSION['id']=$arr[0]['id'];
                 jump('?r=home/index');
             }else{
 
@@ -52,6 +54,8 @@ class indexCtrl extends \core\imooc
 //            dump($arr);die;
             if($arr[0]['password']==$data['password']){
                 $_SESSION['username']=$arr[0]['name'];
+                $_SESSION['id']=$arr[0]['id'];
+                //dump($data);
                 jump('?r=home/index');
             }else{
 

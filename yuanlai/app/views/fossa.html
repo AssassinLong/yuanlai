@@ -251,44 +251,75 @@
 
 					
 
-					
-
+					{% if re %}
+                    {% for v in re %}
 					<h4>详细资料<span class="dot dot-light-purple"></span><a href="?r=fossa/xiangxijieshao" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
 
 					<p>
 
-						<font class="mui-pull-left">生肖</font>狗
+						<font class="mui-pull-left">生肖</font>{{ v.nature }}
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">血型</font>未透露
+						<font class="mui-pull-left">血型</font>{{ v.bloodtype }}
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">民族</font>未透露
+						<font class="mui-pull-left">民族</font>{{ v.nation }}
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">有无子女</font>未透露
+						<font class="mui-pull-left">有无子女</font>{{ v.children }}
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">购车情况</font>未透露
+						<font class="mui-pull-left">购车情况</font>{{ v.vehicle }}
 					</p>
 
 					<p>
 
-						<font class="mui-pull-left">住房情况</font>未透露
+						<font class="mui-pull-left">住房情况</font>{{ v.house }}
+					</p>
+                    {% endfor %}
+					{% else %}
+ 
+					 <h4>详细资料<span class="dot dot-light-purple"></span><a href="?r=fossa/xiangxijieshao" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+
+					<p>
+
+						<font class="mui-pull-left">生肖</font>未填写
 					</p>
 
-					
+					<p>
 
-					
+						<font class="mui-pull-left">血型</font>未填写
+					</p>
 
+					<p>
+
+						<font class="mui-pull-left">民族</font>未填写
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">有无子女</font>未填写
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">购车情况</font>未填写
+					</p>
+
+					<p>
+
+						<font class="mui-pull-left">住房情况</font>未填写
+					</p>
+
+                    {% endif %}
 					<h4>生活描述<span class="dot dot-light-purple"></span><a href="?r=fossa/shenghuomiaoshu" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
 
 					<p>
