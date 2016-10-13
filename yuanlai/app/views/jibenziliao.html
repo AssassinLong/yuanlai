@@ -1,117 +1,490 @@
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<!--标准mui.css-->
-        <link rel="stylesheet" type="text/css" href="web/js/css.css">
-        <!--引用Jquery-->
-        <script src="web/js/jquery.js"></script>
-        <script src="web/js/min.js" /></script>
-	    <script src="web/js/core.js" /></script>
-        <script>
-            $(window).ready(function () {
-                (function ($) {
-                    $('body').on('tap', '.link', function (event) {
-                    var url = this.getAttribute('href');
-                    var blank = this.getAttribute('target');
-                    if (blank == '_blank') {
-                        window.open(url);
-                    } else {
-                        window.location.href = url;
-                    }
-                    });
-                })(mui);
-                var lab = document.getElementsByClassName('site-nav')[0];
-                if (lab) {
-                    var nav = getCookie('tab_item');
-                    if (nav) {
-                            var as = lab.getElementsByTagName('a');
-                            for (var i; i < as.length; i++) {
-                               as[i].className = 'link'
-                            }
-                            as[nav - 1].className = 'link mui-active'
-                    }
-                }
-                function getCookie(name) {
-                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-                    if (arr = document.cookie.match(reg))
-                        return unescape(arr[2]);
-                    else
-                        return null;
-                }
-            })
-        </script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!--标准mui.css-->
+	<link rel="stylesheet" type="text/css" href="web/js/css.css">
+	<!--引用Jquery-->
 
-<title>编辑基本资料</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+	<script src="web/js/jquery.js"></script>
+	<script src="web/js/min.js" /></script>
+	<script src="web/js/core.js" /></script>
+	<script>
+		$(window).ready(function () {
+			(function ($) {
+				$('body').on('tap', '.link', function (event) {
+					var url = this.getAttribute('href');
+					var blank = this.getAttribute('target');
+					if (blank == '_blank') {
+						window.open(url);
+					} else {
+						window.location.href = url;
+					}
+				});
+			})(mui);
+			var lab = document.getElementsByClassName('site-nav')[0];
+			if (lab) {
+				var nav = getCookie('tab_item');
+				if (nav) {
+					var as = lab.getElementsByTagName('a');
+					for (var i; i < as.length; i++) {
+						as[i].className = 'link'
+					}
+					as[nav - 1].className = 'link mui-active'
+				}
+			}
+			function getCookie(name) {
+				var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+				if (arr = document.cookie.match(reg))
+					return unescape(arr[2]);
+				else
+					return null;
+			}
+		})
+	</script>
+
+	<title>编辑基本资料</title>
 </head>
 
-	<body class="backgroud-white">
-		<!-- 导航栏开始 -->
-		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">基本资料</h1>
-			<a href="javascript:;" class="mui-btn-link mui-btn-nav mui-pull-right do-submit" ajax-url="" href-url="" dialog="保存成功">保存</a>
-		</header>
-		<!-- 导航栏结束 -->
+<body class="backgroud-white">
+<!-- 导航栏开始 -->
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<h1 class="mui-title">基本资料</h1>
 
-		<div class="mui-content">
-			<!-- 基本资料开始 -->
-			<form action="" method="post">
-				<div class="form form-search">
-					<div class="padding form-list">
-						<div class="mui-input-row">
-							<label>身高</label>
-							<font class="mui-pull-right">180CM</font>
-						</div>
-						<div id="CityPicker" class="mui-input-row">
-							<label>地区</label>
-							<font class="mui-pull-right">北京 - 北京</font>
-							<input name="provinceid" type="hidden" value="" />
-							<input name="cityid" type="hidden" value="" />
-						</div>
-						<div id="SalaryPicker" class="mui-input-row">
-							<label>月薪</label>
-							<font class="mui-pull-right">2000-5000</font>
-							<input name="salary" type="hidden" value="" />
-						</div>
-						<div id="AstroPicker" class="mui-input-row">
-							<label>星座</label>
-							<font class="mui-pull-right">处女座</font>
-							<input name="astro" type="hidden" value="" />
-						</div>
-						<div id="NationPicker" class="mui-input-row">
-							<label>籍贯</label>
-							<font class="mui-pull-right">-</font>
-							<input name="nationprovinceid" type="hidden" value="" />
-							<input name="nationcityid" type="hidden" value="" />
-						</div>
-						<div class="mui-input-row">
-							<label>学历</label>
-							<font class="mui-pull-right">初中</font>
-						</div>
-						<div id="MarryPicker" class="mui-input-row">
-							<label>婚姻状况</label>
-							<font class="mui-pull-right">未婚</font>
-							<input name="marrystatus" type="hidden" value="" />
-						</div>
-					</div>
-				</div>
-			</form>
+</header>
+<!-- 导航栏结束 -->
 
-			
-			
-			<!-- 基本资料结束 -->
+<div class="mui-content">
+	<!-- 基本资料开始 -->
+
+
+
+	<!--<center>-->
+	<!--<label id="s1">身高</label>-->
+	<!--<span id="content1"></span><input type="text" style="display:none" id="shengao">-->
+	<!--<label id="s2">地区</label>-->
+	<!--<span id="content2"></span><input type="text" style="display:none" id="diqu">-->
+	<!--<label id="s3">月薪</label>-->
+	<!--<span id="content3"></span><input type="text" style="display:none" id="yuexin">-->
+	<!--<label id="s4">星座</label>-->
+	<!--<span id="content4"></span><input type="text" style="display:none" id="xinzuo">-->
+	<!--<label id="s5">籍贯</label>-->
+	<!--<span id="content5"></span><input type="text" style="display:none" id="jiguan">-->
+	<!--<label id="s6">学历</label>-->
+	<!--<span id="content6"></span><input type="text" style="display:none" id="xueli">-->
+	<!--<label id="s7">婚姻状况</label>-->
+	<!--<span id="content7"></span><input type="text" style="display:none" id="hunyin">-->
+	<!--</center>-->
+	<form action="" method="post">
+		{% for var in arr%}
+		<div class="form form-search">
+
+			<span class="input-group-addon">地区</span>
+			{% if var.region %}
+			<span id="s1">{{ var.region }}</span><input type="text" name="nature" onblur="check_a()" id="di" style="display:none" class="form-control" value="{{ var.region }}">
+			{% else %}
+			<span id="s11">未填写</span><input type="text" name="nature" id="di1" onblur="check_a1()" style="display:none" class="form-control" value="">
+			{% endif %}
+			<!--<input type="text" name="bloodtype" class="form-control" value="{{ v.bloodtype }}">-->
+			<span class="input-group-addon">月薪</span>
+			{% if var.pay %}
+			<span id="s2">{{ var.pay }}</span><input type="text" name="nature" id="yue" onblur="check_b()" style="display:none" class="form-control" value="{{ var.pay }}">
+			{% else %}
+			<span id="s21">未填写</span><input type="text" name="nature" id="yue1" onblur="check_b1()" style="display:none" class="form-control" value="">
+			{% endif %}
+			<!--<input type="text" name="nation" class="form-control" value="{{ v.nation }}">-->
+			<span class="input-group-addon">星座</span>
+			{% if var.constellation %}
+			<span id="s3">{{ var.constellation }}</span><input type="text" id="xing" onblur="check_c()" name="nature" class="form-control" style="display:none" value="{{ var.constellation }}">
+			{% else %}
+			<span id="s31">未填写</span><input type="text" name="nature" id="xing1" onblur="check_c1()" style="display:none" class="form-control" value="">
+			{% endif %}
+			<!--<input type="text" name="children" class="form-control" value="{{ v.children }}">-->
+			<span class="input-group-addon">籍贯</span>
+			{% if var.native %}
+			<span id="s4">{{ var.native }}</span><input type="text" name="nature" id="ji" onblur="check_d()"  style="display:none" class="form-control" value="{{ var.native }}">
+			{% else %}
+			<span id="s41">未填写</span><input type="text" name="nature" id="ji1" onblur="check_d1()" style="display:none" class="form-control" value="">
+			{% endif %}
+			<!--<input type="text" name="vehicle" class="form-control" value="{{ v.vehicle }}">-->
+			<span class="input-group-addon">学历</span>
+			{% if var.record %}
+			<span id="s5">{{ var.record }}</span><input type="text" name="nature" id="xue" onblur="check_e()"  style="display:none" class="form-control" value="{{ var.record }}">
+			{% else %}
+			<span id="s51">未填写</span><input type="text" name="nature" id="xue1" onblur="check_e1()" style="display:none" class="form-control" value="">
+			{% endif %}
+			<!--<input type="text" name="house" class="form-control" value="{{ v.house }}">-->
+			<span class="input-group-addon">婚姻状况</span>
+			{% if var.marital %}
+			<span id="s6">{{ var.marital }}</span><input type="text" name="nature" id="hun"  onblur="check_f()" class="form-control"  style="display:none" value="{{ var.marital }}">
+			{% else %}
+			<span id="s61">未填写</span><input type="text" name="nature" id="hun1" onblur="check_f1()" style="display:none" class="form-control" value="">
+			{% endif %}
+			<!--<input type="text" name="house" class="form-control" value="{{ v.house }}">-->
 		</div>
-		<!-- CNZZ代码 -->
-	<img src="http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself%2F377537.html&rnd=1671377287" width="0" height="0"/>	</body>
-	<!--引用自定义脚本-->
-	<script src="js/core1.js"></script> 
-	<!--引用自定义脚本-->
-	
+		{% endfor %}
+	</form>
+
+
+
+	<!-- 基本资料结束 -->
+</div>
+<!-- CNZZ代码 -->
+<img src="http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself%2F377537.html&rnd=1671377287" width="0" height="0"/>	</body>
+<!--引用自定义脚本-->
+<script src="js/core1.js"></script>
+<!--引用自定义脚本-->
+<script>
+	/*婚姻状况*/
+	$("#s61").click(function(){
+		$("#s61").hide();
+		$("#hun1").show();
+		$("#hun1").focus();
+	})
+	function check_f1(){
+		hun=$("#hun1").val();
+		if(hun==''){
+			$("#s61").show();
+			$("#hun1").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"hun="+hun,
+				url:"?r=fossa/xiu1",
+				success:function(e){
+					if(e==2){
+						$("#s61").show();
+						$("#hun1").hide();
+					}else{
+						$("#s61").html(e).show();
+						$("#hun1").hide();
+					}
+				}
+			})
+		}
+	}
+	$("#s6").click(function(){
+		$("#s6").hide();
+		$("#hun").show();
+		$("#hun").focus();
+	})
+	function check_f(){
+		hun=$("#hun").val();
+		if(hun==''){
+			$("#s6").show();
+			$("#hun").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"hun="+hun,
+				url:"?r=fossa/xiu1",
+				success:function(e){
+					if(e==2){
+						$("#s6").show();
+						$("#hun").hide();
+					}else{
+						$("#s6").html(e).show();
+						$("#hun").hide();
+					}
+				}
+			})
+		}
+	}
+	/*学历*/
+	$("#s51").click(function(){
+		$("#s51").hide();
+		$("#xue1").show();
+		$("#xue1").focus();
+	})
+	function check_e1(){
+		xue=$("#xue1").val();
+		if(xue==''){
+			$("#s51").show();
+			$("#xue1").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"xue="+xue,
+				url:"?r=fossa/xiu9",
+				success:function(e){
+					if(e==2){
+						$("#s51").show();
+						$("#xue1").hide();
+					}else{
+						$("#s51").html(e).show();
+						$("#xue1").hide();
+					}
+				}
+			})
+		}
+	}
+	$("#s5").click(function(){
+		$("#s5").hide();
+		$("#xue").show();
+		$("#xue").focus();
+	})
+	function check_e(){
+		xue=$("#xue").val();
+		if(xue==''){
+			$("#s5").show();
+			$("#xue").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"xue="+xue,
+				url:"?r=fossa/xiu9",
+				success:function(e){
+					if(e==2){
+						$("#s5").show();
+						$("#xue").hide();
+					}else{
+						$("#s5").html(e).show();
+						$("#xue").hide();
+					}
+				}
+			})
+		}
+	}
+
+
+	/*籍贯*/
+	$("#s41").click(function(){
+		$("#s41").hide();
+		$("#ji1").show();
+		$("#ji1").focus();
+	})
+	function check_d1(){
+		ji=$("#ji1").val();
+		if(ji==''){
+			$("#s41").show();
+			$("#ji1").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"ji="+ji,
+				url:"?r=fossa/xiu7",
+				success:function(e){
+					if(e==2){
+						$("#s41").show();
+						$("#ji1").hide();
+					}else{
+						$("#s41").html(e).show();
+						$("#ji1").hide();
+					}
+				}
+			})
+		}
+	}
+	$("#s4").click(function(){
+		$("#s4").hide();
+		$("#ji").show();
+		$("#ji").focus();
+	})
+	function check_d(){
+		ji=$("#ji").val();
+		if(ji==''){
+			$("#s4").show();
+			$("#ji").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"ji="+ji,
+				url:"?r=fossa/xiu7",
+				success:function(e){
+					if(e==2){
+						$("#s4").show();
+						$("#ji").hide();
+					}else{
+						$("#s4").html(e).show();
+						$("#ji").hide();
+					}
+				}
+			})
+		}
+	}
+	/*星座值*/
+	$("#s3").click(function(){
+		$("#s3").hide();
+		$("#xing").show();
+		$("#xing").focus();
+	})
+	function check_c(){
+		xing=$("#xing").val();
+		if(xing==''){
+			$("#s3").show();
+			$("#xing").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"xing="+xing,
+				url:"?r=fossa/xiu6",
+				success:function(e){
+					if(e==2){
+						$("#s3").show();
+						$("#xing").hide();
+					}else{
+						$("#s3").html(e).show();
+						$("#xing").hide();
+					}
+				}
+			})
+		}
+	}
+	/*星座*/
+	$("#s31").click(function(){
+		$("#s31").hide();
+		$("#xing1").show();
+		$("#xing1").focus();
+	})
+	function check_c1(){
+		xing=$("#xing1").val();
+		if(xing==''){
+			$("#s31").show();
+			$("#xing1").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"xing="+xing,
+				url:"?r=fossa/xiu6",
+				success:function(e){
+					if(e==2){
+						$("#s31").show();
+						$("#xing1").hide();
+					}else{
+						$("#s31").html(e).show();
+						$("#xing1").hide();
+					}
+				}
+			})
+		}
+	}
+
+
+	/*地区有值*/
+	$("#s1").click(function(){
+		$("#s1").hide();
+		$("#di").show();
+		$("#di").focus();
+	})
+	function check_a(){
+		di=$("#di").val();
+		if(di==''){
+			$("#s1").show();
+			$("#di").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"di="+di,
+				url:"?r=fossa/xiu3",
+				success:function(e){
+					if(e==2){
+						$("#s1").show();
+						$("#di").hide();
+					}else{
+						$("#s1").html(e).show();
+						$("#di").hide();
+					}
+				}
+			})
+		}
+	}
+	/*地区为空*/
+	$("#s11").click(function(){
+		$("#s11").hide();
+		$("#di1").show();
+		$("#di1").focus();
+	})
+	function check_a1(){
+		di=$("#di1").val();
+		if(di==''){
+			$("#s11").show();
+			$("#di1").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"di="+di,
+				url:"?r=fossa/xiu3",
+				success:function(e){
+					if(e==2){
+						$("#s11").show();
+						$("#di1").hide();
+					}else{
+						$("#s11").html(e).show();
+						$("#di1").hide();
+					}
+				}
+			})
+		}
+	}
+
+	/*月薪*/
+	$("#s21").click(function(){
+		$("#s21").hide();
+		$("#yue1").show();
+		$("#yue1").focus();
+	})
+	function check_b1(){
+		yue1=$("#yue1").val();
+		if(yue1==''){
+			$("#s21").show();
+			$("#yue1").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"yue1="+yue1,
+				url:"?r=fossa/xiu2",
+				success:function(e){
+					if(e==2){
+						$("#s21").show();
+						$("#yue1").hide();
+					}else{
+						$("#s21").html(e).show();
+						$("#yue1").hide();
+					}
+				}
+			})
+		}
+	}
+	/*月薪有值*/
+	$("#s2").click(function(){
+		$("#s2").hide();
+		$("#yue").show();
+		$("#yue").focus();
+	})
+	function check_b(){
+		yue=$("#yue").val();
+		if(yue==''){
+			$("#s2").show();
+			$("#yue").hide();
+		}else{
+			$.ajax({
+				type:"post",
+				data:"yue="+yue,
+				url:"?r=fossa/xiu2",
+				success:function(e){
+					if(e==2){
+						$("#s2").show();
+						$("#yue").hide();
+					}else{
+						$("#s2").html(e).show();
+						$("#yue").hide();
+					}
+				}
+			})
+		}
+	}
+</script>
 
 
 </html>

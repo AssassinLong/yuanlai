@@ -5,6 +5,7 @@ use core\lib\model;
 use app\model\userModel;
 use app\model\xiangModel;
 use app\model\shengModel;
+use app\model\basicdataModel;
 use app\model\monoModel;
 session_start();
 class homeCtrl extends \core\imooc
@@ -63,6 +64,13 @@ class homeCtrl extends \core\imooc
 
             $this->assign('sheng',$sheng);
         }
+        $data=array("u_id"=>$id);
+        $model=new basicdataModel();
+        $arras=$model->userOne1($data);
+        if($arras){
+            $this->assign('arras',$arras);
+        }
+//        print_r($arras);die;
         $mono=new monoModel();
         $dubai=$mono->getOne(['u_id'=>$id]);
         $this->assign('dubai',$dubai);

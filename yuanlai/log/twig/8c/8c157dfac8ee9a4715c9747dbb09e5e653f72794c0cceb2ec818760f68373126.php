@@ -1,7 +1,7 @@
 <?php
 
 /* dubai.html */
-class __TwigTemplate_a8a05c363801f71461ba4599b79bf95caf88eb5560cbe0a54eac2d96af94f66d extends Twig_Template
+class __TwigTemplate_49a72fae05eb3566c426644d9e9632a0c46c3f6a85ae8b01f61b346c1e45a2e2 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {

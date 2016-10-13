@@ -229,23 +229,48 @@
 
 					<h4>基本资料<span class="dot dot-orange"></span><a class="link" href="?r=fossa/jibenjieshao"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
 
-					<p><font class="mui-pull-left">身高</font>180CM</p>
-
-					<p><font class="mui-pull-left">地区</font>北京-北京</p>
-
-					<p><font class="mui-pull-left">月薪</font>2000-5000</p>
-
-					<p><font class="mui-pull-left">星座</font>处女座</p>
-
+					{% for vv in arras %}
+					{% if vv.region %}
+					<p><font class="mui-pull-left">地区</font>{{ vv.region }}</p>
+					{% else %}
+					<p><font class="mui-pull-left">地区</font>未填写</p>
+					{% endif %}
+					{% if vv.pay %}
+					<p><font class="mui-pull-left">月薪</font>{{ vv.pay }}</p>
+					{% else %}
+					<p><font class="mui-pull-left">月薪</font>未填写</p>
+					{% endif %}
+					{% if vv.constellation %}
+					<p><font class="mui-pull-left">星座</font>{{ vv.constellation }}</p>
+					{% else %}
+					<p><font class="mui-pull-left">星座</font>未填写</p>
+					{% endif %}
+					{% if vv.native %}
 					<p><font class="mui-pull-left">籍贯</font>
 
-														未透露
-						
-					<p><font class="mui-pull-left">学历</font>大专</p>
+						{{ vv.native }}
 
-					<p><font class="mui-pull-left">婚姻状况</font>未婚</p>
+					</p>
+					{% else %}
+					<p><font class="mui-pull-left">籍贯</font>
 
-					
+						未填写</p>
+					{% endif %}
+					{% if vv.record %}
+					<p><font class="mui-pull-left">学历</font>{{ vv.record }}</p>
+					{% else %}
+					<p><font class="mui-pull-left">学历</font>未填写</p>
+					{% endif %}
+					{% if vv.marital %}
+					<p><font class="mui-pull-left">婚姻状况</font>{{ vv.marital }}</p>
+					{% else %}
+					<p><font class="mui-pull-left">婚姻状况</font>未填写</p>
+
+					{% endif%}
+                   {% endfor %}
+
+
+
 
 					{% if re %}
                     {% for v in re %}
