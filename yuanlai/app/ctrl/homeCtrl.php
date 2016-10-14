@@ -76,6 +76,12 @@ class homeCtrl extends \core\imooc
         $this->assign('dubai',$dubai);
         $this->display('fossa.html');
     }
+    public function upload()
+    {
+         $data['imgfile']=post('imgfile');
+         $data['imgType']=post('imgType');
+         dump($data);die;
+    }
     public function shaixuan()
     {
         $this->display('shaixuan.html');

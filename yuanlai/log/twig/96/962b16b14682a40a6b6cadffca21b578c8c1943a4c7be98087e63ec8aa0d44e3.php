@@ -156,9 +156,9 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t\t\t<div class=\"index-ico\">
 \t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t<a href=\"?r=home/seek\" class=\"link\">
 \t\t\t<span class=\"icon-coffee\"></span>
-\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t\t<div class=\"mui-media-body\">推荐会员</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -426,9 +426,9 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t\t\t<div class=\"index-ico\">
 \t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t<a href=\"?r=home/seek\" class=\"link\">
 \t\t\t<span class=\"icon-coffee\"></span>
-\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t\t<div class=\"mui-media-body\">推荐会员</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">

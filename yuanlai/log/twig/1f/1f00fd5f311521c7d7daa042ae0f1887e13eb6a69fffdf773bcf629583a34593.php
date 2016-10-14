@@ -585,7 +585,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 
 
-\t\t\t<script src=\"/js/upload.js\"></script>
+\t\t<script src=\"web/js/uplod.js\"></script>
 
 \t\t\t<script type=\"text/javascript\">
 
@@ -679,26 +679,9 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t</script>
 
-
-
-\t\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/mui.previewimage.css\" />
-
-\t\t\t<script src=\"/js/mui.zoom.js\"></script>
-
-\t\t\t<script src=\"/js/mui.previewimage.js\"></script>
-
-\t\t\t<script>
-
-\t\t\t\tmui.previewImage();
-
-\t\t\t</script>
-
 \t\t</div>
 
-\t\t<!-- CNZZ代码 -->
-\t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself&rnd=69160430\" width=\"0\" height=\"0\"/>\t</body>
-\t<!--引用自定义脚本-->
-\t<script src=\"/js/core.js\"></script> 
+\t
 
 
 \t<!--引用自定义脚本-->
@@ -1167,7 +1150,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 
 
-\t\t\t<script src=\"/js/upload.js\"></script>
+\t\t<script src=\"web/js/uplod.js\"></script>
 
 \t\t\t<script type=\"text/javascript\">
 
@@ -1261,26 +1244,9 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t</script>
 
-
-
-\t\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/mui.previewimage.css\" />
-
-\t\t\t<script src=\"/js/mui.zoom.js\"></script>
-
-\t\t\t<script src=\"/js/mui.previewimage.js\"></script>
-
-\t\t\t<script>
-
-\t\t\t\tmui.previewImage();
-
-\t\t\t</script>
-
 \t\t</div>
 
-\t\t<!-- CNZZ代码 -->
-\t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself&rnd=69160430\" width=\"0\" height=\"0\"/>\t</body>
-\t<!--引用自定义脚本-->
-\t<script src=\"/js/core.js\"></script> 
+\t
 
 
 \t<!--引用自定义脚本-->
