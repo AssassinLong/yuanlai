@@ -91,18 +91,16 @@
 		<div class="form form-search">
 			<span class="input-group-addon">年龄</span>
 			{% if var.age %}
-			<span id="a1">{{ var.age }}</span><input type="text" name="nature" onblur="check_r()" id="age" style="display:none" class="form-control" value="{{ var.region }}">
+			<span id="a1">{{ var.age }}</span><input type="text" name="nature" onblur="check_v()" id="age" style="display:none" class="form-control" value="{{ var.age }}">
 			{% else %}
-			<span id="a11">未填写</span><input type="text" name="nature" id="age1" onblur="check_r1()" style="display:none" class="form-control" value="">
+			<span id="a11">未填写</span><input type="text" name="nature" id="age1" onblur="check_v1()" style="display:none" class="form-control" value="">
 			{% endif %}
-			<div class="form form-search">
 				<span class="input-group-addon">性别</span>
 				{% if var.sex %}
-				<span id="a2">{{ var.sex }}</span><input type="text" name="nature" onblur="check_g()" id="sex" style="display:none" class="form-control" value="{{ var.region }}">
+				<span id="a2">{{ var.sex }}</span><input type="text" name="nature" onblur="check_g()" id="sex" style="display:none" class="form-control" value="{{ var.sex }}">
 				{% else %}
 				<span id="a21">未填写</span><input type="text" name="nature" id="sex1" onblur="check_g1()" style="display:none" class="form-control" value="">
 				{% endif %}
-
 			<span class="input-group-addon">地区</span>
 			{% if var.region %}
 			<span id="s1">{{ var.region }}</span><input type="text" name="nature" onblur="check_a()" id="di" style="display:none" class="form-control" value="{{ var.region }}">
@@ -220,8 +218,9 @@
 		$("#age").show();
 		$("#age").focus();
 	})
-	function check_r(){
+	function check_v(){
 		age=$("#age").val();
+//		alert(age)
 		if(age==''){
 			$("#a1").show();
 			$("#age").hide();
@@ -247,7 +246,7 @@
 		$("#age1").show();
 		$("#age1").focus();
 	})
-	function check_r1(){
+	function check_v1(){
 		age=$("#age1").val();
 		if(age==''){
 			$("#a11").show();

@@ -119,40 +119,38 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
                 // line 94
                 echo "\t\t\t<span id=\"a1\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "age", array()), "html", null, true);
-                echo "</span><input type=\"text\" name=\"nature\" onblur=\"check_r()\" id=\"age\" style=\"display:none\" class=\"form-control\" value=\"";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "region", array()), "html", null, true);
+                echo "</span><input type=\"text\" name=\"nature\" onblur=\"check_v()\" id=\"age\" style=\"display:none\" class=\"form-control\" value=\"";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "age", array()), "html", null, true);
                 echo "\">
 \t\t\t";
             } else {
                 // line 96
-                echo "\t\t\t<span id=\"a11\">未填写</span><input type=\"text\" name=\"nature\" id=\"age1\" onblur=\"check_r1()\" style=\"display:none\" class=\"form-control\" value=\"\">
+                echo "\t\t\t<span id=\"a11\">未填写</span><input type=\"text\" name=\"nature\" id=\"age1\" onblur=\"check_v1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t";
             }
             // line 98
-            echo "\t\t\t<div class=\"form form-search\">
-\t\t\t\t<span class=\"input-group-addon\">性别</span>
+            echo "\t\t\t\t<span class=\"input-group-addon\">性别</span>
 \t\t\t\t";
-            // line 100
+            // line 99
             if ($this->getAttribute($context["var"], "sex", array())) {
-                // line 101
+                // line 100
                 echo "\t\t\t\t<span id=\"a2\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "sex", array()), "html", null, true);
                 echo "</span><input type=\"text\" name=\"nature\" onblur=\"check_g()\" id=\"sex\" style=\"display:none\" class=\"form-control\" value=\"";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "region", array()), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "sex", array()), "html", null, true);
                 echo "\">
 \t\t\t\t";
             } else {
-                // line 103
+                // line 102
                 echo "\t\t\t\t<span id=\"a21\">未填写</span><input type=\"text\" name=\"nature\" id=\"sex1\" onblur=\"check_g1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t\t";
             }
-            // line 105
-            echo "
-\t\t\t<span class=\"input-group-addon\">地区</span>
+            // line 104
+            echo "\t\t\t<span class=\"input-group-addon\">地区</span>
 \t\t\t";
-            // line 107
+            // line 105
             if ($this->getAttribute($context["var"], "region", array())) {
-                // line 108
+                // line 106
                 echo "\t\t\t<span id=\"s1\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "region", array()), "html", null, true);
                 echo "</span><input type=\"text\" name=\"nature\" onblur=\"check_a()\" id=\"di\" style=\"display:none\" class=\"form-control\" value=\"";
@@ -160,19 +158,19 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
                 echo "\">
 \t\t\t";
             } else {
-                // line 110
+                // line 108
                 echo "\t\t\t<span id=\"s11\">未填写</span><input type=\"text\" name=\"nature\" id=\"di1\" onblur=\"check_a1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t";
             }
-            // line 112
+            // line 110
             echo "\t\t\t<!--<input type=\"text\" name=\"bloodtype\" class=\"form-control\" value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : null), "bloodtype", array()), "html", null, true);
             echo "\">-->
 \t\t\t<span class=\"input-group-addon\">月薪</span>
 \t\t\t";
-            // line 114
+            // line 112
             if ($this->getAttribute($context["var"], "pay", array())) {
-                // line 115
+                // line 113
                 echo "\t\t\t<span id=\"s2\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "pay", array()), "html", null, true);
                 echo "</span><input type=\"text\" name=\"nature\" id=\"yue\" onblur=\"check_b()\" style=\"display:none\" class=\"form-control\" value=\"";
@@ -180,19 +178,19 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
                 echo "\">
 \t\t\t";
             } else {
-                // line 117
+                // line 115
                 echo "\t\t\t<span id=\"s21\">未填写</span><input type=\"text\" name=\"nature\" id=\"yue1\" onblur=\"check_b1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t";
             }
-            // line 119
+            // line 117
             echo "\t\t\t<!--<input type=\"text\" name=\"nation\" class=\"form-control\" value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : null), "nation", array()), "html", null, true);
             echo "\">-->
 \t\t\t<span class=\"input-group-addon\">星座</span>
 \t\t\t";
-            // line 121
+            // line 119
             if ($this->getAttribute($context["var"], "constellation", array())) {
-                // line 122
+                // line 120
                 echo "\t\t\t<span id=\"s3\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "constellation", array()), "html", null, true);
                 echo "</span><input type=\"text\" id=\"xing\" onblur=\"check_c()\" name=\"nature\" class=\"form-control\" style=\"display:none\" value=\"";
@@ -200,19 +198,19 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
                 echo "\">
 \t\t\t";
             } else {
-                // line 124
+                // line 122
                 echo "\t\t\t<span id=\"s31\">未填写</span><input type=\"text\" name=\"nature\" id=\"xing1\" onblur=\"check_c1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t";
             }
-            // line 126
+            // line 124
             echo "\t\t\t<!--<input type=\"text\" name=\"children\" class=\"form-control\" value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : null), "children", array()), "html", null, true);
             echo "\">-->
 \t\t\t<span class=\"input-group-addon\">籍贯</span>
 \t\t\t";
-            // line 128
+            // line 126
             if ($this->getAttribute($context["var"], "native", array())) {
-                // line 129
+                // line 127
                 echo "\t\t\t<span id=\"s4\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "native", array()), "html", null, true);
                 echo "</span><input type=\"text\" name=\"nature\" id=\"ji\" onblur=\"check_d()\"  style=\"display:none\" class=\"form-control\" value=\"";
@@ -220,19 +218,19 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
                 echo "\">
 \t\t\t";
             } else {
-                // line 131
+                // line 129
                 echo "\t\t\t<span id=\"s41\">未填写</span><input type=\"text\" name=\"nature\" id=\"ji1\" onblur=\"check_d1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t";
             }
-            // line 133
+            // line 131
             echo "\t\t\t<!--<input type=\"text\" name=\"vehicle\" class=\"form-control\" value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : null), "vehicle", array()), "html", null, true);
             echo "\">-->
 \t\t\t<span class=\"input-group-addon\">学历</span>
 \t\t\t";
-            // line 135
+            // line 133
             if ($this->getAttribute($context["var"], "record", array())) {
-                // line 136
+                // line 134
                 echo "\t\t\t<span id=\"s5\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "record", array()), "html", null, true);
                 echo "</span><input type=\"text\" name=\"nature\" id=\"xue\" onblur=\"check_e()\"  style=\"display:none\" class=\"form-control\" value=\"";
@@ -240,19 +238,19 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
                 echo "\">
 \t\t\t";
             } else {
-                // line 138
+                // line 136
                 echo "\t\t\t<span id=\"s51\">未填写</span><input type=\"text\" name=\"nature\" id=\"xue1\" onblur=\"check_e1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t";
             }
-            // line 140
+            // line 138
             echo "\t\t\t<!--<input type=\"text\" name=\"house\" class=\"form-control\" value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : null), "house", array()), "html", null, true);
             echo "\">-->
 \t\t\t<span class=\"input-group-addon\">婚姻状况</span>
 \t\t\t";
-            // line 142
+            // line 140
             if ($this->getAttribute($context["var"], "marital", array())) {
-                // line 143
+                // line 141
                 echo "\t\t\t<span id=\"s6\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["var"], "marital", array()), "html", null, true);
                 echo "</span><input type=\"text\" name=\"nature\" id=\"hun\"  onblur=\"check_f()\" class=\"form-control\"  style=\"display:none\" value=\"";
@@ -260,11 +258,11 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
                 echo "\">
 \t\t\t";
             } else {
-                // line 145
+                // line 143
                 echo "\t\t\t<span id=\"s61\">未填写</span><input type=\"text\" name=\"nature\" id=\"hun1\" onblur=\"check_f1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t";
             }
-            // line 147
+            // line 145
             echo "\t\t\t<!--<input type=\"text\" name=\"house\" class=\"form-control\" value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : null), "house", array()), "html", null, true);
             echo "\">-->
@@ -274,7 +272,7 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['var'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 150
+        // line 148
         echo "\t</form>
 
 
@@ -348,34 +346,35 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
 \t\t\$(\"#age\").show();
 \t\t\$(\"#age\").focus();
 \t})
-\tfunction check_r(){
+\tfunction check_v(){
 \t\tage=\$(\"#age\").val();
-\t\tif(age==''){
-\t\t\t\$(\"#a1\").show();
-\t\t\t\$(\"#age\").hide();
-\t\t}else{
-\t\t\t\$.ajax({
-\t\t\t\ttype:\"post\",
-\t\t\t\tdata:\"age=\"+age,
-\t\t\t\turl:\"?r=fossa/xiu12\",
-\t\t\t\tsuccess:function(e){
-\t\t\t\t\tif(e==2){
-\t\t\t\t\t\t\$(\"#a1\").show();
-\t\t\t\t\t\t\$(\"#age\").hide();
-\t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a1\").html(e).show();
-\t\t\t\t\t\t\$(\"#age\").hide();
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t})
-\t\t}
+\t\talert(age)
+//\t\tif(age==''){
+//\t\t\t\$(\"#a1\").show();
+//\t\t\t\$(\"#age\").hide();
+//\t\t}else{
+//\t\t\t\$.ajax({
+//\t\t\t\ttype:\"post\",
+//\t\t\t\tdata:\"age=\"+age,
+//\t\t\t\turl:\"?r=fossa/xiu12\",
+//\t\t\t\tsuccess:function(e){
+//\t\t\t\t\tif(e==2){
+//\t\t\t\t\t\t\$(\"#a1\").show();
+//\t\t\t\t\t\t\$(\"#age\").hide();
+//\t\t\t\t\t}else{
+//\t\t\t\t\t\t\$(\"#a1\").html(e).show();
+//\t\t\t\t\t\t\$(\"#age\").hide();
+//\t\t\t\t\t}
+//\t\t\t\t}
+//\t\t\t})
+//\t\t}
 \t}
 \t\$(\"#a11\").click(function(){
 \t\t\$(\"#a11\").hide();
 \t\t\$(\"#age1\").show();
 \t\t\$(\"#age1\").focus();
 \t})
-\tfunction check_r1(){
+\tfunction check_v1(){
 \t\tage=\$(\"#age1\").val();
 \t\tif(age==''){
 \t\t\t\$(\"#a11\").show();
@@ -753,7 +752,7 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
 
     public function getDebugInfo()
     {
-        return array (  278 => 150,  268 => 147,  264 => 145,  256 => 143,  254 => 142,  248 => 140,  244 => 138,  236 => 136,  234 => 135,  228 => 133,  224 => 131,  216 => 129,  214 => 128,  208 => 126,  204 => 124,  196 => 122,  194 => 121,  188 => 119,  184 => 117,  176 => 115,  174 => 114,  168 => 112,  164 => 110,  156 => 108,  154 => 107,  150 => 105,  146 => 103,  138 => 101,  136 => 100,  132 => 98,  128 => 96,  120 => 94,  118 => 93,  114 => 91,  110 => 90,  19 => 1,);
+        return array (  276 => 148,  266 => 145,  262 => 143,  254 => 141,  252 => 140,  246 => 138,  242 => 136,  234 => 134,  232 => 133,  226 => 131,  222 => 129,  214 => 127,  212 => 126,  206 => 124,  202 => 122,  194 => 120,  192 => 119,  186 => 117,  182 => 115,  174 => 113,  172 => 112,  166 => 110,  162 => 108,  154 => 106,  152 => 105,  149 => 104,  145 => 102,  137 => 100,  135 => 99,  132 => 98,  128 => 96,  120 => 94,  118 => 93,  114 => 91,  110 => 90,  19 => 1,);
     }
 
     public function getSource()
@@ -851,18 +850,16 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
 \t\t<div class=\"form form-search\">
 \t\t\t<span class=\"input-group-addon\">年龄</span>
 \t\t\t{% if var.age %}
-\t\t\t<span id=\"a1\">{{ var.age }}</span><input type=\"text\" name=\"nature\" onblur=\"check_r()\" id=\"age\" style=\"display:none\" class=\"form-control\" value=\"{{ var.region }}\">
+\t\t\t<span id=\"a1\">{{ var.age }}</span><input type=\"text\" name=\"nature\" onblur=\"check_v()\" id=\"age\" style=\"display:none\" class=\"form-control\" value=\"{{ var.age }}\">
 \t\t\t{% else %}
-\t\t\t<span id=\"a11\">未填写</span><input type=\"text\" name=\"nature\" id=\"age1\" onblur=\"check_r1()\" style=\"display:none\" class=\"form-control\" value=\"\">
+\t\t\t<span id=\"a11\">未填写</span><input type=\"text\" name=\"nature\" id=\"age1\" onblur=\"check_v1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t{% endif %}
-\t\t\t<div class=\"form form-search\">
 \t\t\t\t<span class=\"input-group-addon\">性别</span>
 \t\t\t\t{% if var.sex %}
-\t\t\t\t<span id=\"a2\">{{ var.sex }}</span><input type=\"text\" name=\"nature\" onblur=\"check_g()\" id=\"sex\" style=\"display:none\" class=\"form-control\" value=\"{{ var.region }}\">
+\t\t\t\t<span id=\"a2\">{{ var.sex }}</span><input type=\"text\" name=\"nature\" onblur=\"check_g()\" id=\"sex\" style=\"display:none\" class=\"form-control\" value=\"{{ var.sex }}\">
 \t\t\t\t{% else %}
 \t\t\t\t<span id=\"a21\">未填写</span><input type=\"text\" name=\"nature\" id=\"sex1\" onblur=\"check_g1()\" style=\"display:none\" class=\"form-control\" value=\"\">
 \t\t\t\t{% endif %}
-
 \t\t\t<span class=\"input-group-addon\">地区</span>
 \t\t\t{% if var.region %}
 \t\t\t<span id=\"s1\">{{ var.region }}</span><input type=\"text\" name=\"nature\" onblur=\"check_a()\" id=\"di\" style=\"display:none\" class=\"form-control\" value=\"{{ var.region }}\">
@@ -980,34 +977,35 @@ class __TwigTemplate_fb3a92399359229e85518ae337fd1fd74cde46ef54767e0a24272961e2f
 \t\t\$(\"#age\").show();
 \t\t\$(\"#age\").focus();
 \t})
-\tfunction check_r(){
+\tfunction check_v(){
 \t\tage=\$(\"#age\").val();
-\t\tif(age==''){
-\t\t\t\$(\"#a1\").show();
-\t\t\t\$(\"#age\").hide();
-\t\t}else{
-\t\t\t\$.ajax({
-\t\t\t\ttype:\"post\",
-\t\t\t\tdata:\"age=\"+age,
-\t\t\t\turl:\"?r=fossa/xiu12\",
-\t\t\t\tsuccess:function(e){
-\t\t\t\t\tif(e==2){
-\t\t\t\t\t\t\$(\"#a1\").show();
-\t\t\t\t\t\t\$(\"#age\").hide();
-\t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a1\").html(e).show();
-\t\t\t\t\t\t\$(\"#age\").hide();
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t})
-\t\t}
+\t\talert(age)
+//\t\tif(age==''){
+//\t\t\t\$(\"#a1\").show();
+//\t\t\t\$(\"#age\").hide();
+//\t\t}else{
+//\t\t\t\$.ajax({
+//\t\t\t\ttype:\"post\",
+//\t\t\t\tdata:\"age=\"+age,
+//\t\t\t\turl:\"?r=fossa/xiu12\",
+//\t\t\t\tsuccess:function(e){
+//\t\t\t\t\tif(e==2){
+//\t\t\t\t\t\t\$(\"#a1\").show();
+//\t\t\t\t\t\t\$(\"#age\").hide();
+//\t\t\t\t\t}else{
+//\t\t\t\t\t\t\$(\"#a1\").html(e).show();
+//\t\t\t\t\t\t\$(\"#age\").hide();
+//\t\t\t\t\t}
+//\t\t\t\t}
+//\t\t\t})
+//\t\t}
 \t}
 \t\$(\"#a11\").click(function(){
 \t\t\$(\"#a11\").hide();
 \t\t\$(\"#age1\").show();
 \t\t\$(\"#age1\").focus();
 \t})
-\tfunction check_r1(){
+\tfunction check_v1(){
 \t\tage=\$(\"#age1\").val();
 \t\tif(age==''){
 \t\t\t\$(\"#a11\").show();
