@@ -80,6 +80,10 @@ class homeCtrl extends \core\imooc
     {
         $this->display('shaixuan.html');
     }
+    public function suggest()
+    {
+        $this->display('suggest.html');
+    }
 }
      
 

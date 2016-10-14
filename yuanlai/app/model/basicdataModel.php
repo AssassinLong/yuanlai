@@ -38,7 +38,7 @@ class basicdataModel extends model
         $ret=$this->update($this->table,[
             "pay"=>$data['pay']
         ],array(
-            'id'=>$id
+            'u_id'=>$id
         ));
 //        echo $ret;die;
         return $ret;
@@ -47,7 +47,7 @@ class basicdataModel extends model
         $ret=$this->update($this->table,[
             "constellation"=>$data['constellation']
         ],array(
-            'id'=>$id
+            'u_id'=>$id
         ));
 //        echo $ret;die;
         return $ret;
@@ -56,7 +56,7 @@ class basicdataModel extends model
         $ret=$this->update($this->table,[
             "native"=>$data['native']
         ],array(
-            'id'=>$id
+            'u_id'=>$id
         ));
 //        echo $ret;die;
         return $ret;
@@ -65,7 +65,7 @@ class basicdataModel extends model
         $ret=$this->update($this->table,[
             "record"=>$data['record']
         ],array(
-            'id'=>$id
+            'u_id'=>$id
         ));
 //        echo $ret;die;
         return $ret;
@@ -74,7 +74,25 @@ class basicdataModel extends model
         $ret=$this->update($this->table,[
             "marital"=>$data['marital']
         ],array(
-            'id'=>$id
+            'u_id'=>$id
+        ));
+//        echo $ret;die;
+        return $ret;
+    }
+    public function setxiu($id,$data){
+        $ret=$this->update($this->table,[
+            "sex"=>$data['sex']
+        ],array(
+            'u_id'=>$id
+        ));
+//        echo $ret;die;
+        return $ret;
+    }
+    public function setxiu1($id,$data){
+        $ret=$this->update($this->table,[
+            "age"=>$data['age']
+        ],array(
+            'u_id'=>$id
         ));
 //        echo $ret;die;
         return $ret;

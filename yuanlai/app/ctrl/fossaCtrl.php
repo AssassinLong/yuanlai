@@ -221,6 +221,34 @@
                echo 2;
            }
        }
+       /**/
+       public function xiu11()
+       {
+           $id=$_SESSION['id'];
+           $sex=post('sex');
+           $data=array("sex"=>$sex);
+           $model=new basicdataModel();
+           $arr=$model->setxiu($id,$data);
+           if($arr){
+               echo $sex;
+           }else{
+               echo 2;
+           }
+       }
+       /**/
+       public function xiu12()
+       {
+           $id=$_SESSION['id'];
+           $age=post('age');
+           $data=array("age"=>$age);
+           $model=new basicdataModel();
+           $arr=$model->setxiu1($id,$data);
+           if($arr){
+               echo $age;
+           }else{
+               echo 2;
+           }
+       }
        /*婚姻状况*/
        public function xiu1()
        {
