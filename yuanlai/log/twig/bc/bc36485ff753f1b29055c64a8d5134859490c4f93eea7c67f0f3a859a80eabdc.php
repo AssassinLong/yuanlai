@@ -92,7 +92,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</div>
 \t\t<!-- 跟随内容结束 -->
 
-\t\t
+
 \t\t<div id=\"pullrefresh\" class=\"mui-scroll-wrapper\">
 \t\t\t<div class=\"mui-scroll\">
 \t\t\t\t<!-- 图片轮播开始 -->
@@ -156,9 +156,9 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t\t\t<div class=\"index-ico\">
 \t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t<a href=\"?r=home/seek\" class=\"link\">
 \t\t\t<span class=\"icon-coffee\"></span>
-\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t\t<div class=\"mui-media-body\">推荐会员</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -195,9 +195,9 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/about\" class=\"link\">
+\t\t<a href=\"?r=home/suggest\" class=\"link\">
 \t\t\t<span class=\"icon-brand\"></span>
-\t\t\t<div class=\"mui-media-body\">品牌荣誉</div>
+\t\t\t<div class=\"mui-media-body\">会员推介</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -219,9 +219,9 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 
 \t\t\t\t<!-- 会员开始 -->
 \t\t\t\t<div class=\"index-member\">
-\t\t
+
 \t\t<div class=\"tabs\">
-\t
+
 </div>
 <!-- 切换标签结束 -->
 
@@ -229,9 +229,9 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 
 
 
-\t
 
-\t\t\t
+
+
 
 \t\t\t\t<!-- 文字内容开始 -->
 \t\t\t\t<div class=\"index-summary\">
@@ -258,12 +258,12 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</style>
 \t\t<!-- <script src=\"/js/??/core-pull.js,lazyload.js,index.js\"></script> -->
 \t<!--引用自定义脚本-->
-\t
+
 \t\t<!-- CNZZ代码 -->
 \t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=&rnd=1919918879\" width=\"0\" height=\"0\"/>\t</body>
 \t<!--引用自定义脚本-->
-\t<script src=\"web/js/core1.js\"></script> 
-\t
+\t<script src=\"web/js/core1.js\"></script>
+
 
 
 </html>";
@@ -362,7 +362,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</div>
 \t\t<!-- 跟随内容结束 -->
 
-\t\t
+
 \t\t<div id=\"pullrefresh\" class=\"mui-scroll-wrapper\">
 \t\t\t<div class=\"mui-scroll\">
 \t\t\t\t<!-- 图片轮播开始 -->
@@ -426,9 +426,9 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t\t\t<div class=\"index-ico\">
 \t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t<a href=\"?r=home/seek\" class=\"link\">
 \t\t\t<span class=\"icon-coffee\"></span>
-\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t\t<div class=\"mui-media-body\">推荐会员</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -462,9 +462,9 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/about\" class=\"link\">
+\t\t<a href=\"?r=home/suggest\" class=\"link\">
 \t\t\t<span class=\"icon-brand\"></span>
-\t\t\t<div class=\"mui-media-body\">品牌荣誉</div>
+\t\t\t<div class=\"mui-media-body\">会员推介</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -486,9 +486,9 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 
 \t\t\t\t<!-- 会员开始 -->
 \t\t\t\t<div class=\"index-member\">
-\t\t
+
 \t\t<div class=\"tabs\">
-\t
+
 </div>
 <!-- 切换标签结束 -->
 
@@ -496,9 +496,9 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 
 
 
-\t
 
-\t\t\t
+
+
 
 \t\t\t\t<!-- 文字内容开始 -->
 \t\t\t\t<div class=\"index-summary\">
@@ -525,12 +525,12 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</style>
 \t\t<!-- <script src=\"/js/??/core-pull.js,lazyload.js,index.js\"></script> -->
 \t<!--引用自定义脚本-->
-\t
+
 \t\t<!-- CNZZ代码 -->
 \t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=&rnd=1919918879\" width=\"0\" height=\"0\"/>\t</body>
 \t<!--引用自定义脚本-->
-\t<script src=\"web/js/core1.js\"></script> 
-\t
+\t<script src=\"web/js/core1.js\"></script>
+
 
 
 </html>";

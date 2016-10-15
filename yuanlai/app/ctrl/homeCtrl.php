@@ -7,6 +7,7 @@ use app\model\xiangModel;
 use app\model\shengModel;
 use app\model\basicdataModel;
 use app\model\monoModel;
+use app\model\pictureModel;
 session_start();
 class homeCtrl extends \core\imooc
 {
@@ -52,35 +53,55 @@ class homeCtrl extends \core\imooc
     //个人中心
     public function fossa()
     {
-        $id=$_SESSION['id'];
-        $model=new xiangModel();
-        $re=$model->xiang($id);
-        if($re){
-            $this->assign('re',$re);
-        }
-        $model=new shengModel();
-        $sheng=$model->sheng_select($id);
-        if($sheng){
+        if(isset($_SESSION['username'])) {
+            $id = $_SESSION['id'];
+            $model = new xiangModel();
+            $re = $model->xiang($id);
+            if ($re) {
+                $this->assign('re', $re);
+            }
+            $model = new shengModel();
+            $sheng = $model->sheng_select($id);
+            if ($sheng) {
 
-            $this->assign('sheng',$sheng);
-        }
-        $data=array("u_id"=>$id);
-        $model=new basicdataModel();
-        $arras=$model->userOne1($data);
-        if($arras){
-            $this->assign('arras',$arras);
-        }
+                $this->assign('sheng', $sheng);
+            }
+            $data = array("u_id" => $id);
+            $model = new basicdataModel();
+            $arras = $model->userOne1($data);
+            if ($arras) {
+                $this->assign('arras', $arras);
+            }
 //        print_r($arras);die;
-        $mono=new monoModel();
-        $dubai=$mono->getOne(['u_id'=>$id]);
-        $this->assign('dubai',$dubai);
-        $this->display('fossa.html');
+            $mono = new monoModel();
+            $dubai = $mono->getOne(['u_id' => $id]);
+            $this->assign('dubai', $dubai);
+            $this->display('fossa.html');
+        }else{
+            jump('?index/login');
+        }
     }
     public function upload()
     {
-         $data['imgfile']=post('imgfile');
-         $data['imgType']=post('imgType');
-         dump($data);die;
+       if(isset($_FILES['imgfile'])){
+            //$_FILES['imgfile'];
+           $filepath='./web/upimg/';
+           if(!file_exists($filepath)){
+               mkdir($filepath);;
+           }
+           $imgpaths=$filepath.time().$_FILES['imgfile']['name'];
+           move_uploaded_file($_FILES['imgfile']['tmp_name'],$imgpaths);
+           $data['u_id']=$_SESSION['id'];
+           $data['u_name']=$_SESSION['username'];
+           $data['path']=$imgpaths;
+           $data['date']=date('Y-m-d H:i:s',time());
+           $data['show']='1';
+           $model=new pictureModel();
+           $model->addOne($data);
+       }else{
+            echo '文件未上传';
+        }
+
     }
     public function shaixuan()
     {
