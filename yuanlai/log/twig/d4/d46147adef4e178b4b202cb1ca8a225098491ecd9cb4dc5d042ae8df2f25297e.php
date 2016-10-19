@@ -187,19 +187,19 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 \t\t\t\t\tvalue: '0',
 \t\t\t\t\ttext: '不限'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '140CM - 150CM',
+\t\t\t\t\tvalue: '140-150',
 \t\t\t\t\ttext: '140CM - 150CM'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '151CM - 160CM',
+\t\t\t\t\tvalue: '151-160',
 \t\t\t\t\ttext: '151CM - 160CM'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '161CM - 170CM',
+\t\t\t\t\tvalue: '161-170',
 \t\t\t\t\ttext: '161CM - 170CM'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '171CM - 180CM',
+\t\t\t\t\tvalue: '171-180',
 \t\t\t\t\ttext: '171CM - 180CM'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '181CM - 190CM',
+\t\t\t\t\tvalue: '181-190',
 \t\t\t\t\ttext: '181CM - 190CM'
 \t\t\t\t}]);
 \t\t\t\tvar HeightPickerButton = doc.getElementById('HeightPicker');
@@ -255,19 +255,19 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 \t\t\t\t\tvalue: '0',
 \t\t\t\t\ttext: '不限'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '2000元以下',
+\t\t\t\t\tvalue: '0-2000',
 \t\t\t\t\ttext: '2000元以下'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '2000 - 5000元',
+\t\t\t\t\tvalue: '2000-5000',
 \t\t\t\t\ttext: '2000 - 5000元'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '5000 - 10000元',
+\t\t\t\t\tvalue: '5000-10000',
 \t\t\t\t\ttext: '5000 - 10000元'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '10000 - 20000元',
+\t\t\t\t\tvalue: '10000-20000',
 \t\t\t\t\ttext: '10000 - 20000元'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '20000元以上',
+\t\t\t\t\tvalue: '20000-9999999',
 \t\t\t\t\ttext: '20000元以上'
 \t\t\t\t}]);
 \t\t\t\tvar EarnPickerButton = doc.getElementById('EarnPicker');
@@ -521,19 +521,19 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 \t\t\t\t\tvalue: '0',
 \t\t\t\t\ttext: '不限'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '140CM - 150CM',
+\t\t\t\t\tvalue: '140-150',
 \t\t\t\t\ttext: '140CM - 150CM'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '151CM - 160CM',
+\t\t\t\t\tvalue: '151-160',
 \t\t\t\t\ttext: '151CM - 160CM'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '161CM - 170CM',
+\t\t\t\t\tvalue: '161-170',
 \t\t\t\t\ttext: '161CM - 170CM'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '171CM - 180CM',
+\t\t\t\t\tvalue: '171-180',
 \t\t\t\t\ttext: '171CM - 180CM'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '181CM - 190CM',
+\t\t\t\t\tvalue: '181-190',
 \t\t\t\t\ttext: '181CM - 190CM'
 \t\t\t\t}]);
 \t\t\t\tvar HeightPickerButton = doc.getElementById('HeightPicker');
@@ -589,19 +589,19 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 \t\t\t\t\tvalue: '0',
 \t\t\t\t\ttext: '不限'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '2000元以下',
+\t\t\t\t\tvalue: '0-2000',
 \t\t\t\t\ttext: '2000元以下'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '2000 - 5000元',
+\t\t\t\t\tvalue: '2000-5000',
 \t\t\t\t\ttext: '2000 - 5000元'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '5000 - 10000元',
+\t\t\t\t\tvalue: '5000-10000',
 \t\t\t\t\ttext: '5000 - 10000元'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '10000 - 20000元',
+\t\t\t\t\tvalue: '10000-20000',
 \t\t\t\t\ttext: '10000 - 20000元'
 \t\t\t\t}, {
-\t\t\t\t\tvalue: '20000元以上',
+\t\t\t\t\tvalue: '20000-9999999',
 \t\t\t\t\ttext: '20000元以上'
 \t\t\t\t}]);
 \t\t\t\tvar EarnPickerButton = doc.getElementById('EarnPicker');

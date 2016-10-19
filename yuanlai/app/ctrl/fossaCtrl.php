@@ -269,27 +269,79 @@
        {
            $id=$_SESSION['id'];
 //         $gender=isset(post('gender'))?post('gender'):'0';
-           $gender=post('gender');
            $data=array();
-           empty($gender)?:$data['sex']=$gender;
-
            $ageValue= post('ageValue');
            empty($ageValue)?:$data['age']=$ageValue;
-           $education=post('education');
-           empty($education)?:$data['record']=$education;
            $salary=post('salary');
            empty($salary)?:$data['pay']=$salary;
+
+           $gender=post('gender');
+           empty($gender)?:$data['sex']=$gender;
+           $education=post('education');
+           empty($education)?:$data['record']=$education;
            $provinceid=post('provinceid');
            empty($provinceid)?:$data['region']=$provinceid;
-//         $salary=isset(post('salary'))?post('salary'):0;
-//         $provinceid=isset(post('provinceid'))?post('provinceid'):0;
-//           $data=array('sex'=>$gender,'age'=>$ageValue,'record'=>$education,'pay'=>$salary,'regin'=>$provinceid);
            empty($id)?:$data['u_id[!]']=$id;
-           $model=new basicdataModel();
-           $arr=$model->selAll($data);
+//           print_r($data);die;
+           if(empty($data['age']))
+           {
+               if(empty($data['pay']))
+               {
+
+                   $model=new basicdataModel();
+                   $arr=$model->selAll($data);
+//                   print_r(1);die;
+               }else
+               {
+                   unset($data['pay']);
+                   $pay = explode('-', $data['pay']);
+                   $data['pay[>]']=$pay[0];
+                   $data['pay[<]']=$pay[1];
+//                   $data["pay[<>]"]=$pay[0].",".$pay[1];
+//                   print_r($data);die;
+                   $model = new basicdataModel();
+                   $arr = $model->selAll($data);
+//                   print_r(2);die;
+//                   $this->assign('ars',$arr);
+//                   $this->display('suggest.html');
+               }
+           }else
+           {
+               if(empty($data['pay']))
+               {
+                   $age = explode('-', $data['age']);
+                   unset($data['age']);
+                   $data['age[>]']=$age[0];
+                   $data['age[<]']=$age[1];
+                   $model=new basicdataModel();
+                   $arr=$model->selAll($data);
+//                   print_r($arr);die;
+               }else
+               {
+//                   unset($data['pay']);
+                   $pay = explode('-', $data['pay']);
+                   $age = explode('-', $data['age']);
+                   unset($data['pay']);
+                   unset($data['age']);
+                   $data['age[>]']=$age[0];
+                   $data['age[<]']=$age[1];
+                   $data['pay[>]']=$pay[0];
+                   $data['pay[<]']=$pay[1];
+//                   $data["pay[<>]"]=$pay[0].",".$pay[1];
+//                   print_r($data);die;
+                   $model = new basicdataModel();
+                   $arr = $model->selAll($data);
+
+
+               }
+           }
            $this->assign('ars',$arr);
-//        print_r($dubai);die;
            $this->display('suggest.html');
+//           $model=new basicdataModel();
+//           $arr=$model->selAll($data);
+//           $this->assign('ars',$arr);
+//        print_r($dubai);die;
+//           $this->display('suggest.html');
 //           print_r($arr);
 
        }
