@@ -264,6 +264,37 @@
            }
 
        }
+       /*筛选*/
+       public function sou()
+       {
+           $id=$_SESSION['id'];
+//         $gender=isset(post('gender'))?post('gender'):'0';
+           $gender=post('gender');
+           $data=array();
+           empty($gender)?:$data['sex']=$gender;
+
+           $ageValue= post('ageValue');
+           empty($ageValue)?:$data['age']=$ageValue;
+           $education=post('education');
+           empty($education)?:$data['record']=$education;
+           $salary=post('salary');
+           empty($salary)?:$data['pay']=$salary;
+           $provinceid=post('provinceid');
+           empty($provinceid)?:$data['region']=$provinceid;
+//         $salary=isset(post('salary'))?post('salary'):0;
+//         $provinceid=isset(post('provinceid'))?post('provinceid'):0;
+//           $data=array('sex'=>$gender,'age'=>$ageValue,'record'=>$education,'pay'=>$salary,'regin'=>$provinceid);
+           empty($id)?:$data['u_id[!]']=$id;
+           $model=new basicdataModel();
+           $arr=$model->selAll($data);
+           $this->assign('ars',$arr);
+//        print_r($dubai);die;
+           $this->display('suggest.html');
+//           print_r($arr);
+
+       }
+
+
    }
 
 ?>

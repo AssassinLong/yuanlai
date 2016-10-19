@@ -64,7 +64,7 @@ class __TwigTemplate_b4eaab7cf72cf78e4c41ed21e99d16161a07ad27153ff94f86439699004
             })
         </script>
 
-<title>推荐会员-我主良缘：中国高端婚恋直营连锁创导者</title>
+<title>缘来交友</title>
 </head>
 \t<body>
 \t\t<!-- 导航栏开始 -->
@@ -202,7 +202,7 @@ class __TwigTemplate_b4eaab7cf72cf78e4c41ed21e99d16161a07ad27153ff94f86439699004
             })
         </script>
 
-<title>推荐会员-我主良缘：中国高端婚恋直营连锁创导者</title>
+<title>缘来交友</title>
 </head>
 \t<body>
 \t\t<!-- 导航栏开始 -->

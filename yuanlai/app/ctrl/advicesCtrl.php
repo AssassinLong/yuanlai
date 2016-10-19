@@ -24,7 +24,7 @@ class advicesCtrl extends \core\imooc
         $message=post('message');
 
         $basic=new basicdataModel();
-        $arr=$basic->user_phone(['id'=> $_SESSION['id']]);
+        $arr=$basic->userOne(['u_id'=> $_SESSION['id']]);
         //p($arr[0]);exit;
         $data['u_id']=$arr[0]['u_id'];
         $data['u_age']=$arr[0]['age'];

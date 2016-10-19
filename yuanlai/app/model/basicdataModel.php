@@ -6,18 +6,16 @@ class basicdataModel extends model
 {
     public $table="basicdata";
 
-    public function user_phone($data)
+
+    public function user_phone($id)
     {
         // $model=new model();
         // $ret = $this->select($this->table,'*');
         // return $ret;
-
-        $arr = $this->select($this->table,'*', [
-            "u_id" => $data['id'],
-        ]);
-        //dump($arr);die
+        $arr = $this->select($this->table,'*',['u_id[!]' => $id]);
         return $arr;
     }
+
     public function userOne1($data)
     {
         $arr = $this->select($this->table,'*', [
@@ -96,6 +94,16 @@ class basicdataModel extends model
         ));
 //        echo $ret;die;
         return $ret;
+    }
+    public function selAll($data)
+    {
+//        print_R($data);die;
+        $arr = $this->select($this->table,'*', [
+            "AND" =>$data
+        ]);
+//        var_dump($this->error());die;
+//        print_R($arr);die;
+        return $arr;
     }
 
 }

@@ -121,6 +121,11 @@ class homeCtrl extends \core\imooc
     {
         $this->display('suggest.html');
     }
+
+    public function xinqing()
+    {
+    	 $this->display('xinqing.html');
+    }
 }
      
 
