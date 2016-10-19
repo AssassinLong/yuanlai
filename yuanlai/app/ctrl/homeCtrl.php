@@ -87,8 +87,9 @@ class homeCtrl extends \core\imooc
 
             $picture=new pictureModel();
             $imgs=$picture->all();
+            //dump($imgs);die;
             $this->assign('imgs',$imgs);
-
+              
 
             $this->display('fossa.html');
         }else{
@@ -123,7 +124,11 @@ class homeCtrl extends \core\imooc
     }
     public function suggest()
     {
-        
+        $u_id=$_SESSION['id'];
+        $base=new basicdataModel();
+        $arr=$base->user_phone($u_id);
+        //dump($arr);die;
+        $this->assign('ars',$arr);
         $this->display('suggest.html');
     }
 

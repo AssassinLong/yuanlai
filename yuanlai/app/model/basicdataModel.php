@@ -7,12 +7,13 @@ class basicdataModel extends model
     public $table="basicdata";
 
 
-    public function user_phone($id)
+    public function user_phone($u_id)
     {
         // $model=new model();
         // $ret = $this->select($this->table,'*');
         // return $ret;
-        $arr = $this->select($this->table,'*',['u_id[!]' => $id]);
+        $arr = $this->query("select * from user INNER JOIN basicdata ON user.id=basicdata.u_id where user.id!=$u_id")->fetchAll();
+        //dump($arr);die;
         return $arr;
     }
 
