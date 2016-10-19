@@ -118,9 +118,12 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
             // line 96
             echo "            <li class=\"mui-table-view-cell mui-media\">
                 <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
-                    <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\"></a>
+                    <a href=\"\" class=\"link\"></a>
                 </div><div class=\"mui-media-body\">
-                <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\">
+                <a href=\"?r=home/fossa/tid/";
+            // line 100
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "id", array()), "html", null, true);
+            echo "\" class=\"link\">
                     <b>";
             // line 101
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "name", array()), "html", null, true);
@@ -282,7 +285,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
 
     public function getDebugInfo()
     {
-        return array (  152 => 108,  142 => 104,  138 => 103,  134 => 102,  126 => 101,  119 => 96,  115 => 95,  19 => 1,);
+        return array (  155 => 108,  145 => 104,  141 => 103,  137 => 102,  129 => 101,  125 => 100,  119 => 96,  115 => 95,  19 => 1,);
     }
 
     public function getSource()
@@ -384,9 +387,9 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
             {% for vs in ars %}
             <li class=\"mui-table-view-cell mui-media\">
                 <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
-                    <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\"></a>
+                    <a href=\"\" class=\"link\"></a>
                 </div><div class=\"mui-media-body\">
-                <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\">
+                <a href=\"?r=home/fossa/tid/{{vs.id}}\" class=\"link\">
                     <b>{{ vs.name }}</b><span>{{ vs.age }}岁，{{ vs.region }}，152cm</span>
                     <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
                 <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>

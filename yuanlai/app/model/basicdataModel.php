@@ -17,11 +17,9 @@ class basicdataModel extends model
         return $arr;
     }
 
-    public function userOne1($data)
+    public function userOne1($id)
     {
-        $arr = $this->select($this->table,'*', [
-            "u_id" => $data['u_id'],
-        ]);
+        $arr = $this->query("select * from user INNER JOIN basicdata ON user.id=basicdata.u_id where user.id=$id")->fetchAll();
         return $arr;
     }
 

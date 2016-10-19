@@ -62,8 +62,9 @@ class homeCtrl extends \core\imooc
     public function fossa()
     {
         if(isset($_SESSION['username'])) {
-            $id = $_SESSION['id'];
-            $model = new xiangModel();
+            $id=get('tid');
+            if($id){
+                $model = new xiangModel();
             $re = $model->xiang($id);
             if ($re) {
                 $this->assign('re', $re);
@@ -74,9 +75,9 @@ class homeCtrl extends \core\imooc
 
                 $this->assign('sheng', $sheng);
             }
-            $data = array("u_id" => $id);
+            
             $model = new basicdataModel();
-            $arras = $model->userOne1($data);
+            $arras = $model->userOne1($id);
             if ($arras) {
                 $this->assign('arras', $arras);
             }
@@ -92,6 +93,40 @@ class homeCtrl extends \core\imooc
               
 
             $this->display('fossa.html');
+            }else{
+                 $id=$_SESSION['id'];
+                $model = new xiangModel();
+                $re = $model->xiang($id);
+                if ($re) {
+                    $this->assign('re', $re);
+                }
+                $model = new shengModel();
+                $sheng = $model->sheng_select($id);
+                if ($sheng) {
+
+                    $this->assign('sheng', $sheng);
+                }
+               
+                $model = new basicdataModel();
+                $arras = $model->userOne1($id);
+                if ($arras) {
+                    $this->assign('arras', $arras);
+                }
+                //print_r($arras);die;
+                $mono = new monoModel();
+                $dubai = $mono->getOne(['u_id' => $id]);
+                $this->assign('dubai', $dubai);
+
+                $picture=new pictureModel();
+                $imgs=$picture->all();
+                //dump($imgs);die;
+                $this->assign('imgs',$imgs);
+                  
+
+                $this->display('fossa.html');
+            }
+            
+            
         }else{
             jump('?index/login');
         }

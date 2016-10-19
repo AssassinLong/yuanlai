@@ -125,9 +125,12 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
                         <img src=\"./web/upimg/1476874085(23).jpg\">
 \t\t\t\t\t</div>
 
-
+                    
 \t\t\t\t\t<p>
-\t\t\t\t\t\t<b>li李先森</b>
+\t\t\t\t\t\t<b>";
+        // line 112
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["arras"]) ? $context["arras"] : null), "name", array()), "html", null, true);
+        echo "</b>
 
 
 \t\t\t\t\t\t<span class=\"ico ico-ident\"></span>
@@ -143,9 +146,14 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t\t<span class=\"ico ico-mobile-active\"></span>
 
 
-\t\t\t\t\t\t<br />21 &nbsp;北京北京 &nbsp;180CM
+\t\t\t\t\t\t<br />";
+        // line 128
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["arras"]) ? $context["arras"] : null), "age", array()), "html", null, true);
+        echo " &nbsp;";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["arras"]) ? $context["arras"] : null), "native", array()), "html", null, true);
+        echo "
 \t\t\t\t\t</p>
-
+                    
 \t\t\t\t</div>
 
 
@@ -768,7 +776,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
     public function getDebugInfo()
     {
-        return array (  621 => 444,  579 => 404,  576 => 403,  566 => 399,  558 => 394,  550 => 389,  542 => 384,  534 => 379,  526 => 374,  516 => 366,  511 => 365,  509 => 364,  504 => 361,  468 => 327,  465 => 326,  456 => 323,  448 => 318,  440 => 313,  432 => 308,  424 => 303,  416 => 298,  410 => 294,  405 => 293,  403 => 292,  397 => 288,  391 => 287,  386 => 284,  380 => 282,  377 => 281,  373 => 279,  367 => 277,  364 => 276,  358 => 272,  351 => 268,  347 => 266,  344 => 265,  340 => 263,  334 => 261,  331 => 260,  327 => 258,  321 => 256,  318 => 255,  314 => 253,  308 => 251,  305 => 250,  301 => 248,  295 => 246,  292 => 245,  288 => 243,  282 => 241,  279 => 240,  275 => 239,  266 => 233,  223 => 192,  213 => 188,  209 => 186,  205 => 185,  19 => 1,);
+        return array (  629 => 444,  587 => 404,  584 => 403,  574 => 399,  566 => 394,  558 => 389,  550 => 384,  542 => 379,  534 => 374,  524 => 366,  519 => 365,  517 => 364,  512 => 361,  476 => 327,  473 => 326,  464 => 323,  456 => 318,  448 => 313,  440 => 308,  432 => 303,  424 => 298,  418 => 294,  413 => 293,  411 => 292,  405 => 288,  399 => 287,  394 => 284,  388 => 282,  385 => 281,  381 => 279,  375 => 277,  372 => 276,  366 => 272,  359 => 268,  355 => 266,  352 => 265,  348 => 263,  342 => 261,  339 => 260,  335 => 258,  329 => 256,  326 => 255,  322 => 253,  316 => 251,  313 => 250,  309 => 248,  303 => 246,  300 => 245,  296 => 243,  290 => 241,  287 => 240,  283 => 239,  274 => 233,  231 => 192,  221 => 188,  217 => 186,  213 => 185,  151 => 128,  132 => 112,  19 => 1,);
     }
 
     public function getSource()
@@ -882,9 +890,9 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
                         <img src=\"./web/upimg/1476874085(23).jpg\">
 \t\t\t\t\t</div>
 
-
+                    
 \t\t\t\t\t<p>
-\t\t\t\t\t\t<b>li李先森</b>
+\t\t\t\t\t\t<b>{{arras.name}}</b>
 
 
 \t\t\t\t\t\t<span class=\"ico ico-ident\"></span>
@@ -900,9 +908,9 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t\t<span class=\"ico ico-mobile-active\"></span>
 
 
-\t\t\t\t\t\t<br />21 &nbsp;北京北京 &nbsp;180CM
+\t\t\t\t\t\t<br />{{arras.age}} &nbsp;{{arras.native}}
 \t\t\t\t\t</p>
-
+                    
 \t\t\t\t</div>
 
 
