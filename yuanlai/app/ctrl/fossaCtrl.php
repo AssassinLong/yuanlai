@@ -293,8 +293,9 @@
 //                   print_r(1);die;
                }else
                {
-                   unset($data['pay']);
                    $pay = explode('-', $data['pay']);
+                   unset($data['pay']);
+
                    $data['pay[>]']=$pay[0];
                    $data['pay[<]']=$pay[1];
 //                   $data["pay[<>]"]=$pay[0].",".$pay[1];
@@ -335,6 +336,7 @@
 
                }
            }
+//           print_r($arr);die;
            $this->assign('ars',$arr);
            $this->display('suggest.html');
 //           $model=new basicdataModel();

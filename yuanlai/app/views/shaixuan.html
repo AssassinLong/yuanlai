@@ -51,7 +51,7 @@
 <body class="backgroud-white">
 <!-- 导航栏开始 -->
 <header class="mui-bar mui-bar-nav">
-	<a class=""></a>
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 	<h1 class="mui-title">筛选会员</h1>
 	<a href="javascript:void(0);" id="confirm" class="mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-right">确定</a>
 </header>
@@ -80,11 +80,11 @@
 					<label>年龄范围</label>
 					<font>不限</font>
 				</div>
-				<div id="HeightPicker" class="mui-input-row">
-					<input type="hidden" name="heightValue" id="startHeight" value="">
-					<label>身高范围</label>
-					<font class="mui-pull-right">不限</font>
-				</div>
+				<!--<div id="HeightPicker" class="mui-input-row">-->
+					<!--<input type="hidden" name="heightValue" id="startHeight" value="">-->
+					<!--<label>身高范围</label>-->
+					<!--<font class="mui-pull-right">不限</font>-->
+				<!--</div>-->
 				<div id="EduPicker" class="mui-input-row">
 					<input type="hidden" name="education" id="education" value="">
 					<label>最低学历</label>
@@ -164,34 +164,34 @@
 				}, false);
 
 				//身高范围
-				var HeightPicker = new $.PopPicker();
-				HeightPicker.setData([{
-					value: '0',
-					text: '不限'
-				}, {
-					value: '140-150',
-					text: '140CM - 150CM'
-				}, {
-					value: '151-160',
-					text: '151CM - 160CM'
-				}, {
-					value: '161-170',
-					text: '161CM - 170CM'
-				}, {
-					value: '171-180',
-					text: '171CM - 180CM'
-				}, {
-					value: '181-190',
-					text: '181CM - 190CM'
-				}]);
-				var HeightPickerButton = doc.getElementById('HeightPicker');
-				HeightPickerButton.addEventListener('tap', function(event) {
-					HeightPicker.show(function(items) {
-						HeightPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
-						var heightValue = items[0].value;
-						document.getElementById('startHeight').value = heightValue;
-					});
-				}, false);
+//				var HeightPicker = new $.PopPicker();
+//				HeightPicker.setData([{
+//					value: '0',
+//					text: '不限'
+//				}, {
+//					value: '140-150',
+//					text: '140CM - 150CM'
+//				}, {
+//					value: '151-160',
+//					text: '151CM - 160CM'
+//				}, {
+//					value: '161-170',
+//					text: '161CM - 170CM'
+//				}, {
+//					value: '171-180',
+//					text: '171CM - 180CM'
+//				}, {
+//					value: '181-190',
+//					text: '181CM - 190CM'
+//				}]);
+//				var HeightPickerButton = doc.getElementById('HeightPicker');
+//				HeightPickerButton.addEventListener('tap', function(event) {
+//					HeightPicker.show(function(items) {
+//						HeightPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
+//						var heightValue = items[0].value;
+//						document.getElementById('startHeight').value = heightValue;
+//					});
+//				}, false);
 
 				//学历范围
 				var EduPicker = new $.PopPicker();

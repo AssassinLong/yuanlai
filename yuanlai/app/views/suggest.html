@@ -90,6 +90,7 @@
         </div>
     </a>
     <!-- banner结束 -->
+
     <div class="recommend-list">
         <ul class="mui-table-view">
             {% for vs in ars %}
@@ -103,11 +104,10 @@
                 <a href="javascript:;" class="do-message-hi" objid="{{ vs.u_id }}"><span class="ico ico-msg-hi"></span>打招呼</a>
                 <a href="javascript:;" objid="{{ vs.u_id }}" class="do-message-add"><span class="ico ico-msg-call"></span>发信息</a>
             </div>
-            </li>
-            {% endfor %}
+                </li>
+                {% endfor %}
         </ul>
     </div>
-
 
 
 
