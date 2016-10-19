@@ -6,15 +6,13 @@ class basicdataModel extends model
 {
     public $table="basicdata";
 
+
     public function user_phone($id)
     {
         // $model=new model();
         // $ret = $this->select($this->table,'*');
         // return $ret;
-
-        $arr = $this->select($this->table,'*',['u_id[!]' => $id]
-        );
-//        dump($arr);die;
+        $arr = $this->select($this->table,'*',['u_id[!]' => $id]);
         return $arr;
     }
 

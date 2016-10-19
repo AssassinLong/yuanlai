@@ -7,6 +7,7 @@ class pictureModel extends model
     public $table="picture";
     public function all()
     {
+        return $this->select($this->table,'*');
     }
     public function addOne($data)
     {
