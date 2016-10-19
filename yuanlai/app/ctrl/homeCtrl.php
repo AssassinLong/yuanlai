@@ -86,10 +86,8 @@ class homeCtrl extends \core\imooc
             $this->assign('dubai', $dubai);
 
             $picture=new pictureModel();
-            $imgs=$picture->all();
+            $imgs=$picture->all($id);
             $this->assign('imgs',$imgs);
-
-
             $this->display('fossa.html');
         }else{
             jump('?index/login');
@@ -123,7 +121,7 @@ class homeCtrl extends \core\imooc
     }
     public function suggest()
     {
-        
+
         $this->display('suggest.html');
     }
 

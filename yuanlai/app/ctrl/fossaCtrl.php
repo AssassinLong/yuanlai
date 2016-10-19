@@ -8,7 +8,6 @@
    session_start();
    class fossaCtrl extends \core\imooc
    {
-
        public function dubai()
        {
            if(post('monolog')){
@@ -26,7 +25,6 @@
                    echo '0';
                }
            }else{
-
                $this->display('dubai.html');
            }
        }
@@ -54,7 +52,6 @@
                     $this->display('xiangxiziliao.html');
                 }
            }else{
-
                jump('?r=index/login');
            }
 
@@ -91,13 +88,10 @@
                        jump('?r=fossa/xiangxijieshao');
                 }
             }
-
-
        }
 
        public function shenghuomiaoshu()
        {
-
            if($_SESSION['username']){
                 $model=new shengModel();
                 $id=$_SESSION['id'];
@@ -109,13 +103,10 @@
                 }else{
                     $this->display('shenghuomiaoshu.html');
                 }
-
-
            }else{
 
                jump('?r=index/login');
            }
-
        }
        public function sheng_add()
        {
@@ -178,8 +169,6 @@
                echo 2;
            }
        }
-
-
        public function xiu6()
        {
            $id=$_SESSION['id'];
