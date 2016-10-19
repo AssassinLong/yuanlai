@@ -19,10 +19,14 @@ class homeCtrl extends \core\imooc
         $url=array(
             'fossa' => '?r=home/fossa',
             'advices' => '?r=home/advices',
+            'xinqing' => '?r=home/xinqing',
+            'suggest' => '?r=home/suggest',
         );}else{
         $url=array(
             'fossa' => '?r=index/login',
             'advices' => '?r=index/login',
+            'xinqing' => '?r=index/login',
+            'suggest' => '?r=index/login',
         );
         }
       $this->assign('url',$url);
@@ -119,6 +123,7 @@ class homeCtrl extends \core\imooc
     }
     public function suggest()
     {
+        
         $this->display('suggest.html');
     }
 

@@ -156,24 +156,27 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t\t\t<div class=\"index-ico\">
 \t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"?r=home/seek\" class=\"link\">
+\t\t<a href=\"\" class=\"link\">
 \t\t\t<span class=\"icon-coffee\"></span>
-\t\t\t<div class=\"mui-media-body\">推荐会员</div>
+\t\t\t<div class=\"mui-media-body\">同城交友</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 \t\t<a href=\"";
         // line 147
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "advices", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "suggest", array()), "html", null, true);
         echo "\" class=\"link\">
 \t\t\t<span class=\"icon-heart\"></span>
-\t\t\t<div class=\"mui-media-body\">天涯知己</div>
+\t\t\t<div class=\"mui-media-body\">推荐会员</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"#\" class=\"link\">
-\t\t\t<span class=\"icon-doctor\"></span>
-\t\t\t<div class=\"mui-media-body\">婚恋课堂</div>
+        <a href=\"";
+        // line 153
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "advices", array()), "html", null, true);
+        echo "\" class=\"link\">
+            <span class=\"icon-heart\"></span>
+            <div class=\"mui-media-body\">天涯知己</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -186,7 +189,10 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"#\" class=\"link\">
+\t\t<a href=\"";
+        // line 165
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "xinqing", array()), "html", null, true);
+        echo "\" class=\"link\">
 \t\t\t<span class=\"icon-vip\"></span>
 \t\t\t<div class=\"mui-media-body\">心情微博</div>
 \t\t</a>
@@ -200,7 +206,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 \t\t<a href=\"?r=home/suggest\" class=\"link\">
 \t\t\t<span class=\"icon-brand\"></span>
-\t\t\t<div class=\"mui-media-body\">会员推介</div>
+\t\t\t<div class=\"mui-media-body\">品牌荣耀</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -284,7 +290,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 
     public function getDebugInfo()
     {
-        return array (  182 => 159,  167 => 147,  19 => 1,);
+        return array (  194 => 165,  185 => 159,  176 => 153,  167 => 147,  19 => 1,);
     }
 
     public function getSource()
@@ -429,21 +435,21 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t\t\t<div class=\"index-ico\">
 \t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"?r=home/seek\" class=\"link\">
+\t\t<a href=\"\" class=\"link\">
 \t\t\t<span class=\"icon-coffee\"></span>
+\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t</a>
+\t</li>
+\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
+\t\t<a href=\"{{ url.suggest }}\" class=\"link\">
+\t\t\t<span class=\"icon-heart\"></span>
 \t\t\t<div class=\"mui-media-body\">推荐会员</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"{{ url.advices }}\" class=\"link\">
-\t\t\t<span class=\"icon-heart\"></span>
-\t\t\t<div class=\"mui-media-body\">天涯知己</div>
-\t\t</a>
-\t</li>
-\t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"#\" class=\"link\">
-\t\t\t<span class=\"icon-doctor\"></span>
-\t\t\t<div class=\"mui-media-body\">婚恋课堂</div>
+        <a href=\"{{ url.advices }}\" class=\"link\">
+            <span class=\"icon-heart\"></span>
+            <div class=\"mui-media-body\">天涯知己</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -453,7 +459,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"#\" class=\"link\">
+\t\t<a href=\"{{ url.xinqing }}\" class=\"link\">
 \t\t\t<span class=\"icon-vip\"></span>
 \t\t\t<div class=\"mui-media-body\">心情微博</div>
 \t\t</a>
@@ -467,7 +473,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 \t\t<a href=\"?r=home/suggest\" class=\"link\">
 \t\t\t<span class=\"icon-brand\"></span>
-\t\t\t<div class=\"mui-media-body\">会员推介</div>
+\t\t\t<div class=\"mui-media-body\">品牌荣耀</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
