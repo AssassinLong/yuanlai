@@ -19,7 +19,7 @@ class imooc
         $ctrlfile=APP.'/ctrl/'.$ctrlClass.'Ctrl.php';
         //p($ctrlfile);exit;
         $ctrlClass='\\'.MODULE.'\ctrl\\'.$ctrlClass.'Ctrl';
-        //p($action);exit();
+//        p($action);exit();
         if(is_file($ctrlfile)){
             include $ctrlfile;;
             $ctrl=new $ctrlClass;

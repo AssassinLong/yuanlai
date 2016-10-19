@@ -24,11 +24,11 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
     <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">
     <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
     <!--标准mui.css-->
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/??mui.min.css,core.css,app.css?v=102\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
     <!--引用Jquery-->
-    <script src=\"http://img.7799520.com/js/jquery.min.js\"></script>
-    <script src=\"http://img.7799520.com/js/mui.min.js\" /></script>
-    <script src=\"http://m.7799520.com/js/core.js\" /></script>
+    <script src=\"web/js/jquery.js\"></script>
+    <script src=\"web/js/min.js\" ></script>
+    <script src=\"web/js/core.js\" ></script>
     <script>
         \$(window).ready(function () {
             (function (\$) {
@@ -70,9 +70,15 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
 <header class=\"mui-bar mui-bar-nav\">
     <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
     <h1 class=\"mui-title\">推荐会员</h1>
-    <a href=\"http://m.7799520.com/search\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">筛选</a>
+    <a href=\"?r=home/shaixuan\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">筛选</a>
 </header>
 <!-- 导航栏结束 -->
+
+
+
+
+
+
 
 <!-- 发信息开始 -->
 <div class=\"layer\">
@@ -91,7 +97,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
 
 <!-- 选项卡开始 -->
 <div class=\"site-nav\">
-    <a class=\"link\" href=\"http://m.7799520.com\">
+    <a class=\"link\" href=\"\">
         <span class=\"nav-home\"></span>
         <span class=\"mui-tab-label\">首页</span>
     </a>
@@ -101,7 +107,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
         <span class=\"mui-tab-label\">交友</span>
     </a>
 
-    <a class=\"link\" href=\"http://m.7799520.com/register\">
+    <a class=\"link\" href=\"\">
         <span class=\"nav-leaf\"></span>
         <span class=\"mui-tab-label\">注册</span>
     </a>
@@ -112,44 +118,72 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
         <span class=\"mui-tab-label\">消息</span>
     </a>
 
-    <a class=\"link\" href=\"http://m.7799520.com/self\">
+    <a class=\"link\" href=\"\">
         <span class=\"nav-self\"></span>
         <span class=\"mui-tab-label\">个人</span>
     </a>
 </div>
 
 
-<nav class=\"mui-bar mui-bar-tab hidden\">
-    <a class=\"mui-tab-item link\" href=\"首页.html\">
-        <span class=\"nav-home\"></span>
-        <span class=\"mui-tab-label\">首页</span>
-    </a>
-    <a class=\"mui-tab-item mui-active link\" href=\"推荐会员.html\">
-        <span class=\"nav-heart\"></span>
-        <span class=\"mui-tab-label\">交友</span>
-    </a>
-    <a class=\"mui-tab-item link\" href=\"注册1.html\">
-        <span class=\"nav-leaf\"></span>
-        <span class=\"mui-tab-label\">注册</span>
-    </a>
-    <a class=\"mui-tab-item link\" href=\"消息列表.html\">
-        <span class=\"nav-call\"><label>99</label></span>
-        <span class=\"mui-tab-label\">消息</span>
-    </a>
-    <a class=\"mui-tab-item link\" href=\"个人中心.html\">
-        <span class=\"nav-self\"></span>
-        <span class=\"mui-tab-label\">个人</span>
-    </a>
-</nav>\t\t<!-- 选项卡结束 -->
+<!-- 选项卡结束 -->
+
+
+
 
 <div class=\"mui-content backgroud-none\" pull=\"recommend\" pull-obj=\"mui-table-view\">
     <!-- banner开始 -->
-    <a href=\"http://m.7799520.com/self/1.html\" class=\"link\">
+    <a href=\"?r=home/fossa\" class=\"link\">
         <div class=\"banner margin-none\">
-            <img src=\"/img/tips.png\">
+            <img src=\"http://m.7799520.com/img/tips.png\">
         </div>
     </a>
     <!-- banner结束 -->
+    <div class=\"recommend-list\">
+        <ul class=\"mui-table-view\">
+            ";
+        // line 125
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["ars"]) ? $context["ars"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["vs"]) {
+            // line 126
+            echo "            <li class=\"mui-table-view-cell mui-media\">
+                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
+                    <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\"></a>
+                </div><div class=\"mui-media-body\">
+                <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\">
+                    <b>";
+            // line 131
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "real_name", array()), "html", null, true);
+            echo "</b><span>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "age", array()), "html", null, true);
+            echo "岁，";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "region", array()), "html", null, true);
+            echo "，152cm</span>
+                    <p class=\"mui-ellipsis\">内心独白：";
+            // line 132
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "mono", array()), "html", null, true);
+            echo "</p></a></div><div>
+                <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"";
+            // line 133
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
+            echo "\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
+                <a href=\"javascript:;\" objid=\"";
+            // line 134
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
+            echo "\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
+            </div>
+            </li>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vs'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 138
+        echo "        </ul>
+    </div>
+
+
+
 
     <!-- 会员推荐开始 -->
     <div class=\"recommend-list\">
@@ -158,17 +192,18 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
 
     <script src=\"/js/auto-pull.js\"></script>
     <script type=\"text/javascript\">
-        var condition = '{\"ageyear\":[\"gt\",0],\"height\":[\"gt\",0],\"salary\":[\"gt\",0],\"education\":[\"gt\",0],\"gender\":[\"eq\",2],\"avatar\":[\"neq\",\"\"],\"avatarflag\":\"1\"}';
-
-        //打招呼
+        //        var condition = '{\"ageyear\":[\"gt\",0],\"height\":[\"gt\",0],\"salary\":[\"gt\",0],\"education\":[\"gt\",0],\"gender\":[\"eq\",2],\"avatar\":[\"neq\",\"\"],\"avatarflag\":\"1\"}';
+        //
+        //        //打招呼
         \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
             //判断是否在线
             if (\$(this).hasClass('active')) {
                 mui.toast('您已经对TA打过招呼');
             } else {
-                var url = \"http://m.7799520.com/send/addSayHi\";
+                var url = \"?r=fossa/zhaohu\";
                 var obj = \$(this);
                 var id = obj.attr('objid');
+//                alert(id)
                 \$.ajax({
                     url: url,
                     type: 'post',
@@ -177,15 +212,16 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
                         'userid': id
                     },
                     success: function(data) {
-                        if (data.status == 1) {
-                            obj.html('<span class=\"ico ico-msg-hi\"></span>已打招呼');
-                            obj.addClass('active');
-                            mui.toast('您对TA打了个招呼');
-                        } else if (data.status == 0) {
-                            mui.toast('打招呼失败,请重试..');
-                        } else {
-                            window.location.href = \"http://m.7799520.com/login\";
-                        }
+                        alert(data.status)
+//                        if (data.status == 1) {
+//                            obj.html('<span class=\"ico ico-msg-hi\"></span>已打招呼');
+//                            obj.addClass('active');
+//                            mui.toast('您对TA打了个招呼');
+//                        } else if (data.status == 0) {
+//                            mui.toast('打招呼失败,请重试..');
+//                        } else {
+//                            window.location.href = \"http://nbwqh.site/yuanlai/yuanlai/\";
+//                        }
                     }
                 });
             }
@@ -223,24 +259,25 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
             //删除
             \$('.layer-close').click();
             var url = 'http://m.7799520.com/send/addMessage';
-            \$.ajax({
-                url: url,
-                type: 'post',
-                dataType: 'json',
-                data: {
-                    'userid': userid,
-                    'message': ct.val()
-                },
-                success: function(data) {
-                    if (data.status == 1) {
-                        mui.toast('消息已发出');
-                    } else if (data.status == 0) {
-                        mui.toast('发送信息,请重试..');
-                    } else {
-                        window.location.href = \"http://m.7799520.com/login\";
-                    }
-                }
-            });
+            alert(userid)
+//            \$.ajax({
+//                url: url,
+//                type: 'post',
+//                dataType: 'json',
+//                data: {
+//                    'userid': userid,
+//                    'message': ct.val()
+//                },
+//                success: function(data) {
+//                    if (data.status == 1) {
+//                        mui.toast('消息已发出');
+//                    } else if (data.status == 0) {
+//                        mui.toast('发送信息,请重试..');
+//                    } else {
+//                        window.location.href = \"http://m.7799520.com/login\";
+//                    }
+//                }
+//            });
         });
         //关闭弹窗
         \$('.layer-close').click(function() {
@@ -268,9 +305,14 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
         return "suggest.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  182 => 138,  172 => 134,  168 => 133,  164 => 132,  156 => 131,  149 => 126,  145 => 125,  19 => 1,);
     }
 
     public function getSource()
@@ -283,11 +325,11 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
     <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">
     <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
     <!--标准mui.css-->
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/??mui.min.css,core.css,app.css?v=102\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
     <!--引用Jquery-->
-    <script src=\"http://img.7799520.com/js/jquery.min.js\"></script>
-    <script src=\"http://img.7799520.com/js/mui.min.js\" /></script>
-    <script src=\"http://m.7799520.com/js/core.js\" /></script>
+    <script src=\"web/js/jquery.js\"></script>
+    <script src=\"web/js/min.js\" ></script>
+    <script src=\"web/js/core.js\" ></script>
     <script>
         \$(window).ready(function () {
             (function (\$) {
@@ -329,9 +371,15 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
 <header class=\"mui-bar mui-bar-nav\">
     <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
     <h1 class=\"mui-title\">推荐会员</h1>
-    <a href=\"http://m.7799520.com/search\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">筛选</a>
+    <a href=\"?r=home/shaixuan\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">筛选</a>
 </header>
 <!-- 导航栏结束 -->
+
+
+
+
+
+
 
 <!-- 发信息开始 -->
 <div class=\"layer\">
@@ -350,7 +398,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
 
 <!-- 选项卡开始 -->
 <div class=\"site-nav\">
-    <a class=\"link\" href=\"http://m.7799520.com\">
+    <a class=\"link\" href=\"\">
         <span class=\"nav-home\"></span>
         <span class=\"mui-tab-label\">首页</span>
     </a>
@@ -360,7 +408,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
         <span class=\"mui-tab-label\">交友</span>
     </a>
 
-    <a class=\"link\" href=\"http://m.7799520.com/register\">
+    <a class=\"link\" href=\"\">
         <span class=\"nav-leaf\"></span>
         <span class=\"mui-tab-label\">注册</span>
     </a>
@@ -371,44 +419,46 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
         <span class=\"mui-tab-label\">消息</span>
     </a>
 
-    <a class=\"link\" href=\"http://m.7799520.com/self\">
+    <a class=\"link\" href=\"\">
         <span class=\"nav-self\"></span>
         <span class=\"mui-tab-label\">个人</span>
     </a>
 </div>
 
 
-<nav class=\"mui-bar mui-bar-tab hidden\">
-    <a class=\"mui-tab-item link\" href=\"首页.html\">
-        <span class=\"nav-home\"></span>
-        <span class=\"mui-tab-label\">首页</span>
-    </a>
-    <a class=\"mui-tab-item mui-active link\" href=\"推荐会员.html\">
-        <span class=\"nav-heart\"></span>
-        <span class=\"mui-tab-label\">交友</span>
-    </a>
-    <a class=\"mui-tab-item link\" href=\"注册1.html\">
-        <span class=\"nav-leaf\"></span>
-        <span class=\"mui-tab-label\">注册</span>
-    </a>
-    <a class=\"mui-tab-item link\" href=\"消息列表.html\">
-        <span class=\"nav-call\"><label>99</label></span>
-        <span class=\"mui-tab-label\">消息</span>
-    </a>
-    <a class=\"mui-tab-item link\" href=\"个人中心.html\">
-        <span class=\"nav-self\"></span>
-        <span class=\"mui-tab-label\">个人</span>
-    </a>
-</nav>\t\t<!-- 选项卡结束 -->
+<!-- 选项卡结束 -->
+
+
+
 
 <div class=\"mui-content backgroud-none\" pull=\"recommend\" pull-obj=\"mui-table-view\">
     <!-- banner开始 -->
-    <a href=\"http://m.7799520.com/self/1.html\" class=\"link\">
+    <a href=\"?r=home/fossa\" class=\"link\">
         <div class=\"banner margin-none\">
-            <img src=\"/img/tips.png\">
+            <img src=\"http://m.7799520.com/img/tips.png\">
         </div>
     </a>
     <!-- banner结束 -->
+    <div class=\"recommend-list\">
+        <ul class=\"mui-table-view\">
+            {% for vs in ars %}
+            <li class=\"mui-table-view-cell mui-media\">
+                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
+                    <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\"></a>
+                </div><div class=\"mui-media-body\">
+                <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\">
+                    <b>{{ vs.real_name }}</b><span>{{ vs.age }}岁，{{ vs.region }}，152cm</span>
+                    <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
+                <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
+                <a href=\"javascript:;\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
+            </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+
 
     <!-- 会员推荐开始 -->
     <div class=\"recommend-list\">
@@ -417,17 +467,18 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
 
     <script src=\"/js/auto-pull.js\"></script>
     <script type=\"text/javascript\">
-        var condition = '{\"ageyear\":[\"gt\",0],\"height\":[\"gt\",0],\"salary\":[\"gt\",0],\"education\":[\"gt\",0],\"gender\":[\"eq\",2],\"avatar\":[\"neq\",\"\"],\"avatarflag\":\"1\"}';
-
-        //打招呼
+        //        var condition = '{\"ageyear\":[\"gt\",0],\"height\":[\"gt\",0],\"salary\":[\"gt\",0],\"education\":[\"gt\",0],\"gender\":[\"eq\",2],\"avatar\":[\"neq\",\"\"],\"avatarflag\":\"1\"}';
+        //
+        //        //打招呼
         \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
             //判断是否在线
             if (\$(this).hasClass('active')) {
                 mui.toast('您已经对TA打过招呼');
             } else {
-                var url = \"http://m.7799520.com/send/addSayHi\";
+                var url = \"?r=fossa/zhaohu\";
                 var obj = \$(this);
                 var id = obj.attr('objid');
+//                alert(id)
                 \$.ajax({
                     url: url,
                     type: 'post',
@@ -436,15 +487,16 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
                         'userid': id
                     },
                     success: function(data) {
-                        if (data.status == 1) {
-                            obj.html('<span class=\"ico ico-msg-hi\"></span>已打招呼');
-                            obj.addClass('active');
-                            mui.toast('您对TA打了个招呼');
-                        } else if (data.status == 0) {
-                            mui.toast('打招呼失败,请重试..');
-                        } else {
-                            window.location.href = \"http://m.7799520.com/login\";
-                        }
+                        alert(data.status)
+//                        if (data.status == 1) {
+//                            obj.html('<span class=\"ico ico-msg-hi\"></span>已打招呼');
+//                            obj.addClass('active');
+//                            mui.toast('您对TA打了个招呼');
+//                        } else if (data.status == 0) {
+//                            mui.toast('打招呼失败,请重试..');
+//                        } else {
+//                            window.location.href = \"http://nbwqh.site/yuanlai/yuanlai/\";
+//                        }
                     }
                 });
             }
@@ -482,24 +534,25 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
             //删除
             \$('.layer-close').click();
             var url = 'http://m.7799520.com/send/addMessage';
-            \$.ajax({
-                url: url,
-                type: 'post',
-                dataType: 'json',
-                data: {
-                    'userid': userid,
-                    'message': ct.val()
-                },
-                success: function(data) {
-                    if (data.status == 1) {
-                        mui.toast('消息已发出');
-                    } else if (data.status == 0) {
-                        mui.toast('发送信息,请重试..');
-                    } else {
-                        window.location.href = \"http://m.7799520.com/login\";
-                    }
-                }
-            });
+            alert(userid)
+//            \$.ajax({
+//                url: url,
+//                type: 'post',
+//                dataType: 'json',
+//                data: {
+//                    'userid': userid,
+//                    'message': ct.val()
+//                },
+//                success: function(data) {
+//                    if (data.status == 1) {
+//                        mui.toast('消息已发出');
+//                    } else if (data.status == 0) {
+//                        mui.toast('发送信息,请重试..');
+//                    } else {
+//                        window.location.href = \"http://m.7799520.com/login\";
+//                    }
+//                }
+//            });
         });
         //关闭弹窗
         \$('.layer-close').click(function() {

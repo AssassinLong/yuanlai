@@ -103,12 +103,17 @@ class homeCtrl extends \core\imooc
         }
 
     }
-    public function shaixuan()
-    {
+    public function shaixuan(){
         $this->display('shaixuan.html');
     }
     public function suggest()
     {
+        $id=$_SESSION['id'];
+//        echo $id;die;
+        $mono=new basicdataModel();
+        $dubai=$mono->user_phone($id);
+        $this->assign('ars',$dubai);
+//        print_r($dubai);die;
         $this->display('suggest.html');
     }
 }
