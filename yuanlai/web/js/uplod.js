@@ -14,10 +14,13 @@ $(function() {
         if (!chk) {
             return false;
         }
-        $('form').submit();
+        $(this).parents('form').submit();
         process = $(this).parents('.make-upload').attr('param');
-
         mui.toast('图片上传中…');
+
+        /*if(mui.toast('图片上传中…')){
+            location.reload('http://www.liujinlong.site/yuanlai/?r=home/fossa');
+        }*/
 
         //查看自己资料页专用
         if (process == 'album') {
@@ -40,7 +43,7 @@ function checkImgType(obj) {
             alert("图片类型必须是.gif,jpeg,jpg,png中的一种");
             obj.value = "";
             return false;
-        } else {
+        } /*else {
             //以下无效
             //var img = new Image();
             //img.src = obj.value;
@@ -53,7 +56,7 @@ function checkImgType(obj) {
             //		break;
             //	}
             //}
-        }
+        }*/
     }
     return true;
 }

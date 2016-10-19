@@ -64,8 +64,8 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
             })
         </script>
 
-<title>我主良缘：中国高端婚恋交友_征婚相亲直营连锁创导者</title><meta content=\"征婚交友,相亲,征婚,交友网站,相亲网,婚恋交友网\" name=\"keywords\">
-<meta content=\"征婚交友_相亲找对象就上【我主良缘】婚介网,中国大型实体同城婚恋交友标杆企业,找对象快,好单身多！是单身男女交友,找老公-找老婆-找老伴的婚姻介绍网站,我主良缘公司于2007年在福建福州创立,目前已在多个城市开设了直营分公司,其营业规模、团队数量和服务品质均处于行业前沿.\" name=\"description\">
+<title>缘来社交,琴瑟和鸣</title><meta content=\"交友网站,天下谁人不识君\" name=\"keywords\">
+<meta content=\"\" name=\"description\">
 </head>
 \t<body>
 \t\t<!-- 导航栏开始 -->
@@ -77,7 +77,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t\t\t</div>
 \t\t\t</h1>
 \t\t\t<a href=\"\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
-\t\t\t\t\t\t\t\t北京\t\t\t<span></span>
+\t\t\t\t\t\t\t\t\t\t<span></span>
 \t\t\t</a>
 \t\t</header>
 \t\t<!-- 导航栏结束 -->
@@ -162,13 +162,16 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/party\" class=\"link\">
+\t\t<a href=\"";
+        // line 147
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "advices", array()), "html", null, true);
+        echo "\" class=\"link\">
 \t\t\t<span class=\"icon-heart\"></span>
-\t\t\t<div class=\"mui-media-body\">相亲活动</div>
+\t\t\t<div class=\"mui-media-body\">天涯知己</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/news\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-doctor\"></span>
 \t\t\t<div class=\"mui-media-body\">婚恋课堂</div>
 \t\t</a>
@@ -183,13 +186,13 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/weibo\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-vip\"></span>
 \t\t\t<div class=\"mui-media-body\">心情微博</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/story\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-skirt\"></span>
 \t\t\t<div class=\"mui-media-body\">成功故事</div>
 \t\t</a>
@@ -201,7 +204,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/address\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-locate\"></span>
 \t\t\t<div class=\"mui-media-body\">门店地址</div>
 \t\t</a>
@@ -281,7 +284,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 
     public function getDebugInfo()
     {
-        return array (  179 => 159,  19 => 1,);
+        return array (  182 => 159,  167 => 147,  19 => 1,);
     }
 
     public function getSource()
@@ -334,8 +337,8 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
             })
         </script>
 
-<title>我主良缘：中国高端婚恋交友_征婚相亲直营连锁创导者</title><meta content=\"征婚交友,相亲,征婚,交友网站,相亲网,婚恋交友网\" name=\"keywords\">
-<meta content=\"征婚交友_相亲找对象就上【我主良缘】婚介网,中国大型实体同城婚恋交友标杆企业,找对象快,好单身多！是单身男女交友,找老公-找老婆-找老伴的婚姻介绍网站,我主良缘公司于2007年在福建福州创立,目前已在多个城市开设了直营分公司,其营业规模、团队数量和服务品质均处于行业前沿.\" name=\"description\">
+<title>缘来社交,琴瑟和鸣</title><meta content=\"交友网站,天下谁人不识君\" name=\"keywords\">
+<meta content=\"\" name=\"description\">
 </head>
 \t<body>
 \t\t<!-- 导航栏开始 -->
@@ -347,7 +350,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t\t\t</div>
 \t\t\t</h1>
 \t\t\t<a href=\"\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
-\t\t\t\t\t\t\t\t北京\t\t\t<span></span>
+\t\t\t\t\t\t\t\t\t\t<span></span>
 \t\t\t</a>
 \t\t</header>
 \t\t<!-- 导航栏结束 -->
@@ -432,13 +435,13 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/party\" class=\"link\">
+\t\t<a href=\"{{ url.advices }}\" class=\"link\">
 \t\t\t<span class=\"icon-heart\"></span>
-\t\t\t<div class=\"mui-media-body\">相亲活动</div>
+\t\t\t<div class=\"mui-media-body\">天涯知己</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/news\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-doctor\"></span>
 \t\t\t<div class=\"mui-media-body\">婚恋课堂</div>
 \t\t</a>
@@ -450,13 +453,13 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/weibo\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-vip\"></span>
 \t\t\t<div class=\"mui-media-body\">心情微博</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/story\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-skirt\"></span>
 \t\t\t<div class=\"mui-media-body\">成功故事</div>
 \t\t</a>
@@ -468,7 +471,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"http://m.7799520.com/address\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-locate\"></span>
 \t\t\t<div class=\"mui-media-body\">门店地址</div>
 \t\t</a>

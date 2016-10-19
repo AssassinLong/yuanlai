@@ -62,6 +62,7 @@
 			<header class="mui-bar mui-bar-nav nav-hide">
 
 				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+                <a href="?r=home/index" class="mui-bar-nav-home link"></a>
 
 			</header>
 
@@ -103,7 +104,7 @@
 					<div class="clip-bg do-avatar-upload" style="background:
 
 					url(/img/avata-1.png);">
-
+                        <img src="./web/upimg/147650236616.png">
 					</div>
 
 
@@ -181,8 +182,14 @@
 			<div class="file-photo">
 
 				<ul class="mui-table-view mui-grid-view boder-none">
+                    {% for val in imgs %}
+                    <li  class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
 
-					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                        <img src="{{ val.path }}">
+
+                    </li>
+                    {% endfor %}
+					<li  style="float: left" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
 
 						<a href="javascript:;" class="do-layer-file-upload">
 
@@ -230,6 +237,16 @@
 					<h4>基本资料<span class="dot dot-orange"></span><a class="link" href="?r=fossa/jibenjieshao"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
 
 					{% for vv in arras %}
+                    {% if vv.region %}
+                    <p><font class="mui-pull-left">年龄</font>{{ vv.age }}</p>
+                    {% else %}
+                    <p><font class="mui-pull-left">年龄</font>未填写</p>
+                    {% endif %}
+                    {% if vv.region %}
+                    <p><font class="mui-pull-left">性别</font>{{ vv.sex }}</p>
+                    {% else %}
+                    <p><font class="mui-pull-left">性别</font>未填写</p>
+                    {% endif %}
 					{% if vv.region %}
 					<p><font class="mui-pull-left">地区</font>{{ vv.region }}</p>
 					{% else %}
@@ -445,19 +462,18 @@
 
 					//判断照片是否超过10张
 
-					if($('.do-layer-file-upload').parents('ul').find('li').size() > 10) {
+					if($('.do-layer-file-upload').parents('ul').find('li').size() > 4) {
 
 						$('.do-layer-file-upload').hide();
 
 					}
-
 					//上传头像
 
-					$('.file-avatar').on('tap', '.do-avatar-upload', function(event) {
+					/*$('.file-avatar').on('tap', '.do-avatar-upload', function(event) {
 
 						$('.make-upload').eq(0).find('input').click();
 
-					});
+					});*/
 
 					//上传背景
 

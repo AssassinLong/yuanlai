@@ -2,6 +2,6 @@
 return array(
     'MVC'=>'mvcone1',
     'INLET'=>'index.php',
-    'CTRL'=>'index',
-    'ACTION'=>'login'
+    'CTRL'=>'home',
+    'ACTION'=>'index'
 );

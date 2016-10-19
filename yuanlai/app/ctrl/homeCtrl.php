@@ -14,12 +14,15 @@ class homeCtrl extends \core\imooc
     //主页
     public function index()
     {
+        //var_dump($_SESSION);
         if(isset($_SESSION['username'])){
         $url=array(
-            'fossa' => '?r=home/fossa'
+            'fossa' => '?r=home/fossa',
+            'advices' => '?r=home/advices',
         );}else{
         $url=array(
-            'fossa' => '?r=index/login'
+            'fossa' => '?r=index/login',
+            'advices' => '?r=index/login',
         );
         }
       $this->assign('url',$url);
@@ -35,9 +38,10 @@ class homeCtrl extends \core\imooc
     {//echo '1';
             $this->display('seek.html');
     }
-    //消息
+    //消息展示
     public function advices()
     {
+
             $this->display('advices.html');
     }
     //礼物(暂定)
@@ -76,14 +80,21 @@ class homeCtrl extends \core\imooc
             $mono = new monoModel();
             $dubai = $mono->getOne(['u_id' => $id]);
             $this->assign('dubai', $dubai);
+
+            $picture=new pictureModel();
+            $imgs=$picture->all();
+            $this->assign('imgs',$imgs);
+
+
             $this->display('fossa.html');
         }else{
             jump('?index/login');
         }
     }
+    //上传相册
     public function upload()
     {
-       if(isset($_FILES['imgfile'])){
+        if(isset($_FILES['imgfile'])){
             //$_FILES['imgfile'];
            $filepath='./web/upimg/';
            if(!file_exists($filepath)){
@@ -101,7 +112,6 @@ class homeCtrl extends \core\imooc
        }else{
             echo '文件未上传';
         }
-
     }
     public function shaixuan()
     {

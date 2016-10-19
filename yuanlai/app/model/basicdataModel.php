@@ -13,7 +13,7 @@ class basicdataModel extends model
         // return $ret;
 
         $arr = $this->select($this->table,'*', [
-            "id" => $data['id'],
+            "u_id" => $data['id'],
         ]);
         //dump($arr);die
         return $arr;
