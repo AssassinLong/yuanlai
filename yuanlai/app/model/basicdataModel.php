@@ -27,7 +27,7 @@ class basicdataModel extends model
         $ret=$this->update($this->table,[
             "region"=>$data['region']
         ],array(
-            'id'=>$id
+            'u_id'=>$id
         ));
         return $ret;
     }
@@ -104,7 +104,12 @@ class basicdataModel extends model
 //        print_R($arr);die;
         return $arr;
     }
-
+    public function adde1($str)
+    {
+        return $this->insert($this->table,[
+            "u_id"=>$str
+        ]);
+    }
 
 
 }

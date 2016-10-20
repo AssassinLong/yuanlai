@@ -81,19 +81,19 @@ class homeCtrl extends \core\imooc
             if ($arras) {
                 $this->assign('arras', $arras);
             }
-//        print_r($arras);die;
+//            print_r($arras);die;
             $mono = new monoModel();
             $dubai = $mono->getOne(['u_id' => $id]);
             $this->assign('dubai', $dubai);
 
             $picture=new pictureModel();
             $imgs=$picture->all();
-            //dump($imgs);die;
+//            dump($imgs);die;
             $this->assign('imgs',$imgs);
               
 
             $this->display('fossa.html');
-            }else{
+            }  else{
                  $id=$_SESSION['id'];
                 $model = new xiangModel();
                 $re = $model->xiang($id);
@@ -112,7 +112,7 @@ class homeCtrl extends \core\imooc
                 if ($arras) {
                     $this->assign('arras', $arras);
                 }
-                //print_r($arras);die;
+//                print_r($arras);die;
                 $mono = new monoModel();
                 $dubai = $mono->getOne(['u_id' => $id]);
                 $this->assign('dubai', $dubai);

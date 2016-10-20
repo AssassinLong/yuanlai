@@ -285,7 +285,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
         foreach ($context['_seq'] as $context["_key"] => $context["vv"]) {
             // line 240
             echo "                    ";
-            if ($this->getAttribute($context["vv"], "region", array())) {
+            if ($this->getAttribute($context["vv"], "age", array())) {
                 // line 241
                 echo "                    <p><font class=\"mui-pull-left\">年龄</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "age", array()), "html", null, true);
@@ -298,7 +298,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
             }
             // line 245
             echo "                    ";
-            if ($this->getAttribute($context["vv"], "region", array())) {
+            if ($this->getAttribute($context["vv"], "sex", array())) {
                 // line 246
                 echo "                    <p><font class=\"mui-pull-left\">性别</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "sex", array()), "html", null, true);
@@ -1020,12 +1020,12 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"?r=fossa/jibenjieshao\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
 
 \t\t\t\t\t{% for vv in arras %}
-                    {% if vv.region %}
+                    {% if vv.age %}
                     <p><font class=\"mui-pull-left\">年龄</font>{{ vv.age }}</p>
                     {% else %}
                     <p><font class=\"mui-pull-left\">年龄</font>未填写</p>
                     {% endif %}
-                    {% if vv.region %}
+                    {% if vv.sex %}
                     <p><font class=\"mui-pull-left\">性别</font>{{ vv.sex }}</p>
                     {% else %}
                     <p><font class=\"mui-pull-left\">性别</font>未填写</p>

@@ -54,7 +54,7 @@ class __TwigTemplate_804f8817b52a0a7b85c1dafeb52e6be165713e41213880443c43f68c889
 
             
 
-        <a href=\"?index/register\"\" class=\"ui-link\">免费注册</a> <font color=\"#878787\">
+        <a href=\"?index/register\" class=\"ui-link\">免费注册</a> <font color=\"#878787\">
 
     </div>
 
@@ -129,7 +129,7 @@ class __TwigTemplate_804f8817b52a0a7b85c1dafeb52e6be165713e41213880443c43f68c889
 
             
 
-        <a href=\"?index/register\"\" class=\"ui-link\">免费注册</a> <font color=\"#878787\">
+        <a href=\"?index/register\" class=\"ui-link\">免费注册</a> <font color=\"#878787\">
 
     </div>
 

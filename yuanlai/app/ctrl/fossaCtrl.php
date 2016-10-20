@@ -34,9 +34,9 @@
        {
            $id=$_SESSION['id'];
 //           echo $id;die;
-           $data=array('u_id'=>$id);
+
            $model=new basicdataModel();
-           $arr=$model->userOne1($data);
+           $arr=$model->userOne1($id);
            $this->assign('arr',$arr);
            $this->display('jibenziliao.html');
        }

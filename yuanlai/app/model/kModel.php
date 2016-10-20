@@ -18,6 +18,14 @@ class kModel extends model
 
         return $this->insert($table,$data);
     }
+    public function addOne2($table,$data)
+    {
+
+        $id=$this->last_insert_id($table,$data);
+        return $id;
+//        print_r($id);die;
+    }
+
     //删除留言
     public function delOne($id)
     {
