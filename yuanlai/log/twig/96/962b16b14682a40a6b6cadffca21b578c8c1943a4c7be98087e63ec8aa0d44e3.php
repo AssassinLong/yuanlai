@@ -103,7 +103,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
 \t<div class=\"mui-slider-item mui-slider-item-duplicate\">
 
-\t\t<a href=\"http://m.7799520.com/sign\" class=\"link\">
+\t\t<a href=\"\" class=\"link\">
 
 \t\t\t<img src=\"http://img.7799520.com/img/slide-sign.png\">
 \t\t</a>
@@ -113,14 +113,14 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
 
 \t <div class=\"mui-slider-item\">
-                <a href=\"http://m.7799520.com/top\" class=\"link\">
+                <a href=\"\" class=\"link\">
                         <img src=\"http://img.7799520.com/tmp/top1.png\">
                 </a>
         </div>
 
 
 \t<div class=\"mui-slider-item\">
-                <a href=\"http://m.7799520.com/sign\" class=\"link\">
+                <a href=\"\" class=\"link\">
 \t\t\t<img src=\"http://img.7799520.com/img/slide-sign.png\">
                 </a>
         </div>
@@ -382,7 +382,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
 \t<div class=\"mui-slider-item mui-slider-item-duplicate\">
 
-\t\t<a href=\"http://m.7799520.com/sign\" class=\"link\">
+\t\t<a href=\"\" class=\"link\">
 
 \t\t\t<img src=\"http://img.7799520.com/img/slide-sign.png\">
 \t\t</a>
@@ -392,14 +392,14 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
 
 \t <div class=\"mui-slider-item\">
-                <a href=\"http://m.7799520.com/top\" class=\"link\">
+                <a href=\"\" class=\"link\">
                         <img src=\"http://img.7799520.com/tmp/top1.png\">
                 </a>
         </div>
 
 
 \t<div class=\"mui-slider-item\">
-                <a href=\"http://m.7799520.com/sign\" class=\"link\">
+                <a href=\"\" class=\"link\">
 \t\t\t<img src=\"http://img.7799520.com/img/slide-sign.png\">
                 </a>
         </div>

@@ -18,6 +18,43 @@ class monoModel extends model
     {
         return $this->update($this->basi,$data,$where);
     }
+    public function sel()
+    {
+        
+        return $this->query("select * from user INNER JOIN mono on user.id=mono.u_id")->fetchAll();
+         
+    }
+    public function guan($id,$u_id)
+    {
+         return $this->insert('guan',[
+           
+               's_id'=>$id,
+               'b_id'=>$u_id
+            ]);
+    }
+
+    public function guan_sel($u_id)
+    {
+          return $this->select('guan','*',[
+
+                'b_id'=>$u_id
+            ]);
+    }
+    public function zi_guan($id)
+    {
+
+        //echo $id;
+        return $this->select('guan','*',[
+
+                's_id'=>$id
+            ]);
+    }
+    public function sta($aa)
+    {
+          return $this->select('guan','*',[
+             'AND'=>$aa
+            ]);
+    }
 }
 
 ?>

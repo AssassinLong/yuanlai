@@ -62,8 +62,10 @@ class homeCtrl extends \core\imooc
     public function fossa()
     {
         if(isset($_SESSION['username'])) {
-            $id=get('tid');
-            if($id){
+            
+            if(get('tid')){
+                $u_id=$_SESSION['id'];
+                $id=get('tid');
                 $model = new xiangModel();
             $re = $model->xiang($id);
             if ($re) {
@@ -78,6 +80,7 @@ class homeCtrl extends \core\imooc
             
             $model = new basicdataModel();
             $arras = $model->userOne1($id);
+            
             if ($arras) {
                 $this->assign('arras', $arras);
             }
@@ -87,12 +90,22 @@ class homeCtrl extends \core\imooc
             $this->assign('dubai', $dubai);
 
             $picture=new pictureModel();
-            $imgs=$picture->all();
+            $imgs=$picture->all($id);
 //            dump($imgs);die;
             $this->assign('imgs',$imgs);
-              
-
-            $this->display('fossa.html');
+            $ar=$mono->guan_sel($id);
+            $ar1=count($ar);
+            
+            
+            //echo $data1;die;
+            $this->assign('ar1',$ar1);
+            $data=$mono->zi_guan($id);
+            $data1=count($data);
+            $this->assign('data1',$data1);
+            $aa=array('s_id'=>$u_id,'b_id'=>$id);
+            $aaa=$mono->sta($aa);
+            $this->assign('aaa',$aaa);
+            $this->display('fossa_ta.html');
             }  else{
                  $id=$_SESSION['id'];
                 $model = new xiangModel();
@@ -118,11 +131,14 @@ class homeCtrl extends \core\imooc
                 $this->assign('dubai', $dubai);
 
                 $picture=new pictureModel();
-                $imgs=$picture->all();
+                $imgs=$picture->all($id);
                 //dump($imgs);die;
                 $this->assign('imgs',$imgs);
-                  
-
+                $ar=$mono->zi_guan($id);
+                $ar1=count($ar);
+                $data=$mono->guan_sel($id);
+                $data1=count($data);
+                $this->assign('ar1',$ar1);
                 $this->display('fossa.html');
             }
             
@@ -169,10 +185,29 @@ class homeCtrl extends \core\imooc
 
     public function xinqing()
     {
+         $base=new monoModel();
+         $arr=$base->sel();
+         //dump($arr);die;
+         $this->assign('arr',$arr);
     	 $this->display('xinqing.html');
+    }
+
+    public function guan()
+    {
+         $id=$_SESSION['id'];
+         $u_id=post('u_id');
+         $base=new monoModel();
+         $arr=$base->guan($id,$u_id);
+         $ar=$base->guan_sel($u_id);
+         $ar1=count($ar);
+         if($arr){
+             echo $ar1;  
+         }else{
+            echo 0;
+         }
     }
 }
      
 
-
+  
 ?>

@@ -5,9 +5,11 @@ use core\lib\model;
 class pictureModel extends model
 {
     public $table="picture";
-    public function all()
+    public function all($id)
     {
-        return $this->select($this->table,'*');
+        return $this->select($this->table,'*',[
+              '$u_id'=>$id
+            ]);
     }
     public function addOne($data)
     {

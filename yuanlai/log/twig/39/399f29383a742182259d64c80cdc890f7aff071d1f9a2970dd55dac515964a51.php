@@ -1,7 +1,7 @@
 <?php
 
-/* fossa.html */
-class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be4774534e84 extends Twig_Template
+/* fossa_ta.html */
+class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece432f9 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -89,7 +89,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 
 \t\t\t<!-- 弹出层开始 -->
-
+<!-- 
 \t\t\t<div class=\"layer\">
 
 \t\t\t\t<div class=\"layer-file-upload\">
@@ -102,11 +102,11 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t<p>95%的会员选择有照片的用户进行联系哦</p>
 
-\t\t\t\t\t<button class=\"mui-btn do-upload\" type=\"button\">立即上传</button>
+\t\t\t\t\t
 
 \t\t\t\t</div>
 
-\t\t\t</div>
+\t\t\t</div> -->
 
 \t\t\t<!-- 弹出层结束 -->
 
@@ -124,16 +124,14 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t<div class=\"file-avatar\">
 
 
-\t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"background:
-
-\t\t\t\t\turl(/img/avata-1.png);\">
+\t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"\">
                         <img src=\"./web/upimg/1476874085(23).jpg\">
 \t\t\t\t\t</div>
 
                     
 \t\t\t\t\t<p>
 \t\t\t\t\t\t<b>";
-            // line 112
+            // line 110
             echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "name", array()), "html", null, true);
             echo "</b>
 
@@ -152,16 +150,34 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 
 \t\t\t\t\t\t<br />";
-            // line 128
+            // line 126
             echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "age", array()), "html", null, true);
             echo " &nbsp;";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "native", array()), "html", null, true);
             echo "
 \t\t\t\t\t</p>
-                    
-\t\t\t\t</div>
+                     
+                     ";
+            // line 129
+            if ((isset($context["aaa"]) ? $context["aaa"] : null)) {
+                // line 130
+                echo "
+                           <button id=\"focus\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus-on\"></span>已关注</button>
+                     ";
+            } else {
+                // line 133
+                echo "                     <div id=\"u\">
+                    <button name=\"a\" id=\"";
+                // line 134
+                echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "u_id", array()), "html", null, true);
+                echo "\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>
+                    </div>
+                    ";
+            }
+            // line 137
+            echo "\t\t\t\t</div>
 
-
+       
 
 \t\t\t\t<img src=\"web/images/file-bg.png\" />
 
@@ -173,9 +189,9 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4\">
 
-\t\t\t\t\t\t\t<a href=\"#\"><b>";
-            // line 145
-            echo twig_escape_filter($this->env, (isset($context["ar1"]) ? $context["ar1"] : null), "html", null, true);
+\t\t\t\t\t\t\t<a href=\"#\"><b id=\"c\">";
+            // line 151
+            echo twig_escape_filter($this->env, (isset($context["data1"]) ? $context["data1"] : null), "html", null, true);
             echo "</b>关注
 
 \t\t\t\t\t\t\t</a>
@@ -189,7 +205,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t\t\t<b>
 
 \t\t\t\t\t\t\t\t0
-\t\t\t\t\t\t\t</b>魅力</a>
+\t\t\t\t\t\t\t</b>魅力</a>guan
 
 \t\t\t\t\t\t\t<div></div>
 
@@ -197,7 +213,10 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4\">
 
-\t\t\t\t\t\t\t<a href=\"#\"><b>0</b>粉丝</a>
+\t\t\t\t\t\t\t<a href=\"#\"><b id=\"f\">";
+            // line 172
+            echo twig_escape_filter($this->env, (isset($context["ar1"]) ? $context["ar1"] : null), "html", null, true);
+            echo "</b>粉丝</a>
 
 \t\t\t\t\t\t</li>
 
@@ -217,15 +236,15 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
                     ";
-            // line 185
+            // line 191
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["imgs"]) ? $context["imgs"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
-                // line 186
+                // line 192
                 echo "                    <li  class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 
                         <img src=\"";
-                // line 188
+                // line 194
                 echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "path", array()), "html", null, true);
                 echo "\">
 
@@ -235,7 +254,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 192
+            // line 198
             echo "\t\t\t\t\t<li  style=\"float: left\" class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"do-layer-file-upload\">
@@ -266,13 +285,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<span class=\"dot dot-pink\"></span>
 
-\t\t\t\t\t\t<a href=\"?r=fossa/dubai\" class=\"link\">
-
-\t\t\t\t\t\t\t<span class=\"mui-icon mui-icon-compose\"></span>
-
-\t\t\t\t\t\t\t编辑独白
-
-\t\t\t\t\t\t</a>
+\t\t\t\t\t
 
 \t\t\t\t\t</h4>
 
@@ -284,7 +297,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t</p>
 
 
-\t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"?r=fossa/jibenjieshao\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span></h4>
 
 
                     ";
@@ -419,7 +432,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
             $context['_seq'] = twig_ensure_traversable((isset($context["re"]) ? $context["re"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
                 // line 294
-                echo "\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+                echo "\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span></h4>
 
 \t\t\t\t\t<p>
 
@@ -478,7 +491,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
         } else {
             // line 327
             echo "
-\t\t\t\t\t <h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t <h4>详细资料<span class=\"dot dot-light-purple\"></span></h4>
 
 \t\t\t\t\t<p>
 
@@ -525,7 +538,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
             $context['_seq'] = twig_ensure_traversable((isset($context["sheng"]) ? $context["sheng"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
                 // line 366
-                echo "                      <h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+                echo "                      <h4>生活描述<span class=\"dot dot-light-purple\"></span></h4>
 
 
 
@@ -588,7 +601,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
             echo "\t\t\t\t\t";
         } else {
             // line 404
-            echo "\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+            echo "\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span></h4>
 
 
 
@@ -725,8 +738,10 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t});
 
 \t\t\t\t\t//关闭弹窗
+/
+\t
 
-\t\t\t\t\t\$('.layer-close').click(function() {
+\t\t\t\t\$('.layer-close').click(function() {
 
 \t\t\t\t\t\t\$('.layer').fadeOut(300);
 
@@ -736,29 +751,39 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t</script>
 
+           <script>
 
+                   \$('button[name=a]').click(function(){
 
-\t\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/mui.previewimage.css\" />
+                           var u_id=\$('button').attr('id');
+                           \$.ajax({
+\t\t\t\t\t\t\t   type: \"POST\",
+\t\t\t\t\t\t\t   url: \"?r=home/guan\",
+\t\t\t\t\t\t\t   data: {'u_id':u_id},
+\t\t\t\t\t\t\t   success: function(msg){
+\t\t\t\t\t\t\t      if(msg!==0){
+                                       
+                                        var html = '<button name=\"b\" id=\"";
+        // line 564
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["vv"]) ? $context["vv"] : null), "u_id", array()), "html", null, true);
+        echo "\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"?r=home/qu\" dialog=\"加关注成功\"><span class=\"ico ico-focus-on\"></span>已关注</button>';
 
-\t\t\t<script src=\"/js/mui.zoom.js\"></script>
+\t\t\t\t\t\t\t\t           \$('#u').html(html);
+\t\t\t\t\t\t\t\t           \$('#f').html(msg);
+\t\t\t\t\t\t\t      }
+\t\t\t\t\t\t\t      
+\t\t\t\t\t\t\t   }
+\t\t\t\t\t\t\t});
+                   });
+           </script>
 
-\t\t\t<script src=\"/js/mui.previewimage.js\"></script>
+\t\t\t<script src=\"web/js/mui.zoom.js\"></script>
 
-\t\t\t<script>
-
-\t\t\t\tmui.previewImage();
-
-\t\t\t</script>
+\t\t\t<script src=\"web/js/previewimage.js\"></script>
 
 \t\t</div>
 
-\t\t<!-- CNZZ代码 -->
-\t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself&rnd=69160430\" width=\"0\" height=\"0\"/>\t</body>
-\t<!--引用自定义脚本-->
-\t<script src=\"/js/core.js\"></script>
-
-
-\t<!--引用自定义脚本-->
+\t
 
 
 
@@ -770,7 +795,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
     public function getTemplateName()
     {
-        return "fossa.html";
+        return "fossa_ta.html";
     }
 
     public function isTraitable()
@@ -780,7 +805,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
     public function getDebugInfo()
     {
-        return array (  633 => 444,  591 => 404,  588 => 403,  578 => 399,  570 => 394,  562 => 389,  554 => 384,  546 => 379,  538 => 374,  528 => 366,  523 => 365,  521 => 364,  516 => 361,  480 => 327,  477 => 326,  468 => 323,  460 => 318,  452 => 313,  444 => 308,  436 => 303,  428 => 298,  422 => 294,  417 => 293,  415 => 292,  409 => 288,  403 => 287,  398 => 284,  392 => 282,  389 => 281,  385 => 279,  379 => 277,  376 => 276,  370 => 272,  363 => 268,  359 => 266,  356 => 265,  352 => 263,  346 => 261,  343 => 260,  339 => 258,  333 => 256,  330 => 255,  326 => 253,  320 => 251,  317 => 250,  313 => 248,  307 => 246,  304 => 245,  300 => 243,  294 => 241,  292 => 240,  282 => 233,  239 => 192,  229 => 188,  225 => 186,  221 => 185,  178 => 145,  156 => 128,  137 => 112,  122 => 99,  118 => 98,  19 => 1,);
+        return array (  768 => 564,  646 => 444,  604 => 404,  601 => 403,  591 => 399,  583 => 394,  575 => 389,  567 => 384,  559 => 379,  551 => 374,  541 => 366,  536 => 365,  534 => 364,  529 => 361,  493 => 327,  490 => 326,  481 => 323,  473 => 318,  465 => 313,  457 => 308,  449 => 303,  441 => 298,  435 => 294,  430 => 293,  428 => 292,  422 => 288,  416 => 287,  411 => 284,  405 => 282,  402 => 281,  398 => 279,  392 => 277,  389 => 276,  383 => 272,  376 => 268,  372 => 266,  369 => 265,  365 => 263,  359 => 261,  356 => 260,  352 => 258,  346 => 256,  343 => 255,  339 => 253,  333 => 251,  330 => 250,  326 => 248,  320 => 246,  317 => 245,  313 => 243,  307 => 241,  305 => 240,  295 => 233,  258 => 198,  248 => 194,  244 => 192,  240 => 191,  218 => 172,  194 => 151,  178 => 137,  172 => 134,  169 => 133,  164 => 130,  162 => 129,  154 => 126,  135 => 110,  122 => 99,  118 => 98,  19 => 1,);
     }
 
     public function getSource()
@@ -858,7 +883,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 
 \t\t\t<!-- 弹出层开始 -->
-
+<!-- 
 \t\t\t<div class=\"layer\">
 
 \t\t\t\t<div class=\"layer-file-upload\">
@@ -871,11 +896,11 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t<p>95%的会员选择有照片的用户进行联系哦</p>
 
-\t\t\t\t\t<button class=\"mui-btn do-upload\" type=\"button\">立即上传</button>
+\t\t\t\t\t
 
 \t\t\t\t</div>
 
-\t\t\t</div>
+\t\t\t</div> -->
 
 \t\t\t<!-- 弹出层结束 -->
 
@@ -888,9 +913,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t<div class=\"file-avatar\">
 
 
-\t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"background:
-
-\t\t\t\t\turl(/img/avata-1.png);\">
+\t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"\">
                         <img src=\"./web/upimg/1476874085(23).jpg\">
 \t\t\t\t\t</div>
 
@@ -914,10 +937,18 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<br />{{vv.age}} &nbsp;{{vv.native}}
 \t\t\t\t\t</p>
-                    
+                     
+                     {% if aaa %}
+
+                           <button id=\"focus\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus-on\"></span>已关注</button>
+                     {% else %}
+                     <div id=\"u\">
+                    <button name=\"a\" id=\"{{vv.u_id}}\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>
+                    </div>
+                    {% endif %}
 \t\t\t\t</div>
 
-
+       
 
 \t\t\t\t<img src=\"web/images/file-bg.png\" />
 
@@ -929,7 +960,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4\">
 
-\t\t\t\t\t\t\t<a href=\"#\"><b>{{ar1}}</b>关注
+\t\t\t\t\t\t\t<a href=\"#\"><b id=\"c\">{{data1}}</b>关注
 
 \t\t\t\t\t\t\t</a>
 
@@ -942,7 +973,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t\t\t<b>
 
 \t\t\t\t\t\t\t\t0
-\t\t\t\t\t\t\t</b>魅力</a>
+\t\t\t\t\t\t\t</b>魅力</a>guan
 
 \t\t\t\t\t\t\t<div></div>
 
@@ -950,7 +981,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4\">
 
-\t\t\t\t\t\t\t<a href=\"#\"><b>0</b>粉丝</a>
+\t\t\t\t\t\t\t<a href=\"#\"><b id=\"f\">{{ar1}}</b>粉丝</a>
 
 \t\t\t\t\t\t</li>
 
@@ -1006,13 +1037,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t\t<span class=\"dot dot-pink\"></span>
 
-\t\t\t\t\t\t<a href=\"?r=fossa/dubai\" class=\"link\">
-
-\t\t\t\t\t\t\t<span class=\"mui-icon mui-icon-compose\"></span>
-
-\t\t\t\t\t\t\t编辑独白
-
-\t\t\t\t\t\t</a>
+\t\t\t\t\t
 
 \t\t\t\t\t</h4>
 
@@ -1021,7 +1046,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t</p>
 
 
-\t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span><a class=\"link\" href=\"?r=fossa/jibenjieshao\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>基本资料<span class=\"dot dot-orange\"></span></h4>
 
 
                     {% if vv.age %}
@@ -1078,7 +1103,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t\t\t{% if re %}
                     {% for v in re %}
-\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span></h4>
 
 \t\t\t\t\t<p>
 
@@ -1112,7 +1137,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
                     {% endfor %}
 \t\t\t\t\t{% else %}
 
-\t\t\t\t\t <h4>详细资料<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/xiangxijieshao\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t <h4>详细资料<span class=\"dot dot-light-purple\"></span></h4>
 
 \t\t\t\t\t<p>
 
@@ -1150,7 +1175,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
                     {% if sheng %}
                     {% for v in sheng %}
-                      <h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+                      <h4>生活描述<span class=\"dot dot-light-purple\"></span></h4>
 
 
 
@@ -1188,7 +1213,7 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
                     {% endfor %}
 \t\t\t\t\t{% else %}
-\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span><a href=\"?r=fossa/shenghuomiaoshu\" class=\"link\"><span class=\"mui-icon mui-icon-compose\"></span>编辑资料</a></h4>
+\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span></h4>
 
 
 
@@ -1323,8 +1348,10 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 \t\t\t\t\t});
 
 \t\t\t\t\t//关闭弹窗
+/
+\t
 
-\t\t\t\t\t\$('.layer-close').click(function() {
+\t\t\t\t\$('.layer-close').click(function() {
 
 \t\t\t\t\t\t\$('.layer').fadeOut(300);
 
@@ -1334,29 +1361,36 @@ class __TwigTemplate_234b33468a7567cd63afd6421eaf8e8507bba67f0a0ee12b1798be47745
 
 \t\t\t</script>
 
+           <script>
 
+                   \$('button[name=a]').click(function(){
 
-\t\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/mui.previewimage.css\" />
+                           var u_id=\$('button').attr('id');
+                           \$.ajax({
+\t\t\t\t\t\t\t   type: \"POST\",
+\t\t\t\t\t\t\t   url: \"?r=home/guan\",
+\t\t\t\t\t\t\t   data: {'u_id':u_id},
+\t\t\t\t\t\t\t   success: function(msg){
+\t\t\t\t\t\t\t      if(msg!==0){
+                                       
+                                        var html = '<button name=\"b\" id=\"{{vv.u_id}}\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"?r=home/qu\" dialog=\"加关注成功\"><span class=\"ico ico-focus-on\"></span>已关注</button>';
 
-\t\t\t<script src=\"/js/mui.zoom.js\"></script>
+\t\t\t\t\t\t\t\t           \$('#u').html(html);
+\t\t\t\t\t\t\t\t           \$('#f').html(msg);
+\t\t\t\t\t\t\t      }
+\t\t\t\t\t\t\t      
+\t\t\t\t\t\t\t   }
+\t\t\t\t\t\t\t});
+                   });
+           </script>
 
-\t\t\t<script src=\"/js/mui.previewimage.js\"></script>
+\t\t\t<script src=\"web/js/mui.zoom.js\"></script>
 
-\t\t\t<script>
-
-\t\t\t\tmui.previewImage();
-
-\t\t\t</script>
+\t\t\t<script src=\"web/js/previewimage.js\"></script>
 
 \t\t</div>
 
-\t\t<!-- CNZZ代码 -->
-\t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself&rnd=69160430\" width=\"0\" height=\"0\"/>\t</body>
-\t<!--引用自定义脚本-->
-\t<script src=\"/js/core.js\"></script>
-
-
-\t<!--引用自定义脚本-->
+\t
 
 
 

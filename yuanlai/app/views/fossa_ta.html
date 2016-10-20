@@ -71,7 +71,7 @@
 
 
 			<!-- 弹出层开始 -->
-
+<!-- 
 			<div class="layer">
 
 				<div class="layer-file-upload">
@@ -84,11 +84,11 @@
 
 					<p>95%的会员选择有照片的用户进行联系哦</p>
 
-					<button class="mui-btn do-upload" type="button">立即上传</button>
+					
 
 				</div>
 
-			</div>
+			</div> -->
 
 			<!-- 弹出层结束 -->
 
@@ -101,9 +101,7 @@
 				<div class="file-avatar">
 
 
-					<div class="clip-bg do-avatar-upload" style="background:
-
-					url(/img/avata-1.png);">
+					<div class="clip-bg do-avatar-upload" style="">
                         <img src="./web/upimg/1476874085(23).jpg">
 					</div>
 
@@ -127,10 +125,18 @@
 
 						<br />{{vv.age}} &nbsp;{{vv.native}}
 					</p>
-                    
+                     
+                     {% if aaa %}
+
+                           <button id="focus" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus-on"></span>已关注</button>
+                     {% else %}
+                     <div id="u">
+                    <button name="a" id="{{vv.u_id}}" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>
+                    </div>
+                    {% endif %}
 				</div>
 
-
+       
 
 				<img src="web/images/file-bg.png" />
 
@@ -142,7 +148,7 @@
 
 						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
 
-							<a href="#"><b>{{ar1}}</b>关注
+							<a href="#"><b id="c">{{data1}}</b>关注
 
 							</a>
 
@@ -155,7 +161,7 @@
 							<b>
 
 								0
-							</b>魅力</a>
+							</b>魅力</a>guan
 
 							<div></div>
 
@@ -163,7 +169,7 @@
 
 						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
 
-							<a href="#"><b>0</b>粉丝</a>
+							<a href="#"><b id="f">{{ar1}}</b>粉丝</a>
 
 						</li>
 
@@ -219,13 +225,7 @@
 
 						<span class="dot dot-pink"></span>
 
-						<a href="?r=fossa/dubai" class="link">
-
-							<span class="mui-icon mui-icon-compose"></span>
-
-							编辑独白
-
-						</a>
+					
 
 					</h4>
 
@@ -234,7 +234,7 @@
 					</p>
 
 
-					<h4>基本资料<span class="dot dot-orange"></span><a class="link" href="?r=fossa/jibenjieshao"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+					<h4>基本资料<span class="dot dot-orange"></span></h4>
 
 
                     {% if vv.age %}
@@ -291,7 +291,7 @@
 
 					{% if re %}
                     {% for v in re %}
-					<h4>详细资料<span class="dot dot-light-purple"></span><a href="?r=fossa/xiangxijieshao" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+					<h4>详细资料<span class="dot dot-light-purple"></span></h4>
 
 					<p>
 
@@ -325,7 +325,7 @@
                     {% endfor %}
 					{% else %}
 
-					 <h4>详细资料<span class="dot dot-light-purple"></span><a href="?r=fossa/xiangxijieshao" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+					 <h4>详细资料<span class="dot dot-light-purple"></span></h4>
 
 					<p>
 
@@ -363,7 +363,7 @@
 
                     {% if sheng %}
                     {% for v in sheng %}
-                      <h4>生活描述<span class="dot dot-light-purple"></span><a href="?r=fossa/shenghuomiaoshu" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+                      <h4>生活描述<span class="dot dot-light-purple"></span></h4>
 
 
 
@@ -401,7 +401,7 @@
 
                     {% endfor %}
 					{% else %}
-					<h4>生活描述<span class="dot dot-light-purple"></span><a href="?r=fossa/shenghuomiaoshu" class="link"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
+					<h4>生活描述<span class="dot dot-light-purple"></span></h4>
 
 
 
@@ -536,8 +536,10 @@
 					});
 
 					//关闭弹窗
+/
+	
 
-					$('.layer-close').click(function() {
+				$('.layer-close').click(function() {
 
 						$('.layer').fadeOut(300);
 
@@ -547,29 +549,36 @@
 
 			</script>
 
+           <script>
 
+                   $('button[name=a]').click(function(){
 
-			<link rel="stylesheet" type="text/css" href="/css/mui.previewimage.css" />
+                           var u_id=$('button').attr('id');
+                           $.ajax({
+							   type: "POST",
+							   url: "?r=home/guan",
+							   data: {'u_id':u_id},
+							   success: function(msg){
+							      if(msg!==0){
+                                       
+                                        var html = '<button name="b" id="{{vv.u_id}}" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="?r=home/qu" dialog="加关注成功"><span class="ico ico-focus-on"></span>已关注</button>';
 
-			<script src="/js/mui.zoom.js"></script>
+								           $('#u').html(html);
+								           $('#f').html(msg);
+							      }
+							      
+							   }
+							});
+                   });
+           </script>
 
-			<script src="/js/mui.previewimage.js"></script>
+			<script src="web/js/mui.zoom.js"></script>
 
-			<script>
-
-				mui.previewImage();
-
-			</script>
+			<script src="web/js/previewimage.js"></script>
 
 		</div>
 
-		<!-- CNZZ代码 -->
-	<img src="http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself&rnd=69160430" width="0" height="0"/>	</body>
-	<!--引用自定义脚本-->
-	<script src="/js/core.js"></script>
-
-
-	<!--引用自定义脚本-->
+	
 
 
 

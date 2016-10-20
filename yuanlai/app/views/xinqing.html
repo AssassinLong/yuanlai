@@ -12,41 +12,10 @@
         <script src="web/js/jquery.js"></script>
         <script src="web/js/min.js" /></script>
 	    <script src="web/js/core.js" /></script>
-        <script>
-            $(window).ready(function () {
-                (function ($) {
-                    $('body').on('tap', '.link', function (event) {
-                    var url = this.getAttribute('href');
-                    var blank = this.getAttribute('target');
-                    if (blank == '_blank') {
-                        window.open(url);
-                    } else {
-                        window.location.href = url;
-                    }
-                    });
-                })(mui);
-                var lab = document.getElementsByClassName('site-nav')[0];
-                if (lab) {
-                    var nav = getCookie('tab_item');
-                    if (nav) {
-                            var as = lab.getElementsByTagName('a');
-                            for (var i; i < as.length; i++) {
-                               as[i].className = 'link'
-                            }
-                            as[nav - 1].className = 'link mui-active'
-                    }
-                }
-                function getCookie(name) {
-                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-                    if (arr = document.cookie.match(reg))
-                        return unescape(arr[2]);
-                    else
-                        return null;
-                }
-            })
-        </script>
+       
+			
 
-<title>心情微博</title>
+<title></title>
 </head>
 
 	<body>
@@ -74,7 +43,7 @@
 			<div class="weibo-list" id="userid" userid="0" >
 				<div class="tabs">
 					<div class="mui-segmented-control normal">
-												<a class="mui-control-item mui-active" href="#">心情微博</a>
+												
 												
 					</div>
 				</div>
@@ -83,38 +52,41 @@
 			</div>
 			<div class="make-upload" object="weibo" param="weibo"></div>
 			<div id="userid" class="weibo-list" userid="0">
+			
 			<div class="tabs">
 			<ul class="mui-table-view">
+			{% for v in arr %}
 			<li class="mui-table-view-cell mui-media">
 			<div class="mui-pull-left mui-media-object clip-bg" style="background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201610/06/374151/avatar_big.jpg);">
-			<a class="link" href="http://m.7799520.com/user/374151.html"></a>
+			<a class="link" href=""></a>
 			</div>
 			<div class="mui-media-body">
-			<a class="link" href="http://m.7799520.com/user/374151.html">
+			<a class="link" href="">
 			<b>
-			<font>痕迹Q</font>
+			<font>{{v.name}}</font>
 			</b>
-			<span>10-19 . 浙江 杭州</span>
+			<span>{{ v.datatime }} . 浙江 杭州</span>
 			</a>
 			</div>
 			<div>
 			<a class="link" href="">
-			<p>嘿嘿</p>
+			<p>{{v.text}}</p>
 			</a>
 			</div>
 			<div>
-			<a class="do-collect" href="javascript:;" objid="7154">
-			<span class="ico ico-msg-heart"></span>
-			<label>0</label>
+			<a class="do-collect" href="javascript:;"  objid="7154">
+			<span id="a" rel="{{v.id}}" class="ico ico-msg-heart"></span>
+			<label>{{v.dian}}</label>
 			</a>
 			<a class="do-message-add" href="javascript:;" objid="374151">
 
 			</a>
 			</div>
+			{% endfor %}
 			</li>
 			</ul>
 			</div>
-
+            
 			
 	
 	

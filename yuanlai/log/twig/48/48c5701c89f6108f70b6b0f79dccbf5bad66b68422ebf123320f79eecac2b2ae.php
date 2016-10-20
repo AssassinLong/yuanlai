@@ -30,41 +30,10 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
         <script src=\"web/js/jquery.js\"></script>
         <script src=\"web/js/min.js\" /></script>
 \t    <script src=\"web/js/core.js\" /></script>
-        <script>
-            \$(window).ready(function () {
-                (function (\$) {
-                    \$('body').on('tap', '.link', function (event) {
-                    var url = this.getAttribute('href');
-                    var blank = this.getAttribute('target');
-                    if (blank == '_blank') {
-                        window.open(url);
-                    } else {
-                        window.location.href = url;
-                    }
-                    });
-                })(mui);
-                var lab = document.getElementsByClassName('site-nav')[0];
-                if (lab) {
-                    var nav = getCookie('tab_item');
-                    if (nav) {
-                            var as = lab.getElementsByTagName('a');
-                            for (var i; i < as.length; i++) {
-                               as[i].className = 'link'
-                            }
-                            as[nav - 1].className = 'link mui-active'
-                    }
-                }
-                function getCookie(name) {
-                    var arr, reg = new RegExp(\"(^| )\" + name + \"=([^;]*)(;|\$)\");
-                    if (arr = document.cookie.match(reg))
-                        return unescape(arr[2]);
-                    else
-                        return null;
-                }
-            })
-        </script>
+       
+\t\t\t
 
-<title>心情微博</title>
+<title></title>
 </head>
 
 \t<body>
@@ -92,7 +61,7 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t<div class=\"weibo-list\" id=\"userid\" userid=\"0\" >
 \t\t\t\t<div class=\"tabs\">
 \t\t\t\t\t<div class=\"mui-segmented-control normal\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"mui-control-item mui-active\" href=\"#\">心情微博</a>
+\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -101,38 +70,66 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t</div>
 \t\t\t<div class=\"make-upload\" object=\"weibo\" param=\"weibo\"></div>
 \t\t\t<div id=\"userid\" class=\"weibo-list\" userid=\"0\">
+\t\t\t
 \t\t\t<div class=\"tabs\">
 \t\t\t<ul class=\"mui-table-view\">
-\t\t\t<li class=\"mui-table-view-cell mui-media\">
+\t\t\t";
+        // line 58
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["arr"]) ? $context["arr"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
+            // line 59
+            echo "\t\t\t<li class=\"mui-table-view-cell mui-media\">
 \t\t\t<div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201610/06/374151/avatar_big.jpg);\">
-\t\t\t<a class=\"link\" href=\"http://m.7799520.com/user/374151.html\"></a>
+\t\t\t<a class=\"link\" href=\"\"></a>
 \t\t\t</div>
 \t\t\t<div class=\"mui-media-body\">
-\t\t\t<a class=\"link\" href=\"http://m.7799520.com/user/374151.html\">
+\t\t\t<a class=\"link\" href=\"\">
 \t\t\t<b>
-\t\t\t<font>痕迹Q</font>
+\t\t\t<font>";
+            // line 66
+            echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "name", array()), "html", null, true);
+            echo "</font>
 \t\t\t</b>
-\t\t\t<span>10-19 . 浙江 杭州</span>
+\t\t\t<span>";
+            // line 68
+            echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "datatime", array()), "html", null, true);
+            echo " . 浙江 杭州</span>
 \t\t\t</a>
 \t\t\t</div>
 \t\t\t<div>
 \t\t\t<a class=\"link\" href=\"\">
-\t\t\t<p>嘿嘿</p>
+\t\t\t<p>";
+            // line 73
+            echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "text", array()), "html", null, true);
+            echo "</p>
 \t\t\t</a>
 \t\t\t</div>
 \t\t\t<div>
-\t\t\t<a class=\"do-collect\" href=\"javascript:;\" objid=\"7154\">
-\t\t\t<span class=\"ico ico-msg-heart\"></span>
-\t\t\t<label>0</label>
+\t\t\t<a class=\"do-collect\" href=\"javascript:;\"  objid=\"7154\">
+\t\t\t<span id=\"a\" rel=\"";
+            // line 78
+            echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "id", array()), "html", null, true);
+            echo "\" class=\"ico ico-msg-heart\"></span>
+\t\t\t<label>";
+            // line 79
+            echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "dian", array()), "html", null, true);
+            echo "</label>
 \t\t\t</a>
 \t\t\t<a class=\"do-message-add\" href=\"javascript:;\" objid=\"374151\">
 
 \t\t\t</a>
 \t\t\t</div>
-\t\t\t</li>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['v'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 86
+        echo "\t\t\t</li>
 \t\t\t</ul>
 \t\t\t</div>
-
+            
 \t\t\t
 \t
 \t
@@ -146,9 +143,14 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
         return "xinqing.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  129 => 86,  116 => 79,  112 => 78,  104 => 73,  96 => 68,  91 => 66,  82 => 59,  78 => 58,  19 => 1,);
     }
 
     public function getSource()
@@ -167,41 +169,10 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
         <script src=\"web/js/jquery.js\"></script>
         <script src=\"web/js/min.js\" /></script>
 \t    <script src=\"web/js/core.js\" /></script>
-        <script>
-            \$(window).ready(function () {
-                (function (\$) {
-                    \$('body').on('tap', '.link', function (event) {
-                    var url = this.getAttribute('href');
-                    var blank = this.getAttribute('target');
-                    if (blank == '_blank') {
-                        window.open(url);
-                    } else {
-                        window.location.href = url;
-                    }
-                    });
-                })(mui);
-                var lab = document.getElementsByClassName('site-nav')[0];
-                if (lab) {
-                    var nav = getCookie('tab_item');
-                    if (nav) {
-                            var as = lab.getElementsByTagName('a');
-                            for (var i; i < as.length; i++) {
-                               as[i].className = 'link'
-                            }
-                            as[nav - 1].className = 'link mui-active'
-                    }
-                }
-                function getCookie(name) {
-                    var arr, reg = new RegExp(\"(^| )\" + name + \"=([^;]*)(;|\$)\");
-                    if (arr = document.cookie.match(reg))
-                        return unescape(arr[2]);
-                    else
-                        return null;
-                }
-            })
-        </script>
+       
+\t\t\t
 
-<title>心情微博</title>
+<title></title>
 </head>
 
 \t<body>
@@ -229,7 +200,7 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t<div class=\"weibo-list\" id=\"userid\" userid=\"0\" >
 \t\t\t\t<div class=\"tabs\">
 \t\t\t\t\t<div class=\"mui-segmented-control normal\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"mui-control-item mui-active\" href=\"#\">心情微博</a>
+\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -238,38 +209,41 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t</div>
 \t\t\t<div class=\"make-upload\" object=\"weibo\" param=\"weibo\"></div>
 \t\t\t<div id=\"userid\" class=\"weibo-list\" userid=\"0\">
+\t\t\t
 \t\t\t<div class=\"tabs\">
 \t\t\t<ul class=\"mui-table-view\">
+\t\t\t{% for v in arr %}
 \t\t\t<li class=\"mui-table-view-cell mui-media\">
 \t\t\t<div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201610/06/374151/avatar_big.jpg);\">
-\t\t\t<a class=\"link\" href=\"http://m.7799520.com/user/374151.html\"></a>
+\t\t\t<a class=\"link\" href=\"\"></a>
 \t\t\t</div>
 \t\t\t<div class=\"mui-media-body\">
-\t\t\t<a class=\"link\" href=\"http://m.7799520.com/user/374151.html\">
+\t\t\t<a class=\"link\" href=\"\">
 \t\t\t<b>
-\t\t\t<font>痕迹Q</font>
+\t\t\t<font>{{v.name}}</font>
 \t\t\t</b>
-\t\t\t<span>10-19 . 浙江 杭州</span>
+\t\t\t<span>{{ v.datatime }} . 浙江 杭州</span>
 \t\t\t</a>
 \t\t\t</div>
 \t\t\t<div>
 \t\t\t<a class=\"link\" href=\"\">
-\t\t\t<p>嘿嘿</p>
+\t\t\t<p>{{v.text}}</p>
 \t\t\t</a>
 \t\t\t</div>
 \t\t\t<div>
-\t\t\t<a class=\"do-collect\" href=\"javascript:;\" objid=\"7154\">
-\t\t\t<span class=\"ico ico-msg-heart\"></span>
-\t\t\t<label>0</label>
+\t\t\t<a class=\"do-collect\" href=\"javascript:;\"  objid=\"7154\">
+\t\t\t<span id=\"a\" rel=\"{{v.id}}\" class=\"ico ico-msg-heart\"></span>
+\t\t\t<label>{{v.dian}}</label>
 \t\t\t</a>
 \t\t\t<a class=\"do-message-add\" href=\"javascript:;\" objid=\"374151\">
 
 \t\t\t</a>
 \t\t\t</div>
+\t\t\t{% endfor %}
 \t\t\t</li>
 \t\t\t</ul>
 \t\t\t</div>
-
+            
 \t\t\t
 \t
 \t

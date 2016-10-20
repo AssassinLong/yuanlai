@@ -123,7 +123,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
                 </div><div class=\"mui-media-body\">
                 <a href=\"?r=home/fossa/tid/";
             // line 101
-            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "id", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\" class=\"link\">
                     <b>";
             // line 102
@@ -390,7 +390,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
                 <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
                     <a href=\"\" class=\"link\"></a>
                 </div><div class=\"mui-media-body\">
-                <a href=\"?r=home/fossa/tid/{{vs.id}}\" class=\"link\">
+                <a href=\"?r=home/fossa/tid/{{vs.u_id}}\" class=\"link\">
                     <b>{{ vs.name }}</b><span>{{ vs.age }}岁，{{ vs.region }}，152cm</span>
                     <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
                 <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
