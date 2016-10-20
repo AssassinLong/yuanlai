@@ -104,10 +104,11 @@ class basicdataModel extends model
 //        print_R($arr);die;
         return $arr;
     }
-    public function adde1($str)
+    public function adde1($str,$real_name)
     {
         return $this->insert($this->table,[
-            "u_id"=>$str
+            "u_id"=>$str,
+            "real_name"=>$real_name,
         ]);
     }
 

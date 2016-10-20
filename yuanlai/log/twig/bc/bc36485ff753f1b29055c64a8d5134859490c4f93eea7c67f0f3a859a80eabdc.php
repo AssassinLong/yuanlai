@@ -25,7 +25,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
         <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">
         <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
 \t\t<!--标准mui.css-->
-        <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"./web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
         <script src=\"web/js/min.js\" ></script>
@@ -304,7 +304,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
         <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">
         <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
 \t\t<!--标准mui.css-->
-        <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"./web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
         <script src=\"web/js/min.js\" ></script>

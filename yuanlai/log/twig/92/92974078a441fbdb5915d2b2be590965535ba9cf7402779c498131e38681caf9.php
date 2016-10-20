@@ -108,24 +108,25 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         </div>
     </a>
     <!-- banner结束 -->
+
     <div class=\"recommend-list\">
         <ul class=\"mui-table-view\">
             ";
-        // line 95
+        // line 96
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["ars"]) ? $context["ars"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["vs"]) {
-            // line 96
+            // line 97
             echo "            <li class=\"mui-table-view-cell mui-media\">
                 <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
                     <a href=\"\" class=\"link\"></a>
                 </div><div class=\"mui-media-body\">
                 <a href=\"?r=home/fossa/tid/";
-            // line 100
+            // line 101
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\" class=\"link\">
                     <b>";
-            // line 101
+            // line 102
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "name", array()), "html", null, true);
             echo "</b><span>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "age", array()), "html", null, true);
@@ -133,28 +134,27 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "region", array()), "html", null, true);
             echo "，152cm</span>
                     <p class=\"mui-ellipsis\">内心独白：";
-            // line 102
+            // line 103
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "mono", array()), "html", null, true);
             echo "</p></a></div><div>
                 <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"";
-            // line 103
+            // line 104
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
                 <a href=\"?r=home/advices\" objid=\"";
-            // line 104
+            // line 105
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
             </div>
-            </li>
-            ";
+                </li>
+                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vs'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 108
+        // line 109
         echo "        </ul>
     </div>
-
 
 
 
@@ -248,8 +248,6 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                         mui.toast('消息已发出');
                     } else if (data == 0) {
                         mui.toast('发送信息失败,请重试..');
-                    } else {
-                        window.location.href = \"http://m.7799520.com/login\";
                     }
                 }
             });
@@ -287,7 +285,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
 
     public function getDebugInfo()
     {
-        return array (  155 => 108,  145 => 104,  141 => 103,  137 => 102,  129 => 101,  125 => 100,  119 => 96,  115 => 95,  19 => 1,);
+        return array (  156 => 109,  146 => 105,  142 => 104,  138 => 103,  130 => 102,  126 => 101,  120 => 97,  116 => 96,  19 => 1,);
     }
 
     public function getSource()
@@ -384,6 +382,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         </div>
     </a>
     <!-- banner结束 -->
+
     <div class=\"recommend-list\">
         <ul class=\"mui-table-view\">
             {% for vs in ars %}
@@ -397,11 +396,10 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                 <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
                 <a href=\"?r=home/advices\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
             </div>
-            </li>
-            {% endfor %}
+                </li>
+                {% endfor %}
         </ul>
     </div>
-
 
 
 
@@ -495,8 +493,6 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                         mui.toast('消息已发出');
                     } else if (data == 0) {
                         mui.toast('发送信息失败,请重试..');
-                    } else {
-                        window.location.href = \"http://m.7799520.com/login\";
                     }
                 }
             });

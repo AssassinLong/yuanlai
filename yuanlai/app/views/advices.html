@@ -77,14 +77,17 @@
                     </a>
                 </div>
             </li>
+            {% for val in arr %}
             <li class="mui-table-view-cell mui-media"><div class="mui-slider-handle">
-                <a href="?r=advices/friend" class="link">
+                <a href="?r=advices/friend/id/{{ val.u_id }}" class="link">
                     <div class="clip-bg mui-pull-left mui-media-object" style="background: url(/img/avata-1.png);"></div>
-                    <div class="mui-media-body"><p class="title"><b>漆黑烈焰使</b><em class="active">
-                        <span class="ico ico-male"></span>23</em></p><p class="mui-ellipsis">发来一条聊天信息</p>
-                        <label>10-15 16:33</label>
-                    </div></a></div>
-            </li>
+                    <div class="mui-media-body"><p class="title"><b>{{ val.real_name }}</b><em class="active">
+                        <span class="ico ico-male"></span>{{ val.age }}</em></p><p class="mui-ellipsis">发来{{ val.num }}条聊天信息</p>
+                        <label>{{ val.createtime }}</label>
+                    </div>
+                </a>
+            </div></li>
+            {% endfor %}
         </ul>
     </div>
 

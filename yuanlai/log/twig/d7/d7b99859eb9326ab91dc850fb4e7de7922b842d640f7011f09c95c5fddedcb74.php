@@ -95,15 +95,42 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
                     </a>
                 </div>
             </li>
-            <li class=\"mui-table-view-cell mui-media\"><div class=\"mui-slider-handle\">
-                <a href=\"?r=advices/friend\" class=\"link\">
+            ";
+        // line 80
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["arr"]) ? $context["arr"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
+            // line 81
+            echo "            <li class=\"mui-table-view-cell mui-media\"><div class=\"mui-slider-handle\">
+                <a href=\"?r=advices/friend/id/";
+            // line 82
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "u_id", array()), "html", null, true);
+            echo "\" class=\"link\">
                     <div class=\"clip-bg mui-pull-left mui-media-object\" style=\"background: url(/img/avata-1.png);\"></div>
-                    <div class=\"mui-media-body\"><p class=\"title\"><b>漆黑烈焰使</b><em class=\"active\">
-                        <span class=\"ico ico-male\"></span>23</em></p><p class=\"mui-ellipsis\">发来一条聊天信息</p>
-                        <label>10-15 16:33</label>
-                    </div></a></div>
-            </li>
-        </ul>
+                    <div class=\"mui-media-body\"><p class=\"title\"><b>";
+            // line 84
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "real_name", array()), "html", null, true);
+            echo "</b><em class=\"active\">
+                        <span class=\"ico ico-male\"></span>";
+            // line 85
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "age", array()), "html", null, true);
+            echo "</em></p><p class=\"mui-ellipsis\">发来";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "num", array()), "html", null, true);
+            echo "条聊天信息</p>
+                        <label>";
+            // line 86
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "createtime", array()), "html", null, true);
+            echo "</label>
+                    </div>
+                </a>
+            </div></li>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 91
+        echo "        </ul>
     </div>
 
     <script src=\"./web/js/auto-pull.js\"></script>
@@ -153,9 +180,14 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
         return "advices.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  133 => 91,  122 => 86,  116 => 85,  112 => 84,  107 => 82,  104 => 81,  100 => 80,  19 => 1,);
     }
 
     public function getSource()
@@ -239,14 +271,17 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
                     </a>
                 </div>
             </li>
+            {% for val in arr %}
             <li class=\"mui-table-view-cell mui-media\"><div class=\"mui-slider-handle\">
-                <a href=\"?r=advices/friend\" class=\"link\">
+                <a href=\"?r=advices/friend/id/{{ val.u_id }}\" class=\"link\">
                     <div class=\"clip-bg mui-pull-left mui-media-object\" style=\"background: url(/img/avata-1.png);\"></div>
-                    <div class=\"mui-media-body\"><p class=\"title\"><b>漆黑烈焰使</b><em class=\"active\">
-                        <span class=\"ico ico-male\"></span>23</em></p><p class=\"mui-ellipsis\">发来一条聊天信息</p>
-                        <label>10-15 16:33</label>
-                    </div></a></div>
-            </li>
+                    <div class=\"mui-media-body\"><p class=\"title\"><b>{{ val.real_name }}</b><em class=\"active\">
+                        <span class=\"ico ico-male\"></span>{{ val.age }}</em></p><p class=\"mui-ellipsis\">发来{{ val.num }}条聊天信息</p>
+                        <label>{{ val.createtime }}</label>
+                    </div>
+                </a>
+            </div></li>
+            {% endfor %}
         </ul>
     </div>
 

@@ -71,9 +71,12 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
 <body class=\"backgroud-white\">
 <!-- 导航栏开始 -->
 <header class=\"mui-bar mui-bar-nav\">
-    <a class=\"mui-icon mui-icon-left-nav mui-pull-left link\" href=\"http://m.7799520.com/self/news\"></a>
-    <h1 class=\"mui-title\">漆黑烈焰使</h1>
-    <a href=\"http://m.7799520.com\" class=\"mui-bar-nav-home link\"></a>
+    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
+    <h1 class=\"mui-title\">";
+        // line 57
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["arr"]) ? $context["arr"] : null), 0, array(), "array"), "real_name", array()), "html", null, true);
+        echo "</h1>
+    <a href=\"?r=home/index\" class=\"mui-bar-nav-home link\"></a>
 </header>
 <!-- 导航栏结束 -->
 
@@ -90,7 +93,10 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
         <p>
             <input name=\"message\" type=\"text\" placeholder=\"请输入您要留言的内容...\">
             <span class=\"ico ico-emotion\"></span>
-            <button type=\"button\" userid=\"379866\"></button>
+            <button type=\"button\" userid=\"";
+        // line 75
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["arr"]) ? $context["arr"] : null), 0, array(), "array"), "us_id", array()), "html", null, true);
+        echo "\"></button>
         </p>
     </div>
     <!-- 聊天框结束 -->
@@ -102,21 +108,77 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
     <!-- 回信息开始 -->
     <div class=\"message-detail\">
         <ul class=\"mui-table-view\">
-            <li class=\"mui-table-view-cell mui-media\">
+            ";
+        // line 87
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["arr"]) ? $context["arr"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
+            // line 88
+            echo "            ";
+            if (($this->getAttribute($context["val"], "us_id", array()) == $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "uid", array()))) {
+                // line 89
+                echo "            <li class=\"mui-table-view-cell mui-media\">
                 <div class=\"mui-slider-handle\">
-                    <p class=\"title\">10-15 16:33</p>
+                    <p class=\"title\">";
+                // line 91
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "createtime", array()), "html", null, true);
+                echo "</p>
                     <span></span>
                     <div class=\"clip-bg mui-media-object\" style=\"background: url(/img/avata-1.png);\">
-                        <a href=\"http://m.7799520.com/user/379866.html\" class=\"link\"></a>
+                        <a href=\"?r=home/fossa/tid/";
+                // line 94
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "us_id", array()), "html", null, true);
+                echo "\" class=\"link\">";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "real_name", array()), "html", null, true);
+                echo "</a>
                     </div>
                     <div class=\"mui-media-body\">
                         <p>
-                            阿斯达斯的\t\t\t\t\t\t\t\t</p>
+                            ";
+                // line 98
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "content", array()), "html", null, true);
+                echo "</p>
                     </div>
                 </div>
             </li>
-
-            <li class=\"mui-table-view-cell mui-media active\">
+            ";
+            } else {
+                // line 103
+                echo "            <li class=\"mui-table-view-cell mui-media active\">
+                <div class=\"mui-slider-handle\">
+                    <p class=\"title\">";
+                // line 105
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "createtime", array()), "html", null, true);
+                echo "</p>
+                    <span></span>
+                    <div class=\"clip-bg mui-media-object\" style=\"background: url(.web/img/avata-1.png););\">
+                        <a href=\"?r=home/fossa/tid/";
+                // line 108
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "us_id", array()), "html", null, true);
+                echo "\" class=\"link\">";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "real_name", array()), "html", null, true);
+                echo "</a>
+                    </div>
+                    <div class=\"mui-media-body\">
+                        <p>
+                            ";
+                // line 112
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "content", array()), "html", null, true);
+                echo "\t\t</p>
+                    </div>
+                </div>
+            </li>
+            ";
+            }
+            // line 117
+            echo "            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 118
+        echo "
+            <!--<li class=\"mui-table-view-cell mui-media active\">
                 <div class=\"mui-slider-handle\">
                     <p class=\"title\">10-15 16:05</p>
                     <span></span>
@@ -125,10 +187,11 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
                     </div>
                     <div class=\"mui-media-body\">
                         <p>
-                            蛤蛤蛤蛤蛤蛤\t\t\t\t\t\t\t\t</p>
+                            蛤蛤蛤蛤蛤蛤\t\t</p>
                     </div>
                 </div>
-            </li>
+            </li>-->
+
         </ul>
     </div>
     <!-- 回信息结束 -->
@@ -277,9 +340,14 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
         return "friend.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  180 => 118,  174 => 117,  166 => 112,  157 => 108,  151 => 105,  147 => 103,  139 => 98,  130 => 94,  124 => 91,  120 => 89,  117 => 88,  113 => 87,  98 => 75,  77 => 57,  19 => 1,);
     }
 
     public function getSource()
@@ -339,9 +407,9 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
 <body class=\"backgroud-white\">
 <!-- 导航栏开始 -->
 <header class=\"mui-bar mui-bar-nav\">
-    <a class=\"mui-icon mui-icon-left-nav mui-pull-left link\" href=\"http://m.7799520.com/self/news\"></a>
-    <h1 class=\"mui-title\">漆黑烈焰使</h1>
-    <a href=\"http://m.7799520.com\" class=\"mui-bar-nav-home link\"></a>
+    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
+    <h1 class=\"mui-title\">{{ arr[0].real_name }}</h1>
+    <a href=\"?r=home/index\" class=\"mui-bar-nav-home link\"></a>
 </header>
 <!-- 导航栏结束 -->
 
@@ -358,7 +426,7 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
         <p>
             <input name=\"message\" type=\"text\" placeholder=\"请输入您要留言的内容...\">
             <span class=\"ico ico-emotion\"></span>
-            <button type=\"button\" userid=\"379866\"></button>
+            <button type=\"button\" userid=\"{{ arr[0].us_id  }}\"></button>
         </p>
     </div>
     <!-- 聊天框结束 -->
@@ -370,21 +438,39 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
     <!-- 回信息开始 -->
     <div class=\"message-detail\">
         <ul class=\"mui-table-view\">
+            {% for val in arr %}
+            {% if val.us_id == data.uid  %}
             <li class=\"mui-table-view-cell mui-media\">
                 <div class=\"mui-slider-handle\">
-                    <p class=\"title\">10-15 16:33</p>
+                    <p class=\"title\">{{ val.createtime }}</p>
                     <span></span>
                     <div class=\"clip-bg mui-media-object\" style=\"background: url(/img/avata-1.png);\">
-                        <a href=\"http://m.7799520.com/user/379866.html\" class=\"link\"></a>
+                        <a href=\"?r=home/fossa/tid/{{ val.us_id }}\" class=\"link\">{{ val.real_name }}</a>
                     </div>
                     <div class=\"mui-media-body\">
                         <p>
-                            阿斯达斯的\t\t\t\t\t\t\t\t</p>
+                            {{ val.content }}</p>
                     </div>
                 </div>
             </li>
-
+            {% else %}
             <li class=\"mui-table-view-cell mui-media active\">
+                <div class=\"mui-slider-handle\">
+                    <p class=\"title\">{{ val.createtime }}</p>
+                    <span></span>
+                    <div class=\"clip-bg mui-media-object\" style=\"background: url(.web/img/avata-1.png););\">
+                        <a href=\"?r=home/fossa/tid/{{ val.us_id }}\" class=\"link\">{{ val.real_name }}</a>
+                    </div>
+                    <div class=\"mui-media-body\">
+                        <p>
+                            {{ val.content }}\t\t</p>
+                    </div>
+                </div>
+            </li>
+            {% endif %}
+            {% endfor %}
+
+            <!--<li class=\"mui-table-view-cell mui-media active\">
                 <div class=\"mui-slider-handle\">
                     <p class=\"title\">10-15 16:05</p>
                     <span></span>
@@ -393,10 +479,11 @@ class __TwigTemplate_ab00de95c2f06c0cecfa8c754085826985a98000bf1e84fe7772288dac9
                     </div>
                     <div class=\"mui-media-body\">
                         <p>
-                            蛤蛤蛤蛤蛤蛤\t\t\t\t\t\t\t\t</p>
+                            蛤蛤蛤蛤蛤蛤\t\t</p>
                     </div>
                 </div>
-            </li>
+            </li>-->
+
         </ul>
     </div>
     <!-- 回信息结束 -->

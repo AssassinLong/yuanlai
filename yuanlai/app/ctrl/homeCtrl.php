@@ -49,12 +49,11 @@ class homeCtrl extends \core\imooc
     {
         $id=$_SESSION['id'];
         $mess=new messageModel();
-        $where['readstatus']='0';
-        $where['a_id']=$id;
-        $data=$mess->all('addressee',$where);
-        var_dump($data);
-        $this->assign('data',$data);
-            $this->display('advices.html');
+        $arr=$mess->addAll($id);
+        //$mess->updata('');
+        //p($arr);
+        $this->assign('arr',$arr);
+        $this->display('advices.html');
     }
     //礼物(暂定)
     public function gift()
@@ -139,6 +138,15 @@ class homeCtrl extends \core\imooc
     //上传相册
     public function upload()
     {
+        /*//unset($_SESSION['imgfile']);
+        if(isset($_SESSION['imgfile'])){
+            var_dump($_SESSION['imgfile']);
+        }elseif(isset($_FILES['imgfile'])){
+            $_SESSION['imgfile']=$_FILES['imgfile'];
+        }else{
+            echo '未上传文件';
+        }*/
+
         if(isset($_FILES['imgfile'])){
             //$_FILES['imgfile'];
            $filepath='./web/upimg/';
@@ -175,6 +183,7 @@ class homeCtrl extends \core\imooc
 
     public function xinqing()
     {
+
     	 $this->display('xinqing.html');
     }
 }
