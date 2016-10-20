@@ -97,7 +97,7 @@ class basicdataModel extends model
     public function selAll($data)
     {
 //        print_R($data);die;
-        $arr = $this->select($this->table,["[>]user" => ["id" => "id"]],'*', [
+        $arr = $this->select($this->table,["[>]user" => ["u_id" => "id"]],'*', [
             "AND" =>$data
         ]);
 //        var_dump($this->error());die;
