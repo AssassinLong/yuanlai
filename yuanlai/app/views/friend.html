@@ -53,9 +53,9 @@
 <body class="backgroud-white">
 <!-- 导航栏开始 -->
 <header class="mui-bar mui-bar-nav">
-    <a class="mui-icon mui-icon-left-nav mui-pull-left link" href="http://m.7799520.com/self/news"></a>
-    <h1 class="mui-title">漆黑烈焰使</h1>
-    <a href="http://m.7799520.com" class="mui-bar-nav-home link"></a>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">{{ arr[0].real_name }}</h1>
+    <a href="?r=home/index" class="mui-bar-nav-home link"></a>
 </header>
 <!-- 导航栏结束 -->
 
@@ -72,7 +72,7 @@
         <p>
             <input name="message" type="text" placeholder="请输入您要留言的内容...">
             <span class="ico ico-emotion"></span>
-            <button type="button" userid="379866"></button>
+            <button type="button" userid="{{ arr[0].us_id  }}"></button>
         </p>
     </div>
     <!-- 聊天框结束 -->
@@ -84,21 +84,39 @@
     <!-- 回信息开始 -->
     <div class="message-detail">
         <ul class="mui-table-view">
+            {% for val in arr %}
+            {% if val.us_id == data.uid  %}
             <li class="mui-table-view-cell mui-media">
                 <div class="mui-slider-handle">
-                    <p class="title">10-15 16:33</p>
+                    <p class="title">{{ val.createtime }}</p>
                     <span></span>
                     <div class="clip-bg mui-media-object" style="background: url(/img/avata-1.png);">
-                        <a href="http://m.7799520.com/user/379866.html" class="link"></a>
+                        <a href="?r=home/fossa/tid/{{ val.us_id }}" class="link">{{ val.real_name }}</a>
                     </div>
                     <div class="mui-media-body">
                         <p>
-                            阿斯达斯的								</p>
+                            {{ val.content }}</p>
                     </div>
                 </div>
             </li>
-
+            {% else %}
             <li class="mui-table-view-cell mui-media active">
+                <div class="mui-slider-handle">
+                    <p class="title">{{ val.createtime }}</p>
+                    <span></span>
+                    <div class="clip-bg mui-media-object" style="background: url(.web/img/avata-1.png););">
+                        <a href="?r=home/fossa/tid/{{ val.us_id }}" class="link">{{ val.real_name }}</a>
+                    </div>
+                    <div class="mui-media-body">
+                        <p>
+                            {{ val.content }}		</p>
+                    </div>
+                </div>
+            </li>
+            {% endif %}
+            {% endfor %}
+
+            <!--<li class="mui-table-view-cell mui-media active">
                 <div class="mui-slider-handle">
                     <p class="title">10-15 16:05</p>
                     <span></span>
@@ -107,10 +125,11 @@
                     </div>
                     <div class="mui-media-body">
                         <p>
-                            蛤蛤蛤蛤蛤蛤								</p>
+                            蛤蛤蛤蛤蛤蛤		</p>
                     </div>
                 </div>
-            </li>
+            </li>-->
+
         </ul>
     </div>
     <!-- 回信息结束 -->

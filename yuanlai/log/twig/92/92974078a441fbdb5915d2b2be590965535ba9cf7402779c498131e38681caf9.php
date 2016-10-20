@@ -86,7 +86,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         <div class=\"title\">
             <span class=\"mui-icon mui-icon-closeempty mui-poppicker-btn-cancel mui-pull-left layer-close\"></span>
             <p class=\"mui-ellipsis\">与<label id=\"\"></label>对话</p>
-            <span class=\"mui-icon mui-icon-checkmarkempty mui-poppicker-btn-ok mui-pull-right do-message-send\"></span>
+            <span class=\"mui-icon mui-icon-checkmarkempty mui-poppicker-btn-ok mui-pull-right do-message-send\">发送</span>
         </div>
         <div class=\"upload\"></div>
         <input name=\"send_id\" type=\"hidden\" value=\"\" />
@@ -95,37 +95,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
 </div>
 <!-- 发信息结束 -->
 
-<!-- 选项卡开始 -->
-<div class=\"site-nav\">
-    <a class=\"link\" href=\"\">
-        <span class=\"nav-home\"></span>
-        <span class=\"mui-tab-label\">首页</span>
-    </a>
 
-    <a class=\"link\" href=\"http://m.7799520.com/recommend\">
-        <span class=\"nav-heart\"></span>
-        <span class=\"mui-tab-label\">交友</span>
-    </a>
-
-    <a class=\"link\" href=\"\">
-        <span class=\"nav-leaf\"></span>
-        <span class=\"mui-tab-label\">注册</span>
-    </a>
-
-
-    <a class=\"link\" href=\"http://m.7799520.com/self/news\">
-        <span class=\"nav-call\"></span>
-        <span class=\"mui-tab-label\">消息</span>
-    </a>
-
-    <a class=\"link\" href=\"\">
-        <span class=\"nav-self\"></span>
-        <span class=\"mui-tab-label\">个人</span>
-    </a>
-</div>
-
-
-<!-- 选项卡结束 -->
 
 
 
@@ -138,50 +108,53 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         </div>
     </a>
     <!-- banner结束 -->
+
     <div class=\"recommend-list\">
         <ul class=\"mui-table-view\">
             ";
-        // line 125
+        // line 96
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["ars"]) ? $context["ars"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["vs"]) {
-            // line 126
+            // line 97
             echo "            <li class=\"mui-table-view-cell mui-media\">
                 <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
-                    <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\"></a>
+                    <a href=\"\" class=\"link\"></a>
                 </div><div class=\"mui-media-body\">
-                <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\">
+                <a href=\"?r=home/fossa/tid/";
+            // line 101
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
+            echo "\" class=\"link\">
                     <b>";
-            // line 131
-            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "real_name", array()), "html", null, true);
+            // line 102
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "name", array()), "html", null, true);
             echo "</b><span>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "age", array()), "html", null, true);
             echo "岁，";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "region", array()), "html", null, true);
             echo "，152cm</span>
                     <p class=\"mui-ellipsis\">内心独白：";
-            // line 132
+            // line 103
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "mono", array()), "html", null, true);
             echo "</p></a></div><div>
                 <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"";
-            // line 133
+            // line 104
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
-                <a href=\"javascript:;\" objid=\"";
-            // line 134
+                <a href=\"?r=home/advices\" objid=\"";
+            // line 105
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
             </div>
-            </li>
-            ";
+                </li>
+                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vs'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 138
+        // line 109
         echo "        </ul>
     </div>
-
 
 
 
@@ -257,27 +230,27 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                 return false;
             }
             //删除
-            \$('.layer-close').click();
-            var url = 'http://m.7799520.com/send/addMessage';
-            alert(userid)
-//            \$.ajax({
-//                url: url,
-//                type: 'post',
-//                dataType: 'json',
-//                data: {
-//                    'userid': userid,
-//                    'message': ct.val()
-//                },
-//                success: function(data) {
-//                    if (data.status == 1) {
-//                        mui.toast('消息已发出');
-//                    } else if (data.status == 0) {
-//                        mui.toast('发送信息,请重试..');
-//                    } else {
-//                        window.location.href = \"http://m.7799520.com/login\";
-//                    }
-//                }
-//            });
+            //\$('.layer-close').click();
+            var url = '?r=advices/addmessage';
+            //alert(userid);
+            //alert(ct.val());
+            \$.ajax({
+                url: url,
+                type: 'post',
+                //dataType: 'json',
+                data: {
+                    'userid': userid,
+                    'message': ct.val()
+                },
+                success: function(data) {
+                    //alert(data);
+                    if (data== 1) {
+                        mui.toast('消息已发出');
+                    } else if (data == 0) {
+                        mui.toast('发送信息失败,请重试..');
+                    }
+                }
+            });
         });
         //关闭弹窗
         \$('.layer-close').click(function() {
@@ -312,7 +285,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
 
     public function getDebugInfo()
     {
-        return array (  182 => 138,  172 => 134,  168 => 133,  164 => 132,  156 => 131,  149 => 126,  145 => 125,  19 => 1,);
+        return array (  156 => 109,  146 => 105,  142 => 104,  138 => 103,  130 => 102,  126 => 101,  120 => 97,  116 => 96,  19 => 1,);
     }
 
     public function getSource()
@@ -387,7 +360,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         <div class=\"title\">
             <span class=\"mui-icon mui-icon-closeempty mui-poppicker-btn-cancel mui-pull-left layer-close\"></span>
             <p class=\"mui-ellipsis\">与<label id=\"\"></label>对话</p>
-            <span class=\"mui-icon mui-icon-checkmarkempty mui-poppicker-btn-ok mui-pull-right do-message-send\"></span>
+            <span class=\"mui-icon mui-icon-checkmarkempty mui-poppicker-btn-ok mui-pull-right do-message-send\">发送</span>
         </div>
         <div class=\"upload\"></div>
         <input name=\"send_id\" type=\"hidden\" value=\"\" />
@@ -396,37 +369,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
 </div>
 <!-- 发信息结束 -->
 
-<!-- 选项卡开始 -->
-<div class=\"site-nav\">
-    <a class=\"link\" href=\"\">
-        <span class=\"nav-home\"></span>
-        <span class=\"mui-tab-label\">首页</span>
-    </a>
 
-    <a class=\"link\" href=\"http://m.7799520.com/recommend\">
-        <span class=\"nav-heart\"></span>
-        <span class=\"mui-tab-label\">交友</span>
-    </a>
-
-    <a class=\"link\" href=\"\">
-        <span class=\"nav-leaf\"></span>
-        <span class=\"mui-tab-label\">注册</span>
-    </a>
-
-
-    <a class=\"link\" href=\"http://m.7799520.com/self/news\">
-        <span class=\"nav-call\"></span>
-        <span class=\"mui-tab-label\">消息</span>
-    </a>
-
-    <a class=\"link\" href=\"\">
-        <span class=\"nav-self\"></span>
-        <span class=\"mui-tab-label\">个人</span>
-    </a>
-</div>
-
-
-<!-- 选项卡结束 -->
 
 
 
@@ -439,24 +382,24 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         </div>
     </a>
     <!-- banner结束 -->
+
     <div class=\"recommend-list\">
         <ul class=\"mui-table-view\">
             {% for vs in ars %}
             <li class=\"mui-table-view-cell mui-media\">
                 <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
-                    <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\"></a>
+                    <a href=\"\" class=\"link\"></a>
                 </div><div class=\"mui-media-body\">
-                <a href=\"http://m.7799520.com/user/231449.html\" class=\"link\">
-                    <b>{{ vs.real_name }}</b><span>{{ vs.age }}岁，{{ vs.region }}，152cm</span>
+                <a href=\"?r=home/fossa/tid/{{vs.u_id}}\" class=\"link\">
+                    <b>{{ vs.name }}</b><span>{{ vs.age }}岁，{{ vs.region }}，152cm</span>
                     <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
                 <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
-                <a href=\"javascript:;\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
+                <a href=\"?r=home/advices\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
             </div>
-            </li>
-            {% endfor %}
+                </li>
+                {% endfor %}
         </ul>
     </div>
-
 
 
 
@@ -532,27 +475,27 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                 return false;
             }
             //删除
-            \$('.layer-close').click();
-            var url = 'http://m.7799520.com/send/addMessage';
-            alert(userid)
-//            \$.ajax({
-//                url: url,
-//                type: 'post',
-//                dataType: 'json',
-//                data: {
-//                    'userid': userid,
-//                    'message': ct.val()
-//                },
-//                success: function(data) {
-//                    if (data.status == 1) {
-//                        mui.toast('消息已发出');
-//                    } else if (data.status == 0) {
-//                        mui.toast('发送信息,请重试..');
-//                    } else {
-//                        window.location.href = \"http://m.7799520.com/login\";
-//                    }
-//                }
-//            });
+            //\$('.layer-close').click();
+            var url = '?r=advices/addmessage';
+            //alert(userid);
+            //alert(ct.val());
+            \$.ajax({
+                url: url,
+                type: 'post',
+                //dataType: 'json',
+                data: {
+                    'userid': userid,
+                    'message': ct.val()
+                },
+                success: function(data) {
+                    //alert(data);
+                    if (data== 1) {
+                        mui.toast('消息已发出');
+                    } else if (data == 0) {
+                        mui.toast('发送信息失败,请重试..');
+                    }
+                }
+            });
         });
         //关闭弹窗
         \$('.layer-close').click(function() {

@@ -28,8 +28,8 @@ class __TwigTemplate_e50851490d3a1e1f05d5fadead2ebe0259c3b8e54fee833570513bae012
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
+        <script src=\"web/js/min.js\" ></script>
+\t    <script src=\"web/js/core.js\" ></script>
         <script>
             \$(window).ready(function () {
                 (function (\$) {
@@ -165,8 +165,8 @@ class __TwigTemplate_e50851490d3a1e1f05d5fadead2ebe0259c3b8e54fee833570513bae012
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
+        <script src=\"web/js/min.js\" ></script>
+\t    <script src=\"web/js/core.js\" ></script>
         <script>
             \$(window).ready(function () {
                 (function (\$) {

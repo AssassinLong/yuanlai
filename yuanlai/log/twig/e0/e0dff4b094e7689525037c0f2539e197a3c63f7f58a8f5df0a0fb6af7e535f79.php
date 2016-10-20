@@ -28,8 +28,11 @@ class __TwigTemplate_382ea778523b5ab59f29d5941f06d4d90e3011e5f404663e05e5ba00a77
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
+        <script src=\"web/js/min.js\" ></script>
+\t    <script src=\"web/js/core.js\" ></script>
+\t    <link rel=\"stylesheet\" href=\"http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css\">  
+\t    <script src=\"http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js\"></script>
+\t    <script src=\"http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
        
 <title>编辑详细资料</title>
 </head>
@@ -39,53 +42,84 @@ class __TwigTemplate_382ea778523b5ab59f29d5941f06d4d90e3011e5f404663e05e5ba00a77
 \t\t<header class=\"mui-bar mui-bar-nav\">
 \t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
 \t\t\t<h1 class=\"mui-title\">详细资料</h1>
-\t\t\t<a href=\"javascript:;\" class=\"mui-btn-link mui-btn-nav mui-pull-right do-submit\" ajax-url=\"\" href-url=\"\" dialog=\"保存成功\">保存</a>
+\t\t\t
 \t\t</header>
 \t\t<!-- 导航栏结束 -->
 
 \t\t<div class=\"mui-content\">
 \t\t\t<!-- 详细资料开始 -->
-\t\t\t<form action=\"\" method=\"post\">
-\t\t\t\t<div class=\"form form-search\">
-\t\t\t\t\t<div class=\"padding form-list\">
-\t\t\t\t\t\t<div id=\"LunarPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>生肖</label>
-\t\t\t\t\t\t\t<font>狗</font>
-\t\t\t\t\t\t\t<input name=\"lunar\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"BloodPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>血型</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"blood\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"NationalityPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>国籍</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"nationality\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"NationPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>民族</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"national\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"StatusPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>有无子女</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"childrenstatus\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"CarPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>购车情况</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"caring\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"HousePicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>住房情况</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"housing\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</form>
+\t\t\t<form action=\"?r=fossa/xiang_add\" method=\"post\">
+\t\t    ";
+        // line 34
+        if ((isset($context["re"]) ? $context["re"] : null)) {
+            // line 35
+            echo "\t\t\t  ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["re"]) ? $context["re"] : null));
+            foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
+                // line 36
+                echo "\t\t\t\t<span class=\"input-group-addon\">生肖</span>
+\t\t\t    <input type=\"text\" name=\"nature\" class=\"form-control\" value=\"";
+                // line 37
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "nature", array()), "html", null, true);
+                echo "\">
+\t\t\t    <span class=\"input-group-addon\">血型</span>
+\t\t\t    <input type=\"text\" name=\"bloodtype\" class=\"form-control\" value=\"";
+                // line 39
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "bloodtype", array()), "html", null, true);
+                echo "\">
+\t\t\t    <span class=\"input-group-addon\">民族</span>
+\t\t\t    <input type=\"text\" name=\"nation\" class=\"form-control\" value=\"";
+                // line 41
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "nation", array()), "html", null, true);
+                echo "\">
+\t\t\t    <span class=\"input-group-addon\">有无子女</span>
+\t\t\t    <input type=\"text\" name=\"children\" class=\"form-control\" value=\"";
+                // line 43
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "children", array()), "html", null, true);
+                echo "\">
+\t\t\t    <span class=\"input-group-addon\">购车情况</span>
+\t\t\t    <input type=\"text\" name=\"vehicle\" class=\"form-control\" value=\"";
+                // line 45
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "vehicle", array()), "html", null, true);
+                echo "\">
+                <span class=\"input-group-addon\">住房情况</span>
+\t\t\t    <input type=\"text\" name=\"house\" class=\"form-control\" value=\"";
+                // line 47
+                echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "house", array()), "html", null, true);
+                echo "\">
+                <center>
+\t\t\t    <input type=\"submit\" value=\"完成\">
+\t\t\t    </center>
+\t\t\t    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['v'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 52
+            echo "\t\t\t  
+               ";
+        } else {
+            // line 54
+            echo "                <span class=\"input-group-addon\">生肖</span>
+\t\t\t    <input type=\"text\" name=\"nature\" class=\"form-control\" placeholder=\"\">
+\t\t\t    <span class=\"input-group-addon\">血型</span>
+\t\t\t    <input type=\"text\" name=\"bloodtype\" class=\"form-control\" placeholder=\"\">
+\t\t\t    <span class=\"input-group-addon\">民族</span>
+\t\t\t    <input type=\"text\" name=\"nation\" class=\"form-control\" placeholder=\"\">
+\t\t\t    <span class=\"input-group-addon\">有无子女</span>
+\t\t\t    <input type=\"text\" name=\"children\" class=\"form-control\" placeholder=\"\">
+\t\t\t    <span class=\"input-group-addon\">购车情况</span>
+\t\t\t    <input type=\"text\" name=\"vehicle\" class=\"form-control\" placeholder=\"\">
+                <span class=\"input-group-addon\">住房情况</span>
+\t\t\t    <input type=\"text\" name=\"house\" class=\"form-control\" placeholder=\"\">
+                <center>
+\t\t\t    <input type=\"submit\" value=\"完成\">
+\t\t\t    </center>
+\t\t\t ";
+        }
+        // line 70
+        echo "\t\t\t</form>
 
 \t\t\t
 \t\t\t<!-- 详细资料结束 -->
@@ -93,7 +127,7 @@ class __TwigTemplate_382ea778523b5ab59f29d5941f06d4d90e3011e5f404663e05e5ba00a77
 \t\t<!-- CNZZ代码 -->
 \t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself%2F377537.html&rnd=1481080925\" width=\"0\" height=\"0\"/>\t</body>
 \t<!--引用自定义脚本-->
-\t<script src=\"css/core.js\"></script> 
+\t<script src=\"web/js/core1.js\"></script> 
 \t<!--引用自定义脚本-->
 \t
 
@@ -106,9 +140,14 @@ class __TwigTemplate_382ea778523b5ab59f29d5941f06d4d90e3011e5f404663e05e5ba00a77
         return "xiangxiziliao.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  122 => 70,  104 => 54,  100 => 52,  89 => 47,  84 => 45,  79 => 43,  74 => 41,  69 => 39,  64 => 37,  61 => 36,  56 => 35,  54 => 34,  19 => 1,);
     }
 
     public function getSource()
@@ -125,8 +164,11 @@ class __TwigTemplate_382ea778523b5ab59f29d5941f06d4d90e3011e5f404663e05e5ba00a77
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
+        <script src=\"web/js/min.js\" ></script>
+\t    <script src=\"web/js/core.js\" ></script>
+\t    <link rel=\"stylesheet\" href=\"http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css\">  
+\t    <script src=\"http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js\"></script>
+\t    <script src=\"http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
        
 <title>编辑详细资料</title>
 </head>
@@ -136,52 +178,49 @@ class __TwigTemplate_382ea778523b5ab59f29d5941f06d4d90e3011e5f404663e05e5ba00a77
 \t\t<header class=\"mui-bar mui-bar-nav\">
 \t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
 \t\t\t<h1 class=\"mui-title\">详细资料</h1>
-\t\t\t<a href=\"javascript:;\" class=\"mui-btn-link mui-btn-nav mui-pull-right do-submit\" ajax-url=\"\" href-url=\"\" dialog=\"保存成功\">保存</a>
+\t\t\t
 \t\t</header>
 \t\t<!-- 导航栏结束 -->
 
 \t\t<div class=\"mui-content\">
 \t\t\t<!-- 详细资料开始 -->
-\t\t\t<form action=\"\" method=\"post\">
-\t\t\t\t<div class=\"form form-search\">
-\t\t\t\t\t<div class=\"padding form-list\">
-\t\t\t\t\t\t<div id=\"LunarPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>生肖</label>
-\t\t\t\t\t\t\t<font>狗</font>
-\t\t\t\t\t\t\t<input name=\"lunar\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"BloodPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>血型</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"blood\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"NationalityPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>国籍</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"nationality\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"NationPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>民族</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"national\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"StatusPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>有无子女</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"childrenstatus\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"CarPicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>购车情况</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"caring\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div id=\"HousePicker\" class=\"mui-input-row\">
-\t\t\t\t\t\t\t<label>住房情况</label>
-\t\t\t\t\t\t\t<font>未透露</font>
-\t\t\t\t\t\t\t<input name=\"housing\" type=\"hidden\" value=\"\" />
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t<form action=\"?r=fossa/xiang_add\" method=\"post\">
+\t\t    {% if re %}
+\t\t\t  {% for v in re %}
+\t\t\t\t<span class=\"input-group-addon\">生肖</span>
+\t\t\t    <input type=\"text\" name=\"nature\" class=\"form-control\" value=\"{{ v.nature }}\">
+\t\t\t    <span class=\"input-group-addon\">血型</span>
+\t\t\t    <input type=\"text\" name=\"bloodtype\" class=\"form-control\" value=\"{{ v.bloodtype }}\">
+\t\t\t    <span class=\"input-group-addon\">民族</span>
+\t\t\t    <input type=\"text\" name=\"nation\" class=\"form-control\" value=\"{{ v.nation }}\">
+\t\t\t    <span class=\"input-group-addon\">有无子女</span>
+\t\t\t    <input type=\"text\" name=\"children\" class=\"form-control\" value=\"{{ v.children }}\">
+\t\t\t    <span class=\"input-group-addon\">购车情况</span>
+\t\t\t    <input type=\"text\" name=\"vehicle\" class=\"form-control\" value=\"{{ v.vehicle }}\">
+                <span class=\"input-group-addon\">住房情况</span>
+\t\t\t    <input type=\"text\" name=\"house\" class=\"form-control\" value=\"{{ v.house }}\">
+                <center>
+\t\t\t    <input type=\"submit\" value=\"完成\">
+\t\t\t    </center>
+\t\t\t    {% endfor %}
+\t\t\t  
+               {% else %}
+                <span class=\"input-group-addon\">生肖</span>
+\t\t\t    <input type=\"text\" name=\"nature\" class=\"form-control\" placeholder=\"\">
+\t\t\t    <span class=\"input-group-addon\">血型</span>
+\t\t\t    <input type=\"text\" name=\"bloodtype\" class=\"form-control\" placeholder=\"\">
+\t\t\t    <span class=\"input-group-addon\">民族</span>
+\t\t\t    <input type=\"text\" name=\"nation\" class=\"form-control\" placeholder=\"\">
+\t\t\t    <span class=\"input-group-addon\">有无子女</span>
+\t\t\t    <input type=\"text\" name=\"children\" class=\"form-control\" placeholder=\"\">
+\t\t\t    <span class=\"input-group-addon\">购车情况</span>
+\t\t\t    <input type=\"text\" name=\"vehicle\" class=\"form-control\" placeholder=\"\">
+                <span class=\"input-group-addon\">住房情况</span>
+\t\t\t    <input type=\"text\" name=\"house\" class=\"form-control\" placeholder=\"\">
+                <center>
+\t\t\t    <input type=\"submit\" value=\"完成\">
+\t\t\t    </center>
+\t\t\t {% endif %}
 \t\t\t</form>
 
 \t\t\t
@@ -190,7 +229,7 @@ class __TwigTemplate_382ea778523b5ab59f29d5941f06d4d90e3011e5f404663e05e5ba00a77
 \t\t<!-- CNZZ代码 -->
 \t<img src=\"http://c.cnzz.com/wapstat.php?siteid=1258721820&r=http%3A%2F%2Fm.7799520.com%2Fself%2F377537.html&rnd=1481080925\" width=\"0\" height=\"0\"/>\t</body>
 \t<!--引用自定义脚本-->
-\t<script src=\"css/core.js\"></script> 
+\t<script src=\"web/js/core1.js\"></script> 
 \t<!--引用自定义脚本-->
 \t
 

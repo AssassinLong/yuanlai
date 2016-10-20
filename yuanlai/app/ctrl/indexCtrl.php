@@ -76,10 +76,12 @@ class indexCtrl extends \core\imooc
                 $model=new kModel();
                 $str=$model->addOne('user',$data);
 //                print_r($str);die;
+                $real_name=$data['name'];
                 if($str>0){
                     $models=new basicdataModel();
-                    $s1=$models->adde1($str);
+                    $s1=$models->adde1($str,$real_name);
 //                    print_r($s1);die;
+                    //echo $s1;
                     if($s1){
                         jump('?r=index/login');
                     }else{

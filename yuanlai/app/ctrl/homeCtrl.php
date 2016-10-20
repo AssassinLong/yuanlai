@@ -8,6 +8,8 @@ use app\model\shengModel;
 use app\model\basicdataModel;
 use app\model\monoModel;
 use app\model\pictureModel;
+use app\model\messageModel;
+
 session_start();
 class homeCtrl extends \core\imooc
 {
@@ -45,8 +47,13 @@ class homeCtrl extends \core\imooc
     //消息展示
     public function advices()
     {
-
-            $this->display('advices.html');
+        $id=$_SESSION['id'];
+        $mess=new messageModel();
+        $arr=$mess->addAll($id);
+        //$mess->updata('');
+        //p($arr);
+        $this->assign('arr',$arr);
+        $this->display('advices.html');
     }
     //礼物(暂定)
     public function gift()
@@ -91,13 +98,13 @@ class homeCtrl extends \core\imooc
 
             $picture=new pictureModel();
             $imgs=$picture->all($id);
-//            dump($imgs);die;
+           
             $this->assign('imgs',$imgs);
             $ar=$mono->guan_sel($id);
             $ar1=count($ar);
             
             
-            //echo $data1;die;
+            
             $this->assign('ar1',$ar1);
             $data=$mono->zi_guan($id);
             $data1=count($data);
@@ -107,6 +114,7 @@ class homeCtrl extends \core\imooc
             $this->assign('aaa',$aaa);
             $this->display('fossa_ta.html');
             }  else{
+
                  $id=$_SESSION['id'];
                 $model = new xiangModel();
                 $re = $model->xiang($id);
@@ -132,7 +140,6 @@ class homeCtrl extends \core\imooc
 
                 $picture=new pictureModel();
                 $imgs=$picture->all($id);
-                //dump($imgs);die;
                 $this->assign('imgs',$imgs);
                 $ar=$mono->zi_guan($id);
                 $ar1=count($ar);
@@ -150,6 +157,15 @@ class homeCtrl extends \core\imooc
     //上传相册
     public function upload()
     {
+        /*//unset($_SESSION['imgfile']);
+        if(isset($_SESSION['imgfile'])){
+            var_dump($_SESSION['imgfile']);
+        }elseif(isset($_FILES['imgfile'])){
+            $_SESSION['imgfile']=$_FILES['imgfile'];
+        }else{
+            echo '未上传文件';
+        }*/
+
         if(isset($_FILES['imgfile'])){
             //$_FILES['imgfile'];
            $filepath='./web/upimg/';
@@ -180,15 +196,18 @@ class homeCtrl extends \core\imooc
         $arr=$base->user_phone($u_id);
         //dump($arr);die;
         $this->assign('ars',$arr);
+        //var_dump($arr);
         $this->display('suggest.html');
     }
 
     public function xinqing()
     {
+
          $base=new monoModel();
          $arr=$base->sel();
          //dump($arr);die;
          $this->assign('arr',$arr);
+
     	 $this->display('xinqing.html');
     }
 

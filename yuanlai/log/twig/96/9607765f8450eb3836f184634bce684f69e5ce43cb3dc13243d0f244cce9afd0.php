@@ -86,7 +86,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
         <div class=\"title\">
             <span class=\"mui-icon mui-icon-closeempty mui-poppicker-btn-cancel mui-pull-left layer-close\"></span>
             <p class=\"mui-ellipsis\">与<label id=\"\"></label>对话</p>
-            <span class=\"mui-icon mui-icon-checkmarkempty mui-poppicker-btn-ok mui-pull-right do-message-send\"></span>
+            <span class=\"mui-icon mui-icon-checkmarkempty mui-poppicker-btn-ok mui-pull-right do-message-send\">发送</span>
         </div>
         <div class=\"upload\"></div>
         <input name=\"send_id\" type=\"hidden\" value=\"\" />
@@ -141,7 +141,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
             // line 104
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
-                <a href=\"javascript:;\" objid=\"";
+                <a href=\"?r=home/advices\" objid=\"";
             // line 105
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
@@ -230,27 +230,27 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
                 return false;
             }
             //删除
-            \$('.layer-close').click();
-            var url = 'http://m.7799520.com/send/addMessage';
-            alert(userid)
-//            \$.ajax({
-//                url: url,
-//                type: 'post',
-//                dataType: 'json',
-//                data: {
-//                    'userid': userid,
-//                    'message': ct.val()
-//                },
-//                success: function(data) {
-//                    if (data.status == 1) {
-//                        mui.toast('消息已发出');
-//                    } else if (data.status == 0) {
-//                        mui.toast('发送信息,请重试..');
-//                    } else {
-//                        window.location.href = \"http://m.7799520.com/login\";
-//                    }
-//                }
-//            });
+            //\$('.layer-close').click();
+            var url = '?r=advices/addmessage';
+            //alert(userid);
+            //alert(ct.val());
+            \$.ajax({
+                url: url,
+                type: 'post',
+                //dataType: 'json',
+                data: {
+                    'userid': userid,
+                    'message': ct.val()
+                },
+                success: function(data) {
+                    //alert(data);
+                    if (data== 1) {
+                        mui.toast('消息已发出');
+                    } else if (data == 0) {
+                        mui.toast('发送信息失败,请重试..');
+                    }
+                }
+            });
         });
         //关闭弹窗
         \$('.layer-close').click(function() {
@@ -360,7 +360,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
         <div class=\"title\">
             <span class=\"mui-icon mui-icon-closeempty mui-poppicker-btn-cancel mui-pull-left layer-close\"></span>
             <p class=\"mui-ellipsis\">与<label id=\"\"></label>对话</p>
-            <span class=\"mui-icon mui-icon-checkmarkempty mui-poppicker-btn-ok mui-pull-right do-message-send\"></span>
+            <span class=\"mui-icon mui-icon-checkmarkempty mui-poppicker-btn-ok mui-pull-right do-message-send\">发送</span>
         </div>
         <div class=\"upload\"></div>
         <input name=\"send_id\" type=\"hidden\" value=\"\" />
@@ -394,7 +394,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
                     <b>{{ vs.name }}</b><span>{{ vs.age }}岁，{{ vs.region }}，152cm</span>
                     <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
                 <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
-                <a href=\"javascript:;\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
+                <a href=\"?r=home/advices\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
             </div>
                 </li>
                 {% endfor %}
@@ -475,27 +475,27 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
                 return false;
             }
             //删除
-            \$('.layer-close').click();
-            var url = 'http://m.7799520.com/send/addMessage';
-            alert(userid)
-//            \$.ajax({
-//                url: url,
-//                type: 'post',
-//                dataType: 'json',
-//                data: {
-//                    'userid': userid,
-//                    'message': ct.val()
-//                },
-//                success: function(data) {
-//                    if (data.status == 1) {
-//                        mui.toast('消息已发出');
-//                    } else if (data.status == 0) {
-//                        mui.toast('发送信息,请重试..');
-//                    } else {
-//                        window.location.href = \"http://m.7799520.com/login\";
-//                    }
-//                }
-//            });
+            //\$('.layer-close').click();
+            var url = '?r=advices/addmessage';
+            //alert(userid);
+            //alert(ct.val());
+            \$.ajax({
+                url: url,
+                type: 'post',
+                //dataType: 'json',
+                data: {
+                    'userid': userid,
+                    'message': ct.val()
+                },
+                success: function(data) {
+                    //alert(data);
+                    if (data== 1) {
+                        mui.toast('消息已发出');
+                    } else if (data == 0) {
+                        mui.toast('发送信息失败,请重试..');
+                    }
+                }
+            });
         });
         //关闭弹窗
         \$('.layer-close').click(function() {

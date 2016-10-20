@@ -5,7 +5,6 @@ use core\lib\model;
 class userModel extends model
 {
      public $table="user";
-    
         public function user_phone($data)
         {
             // $model=new model();

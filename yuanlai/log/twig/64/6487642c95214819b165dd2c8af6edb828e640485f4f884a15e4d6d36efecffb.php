@@ -294,8 +294,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_g(){
 \t\tsex=\$(\"#sex\").val();
 \t\tif(sex==''){
-\t\t\t\$(\"#a2\").show();
 \t\t\t\$(\"#sex\").hide();
+\t\t\t\$(\"#a2\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -303,11 +304,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu11\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#sex\").hide();
 \t\t\t\t\t\t\$(\"#a2\").show();
-\t\t\t\t\t\t\$(\"#sex\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a2\").html(e).show();
 \t\t\t\t\t\t\$(\"#sex\").hide();
+\t\t\t\t\t\t\$(\"#a2\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -321,8 +324,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_g1(){
 \t\tsex=\$(\"#sex1\").val();
 \t\tif(sex==''){
-\t\t\t\$(\"#a21\").show();
 \t\t\t\$(\"#sex1\").hide();
+\t\t\t\$(\"#a21\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -330,11 +334,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu11\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#sex1\").hide();
 \t\t\t\t\t\t\$(\"#a21\").show();
-\t\t\t\t\t\t\$(\"#sex1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a21\").html(e).show();
 \t\t\t\t\t\t\$(\"#sex1\").hide();
+\t\t\t\t\t\t\$(\"#a21\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -350,8 +356,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\tage=\$(\"#age\").val();
 //\t\talert(age)
 \t\tif(age==''){
-\t\t\t\$(\"#a1\").show();
 \t\t\t\$(\"#age\").hide();
+\t\t\t\$(\"#a1\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -359,11 +366,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu12\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#age\").hide();
 \t\t\t\t\t\t\$(\"#a1\").show();
-\t\t\t\t\t\t\$(\"#age\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a1\").html(e).show();
 \t\t\t\t\t\t\$(\"#age\").hide();
+\t\t\t\t\t\t\$(\"#a1\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -377,8 +386,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_v1(){
 \t\tage=\$(\"#age1\").val();
 \t\tif(age==''){
-\t\t\t\$(\"#a11\").show();
 \t\t\t\$(\"#age1\").hide();
+\t\t\t\$(\"#a11\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -386,11 +396,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu12\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#age1\").hide();
 \t\t\t\t\t\t\$(\"#a11\").show();
-\t\t\t\t\t\t\$(\"#age1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a11\").html(e).show();
 \t\t\t\t\t\t\$(\"#age1\").hide();
+\t\t\t\t\t\t\$(\"#a11\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -405,8 +417,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_f1(){
 \t\thun=\$(\"#hun1\").val();
 \t\tif(hun==''){
-\t\t\t\$(\"#s61\").show();
 \t\t\t\$(\"#hun1\").hide();
+\t\t\t\$(\"#s61\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -414,11 +427,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu1\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#hun1\").hide();
 \t\t\t\t\t\t\$(\"#s61\").show();
-\t\t\t\t\t\t\$(\"#hun1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s61\").html(e).show();
 \t\t\t\t\t\t\$(\"#hun1\").hide();
+\t\t\t\t\t\t\$(\"#s61\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -432,8 +447,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_f(){
 \t\thun=\$(\"#hun\").val();
 \t\tif(hun==''){
-\t\t\t\$(\"#s6\").show();
 \t\t\t\$(\"#hun\").hide();
+\t\t\t\$(\"#s6\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -441,11 +457,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu1\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#hun\").hide();
 \t\t\t\t\t\t\$(\"#s6\").show();
-\t\t\t\t\t\t\$(\"#hun\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s6\").html(e).show();
 \t\t\t\t\t\t\$(\"#hun\").hide();
+\t\t\t\t\t\t\$(\"#s6\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -460,8 +478,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_e1(){
 \t\txue=\$(\"#xue1\").val();
 \t\tif(xue==''){
-\t\t\t\$(\"#s51\").show();
 \t\t\t\$(\"#xue1\").hide();
+\t\t\t\$(\"#s51\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -469,11 +488,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu9\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#xue1\").hide();
 \t\t\t\t\t\t\$(\"#s51\").show();
-\t\t\t\t\t\t\$(\"#xue1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s51\").html(e).show();
 \t\t\t\t\t\t\$(\"#xue1\").hide();
+\t\t\t\t\t\t\$(\"#s51\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -487,8 +508,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_e(){
 \t\txue=\$(\"#xue\").val();
 \t\tif(xue==''){
-\t\t\t\$(\"#s5\").show();
 \t\t\t\$(\"#xue\").hide();
+\t\t\t\$(\"#s5\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -496,11 +518,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu9\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#xue\").hide();
 \t\t\t\t\t\t\$(\"#s5\").show();
-\t\t\t\t\t\t\$(\"#xue\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s5\").html(e).show();
 \t\t\t\t\t\t\$(\"#xue\").hide();
+\t\t\t\t\t\t\$(\"#s5\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -517,8 +541,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_d1(){
 \t\tji=\$(\"#ji1\").val();
 \t\tif(ji==''){
-\t\t\t\$(\"#s41\").show();
 \t\t\t\$(\"#ji1\").hide();
+\t\t\t\$(\"#s41\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -526,11 +551,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu7\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#ji1\").hide();
 \t\t\t\t\t\t\$(\"#s41\").show();
-\t\t\t\t\t\t\$(\"#ji1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s41\").html(e).show();
 \t\t\t\t\t\t\$(\"#ji1\").hide();
+\t\t\t\t\t\t\$(\"#s41\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -544,8 +571,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_d(){
 \t\tji=\$(\"#ji\").val();
 \t\tif(ji==''){
-\t\t\t\$(\"#s4\").show();
 \t\t\t\$(\"#ji\").hide();
+\t\t\t\$(\"#s4\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -553,11 +581,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu7\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#ji\").hide();
 \t\t\t\t\t\t\$(\"#s4\").show();
-\t\t\t\t\t\t\$(\"#ji\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s4\").html(e).show();
 \t\t\t\t\t\t\$(\"#ji\").hide();
+\t\t\t\t\t\t\$(\"#s4\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -572,8 +602,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_c(){
 \t\txing=\$(\"#xing\").val();
 \t\tif(xing==''){
-\t\t\t\$(\"#s3\").show();
 \t\t\t\$(\"#xing\").hide();
+\t\t\t\$(\"#s3\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -581,11 +612,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu6\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#xing\").hide();
 \t\t\t\t\t\t\$(\"#s3\").show();
-\t\t\t\t\t\t\$(\"#xing\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s3\").html(e).show();
 \t\t\t\t\t\t\$(\"#xing\").hide();
+\t\t\t\t\t\t\$(\"#s3\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -600,8 +633,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_c1(){
 \t\txing=\$(\"#xing1\").val();
 \t\tif(xing==''){
-\t\t\t\$(\"#s31\").show();
 \t\t\t\$(\"#xing1\").hide();
+\t\t\t\$(\"#s31\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -609,11 +643,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu6\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#xing1\").hide();
 \t\t\t\t\t\t\$(\"#s31\").show();
-\t\t\t\t\t\t\$(\"#xing1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s31\").html(e).show();
 \t\t\t\t\t\t\$(\"#xing1\").hide();
+\t\t\t\t\t\t\$(\"#s31\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -630,8 +666,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_a(){
 \t\tdi=\$(\"#di\").val();
 \t\tif(di==''){
-\t\t\t\$(\"#s1\").show();
 \t\t\t\$(\"#di\").hide();
+\t\t\t\$(\"#s1\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -639,11 +676,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu3\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#di\").hide();
 \t\t\t\t\t\t\$(\"#s1\").show();
-\t\t\t\t\t\t\$(\"#di\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s1\").html(e).show();
 \t\t\t\t\t\t\$(\"#di\").hide();
+\t\t\t\t\t\t\$(\"#s1\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -658,8 +697,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_a1(){
 \t\tdi=\$(\"#di1\").val();
 \t\tif(di==''){
-\t\t\t\$(\"#s11\").show();
 \t\t\t\$(\"#di1\").hide();
+\t\t\t\$(\"#s11\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -667,11 +707,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu3\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#di1\").hide();
 \t\t\t\t\t\t\$(\"#s11\").show();
-\t\t\t\t\t\t\$(\"#di1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s11\").html(e).show();
 \t\t\t\t\t\t\$(\"#di1\").hide();
+\t\t\t\t\t\t\$(\"#s11\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -687,8 +729,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_b1(){
 \t\tyue1=\$(\"#yue1\").val();
 \t\tif(yue1==''){
-\t\t\t\$(\"#s21\").show();
 \t\t\t\$(\"#yue1\").hide();
+\t\t\t\$(\"#s21\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -696,11 +739,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu2\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#yue1\").hide();
 \t\t\t\t\t\t\$(\"#s21\").show();
-\t\t\t\t\t\t\$(\"#yue1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s21\").html(e).show();
 \t\t\t\t\t\t\$(\"#yue1\").hide();
+\t\t\t\t\t\t\$(\"#s21\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -715,8 +760,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_b(){
 \t\tyue=\$(\"#yue\").val();
 \t\tif(yue==''){
-\t\t\t\$(\"#s2\").show();
 \t\t\t\$(\"#yue\").hide();
+\t\t\t\$(\"#s2\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -724,11 +770,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu2\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#yue\").hide();
 \t\t\t\t\t\t\$(\"#s2\").show();
-\t\t\t\t\t\t\$(\"#yue\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s2\").html(e).show();
 \t\t\t\t\t\t\$(\"#yue\").hide();
+\t\t\t\t\t\t\$(\"#s2\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -925,8 +973,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_g(){
 \t\tsex=\$(\"#sex\").val();
 \t\tif(sex==''){
-\t\t\t\$(\"#a2\").show();
 \t\t\t\$(\"#sex\").hide();
+\t\t\t\$(\"#a2\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -934,11 +983,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu11\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#sex\").hide();
 \t\t\t\t\t\t\$(\"#a2\").show();
-\t\t\t\t\t\t\$(\"#sex\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a2\").html(e).show();
 \t\t\t\t\t\t\$(\"#sex\").hide();
+\t\t\t\t\t\t\$(\"#a2\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -952,8 +1003,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_g1(){
 \t\tsex=\$(\"#sex1\").val();
 \t\tif(sex==''){
-\t\t\t\$(\"#a21\").show();
 \t\t\t\$(\"#sex1\").hide();
+\t\t\t\$(\"#a21\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -961,11 +1013,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu11\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#sex1\").hide();
 \t\t\t\t\t\t\$(\"#a21\").show();
-\t\t\t\t\t\t\$(\"#sex1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a21\").html(e).show();
 \t\t\t\t\t\t\$(\"#sex1\").hide();
+\t\t\t\t\t\t\$(\"#a21\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -981,8 +1035,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\tage=\$(\"#age\").val();
 //\t\talert(age)
 \t\tif(age==''){
-\t\t\t\$(\"#a1\").show();
 \t\t\t\$(\"#age\").hide();
+\t\t\t\$(\"#a1\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -990,11 +1045,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu12\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#age\").hide();
 \t\t\t\t\t\t\$(\"#a1\").show();
-\t\t\t\t\t\t\$(\"#age\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a1\").html(e).show();
 \t\t\t\t\t\t\$(\"#age\").hide();
+\t\t\t\t\t\t\$(\"#a1\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1008,8 +1065,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_v1(){
 \t\tage=\$(\"#age1\").val();
 \t\tif(age==''){
-\t\t\t\$(\"#a11\").show();
 \t\t\t\$(\"#age1\").hide();
+\t\t\t\$(\"#a11\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1017,11 +1075,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu12\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#age1\").hide();
 \t\t\t\t\t\t\$(\"#a11\").show();
-\t\t\t\t\t\t\$(\"#age1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#a11\").html(e).show();
 \t\t\t\t\t\t\$(\"#age1\").hide();
+\t\t\t\t\t\t\$(\"#a11\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1036,8 +1096,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_f1(){
 \t\thun=\$(\"#hun1\").val();
 \t\tif(hun==''){
-\t\t\t\$(\"#s61\").show();
 \t\t\t\$(\"#hun1\").hide();
+\t\t\t\$(\"#s61\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1045,11 +1106,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu1\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#hun1\").hide();
 \t\t\t\t\t\t\$(\"#s61\").show();
-\t\t\t\t\t\t\$(\"#hun1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s61\").html(e).show();
 \t\t\t\t\t\t\$(\"#hun1\").hide();
+\t\t\t\t\t\t\$(\"#s61\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1063,8 +1126,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_f(){
 \t\thun=\$(\"#hun\").val();
 \t\tif(hun==''){
-\t\t\t\$(\"#s6\").show();
 \t\t\t\$(\"#hun\").hide();
+\t\t\t\$(\"#s6\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1072,11 +1136,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu1\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#hun\").hide();
 \t\t\t\t\t\t\$(\"#s6\").show();
-\t\t\t\t\t\t\$(\"#hun\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s6\").html(e).show();
 \t\t\t\t\t\t\$(\"#hun\").hide();
+\t\t\t\t\t\t\$(\"#s6\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1091,8 +1157,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_e1(){
 \t\txue=\$(\"#xue1\").val();
 \t\tif(xue==''){
-\t\t\t\$(\"#s51\").show();
 \t\t\t\$(\"#xue1\").hide();
+\t\t\t\$(\"#s51\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1100,11 +1167,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu9\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#xue1\").hide();
 \t\t\t\t\t\t\$(\"#s51\").show();
-\t\t\t\t\t\t\$(\"#xue1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s51\").html(e).show();
 \t\t\t\t\t\t\$(\"#xue1\").hide();
+\t\t\t\t\t\t\$(\"#s51\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1118,8 +1187,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_e(){
 \t\txue=\$(\"#xue\").val();
 \t\tif(xue==''){
-\t\t\t\$(\"#s5\").show();
 \t\t\t\$(\"#xue\").hide();
+\t\t\t\$(\"#s5\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1127,11 +1197,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu9\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#xue\").hide();
 \t\t\t\t\t\t\$(\"#s5\").show();
-\t\t\t\t\t\t\$(\"#xue\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s5\").html(e).show();
 \t\t\t\t\t\t\$(\"#xue\").hide();
+\t\t\t\t\t\t\$(\"#s5\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1148,8 +1220,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_d1(){
 \t\tji=\$(\"#ji1\").val();
 \t\tif(ji==''){
-\t\t\t\$(\"#s41\").show();
 \t\t\t\$(\"#ji1\").hide();
+\t\t\t\$(\"#s41\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1157,11 +1230,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu7\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#ji1\").hide();
 \t\t\t\t\t\t\$(\"#s41\").show();
-\t\t\t\t\t\t\$(\"#ji1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s41\").html(e).show();
 \t\t\t\t\t\t\$(\"#ji1\").hide();
+\t\t\t\t\t\t\$(\"#s41\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1175,8 +1250,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_d(){
 \t\tji=\$(\"#ji\").val();
 \t\tif(ji==''){
-\t\t\t\$(\"#s4\").show();
 \t\t\t\$(\"#ji\").hide();
+\t\t\t\$(\"#s4\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1184,11 +1260,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu7\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#ji\").hide();
 \t\t\t\t\t\t\$(\"#s4\").show();
-\t\t\t\t\t\t\$(\"#ji\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s4\").html(e).show();
 \t\t\t\t\t\t\$(\"#ji\").hide();
+\t\t\t\t\t\t\$(\"#s4\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1203,8 +1281,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_c(){
 \t\txing=\$(\"#xing\").val();
 \t\tif(xing==''){
-\t\t\t\$(\"#s3\").show();
 \t\t\t\$(\"#xing\").hide();
+\t\t\t\$(\"#s3\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1212,11 +1291,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu6\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#xing\").hide();
 \t\t\t\t\t\t\$(\"#s3\").show();
-\t\t\t\t\t\t\$(\"#xing\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s3\").html(e).show();
 \t\t\t\t\t\t\$(\"#xing\").hide();
+\t\t\t\t\t\t\$(\"#s3\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1231,8 +1312,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_c1(){
 \t\txing=\$(\"#xing1\").val();
 \t\tif(xing==''){
-\t\t\t\$(\"#s31\").show();
 \t\t\t\$(\"#xing1\").hide();
+\t\t\t\$(\"#s31\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1240,11 +1322,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu6\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#xing1\").hide();
 \t\t\t\t\t\t\$(\"#s31\").show();
-\t\t\t\t\t\t\$(\"#xing1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s31\").html(e).show();
 \t\t\t\t\t\t\$(\"#xing1\").hide();
+\t\t\t\t\t\t\$(\"#s31\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1261,8 +1345,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_a(){
 \t\tdi=\$(\"#di\").val();
 \t\tif(di==''){
-\t\t\t\$(\"#s1\").show();
 \t\t\t\$(\"#di\").hide();
+\t\t\t\$(\"#s1\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1270,11 +1355,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu3\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#di\").hide();
 \t\t\t\t\t\t\$(\"#s1\").show();
-\t\t\t\t\t\t\$(\"#di\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s1\").html(e).show();
 \t\t\t\t\t\t\$(\"#di\").hide();
+\t\t\t\t\t\t\$(\"#s1\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1289,8 +1376,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_a1(){
 \t\tdi=\$(\"#di1\").val();
 \t\tif(di==''){
-\t\t\t\$(\"#s11\").show();
 \t\t\t\$(\"#di1\").hide();
+\t\t\t\$(\"#s11\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1298,11 +1386,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu3\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#di1\").hide();
 \t\t\t\t\t\t\$(\"#s11\").show();
-\t\t\t\t\t\t\$(\"#di1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s11\").html(e).show();
 \t\t\t\t\t\t\$(\"#di1\").hide();
+\t\t\t\t\t\t\$(\"#s11\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1318,8 +1408,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_b1(){
 \t\tyue1=\$(\"#yue1\").val();
 \t\tif(yue1==''){
-\t\t\t\$(\"#s21\").show();
 \t\t\t\$(\"#yue1\").hide();
+\t\t\t\$(\"#s21\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1327,11 +1418,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu2\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#yue1\").hide();
 \t\t\t\t\t\t\$(\"#s21\").show();
-\t\t\t\t\t\t\$(\"#yue1\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s21\").html(e).show();
 \t\t\t\t\t\t\$(\"#yue1\").hide();
+\t\t\t\t\t\t\$(\"#s21\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})
@@ -1346,8 +1439,9 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \tfunction check_b(){
 \t\tyue=\$(\"#yue\").val();
 \t\tif(yue==''){
-\t\t\t\$(\"#s2\").show();
 \t\t\t\$(\"#yue\").hide();
+\t\t\t\$(\"#s2\").show();
+
 \t\t}else{
 \t\t\t\$.ajax({
 \t\t\t\ttype:\"post\",
@@ -1355,11 +1449,13 @@ class __TwigTemplate_2f244a4806e40e4d2f65436e58d9e436b19c8d51447afd84fcffaa8a143
 \t\t\t\turl:\"?r=fossa/xiu2\",
 \t\t\t\tsuccess:function(e){
 \t\t\t\t\tif(e==2){
+\t\t\t\t\t\t\$(\"#yue\").hide();
 \t\t\t\t\t\t\$(\"#s2\").show();
-\t\t\t\t\t\t\$(\"#yue\").hide();
+
 \t\t\t\t\t}else{
-\t\t\t\t\t\t\$(\"#s2\").html(e).show();
 \t\t\t\t\t\t\$(\"#yue\").hide();
+\t\t\t\t\t\t\$(\"#s2\").html(e).show();
+
 \t\t\t\t\t}
 \t\t\t\t}
 \t\t\t})

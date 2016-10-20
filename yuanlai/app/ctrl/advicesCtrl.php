@@ -6,6 +6,7 @@ use app\model\basicdataModel;
 session_start();
 class advicesCtrl extends \core\imooc
 {
+
     //系统消息
     public function systems()
     {
@@ -14,7 +15,18 @@ class advicesCtrl extends \core\imooc
     //好友消息
     public function friend()
     {
-
+        $id=$_SESSION['id'];
+        $uid=get('id');
+        $mess=new messageModel();
+        $arr=$mess->oneAll($uid,$id);
+        //p($arr);
+        $data=array(
+            'id'=>$id,
+            'uid'=>$uid,
+        );
+        //p($data);
+        $this->assign('arr',$arr);
+        $this->assign('data',$data);
         $this->display('friend.html');
     }
     //添加消息
@@ -22,29 +34,23 @@ class advicesCtrl extends \core\imooc
     {
         $id=post('userid');
         $message=post('message');
-
-        $basic=new basicdataModel();
-        $arr=$basic->userOne(['u_id'=> $_SESSION['id']]);
-        //p($arr[0]);exit;
-        $data['u_id']=$arr[0]['u_id'];
-        $data['u_age']=$arr[0]['age'];
-        $data['u_sex']=$arr[0]['sex'];
-        $data['content']=$message;
-        $data['createtime']=date('Y-m-d H:i:s',time());
-        $model=new messageModel();
-        $str=$model->addOne('message',$data);
-        $add['a_id']=$id;
-        $add['m_id']=$str;
-        $add['content']=$message;
-        $add['sendstatus']='0';
-        $add['recevestatus']='0';
-        $add['readstatus']='1';
-        $model->addOne('addressee',$add);
-        if($str){
-            echo '1';
-        }else{
-            echo '0';
-        }
+        //echo $_SESSION['id'];
+          $basic=new basicdataModel();
+          $arr=$basic->userOne1($_SESSION['id']);
+         $model=new messageModel();
+         $add['a_id']=$id;
+         $add['us_id']=$arr[0]['u_id'];
+         $add['content']=$message;
+         $add['createtime']=date('Y-m-d H:i:s',time());
+         $add['sendstatus']='0';
+         $add['recevestatus']='0';
+         $add['readstatus']='0';
+         $str=$model->addOne($add);
+         if($str){
+             echo '1';
+         }else{
+             echo '0';
+         }
     }
 }
 

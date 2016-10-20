@@ -10,10 +10,48 @@
         <link rel="stylesheet" type="text/css" href="web/js/css.css">
         <!--引用Jquery-->
         <script src="web/js/jquery.js"></script>
+<<<<<<< HEAD
         <script src="web/js/min.js" /></script>
 	    <script src="web/js/core.js" /></script>
        
 			
+=======
+        <script src="web/js/min.js" ></script>
+	    <script src="web/js/core.js" ></script>
+        <script>
+            $(window).ready(function () {
+                (function ($) {
+                    $('body').on('tap', '.link', function (event) {
+                    var url = this.getAttribute('href');
+                    var blank = this.getAttribute('target');
+                    if (blank == '_blank') {
+                        window.open(url);
+                    } else {
+                        window.location.href = url;
+                    }
+                    });
+                })(mui);
+                var lab = document.getElementsByClassName('site-nav')[0];
+                if (lab) {
+                    var nav = getCookie('tab_item');
+                    if (nav) {
+                            var as = lab.getElementsByTagName('a');
+                            for (var i; i < as.length; i++) {
+                               as[i].className = 'link'
+                            }
+                            as[nav - 1].className = 'link mui-active'
+                    }
+                }
+                function getCookie(name) {
+                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                    if (arr = document.cookie.match(reg))
+                        return unescape(arr[2]);
+                    else
+                        return null;
+                }
+            })
+        </script>
+>>>>>>> b74d7ed842b86974f23b3d784436f5ad5308c438
 
 <title></title>
 </head>
@@ -28,14 +66,7 @@
 		<!-- 导航栏结束 -->
 
 		<div class="layer">
-		
-
-			
 		</div>
-
-	
-
-
 	<!-- 选项卡结束 -->
 
 		<div class="mui-content backgroud-none" pull="weibo-list" pull-obj="weibo-list > .mui-table-view">
@@ -88,8 +119,5 @@
 			</div>
             
 			
-	
-	
-
 
 </html>
