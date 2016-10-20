@@ -101,7 +101,9 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
                     <div class=\"mui-media-body\"><p class=\"title\"><b>漆黑烈焰使</b><em class=\"active\">
                         <span class=\"ico ico-male\"></span>23</em></p><p class=\"mui-ellipsis\">发来一条聊天信息</p>
                         <label>10-15 16:33</label>
-                    </div></a></div></li></ul>
+                    </div></a></div>
+            </li>
+        </ul>
     </div>
 
     <script src=\"./web/js/auto-pull.js\"></script>
@@ -243,7 +245,9 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
                     <div class=\"mui-media-body\"><p class=\"title\"><b>漆黑烈焰使</b><em class=\"active\">
                         <span class=\"ico ico-male\"></span>23</em></p><p class=\"mui-ellipsis\">发来一条聊天信息</p>
                         <label>10-15 16:33</label>
-                    </div></a></div></li></ul>
+                    </div></a></div>
+            </li>
+        </ul>
     </div>
 
     <script src=\"./web/js/auto-pull.js\"></script>

@@ -8,6 +8,8 @@ use app\model\shengModel;
 use app\model\basicdataModel;
 use app\model\monoModel;
 use app\model\pictureModel;
+use app\model\messageModel;
+
 session_start();
 class homeCtrl extends \core\imooc
 {
@@ -45,7 +47,13 @@ class homeCtrl extends \core\imooc
     //消息展示
     public function advices()
     {
-
+        $id=$_SESSION['id'];
+        $mess=new messageModel();
+        $where['readstatus']='0';
+        $where['a_id']=$id;
+        $data=$mess->all('addressee',$where);
+        var_dump($data);
+        $this->assign('data',$data);
             $this->display('advices.html');
     }
     //礼物(暂定)
@@ -62,8 +70,9 @@ class homeCtrl extends \core\imooc
     public function fossa()
     {
         if(isset($_SESSION['username'])) {
-            $id = $_SESSION['id'];
-            $model = new xiangModel();
+            $id=get('tid');
+            if($id){
+                $model = new xiangModel();
             $re = $model->xiang($id);
             if ($re) {
                 $this->assign('re', $re);
@@ -74,9 +83,9 @@ class homeCtrl extends \core\imooc
 
                 $this->assign('sheng', $sheng);
             }
-            $data = array("u_id" => $id);
+            
             $model = new basicdataModel();
-            $arras = $model->userOne1($data);
+            $arras = $model->userOne1($id);
             if ($arras) {
                 $this->assign('arras', $arras);
             }
@@ -89,6 +98,41 @@ class homeCtrl extends \core\imooc
             $imgs=$picture->all($id);
             $this->assign('imgs',$imgs);
             $this->display('fossa.html');
+
+            }else{
+                 $id=$_SESSION['id'];
+                $model = new xiangModel();
+                $re = $model->xiang($id);
+                if ($re) {
+                    $this->assign('re', $re);
+                }
+                $model = new shengModel();
+                $sheng = $model->sheng_select($id);
+                if ($sheng) {
+
+                    $this->assign('sheng', $sheng);
+                }
+               
+                $model = new basicdataModel();
+                $arras = $model->userOne1($id);
+                if ($arras) {
+                    $this->assign('arras', $arras);
+                }
+                //print_r($arras);die;
+                $mono = new monoModel();
+                $dubai = $mono->getOne(['u_id' => $id]);
+                $this->assign('dubai', $dubai);
+
+                $picture=new pictureModel();
+                $imgs=$picture->all($id);
+                //var_dump($imgs);
+                $this->assign('imgs',$imgs);
+                  
+
+                $this->display('fossa.html');
+            }
+            
+            
         }else{
             jump('?index/login');
         }
@@ -121,7 +165,12 @@ class homeCtrl extends \core\imooc
     }
     public function suggest()
     {
-
+        $u_id=$_SESSION['id'];
+        $base=new basicdataModel();
+        $arr=$base->user_phone($u_id);
+        //dump($arr);die;
+        $this->assign('ars',$arr);
+        //var_dump($arr);
         $this->display('suggest.html');
     }
 
