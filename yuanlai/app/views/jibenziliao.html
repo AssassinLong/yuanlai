@@ -166,8 +166,9 @@
 	function check_g(){
 		sex=$("#sex").val();
 		if(sex==''){
-			$("#a2").show();
 			$("#sex").hide();
+			$("#a2").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -175,11 +176,13 @@
 				url:"?r=fossa/xiu11",
 				success:function(e){
 					if(e==2){
+						$("#sex").hide();
 						$("#a2").show();
-						$("#sex").hide();
+
 					}else{
-						$("#a2").html(e).show();
 						$("#sex").hide();
+						$("#a2").html(e).show();
+
 					}
 				}
 			})
@@ -193,8 +196,9 @@
 	function check_g1(){
 		sex=$("#sex1").val();
 		if(sex==''){
-			$("#a21").show();
 			$("#sex1").hide();
+			$("#a21").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -202,11 +206,13 @@
 				url:"?r=fossa/xiu11",
 				success:function(e){
 					if(e==2){
+						$("#sex1").hide();
 						$("#a21").show();
-						$("#sex1").hide();
+
 					}else{
-						$("#a21").html(e).show();
 						$("#sex1").hide();
+						$("#a21").html(e).show();
+
 					}
 				}
 			})
@@ -222,8 +228,9 @@
 		age=$("#age").val();
 //		alert(age)
 		if(age==''){
-			$("#a1").show();
 			$("#age").hide();
+			$("#a1").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -231,11 +238,13 @@
 				url:"?r=fossa/xiu12",
 				success:function(e){
 					if(e==2){
+						$("#age").hide();
 						$("#a1").show();
-						$("#age").hide();
+
 					}else{
-						$("#a1").html(e).show();
 						$("#age").hide();
+						$("#a1").html(e).show();
+
 					}
 				}
 			})
@@ -249,8 +258,9 @@
 	function check_v1(){
 		age=$("#age1").val();
 		if(age==''){
-			$("#a11").show();
 			$("#age1").hide();
+			$("#a11").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -258,11 +268,13 @@
 				url:"?r=fossa/xiu12",
 				success:function(e){
 					if(e==2){
+						$("#age1").hide();
 						$("#a11").show();
-						$("#age1").hide();
+
 					}else{
-						$("#a11").html(e).show();
 						$("#age1").hide();
+						$("#a11").html(e).show();
+
 					}
 				}
 			})
@@ -277,8 +289,9 @@
 	function check_f1(){
 		hun=$("#hun1").val();
 		if(hun==''){
-			$("#s61").show();
 			$("#hun1").hide();
+			$("#s61").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -286,11 +299,13 @@
 				url:"?r=fossa/xiu1",
 				success:function(e){
 					if(e==2){
+						$("#hun1").hide();
 						$("#s61").show();
-						$("#hun1").hide();
+
 					}else{
-						$("#s61").html(e).show();
 						$("#hun1").hide();
+						$("#s61").html(e).show();
+
 					}
 				}
 			})
@@ -304,8 +319,9 @@
 	function check_f(){
 		hun=$("#hun").val();
 		if(hun==''){
-			$("#s6").show();
 			$("#hun").hide();
+			$("#s6").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -313,11 +329,13 @@
 				url:"?r=fossa/xiu1",
 				success:function(e){
 					if(e==2){
+						$("#hun").hide();
 						$("#s6").show();
-						$("#hun").hide();
+
 					}else{
-						$("#s6").html(e).show();
 						$("#hun").hide();
+						$("#s6").html(e).show();
+
 					}
 				}
 			})
@@ -332,8 +350,9 @@
 	function check_e1(){
 		xue=$("#xue1").val();
 		if(xue==''){
-			$("#s51").show();
 			$("#xue1").hide();
+			$("#s51").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -341,11 +360,13 @@
 				url:"?r=fossa/xiu9",
 				success:function(e){
 					if(e==2){
+						$("#xue1").hide();
 						$("#s51").show();
-						$("#xue1").hide();
+
 					}else{
-						$("#s51").html(e).show();
 						$("#xue1").hide();
+						$("#s51").html(e).show();
+
 					}
 				}
 			})
@@ -359,8 +380,9 @@
 	function check_e(){
 		xue=$("#xue").val();
 		if(xue==''){
-			$("#s5").show();
 			$("#xue").hide();
+			$("#s5").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -368,11 +390,13 @@
 				url:"?r=fossa/xiu9",
 				success:function(e){
 					if(e==2){
+						$("#xue").hide();
 						$("#s5").show();
-						$("#xue").hide();
+
 					}else{
-						$("#s5").html(e).show();
 						$("#xue").hide();
+						$("#s5").html(e).show();
+
 					}
 				}
 			})
@@ -389,8 +413,9 @@
 	function check_d1(){
 		ji=$("#ji1").val();
 		if(ji==''){
-			$("#s41").show();
 			$("#ji1").hide();
+			$("#s41").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -398,11 +423,13 @@
 				url:"?r=fossa/xiu7",
 				success:function(e){
 					if(e==2){
+						$("#ji1").hide();
 						$("#s41").show();
-						$("#ji1").hide();
+
 					}else{
-						$("#s41").html(e).show();
 						$("#ji1").hide();
+						$("#s41").html(e).show();
+
 					}
 				}
 			})
@@ -416,8 +443,9 @@
 	function check_d(){
 		ji=$("#ji").val();
 		if(ji==''){
-			$("#s4").show();
 			$("#ji").hide();
+			$("#s4").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -425,11 +453,13 @@
 				url:"?r=fossa/xiu7",
 				success:function(e){
 					if(e==2){
+						$("#ji").hide();
 						$("#s4").show();
-						$("#ji").hide();
+
 					}else{
-						$("#s4").html(e).show();
 						$("#ji").hide();
+						$("#s4").html(e).show();
+
 					}
 				}
 			})
@@ -444,8 +474,9 @@
 	function check_c(){
 		xing=$("#xing").val();
 		if(xing==''){
-			$("#s3").show();
 			$("#xing").hide();
+			$("#s3").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -453,11 +484,13 @@
 				url:"?r=fossa/xiu6",
 				success:function(e){
 					if(e==2){
+						$("#xing").hide();
 						$("#s3").show();
-						$("#xing").hide();
+
 					}else{
-						$("#s3").html(e).show();
 						$("#xing").hide();
+						$("#s3").html(e).show();
+
 					}
 				}
 			})
@@ -472,8 +505,9 @@
 	function check_c1(){
 		xing=$("#xing1").val();
 		if(xing==''){
-			$("#s31").show();
 			$("#xing1").hide();
+			$("#s31").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -481,11 +515,13 @@
 				url:"?r=fossa/xiu6",
 				success:function(e){
 					if(e==2){
+						$("#xing1").hide();
 						$("#s31").show();
-						$("#xing1").hide();
+
 					}else{
-						$("#s31").html(e).show();
 						$("#xing1").hide();
+						$("#s31").html(e).show();
+
 					}
 				}
 			})
@@ -502,8 +538,9 @@
 	function check_a(){
 		di=$("#di").val();
 		if(di==''){
-			$("#s1").show();
 			$("#di").hide();
+			$("#s1").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -511,11 +548,13 @@
 				url:"?r=fossa/xiu3",
 				success:function(e){
 					if(e==2){
+						$("#di").hide();
 						$("#s1").show();
-						$("#di").hide();
+
 					}else{
-						$("#s1").html(e).show();
 						$("#di").hide();
+						$("#s1").html(e).show();
+
 					}
 				}
 			})
@@ -530,8 +569,9 @@
 	function check_a1(){
 		di=$("#di1").val();
 		if(di==''){
-			$("#s11").show();
 			$("#di1").hide();
+			$("#s11").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -539,11 +579,13 @@
 				url:"?r=fossa/xiu3",
 				success:function(e){
 					if(e==2){
+						$("#di1").hide();
 						$("#s11").show();
-						$("#di1").hide();
+
 					}else{
-						$("#s11").html(e).show();
 						$("#di1").hide();
+						$("#s11").html(e).show();
+
 					}
 				}
 			})
@@ -559,8 +601,9 @@
 	function check_b1(){
 		yue1=$("#yue1").val();
 		if(yue1==''){
-			$("#s21").show();
 			$("#yue1").hide();
+			$("#s21").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -568,11 +611,13 @@
 				url:"?r=fossa/xiu2",
 				success:function(e){
 					if(e==2){
+						$("#yue1").hide();
 						$("#s21").show();
-						$("#yue1").hide();
+
 					}else{
-						$("#s21").html(e).show();
 						$("#yue1").hide();
+						$("#s21").html(e).show();
+
 					}
 				}
 			})
@@ -587,8 +632,9 @@
 	function check_b(){
 		yue=$("#yue").val();
 		if(yue==''){
-			$("#s2").show();
 			$("#yue").hide();
+			$("#s2").show();
+
 		}else{
 			$.ajax({
 				type:"post",
@@ -596,11 +642,13 @@
 				url:"?r=fossa/xiu2",
 				success:function(e){
 					if(e==2){
+						$("#yue").hide();
 						$("#s2").show();
-						$("#yue").hide();
+
 					}else{
-						$("#s2").html(e).show();
 						$("#yue").hide();
+						$("#s2").html(e).show();
+
 					}
 				}
 			})

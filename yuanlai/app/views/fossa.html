@@ -239,12 +239,12 @@
 					<h4>基本资料<span class="dot dot-orange"></span><a class="link" href="?r=fossa/jibenjieshao"><span class="mui-icon mui-icon-compose"></span>编辑资料</a></h4>
 
 					{% for vv in arras %}
-                    {% if vv.region %}
+                    {% if vv.age %}
                     <p><font class="mui-pull-left">年龄</font>{{ vv.age }}</p>
                     {% else %}
                     <p><font class="mui-pull-left">年龄</font>未填写</p>
                     {% endif %}
-                    {% if vv.region %}
+                    {% if vv.sex %}
                     <p><font class="mui-pull-left">性别</font>{{ vv.sex }}</p>
                     {% else %}
                     <p><font class="mui-pull-left">性别</font>未填写</p>

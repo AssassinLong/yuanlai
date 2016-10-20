@@ -2,6 +2,7 @@
 namespace app\ctrl;
 use app\model\userModel;
 use app\model\kModel;
+use app\model\basicdataModel   ;
 use core\lib\conf;
 use core\lib\model;
 
@@ -74,8 +75,17 @@ class indexCtrl extends \core\imooc
                 $data['datetime']=date('Y-m-d H:i:s',time());
                 $model=new kModel();
                 $str=$model->addOne('user',$data);
+//                print_r($str);die;
                 if($str>0){
-                    jump('?r=index/login');
+                    $models=new basicdataModel();
+                    $s1=$models->adde1($str);
+//                    print_r($s1);die;
+                    if($s1){
+                        jump('?r=index/login');
+                    }else{
+                        echo '注册失败';die;
+                    }
+
                 }else{
                     echo '注册失败';die;
                 }

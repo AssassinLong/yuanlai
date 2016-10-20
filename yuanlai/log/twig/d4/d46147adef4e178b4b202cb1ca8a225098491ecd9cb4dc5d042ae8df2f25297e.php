@@ -69,7 +69,7 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 <body class=\"backgroud-white\">
 <!-- 导航栏开始 -->
 <header class=\"mui-bar mui-bar-nav\">
-\t<a class=\"\"></a>
+\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
 \t<h1 class=\"mui-title\">筛选会员</h1>
 \t<a href=\"javascript:void(0);\" id=\"confirm\" class=\"mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-right\">确定</a>
 </header>
@@ -98,11 +98,11 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 \t\t\t\t\t<label>年龄范围</label>
 \t\t\t\t\t<font>不限</font>
 \t\t\t\t</div>
-\t\t\t\t<div id=\"HeightPicker\" class=\"mui-input-row\">
-\t\t\t\t\t<input type=\"hidden\" name=\"heightValue\" id=\"startHeight\" value=\"\">
-\t\t\t\t\t<label>身高范围</label>
-\t\t\t\t\t<font class=\"mui-pull-right\">不限</font>
-\t\t\t\t</div>
+\t\t\t\t<!--<div id=\"HeightPicker\" class=\"mui-input-row\">-->
+\t\t\t\t\t<!--<input type=\"hidden\" name=\"heightValue\" id=\"startHeight\" value=\"\">-->
+\t\t\t\t\t<!--<label>身高范围</label>-->
+\t\t\t\t\t<!--<font class=\"mui-pull-right\">不限</font>-->
+\t\t\t\t<!--</div>-->
 \t\t\t\t<div id=\"EduPicker\" class=\"mui-input-row\">
 \t\t\t\t\t<input type=\"hidden\" name=\"education\" id=\"education\" value=\"\">
 \t\t\t\t\t<label>最低学历</label>
@@ -182,34 +182,34 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 \t\t\t\t}, false);
 
 \t\t\t\t//身高范围
-\t\t\t\tvar HeightPicker = new \$.PopPicker();
-\t\t\t\tHeightPicker.setData([{
-\t\t\t\t\tvalue: '0',
-\t\t\t\t\ttext: '不限'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '140-150',
-\t\t\t\t\ttext: '140CM - 150CM'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '151-160',
-\t\t\t\t\ttext: '151CM - 160CM'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '161-170',
-\t\t\t\t\ttext: '161CM - 170CM'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '171-180',
-\t\t\t\t\ttext: '171CM - 180CM'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '181-190',
-\t\t\t\t\ttext: '181CM - 190CM'
-\t\t\t\t}]);
-\t\t\t\tvar HeightPickerButton = doc.getElementById('HeightPicker');
-\t\t\t\tHeightPickerButton.addEventListener('tap', function(event) {
-\t\t\t\t\tHeightPicker.show(function(items) {
-\t\t\t\t\t\tHeightPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
-\t\t\t\t\t\tvar heightValue = items[0].value;
-\t\t\t\t\t\tdocument.getElementById('startHeight').value = heightValue;
-\t\t\t\t\t});
-\t\t\t\t}, false);
+//\t\t\t\tvar HeightPicker = new \$.PopPicker();
+//\t\t\t\tHeightPicker.setData([{
+//\t\t\t\t\tvalue: '0',
+//\t\t\t\t\ttext: '不限'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '140-150',
+//\t\t\t\t\ttext: '140CM - 150CM'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '151-160',
+//\t\t\t\t\ttext: '151CM - 160CM'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '161-170',
+//\t\t\t\t\ttext: '161CM - 170CM'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '171-180',
+//\t\t\t\t\ttext: '171CM - 180CM'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '181-190',
+//\t\t\t\t\ttext: '181CM - 190CM'
+//\t\t\t\t}]);
+//\t\t\t\tvar HeightPickerButton = doc.getElementById('HeightPicker');
+//\t\t\t\tHeightPickerButton.addEventListener('tap', function(event) {
+//\t\t\t\t\tHeightPicker.show(function(items) {
+//\t\t\t\t\t\tHeightPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
+//\t\t\t\t\t\tvar heightValue = items[0].value;
+//\t\t\t\t\t\tdocument.getElementById('startHeight').value = heightValue;
+//\t\t\t\t\t});
+//\t\t\t\t}, false);
 
 \t\t\t\t//学历范围
 \t\t\t\tvar EduPicker = new \$.PopPicker();
@@ -403,7 +403,7 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 <body class=\"backgroud-white\">
 <!-- 导航栏开始 -->
 <header class=\"mui-bar mui-bar-nav\">
-\t<a class=\"\"></a>
+\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
 \t<h1 class=\"mui-title\">筛选会员</h1>
 \t<a href=\"javascript:void(0);\" id=\"confirm\" class=\"mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-right\">确定</a>
 </header>
@@ -432,11 +432,11 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 \t\t\t\t\t<label>年龄范围</label>
 \t\t\t\t\t<font>不限</font>
 \t\t\t\t</div>
-\t\t\t\t<div id=\"HeightPicker\" class=\"mui-input-row\">
-\t\t\t\t\t<input type=\"hidden\" name=\"heightValue\" id=\"startHeight\" value=\"\">
-\t\t\t\t\t<label>身高范围</label>
-\t\t\t\t\t<font class=\"mui-pull-right\">不限</font>
-\t\t\t\t</div>
+\t\t\t\t<!--<div id=\"HeightPicker\" class=\"mui-input-row\">-->
+\t\t\t\t\t<!--<input type=\"hidden\" name=\"heightValue\" id=\"startHeight\" value=\"\">-->
+\t\t\t\t\t<!--<label>身高范围</label>-->
+\t\t\t\t\t<!--<font class=\"mui-pull-right\">不限</font>-->
+\t\t\t\t<!--</div>-->
 \t\t\t\t<div id=\"EduPicker\" class=\"mui-input-row\">
 \t\t\t\t\t<input type=\"hidden\" name=\"education\" id=\"education\" value=\"\">
 \t\t\t\t\t<label>最低学历</label>
@@ -516,34 +516,34 @@ class __TwigTemplate_23896b9320ce981098abad5438b9d3e17888cae094fe686766e617150ac
 \t\t\t\t}, false);
 
 \t\t\t\t//身高范围
-\t\t\t\tvar HeightPicker = new \$.PopPicker();
-\t\t\t\tHeightPicker.setData([{
-\t\t\t\t\tvalue: '0',
-\t\t\t\t\ttext: '不限'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '140-150',
-\t\t\t\t\ttext: '140CM - 150CM'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '151-160',
-\t\t\t\t\ttext: '151CM - 160CM'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '161-170',
-\t\t\t\t\ttext: '161CM - 170CM'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '171-180',
-\t\t\t\t\ttext: '171CM - 180CM'
-\t\t\t\t}, {
-\t\t\t\t\tvalue: '181-190',
-\t\t\t\t\ttext: '181CM - 190CM'
-\t\t\t\t}]);
-\t\t\t\tvar HeightPickerButton = doc.getElementById('HeightPicker');
-\t\t\t\tHeightPickerButton.addEventListener('tap', function(event) {
-\t\t\t\t\tHeightPicker.show(function(items) {
-\t\t\t\t\t\tHeightPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
-\t\t\t\t\t\tvar heightValue = items[0].value;
-\t\t\t\t\t\tdocument.getElementById('startHeight').value = heightValue;
-\t\t\t\t\t});
-\t\t\t\t}, false);
+//\t\t\t\tvar HeightPicker = new \$.PopPicker();
+//\t\t\t\tHeightPicker.setData([{
+//\t\t\t\t\tvalue: '0',
+//\t\t\t\t\ttext: '不限'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '140-150',
+//\t\t\t\t\ttext: '140CM - 150CM'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '151-160',
+//\t\t\t\t\ttext: '151CM - 160CM'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '161-170',
+//\t\t\t\t\ttext: '161CM - 170CM'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '171-180',
+//\t\t\t\t\ttext: '171CM - 180CM'
+//\t\t\t\t}, {
+//\t\t\t\t\tvalue: '181-190',
+//\t\t\t\t\ttext: '181CM - 190CM'
+//\t\t\t\t}]);
+//\t\t\t\tvar HeightPickerButton = doc.getElementById('HeightPicker');
+//\t\t\t\tHeightPickerButton.addEventListener('tap', function(event) {
+//\t\t\t\t\tHeightPicker.show(function(items) {
+//\t\t\t\t\t\tHeightPickerButton.getElementsByTagName('font')[0].innerText = items[0].text;
+//\t\t\t\t\t\tvar heightValue = items[0].value;
+//\t\t\t\t\t\tdocument.getElementById('startHeight').value = heightValue;
+//\t\t\t\t\t});
+//\t\t\t\t}, false);
 
 \t\t\t\t//学历范围
 \t\t\t\tvar EduPicker = new \$.PopPicker();
