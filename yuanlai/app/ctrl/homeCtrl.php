@@ -104,9 +104,9 @@ class homeCtrl extends \core\imooc
             $this->assign('imgs',$imgs);
             $ar=$mono->guan_sel($id);
             $ar1=count($ar);
-            
-            
-            
+            $meili = $mono->meili($id);
+            $m=$meili[0]['usercp'];
+            $this->assign('m',$m);
             $this->assign('ar1',$ar1);
             $data=$mono->zi_guan($id);
             $data1=count($data);
@@ -240,7 +240,9 @@ class homeCtrl extends \core\imooc
          $arr=$base->delall($arrs);
             $ar=$base->guan_sel($u_id);
             $ar1=count($ar);
+
             if($arr){
+
                 $array=array('a'=>1,'f'=>$ar1);
                 $json=json_encode($array);
                 echo $json;
@@ -251,6 +253,7 @@ class homeCtrl extends \core\imooc
         $arr=$base->guan($id,$u_id);
             $ar=$base->guan_sel($u_id);
             $ar1=count($ar);
+
             if($arr){
                 $array=array('a'=>2,'f'=>$ar1);
                 $json=json_encode($array);
@@ -290,20 +293,20 @@ class homeCtrl extends \core\imooc
         $usercp=$s3['usercp'];
         $aa=$model->sells($usercp);
 //        print_r($aa);die;
-        $s4=$aa[0];
-        $s5=$aa[1];
-        $s6=$aa[2];
-        $s7=$aa[3];
-        $s8=$aa[4];
-        $s9=$aa[5];
-        $this->assign('s3',$s3);
-        $this->assign('s4',$s4);
-        $this->assign('s5',$s5);
-        $this->assign('s6',$s6);
-        $this->assign('s7',$s7);
-        $this->assign('s8',$s8);
-        $this->assign('s9',$s9);
-
+//        $s4=$aa[0];
+//        $s5=$aa[1];
+//        $s6=$aa[2];
+//        $s7=$aa[3];
+//        $s8=$aa[4];
+//        $s9=$aa[5];
+//        $this->assign('s3',$s3);
+//        $this->assign('s4',$s4);
+//        $this->assign('s5',$s5);
+//        $this->assign('s6',$s6);
+//        $this->assign('s7',$s7);
+//        $this->assign('s8',$s8);
+//        $this->assign('s9',$s9);
+      $this->assign('aa',$aa);
         $this->display('paihangbang.html');
     }
     public function aa(){

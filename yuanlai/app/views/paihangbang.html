@@ -57,46 +57,44 @@
                 <p class="mlph-tb-p1" style="width: 100%; float: none; top: 75%; left: 50%; transform: translate(-50%, 0px); text-align: center;">{{s2.name}}</p>
                 <p class="mlph-tb-p2" style="float: none; top: 70%; left: 50%; width: 100%; transform: translate(-50%, -50%); text-align: center;">{{s2.usercp}}</p>
             </li>
-            <li style="margin-top: 46%;">
-                <p class="mlph-tb-icon">4</p>
-                <a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>
-                <p class="mlph-tb-p1">{{s3.name}}</p><p class="mlph-tb-p2">{{s3.usercp}}</p>
-            </li>
-            <li>
-                <p class="mlph-tb-icon">5</p>
-                <a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>
-                <p class="mlph-tb-p1">{{s4.name}}</p><p class="mlph-tb-p2">{{s4.usercp}}</p>
-            </li>
-            <li>
-                <p class="mlph-tb-icon">6</p>
-                <a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>
-                <p class="mlph-tb-p1">{{s5.name}}</p><p class="mlph-tb-p2">{{s5.usercp}}</p>
-            </li>
-            <li>
-                <p class="mlph-tb-icon">7</p>
-                <a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>
-                <p class="mlph-tb-p1">{{s6.name}}</p><p class="mlph-tb-p2">{{s6.usercp}}</p>
-            </li>
-            <li>
-                <p class="mlph-tb-icon">8</p>
-                <a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>
-                <p class="mlph-tb-p1">{{s7.name}}</p><p class="mlph-tb-p2">{{s7.usercp}}</p>
-            </li>
+            {% for key,ww in aa %}
             <li >
-                <p class="mlph-tb-icon">9</p>
+                <p class="mlph-tb-icon">{{key+4}}</p>
                 <a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>
-                <p class="mlph-tb-p1">{{s8.name}}</p><p class="mlph-tb-p2">{{s8.usercp}}</p>
+                <p class="mlph-tb-p1">{{ww.name}}</p><p class="mlph-tb-p2">{{ww.usercp}}</p>
             </li>
-            <li >
-                <p class="mlph-tb-icon">10</p>
-                <a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>
-                <p class="mlph-tb-p1">{{s9.name}}</p><p class="mlph-tb-p2">{{s9.usercp}}</p>
-            </li>
+            {%endfor%}
             <!--<li>-->
-            <!--<p class="mlph-tb-icon">5</p>-->
-            <!--<a href="/user/286780.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201608/16/286780/avatar_big.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>-->
-            <!--<p class="mlph-tb-p1">timeover</p><p class="mlph-tb-p2">{{var.usercp}}</p>-->
-        <!--</li>-->
+                <!--<p class="mlph-tb-icon">5</p>-->
+                <!--<a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>-->
+                <!--<p class="mlph-tb-p1">{{s4.name}}</p><p class="mlph-tb-p2">{{s4.usercp}}</p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p class="mlph-tb-icon">6</p>-->
+                <!--<a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>-->
+                <!--<p class="mlph-tb-p1">{{s5.name}}</p><p class="mlph-tb-p2">{{s5.usercp}}</p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p class="mlph-tb-icon">7</p>-->
+                <!--<a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>-->
+                <!--<p class="mlph-tb-p1">{{s6.name}}</p><p class="mlph-tb-p2">{{s6.usercp}}</p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p class="mlph-tb-icon">8</p>-->
+                <!--<a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>-->
+                <!--<p class="mlph-tb-p1">{{s7.name}}</p><p class="mlph-tb-p2">{{s7.usercp}}</p>-->
+            <!--</li>-->
+            <!--<li >-->
+                <!--<p class="mlph-tb-icon">9</p>-->
+                <!--<a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>-->
+                <!--<p class="mlph-tb-p1">{{s8.name}}</p><p class="mlph-tb-p2">{{s8.usercp}}</p>-->
+            <!--</li>-->
+            <!--<li >-->
+                <!--<p class="mlph-tb-icon">10</p>-->
+                <!--<a href="/user/330024.html" class="link" style="background:URL(http://www.7799520.com/jiaoyou/data/attachment/avatar/201607/27/330024/avatar_big.jpg.thumb.jpg) center no-repeat;-webkit-Background-size:100%,100%;"></a>-->
+                <!--<p class="mlph-tb-p1">{{s9.name}}</p><p class="mlph-tb-p2">{{s9.usercp}}</p>-->
+            <!--</li>-->
+
 
         </ul>
      </div>
@@ -106,5 +104,5 @@
 
 
 
-
+<script src="web/js/top.js"></script>
 </body><!--引用自定义脚本--></html>

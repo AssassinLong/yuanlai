@@ -171,10 +171,10 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
             } else {
                 // line 134
                 echo "                     <div id=\"u\">
-                    <button name=\"a\"  onclick=\"check_a()\" id=\"";
+                    <button name=\"a\"   id=\"";
                 // line 135
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "u_id", array()), "html", null, true);
-                echo "\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>
+                echo "\" onclick=\"check_a()\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>
                     </div>
                     ";
             }
@@ -193,7 +193,7 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 \t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4\">
 
-\t\t\t\t\t\t\t<a href=\"#\"><b id=\"c\">";
+\t\t\t\t\t\t\t<a href=\"#\"><b id=\"zhu\">";
             // line 152
             echo twig_escape_filter($this->env, (isset($context["data1"]) ? $context["data1"] : null), "html", null, true);
             echo "</b>关注
@@ -206,12 +206,15 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 \t\t\t\t\t\t\t<a href=\"#\">
 
-\t\t\t\t\t\t\t<b>
+\t\t\t\t\t\t\t<b id=\"meili\">
 
-\t\t\t\t\t\t\t\t0
-\t\t\t\t\t\t\t</b>魅力</a>guan
+\t\t\t\t\t\t\t\t";
+            // line 164
+            echo twig_escape_filter($this->env, (isset($context["m"]) ? $context["m"] : null), "html", null, true);
+            echo "
+\t\t\t\t\t\t\t</b>魅力</a>
 
-\t\t\t\t\t\t\t<div></div>
+
 
 \t\t\t\t\t\t</li>
 
@@ -767,7 +770,7 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 \t\t\t\t\t\t\t   success: function(msg){
 
 \t\t\t\t\t\t\t\t   json = eval( \"(\" + msg + \")\" );
-//\t\t\t\t\t\t\t\t   alert(json.a)
+//\t\t\t\t\t\t\t\t   alert(msg)
 \t\t\t\t\t\t\t      if(json.a==1){
 \t\t\t\t\t\t\t\t\t  var html='<button name=\"a\" id=\"";
         // line 567
@@ -775,16 +778,19 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
         echo "\"  onclick=\"check_a()\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>';
 \t\t\t\t\t\t\t\t\t  \$('#u').html(html);
 \t\t\t\t\t\t\t\t\t  \$('#f').html(json.f);
+\t\t\t\t\t\t\t\t\t  \$('#zhu').html(json.f);
 
 \t\t\t\t\t\t\t\t   }else if(json.a==2){
 
 \t\t\t\t\t\t\t\t\t   var html = '<button name=\"b\" id=\"";
-        // line 573
+        // line 574
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["vv"]) ? $context["vv"] : null), "u_id", array()), "html", null, true);
         echo "\" onclick=\"check_a()\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"?r=home/qu\" dialog=\"加关注成功\"><span class=\"ico ico-focus-on\"></span>已关注</button>';
 
 \t\t\t\t\t\t\t\t\t  \$('#u').html(html);
 \t\t\t\t\t\t\t\t\t  \$('#f').html(json.f);
+\t\t\t\t\t\t\t\t\t  \$('#zhu').html(json.f);
+
 \t\t\t\t\t\t\t\t  }
 \t\t\t\t\t\t\t      
 \t\t\t\t\t\t\t   }
@@ -820,7 +826,7 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
     public function getDebugInfo()
     {
-        return array (  783 => 573,  774 => 567,  650 => 445,  608 => 405,  605 => 404,  595 => 400,  587 => 395,  579 => 390,  571 => 385,  563 => 380,  555 => 375,  545 => 367,  540 => 366,  538 => 365,  533 => 362,  497 => 328,  494 => 327,  485 => 324,  477 => 319,  469 => 314,  461 => 309,  453 => 304,  445 => 299,  439 => 295,  434 => 294,  432 => 293,  426 => 289,  420 => 288,  415 => 285,  409 => 283,  406 => 282,  402 => 280,  396 => 278,  393 => 277,  387 => 273,  380 => 269,  376 => 267,  373 => 266,  369 => 264,  363 => 262,  360 => 261,  356 => 259,  350 => 257,  347 => 256,  343 => 254,  337 => 252,  334 => 251,  330 => 249,  324 => 247,  321 => 246,  317 => 244,  311 => 242,  309 => 241,  299 => 234,  262 => 199,  252 => 195,  248 => 193,  244 => 192,  222 => 173,  198 => 152,  182 => 138,  176 => 135,  173 => 134,  167 => 131,  164 => 130,  162 => 129,  154 => 126,  135 => 110,  122 => 99,  118 => 98,  19 => 1,);
+        return array (  787 => 574,  777 => 567,  653 => 445,  611 => 405,  608 => 404,  598 => 400,  590 => 395,  582 => 390,  574 => 385,  566 => 380,  558 => 375,  548 => 367,  543 => 366,  541 => 365,  536 => 362,  500 => 328,  497 => 327,  488 => 324,  480 => 319,  472 => 314,  464 => 309,  456 => 304,  448 => 299,  442 => 295,  437 => 294,  435 => 293,  429 => 289,  423 => 288,  418 => 285,  412 => 283,  409 => 282,  405 => 280,  399 => 278,  396 => 277,  390 => 273,  383 => 269,  379 => 267,  376 => 266,  372 => 264,  366 => 262,  363 => 261,  359 => 259,  353 => 257,  350 => 256,  346 => 254,  340 => 252,  337 => 251,  333 => 249,  327 => 247,  324 => 246,  320 => 244,  314 => 242,  312 => 241,  302 => 234,  265 => 199,  255 => 195,  251 => 193,  247 => 192,  225 => 173,  213 => 164,  198 => 152,  182 => 138,  176 => 135,  173 => 134,  167 => 131,  164 => 130,  162 => 129,  154 => 126,  135 => 110,  122 => 99,  118 => 98,  19 => 1,);
     }
 
     public function getSource()
@@ -959,7 +965,7 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 \t\t\t\t\t</div>
                      {% else %}
                      <div id=\"u\">
-                    <button name=\"a\"  onclick=\"check_a()\" id=\"{{vv.u_id}}\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>
+                    <button name=\"a\"   id=\"{{vv.u_id}}\" onclick=\"check_a()\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>
                     </div>
                     {% endif %}
 \t\t\t\t</div>
@@ -976,7 +982,7 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 \t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4\">
 
-\t\t\t\t\t\t\t<a href=\"#\"><b id=\"c\">{{data1}}</b>关注
+\t\t\t\t\t\t\t<a href=\"#\"><b id=\"zhu\">{{data1}}</b>关注
 
 \t\t\t\t\t\t\t</a>
 
@@ -986,12 +992,12 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 \t\t\t\t\t\t\t<a href=\"#\">
 
-\t\t\t\t\t\t\t<b>
+\t\t\t\t\t\t\t<b id=\"meili\">
 
-\t\t\t\t\t\t\t\t0
-\t\t\t\t\t\t\t</b>魅力</a>guan
+\t\t\t\t\t\t\t\t{{m}}
+\t\t\t\t\t\t\t</b>魅力</a>
 
-\t\t\t\t\t\t\t<div></div>
+
 
 \t\t\t\t\t\t</li>
 
@@ -1389,11 +1395,12 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 \t\t\t\t\t\t\t   success: function(msg){
 
 \t\t\t\t\t\t\t\t   json = eval( \"(\" + msg + \")\" );
-//\t\t\t\t\t\t\t\t   alert(json.a)
+//\t\t\t\t\t\t\t\t   alert(msg)
 \t\t\t\t\t\t\t      if(json.a==1){
 \t\t\t\t\t\t\t\t\t  var html='<button name=\"a\" id=\"{{vv.u_id}}\"  onclick=\"check_a()\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>';
 \t\t\t\t\t\t\t\t\t  \$('#u').html(html);
 \t\t\t\t\t\t\t\t\t  \$('#f').html(json.f);
+\t\t\t\t\t\t\t\t\t  \$('#zhu').html(json.f);
 
 \t\t\t\t\t\t\t\t   }else if(json.a==2){
 
@@ -1401,6 +1408,8 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 \t\t\t\t\t\t\t\t\t  \$('#u').html(html);
 \t\t\t\t\t\t\t\t\t  \$('#f').html(json.f);
+\t\t\t\t\t\t\t\t\t  \$('#zhu').html(json.f);
+
 \t\t\t\t\t\t\t\t  }
 \t\t\t\t\t\t\t      
 \t\t\t\t\t\t\t   }
