@@ -198,9 +198,12 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"#\" class=\"link\">
+\t\t<a href=\"";
+        // line 171
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "paihangbang", array()), "html", null, true);
+        echo "\" class=\"link\">
 \t\t\t<span class=\"icon-skirt\"></span>
-\t\t\t<div class=\"mui-media-body\">成功故事</div>
+\t\t\t<div class=\"mui-media-body\">魅力排行</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -290,7 +293,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
     public function getDebugInfo()
     {
-        return array (  194 => 165,  185 => 159,  176 => 153,  167 => 147,  19 => 1,);
+        return array (  203 => 171,  194 => 165,  185 => 159,  176 => 153,  167 => 147,  19 => 1,);
     }
 
     public function getSource()
@@ -465,9 +468,9 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"#\" class=\"link\">
+\t\t<a href=\"{{ url.paihangbang }}\" class=\"link\">
 \t\t\t<span class=\"icon-skirt\"></span>
-\t\t\t<div class=\"mui-media-body\">成功故事</div>
+\t\t\t<div class=\"mui-media-body\">魅力排行</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
