@@ -8,8 +8,10 @@ class pictureModel extends model
     public function all($id)
     {
         return $this->select($this->table,'*',[
-              'u_id'=>$id
-            ]);
+              'u_id'=>$id,
+            'ORDER'=>["picture.id"=>"DESC"],
+            'LIMIT'=>4,
+        ]);
     }
     public function addOne($data)
     {
@@ -57,15 +59,9 @@ class pictureModel extends model
                 'm_name'=>'相册图片上传'
             ]);
     }
-    public function ren($id)
+    public function sta($id)
     {
-         
-         return $this->update('renwu',[
-                't_static'=>1
-            ],[
-
-                'id'=>$id
-            ]);
+        return $this->query("update renwu set t_static=1 where u_id=$id")->fetchAll();
     }
 }
 ?>

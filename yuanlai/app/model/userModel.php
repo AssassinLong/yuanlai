@@ -5,6 +5,11 @@ use core\lib\model;
 class userModel extends model
 {
      public $table="user";
+
+        public function getOne($id)
+        {
+         return $this->select($this->table,'*',['id' => $id ]);
+        }
         public function user_phone($data)
         {
             // $model=new model();

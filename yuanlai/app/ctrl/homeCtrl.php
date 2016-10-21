@@ -19,16 +19,18 @@ class homeCtrl extends \core\imooc
         //var_dump($_SESSION);
         if(isset($_SESSION['username'])){
         $url=array(
-            'fossa' => '?r=home/fossa',
+            'fossa'   => '?r=home/fossa',
             'advices' => '?r=home/advices',
             'xinqing' => '?r=home/xinqing',
             'suggest' => '?r=home/suggest',
+            'renwu'   => '?r=home/renwu',
         );}else{
         $url=array(
-            'fossa' => '?r=index/login',
+            'fossa'   => '?r=index/login',
             'advices' => '?r=index/login',
             'xinqing' => '?r=index/login',
             'suggest' => '?r=index/login',
+            'renwu'   =>'?r=index/login',
         );
         }
       $this->assign('url',$url);
@@ -141,6 +143,8 @@ class homeCtrl extends \core\imooc
                 $picture=new pictureModel();
                 $imgs=$picture->all($id);
                 $this->assign('imgs',$imgs);
+                //p($imgs);
+
                 $ar=$mono->zi_guan($id);
                 $ar1=count($ar);
                 $data=$mono->guan_sel($id);
@@ -180,9 +184,11 @@ class homeCtrl extends \core\imooc
             $data['path']=$imgpaths;
             $data['date']=date('Y-m-d H:i:s',time());
             $data['show']='1';
+            $id=$_SESSION['id'];
             $model=new pictureModel();
               $model->addOne($data);
-              $id=$_SESSION['id'];
+            $basi=new basicdataModel();
+            $basi->setimg($id,$imgpaths);
             $arr=$model->all($id);
             $arr1=count($arr);
             //dump($arr1);die;
@@ -190,7 +196,7 @@ class homeCtrl extends \core\imooc
                 // echo 1;die;
                 $aaa=$model->up($id);
                 $aaa1=$model->ad($id);
-                $aaa2=$model->ren($id);
+                $aaa2=$model->sta($id);
             }else{
                // echo 2;die;
                 $aaa=$model->up1($id);
@@ -202,6 +208,8 @@ class homeCtrl extends \core\imooc
     }
     public function shaixuan()
     {
+
+
         $this->display('shaixuan.html');
     }
     public function suggest()
@@ -220,7 +228,7 @@ class homeCtrl extends \core\imooc
 
          $base=new monoModel();
          $arr=$base->sel();
-         //dump($arr);die;
+         //p($arr);die;
          $this->assign('arr',$arr);
 
     	 $this->display('xinqing.html');
@@ -243,11 +251,19 @@ class homeCtrl extends \core\imooc
 
     public function renwu()
     {
+        $time=date('Y-m-d',time());
+        //echo $time;die;
     	$id=$_SESSION['id'];
+        $user=new userModel();
+        $data=$user->getOne($id);
     	$base=new monoModel();
     	$arr=$base->renwu($id);
-    	//dump($arr);die;
-    	$this->assign('arr',$arr);
+        $meiri=$base->day($id,$time);
+    	//dump($meiri);die;
+        $data['m_num']=$meiri[0]['m_num'];
+        //p($data);
+    	$this->assign('data',$data);
+        $this->assign('arr',$arr);
         $this->display('renwu.html');
     }
 }

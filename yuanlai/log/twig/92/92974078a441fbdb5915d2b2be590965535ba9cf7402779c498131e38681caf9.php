@@ -118,7 +118,10 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         foreach ($context['_seq'] as $context["_key"] => $context["vs"]) {
             // line 97
             echo "            <li class=\"mui-table-view-cell mui-media\">
-                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
+                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(";
+            // line 98
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "head_img", array()), "html", null, true);
+            echo ");\">
                     <a href=\"\" class=\"link\"></a>
                 </div><div class=\"mui-media-body\">
                 <a href=\"?r=home/fossa/tid/";
@@ -130,17 +133,17 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "name", array()), "html", null, true);
             echo "</b><span>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "age", array()), "html", null, true);
-            echo "岁，";
+            echo "岁<br/>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "region", array()), "html", null, true);
-            echo "，152cm</span>
+            echo "</span>
                     <p class=\"mui-ellipsis\">内心独白：";
             // line 103
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "mono", array()), "html", null, true);
             echo "</p></a></div><div>
-                <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"";
+                <a href=\"#\" class=\"do-message-hi\" objid=\"";
             // line 104
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
-            echo "\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
+            echo "\"><span class=\"ico ico-msg-hi\"></span>-_-</a>
                 <a href=\"?r=home/advices\" objid=\"";
             // line 105
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
@@ -285,7 +288,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
 
     public function getDebugInfo()
     {
-        return array (  156 => 109,  146 => 105,  142 => 104,  138 => 103,  130 => 102,  126 => 101,  120 => 97,  116 => 96,  19 => 1,);
+        return array (  159 => 109,  149 => 105,  145 => 104,  141 => 103,  133 => 102,  129 => 101,  123 => 98,  120 => 97,  116 => 96,  19 => 1,);
     }
 
     public function getSource()
@@ -387,13 +390,13 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         <ul class=\"mui-table-view\">
             {% for vs in ars %}
             <li class=\"mui-table-view-cell mui-media\">
-                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
+                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url({{ vs.head_img }});\">
                     <a href=\"\" class=\"link\"></a>
                 </div><div class=\"mui-media-body\">
                 <a href=\"?r=home/fossa/tid/{{vs.u_id}}\" class=\"link\">
-                    <b>{{ vs.name }}</b><span>{{ vs.age }}岁，{{ vs.region }}，152cm</span>
+                    <b>{{ vs.name }}</b><span>{{ vs.age }}岁<br/>{{ vs.region }}</span>
                     <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
-                <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
+                <a href=\"#\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>-_-</a>
                 <a href=\"?r=home/advices\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
             </div>
                 </li>
