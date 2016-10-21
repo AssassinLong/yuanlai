@@ -5,11 +5,15 @@
    use app\model\shengModel;
    use app\model\basicdataModel;
    use app\model\monoModel;
+   use app\model\userModel;
    session_start();
    class fossaCtrl extends \core\imooc
    {
        public function dubai()
        {
+
+
+
            if(post('monolog')){
                $data['text']=post('monolog');
                $data['datatime']=date('Y-m-d H:i:s',time());
@@ -20,6 +24,13 @@
                //var_dump($str);
                if($str>0){
                    $model->save(['mono'=>$data['text']],['u_id'=>$data['u_id']]);
+                   /*$update['usercp[+]']='5';
+                   $where['id']=$_SESSION['id'];
+                    $model=new monoModel();
+                    $mono=$model->getTwo('');
+                   $userm=new userModel();
+                   $userm->save_dubai($update,$where);
+                   */
                    echo '1';
                }else{
                    echo '0';

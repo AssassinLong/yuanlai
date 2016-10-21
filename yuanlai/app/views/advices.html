@@ -81,8 +81,13 @@
             <li class="mui-table-view-cell mui-media"><div class="mui-slider-handle">
                 <a href="?r=advices/friend/id/{{ val.u_id }}" class="link">
                     <div class="clip-bg mui-pull-left mui-media-object" style="background: url(/img/avata-1.png);"></div>
-                    <div class="mui-media-body"><p class="title"><b>{{ val.real_name }}</b><em class="active">
-                        <span class="ico ico-male"></span>{{ val.age }}</em></p><p class="mui-ellipsis">发来{{ val.num }}条聊天信息</p>
+                    <div class="mui-media-body"><p class="title"><b>{{ val.real_name }}</b>
+                        {% if val.sex=='男' %}
+                        <em class="active"><span class="ico ico-male"></span>{{ val.age }}</em>
+                        {% else %}
+                        <em class=""><span class="ico ico-female"></span>{{ val.age }}</em>
+                        {% endif %}
+                    </p><p class="mui-ellipsis">发来{{ val.num }}条聊天信息</p>
                         <label>{{ val.createtime }}</label>
                     </div>
                 </a>

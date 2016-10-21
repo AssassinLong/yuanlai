@@ -4,9 +4,9 @@ $(function() {
     //生成上传对象
     $('body').append('<iframe name="upload" style="display:none"></iframe>');
     $('.make-upload').each(function() {
+        //alert ('跳转成功');
         $(this).append('<form id="' + $(this).attr('object') + '" action="' + upload_url + '" target="upload" method="post" enctype="multipart/form-data"><input name="imgfile" type="file" accept="image/*" ><input name="imgType" type="hidden" value="' + $(this).attr('object') + '"></form>');
     });
-
     //执行上传
     $('.make-upload input').change(function() {
         //文件上传判断
@@ -14,13 +14,20 @@ $(function() {
         if (!chk) {
             return false;
         }
-        $(this).parents('form').submit();
-        process = $(this).parents('.make-upload').attr('param');
-        mui.toast('图片上传中…');
 
-        /*if(mui.toast('图片上传中…')){
-            location.reload('http://www.liujinlong.site/yuanlai/?r=home/fossa');
-        }*/
+            if($(this).parents('form').submit()){
+                if(process = $(this).parents('.make-upload').attr('param')){
+                    mui.toast('图片上传中…跳转');
+                    setTimeout("window.location.href='?r=home/fossa'", 1000);
+                }
+            }
+
+
+
+
+    /*if(mui.toast('图片上传中…')){
+        location.reload('http://www.liujinlong.site/yuanlai/?r=home/fossa');
+    }*/
 
         //查看自己资料页专用
         if (process == 'album') {

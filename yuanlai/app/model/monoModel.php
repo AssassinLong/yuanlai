@@ -14,6 +14,12 @@ class monoModel extends model
     {
      return $this->get($this->basi,'*',$where);
     }
+    //查询上一次独白
+    public function getTwo()
+    {
+        return $this->query("select * from ".$this->table." ORDER BY  id desc LIMIT 1")->fetchAll();
+        //return $this->get($this->table,'*',[ "ORDER" => "mono.id DESC"]);
+    }
     public function save($data,$where)
     {
         return $this->update($this->basi,$data,$where);
