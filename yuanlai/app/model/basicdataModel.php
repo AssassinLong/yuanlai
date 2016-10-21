@@ -112,7 +112,25 @@ class basicdataModel extends model
         ]);
     }
 
-
+    public function adde2($str)
+    {
+          $data=date('Y-m-d');
+          return $this->insert('renwu',[
+               'u_id'=>$str,
+               's_static'=>1,
+                'r_data'=>$data
+            ]);
+    }
+    public function adde3($str)
+    {
+          $data=date('Y-m-d');
+          return $this->insert('meiri',[
+               'u_id'=>$str,
+               'm_name'=>'手机号注册魅力增加100',
+               'm_num'=>100,
+               'date'=>$data
+            ]);
+    }
 }
 ?>
 

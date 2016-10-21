@@ -14,12 +14,38 @@
                $data['text']=post('monolog');
                $data['datatime']=date('Y-m-d H:i:s',time());
                $data['u_id']=$_SESSION['id'];
-               //var_dump($data);
+           
                $model=new monoModel();
                $str=$model->addOne($data);
-               //var_dump($str);
+          
                if($str>0){
                    $model->save(['mono'=>$data['text']],['u_id'=>$data['u_id']]);
+                   $id=$data['u_id'];
+                   $du=$model->se($id);
+                   $du1=count($du);
+                   if($du1==1){
+
+                   	      $abc=$model->jia($id);
+                   	      $abc1=$model->jia1($id);
+                   	      $abc2=$model->jia2($id);
+                   }else{
+				       
+				          $dd=$model->ss($id);	
+				          $datatime=$dd[0]['datatime'];
+				          $datatime1=explode('-',$datatime);
+						  $datatime2=explode(' ',$datatime1[2]);
+						  $datatime3=$datatime2[0];
+						  $data['daa']=date('Y-m-d H:i:s',time());
+      					  $da=explode('-',$data['daa']);
+      					  $da1=explode(' ',$da[2]);
+      					  $da2=$da1[0];
+      					  if($datatime3<$da2){
+                                 
+                                $tian=$model->acc($id);
+                                $tian1=$model->acc1($id);      
+      					  }
+
+                   }
                    echo '1';
                }else{
                    echo '0';
@@ -334,8 +360,27 @@
 //           print_r($arr);
 
        }
+     
+      // public function aa()
+      //   {
+      //   	$data['datatime']=date('Y-m-d H:i:s',time());
+      //   	$a=explode('-',$data['datatime']);
+      //   	$b=explode(' ',$a[2]);
+      //   	dump($b[0]); 
+      //   }
 
+          // public function aa()
+          // {
+          // 	$id=$_SESSION['id'];
+          // 	   $model=new monoModel();
+          //      $str=$model->acc1($id);
+          //      dump($str);
+			  
+          // }
+         
 
    }
+
+     
 
 ?>

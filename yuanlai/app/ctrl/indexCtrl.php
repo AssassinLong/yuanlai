@@ -75,14 +75,16 @@ class indexCtrl extends \core\imooc
                 $data['datetime']=date('Y-m-d H:i:s',time());
                 $model=new kModel();
                 $str=$model->addOne('user',$data);
-//                print_r($str);die;
+            //print_r($str);die;
                 $real_name=$data['name'];
                 if($str>0){
                     $models=new basicdataModel();
                     $s1=$models->adde1($str,$real_name);
+                    $s2=$models->adde2($str);
+                    $s3=$models->adde3($str);
 //                    print_r($s1);die;
                     //echo $s1;
-                    if($s1){
+                    if($s1){   
                         jump('?r=index/login');
                     }else{
                         echo '注册失败';die;

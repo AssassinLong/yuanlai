@@ -167,6 +167,7 @@ class homeCtrl extends \core\imooc
         }*/
 
         if(isset($_FILES['imgfile'])){
+
             //$_FILES['imgfile'];
            $filepath='./web/upimg/';
            if(!file_exists($filepath)){
@@ -179,8 +180,22 @@ class homeCtrl extends \core\imooc
            $data['path']=$imgpaths;
            $data['date']=date('Y-m-d H:i:s',time());
            $data['show']='1';
-           $model=new pictureModel();
-           $model->addOne($data);
+            $model=new pictureModel();
+            // $model->addOne($data);
+            $id=$_SESSION['id'];
+           $arr=$model->all($id);
+           $arr1=count($arr);
+           //dump($arr1);die;
+           if($arr1==1){
+               // echo 1;die;
+               $aaa=$model->up($id);
+               $aaa1=$model->ad($id);
+               $aaa2=$model->ren($id);
+           }else{
+              // echo 2;die;
+               $aaa=$model->up1($id);
+               $aaa1=$model->ad1($id);
+           }
        }else{
             echo '文件未上传';
         }
@@ -224,6 +239,16 @@ class homeCtrl extends \core\imooc
          }else{
             echo 0;
          }
+    }
+
+    public function renwu()
+    {
+    	$id=$_SESSION['id'];
+    	$base=new monoModel();
+    	$arr=$base->renwu($id);
+    	//dump($arr);die;
+    	$this->assign('arr',$arr);
+        $this->display('renwu.html');
     }
 }
      

@@ -55,6 +55,74 @@ class monoModel extends model
              'AND'=>$aa
             ]);
     }
+    public function renwu($id)
+    {
+        return $this->select('renwu','*',[
+
+           'u_id'=>$id
+            ]);
+    }
+    public function se($id)
+    {
+           return $this->select('mono','*',[
+
+           'u_id'=>$id
+            ]);
+    }
+    public function jia($id)
+    {
+           $data=date('Y-m-d');
+         return $this->insert('meiri',[
+                'u_id'=>$id,
+                'date'=>$data,
+                'm_num'=>50,
+                'm_name'=>'第一次发表独白'
+            ]);
+    }
+     public function jia1($id)
+    {
+         return $this->update('user',[
+                'usercp[+]'=>'50'
+            ],[
+
+                'id'=>$id
+            ]);
+    }
+
+    public function jia2($id)
+    {
+         
+         return $this->update('renwu',[
+                'f_static'=>1
+            ],[
+
+                'u_id'=>$id
+            ]);
+    }
+    public function ss($id)
+    {
+       return $this->query("select datatime from mono  WHERE  u_id=$id order by (id) desc limit 1")->fetchAll();
+    }
+    public function acc($id)
+    {
+         return $this->update('user',[
+
+               'usercp[+]'=>10
+            ],[
+
+               'id'=>$id
+            ]);
+    }
+    public function acc1($id)
+    {
+         $data=date('Y-m-d');
+         return $this->insert('meiri',[
+                'u_id'=>$id,
+                'date'=>$data,
+                'm_num'=>10,
+                'm_name'=>'每日日志'
+            ]);
+    }
 }
 
 ?>
