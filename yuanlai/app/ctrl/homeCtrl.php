@@ -23,12 +23,14 @@ class homeCtrl extends \core\imooc
             'advices' => '?r=home/advices',
             'xinqing' => '?r=home/xinqing',
             'suggest' => '?r=home/suggest',
+            'paihangbang' => '?r=home/paihangbang',
         );}else{
         $url=array(
             'fossa' => '?r=index/login',
             'advices' => '?r=index/login',
             'xinqing' => '?r=index/login',
             'suggest' => '?r=index/login',
+            'paihangbang' => '?r=index/login',
         );
         }
       $this->assign('url',$url);
@@ -231,15 +233,36 @@ class homeCtrl extends \core\imooc
          $id=$_SESSION['id'];
          $u_id=post('u_id');
          $base=new monoModel();
-         $arr=$base->guan($id,$u_id);
-         $ar=$base->guan_sel($u_id);
-         $ar1=count($ar);
-         if($arr){
-             echo $ar1;  
-         }else{
-            echo 0;
-         }
+        $arrs=array('s_id'=>$id,'b_id'=>$u_id);
+        $arr=$base->quxiao($arrs);
+//        print_r($arr);die;
+        if($arr){
+         $arr=$base->delall($arrs);
+            $ar=$base->guan_sel($u_id);
+            $ar1=count($ar);
+            if($arr){
+                $array=array('a'=>1,'f'=>$ar1);
+                $json=json_encode($array);
+                echo $json;
+            }else{
+                echo 0;
+            }
+        }else{
+        $arr=$base->guan($id,$u_id);
+            $ar=$base->guan_sel($u_id);
+            $ar1=count($ar);
+            if($arr){
+                $array=array('a'=>2,'f'=>$ar1);
+                $json=json_encode($array);
+                echo $json;
+            }else{
+                echo 0;
+            }
+        }
+
+
     }
+
 
     public function renwu()
     {
@@ -250,6 +273,45 @@ class homeCtrl extends \core\imooc
     	$this->assign('arr',$arr);
         $this->display('renwu.html');
     }
+
+    public function paihangbang()
+    {
+        $model=new basicdataModel();
+        $arr=$model->sel();
+        $s=$arr[0];
+        $s1=$arr[1];
+        $s2=$arr[2];
+//        print_r($arr);die;
+        $this->assign('s',$s);
+        $this->assign('s1',$s1);
+        $this->assign('s2',$s2);
+        $s3=$arr[3];
+//        array()
+        $usercp=$s3['usercp'];
+        $aa=$model->sells($usercp);
+//        print_r($aa);die;
+        $s4=$aa[0];
+        $s5=$aa[1];
+        $s6=$aa[2];
+        $s7=$aa[3];
+        $s8=$aa[4];
+        $s9=$aa[5];
+        $this->assign('s3',$s3);
+        $this->assign('s4',$s4);
+        $this->assign('s5',$s5);
+        $this->assign('s6',$s6);
+        $this->assign('s7',$s7);
+        $this->assign('s8',$s8);
+        $this->assign('s9',$s9);
+
+        $this->display('paihangbang.html');
+    }
+    public function aa(){
+        $this->display('a.html');
+    }
+
+
+
 }
      
 

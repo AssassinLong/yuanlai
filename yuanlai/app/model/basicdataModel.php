@@ -111,6 +111,16 @@ class basicdataModel extends model
             "real_name"=>$real_name,
         ]);
     }
+    public function sel(){
+         $arr = $this->query("select * from user INNER JOIN basicdata ON user.id=basicdata.u_id  order by user.usercp desc limit 4")->fetchAll();
+         return $arr;
+    }
+    public function sells($usercp){
+
+        $arr = $this->query("select * from user INNER JOIN basicdata ON user.id=basicdata.u_id where user.usercp<".$usercp."  order by user.usercp desc limit 6")->fetchAll();
+//       print_r($usercp);die;
+        return $arr;
+    }
 
     public function adde2($str)
     {

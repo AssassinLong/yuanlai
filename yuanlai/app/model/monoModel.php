@@ -46,6 +46,18 @@ class monoModel extends model
                 'b_id'=>$u_id
             ]);
     }
+    public function quxiao($arrs){
+        return $this->select('guan','*',[
+
+            'AND'=>$arrs
+        ]);
+    }
+    public function delall($arrs){
+        return $this->delete('guan',[
+
+            'AND'=>$arrs
+        ]);
+    }
     public function zi_guan($id)
     {
 

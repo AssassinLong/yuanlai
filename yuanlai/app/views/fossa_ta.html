@@ -127,11 +127,12 @@
 					</p>
                      
                      {% if aaa %}
-
-                           <button id="focus" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus-on"></span>已关注</button>
+					<div id="u">
+                           <button id="{{vv.u_id}}" onclick="check_a()"  name="a"   class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus-on" ></span>已关注</button>
+					</div>
                      {% else %}
                      <div id="u">
-                    <button name="a" id="{{vv.u_id}}" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>
+                    <button name="a"  onclick="check_a()" id="{{vv.u_id}}" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>
                     </div>
                     {% endif %}
 				</div>
@@ -536,7 +537,7 @@
 					});
 
 					//关闭弹窗
-/
+
 	
 
 				$('.layer-close').click(function() {
@@ -551,7 +552,7 @@
 
            <script>
 
-                   $('button[name=a]').click(function(){
+                  function check_a(){
 
                            var u_id=$('button').attr('id');
                            $.ajax({
@@ -559,17 +560,25 @@
 							   url: "?r=home/guan",
 							   data: {'u_id':u_id},
 							   success: function(msg){
-							      if(msg!==0){
-                                       
-                                        var html = '<button name="b" id="{{vv.u_id}}" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="?r=home/qu" dialog="加关注成功"><span class="ico ico-focus-on"></span>已关注</button>';
 
-								           $('#u').html(html);
-								           $('#f').html(msg);
-							      }
+								   json = eval( "(" + msg + ")" );
+//								   alert(json.a)
+							      if(json.a==1){
+									  var html='<button name="a" id="{{vv.u_id}}"  onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>';
+									  $('#u').html(html);
+									  $('#f').html(json.f);
+
+								   }else if(json.a==2){
+
+									   var html = '<button name="b" id="{{vv.u_id}}" onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="?r=home/qu" dialog="加关注成功"><span class="ico ico-focus-on"></span>已关注</button>';
+
+									  $('#u').html(html);
+									  $('#f').html(json.f);
+								  }
 							      
 							   }
 							});
-                   });
+                   };
            </script>
 
 			<script src="web/js/mui.zoom.js"></script>
