@@ -110,15 +110,28 @@ class __TwigTemplate_69360cce3c232a3ef9c6ac45c197e869e1ee00a124e42e2175ab940fb50
                     <div class=\"mui-media-body\"><p class=\"title\"><b>";
             // line 84
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "real_name", array()), "html", null, true);
-            echo "</b><em class=\"active\">
-                        <span class=\"ico ico-male\"></span>";
+            echo "</b>
+                        ";
             // line 85
-            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "age", array()), "html", null, true);
-            echo "</em></p><p class=\"mui-ellipsis\">发来";
+            if (($this->getAttribute($context["val"], "sex", array()) == "男")) {
+                // line 86
+                echo "                        <em class=\"active\"><span class=\"ico ico-male\"></span>";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "age", array()), "html", null, true);
+                echo "</em>
+                        ";
+            } else {
+                // line 88
+                echo "                        <em class=\"\"><span class=\"ico ico-female\"></span>";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "age", array()), "html", null, true);
+                echo "</em>
+                        ";
+            }
+            // line 90
+            echo "                    </p><p class=\"mui-ellipsis\">发来";
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "num", array()), "html", null, true);
             echo "条聊天信息</p>
                         <label>";
-            // line 86
+            // line 91
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "createtime", array()), "html", null, true);
             echo "</label>
                     </div>
@@ -129,7 +142,7 @@ class __TwigTemplate_69360cce3c232a3ef9c6ac45c197e869e1ee00a124e42e2175ab940fb50
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 91
+        // line 96
         echo "        </ul>
     </div>
 
@@ -187,7 +200,7 @@ class __TwigTemplate_69360cce3c232a3ef9c6ac45c197e869e1ee00a124e42e2175ab940fb50
 
     public function getDebugInfo()
     {
-        return array (  133 => 91,  122 => 86,  116 => 85,  112 => 84,  107 => 82,  104 => 81,  100 => 80,  19 => 1,);
+        return array (  146 => 96,  135 => 91,  130 => 90,  124 => 88,  118 => 86,  116 => 85,  112 => 84,  107 => 82,  104 => 81,  100 => 80,  19 => 1,);
     }
 
     public function getSource()
@@ -275,8 +288,13 @@ class __TwigTemplate_69360cce3c232a3ef9c6ac45c197e869e1ee00a124e42e2175ab940fb50
             <li class=\"mui-table-view-cell mui-media\"><div class=\"mui-slider-handle\">
                 <a href=\"?r=advices/friend/id/{{ val.u_id }}\" class=\"link\">
                     <div class=\"clip-bg mui-pull-left mui-media-object\" style=\"background: url(/img/avata-1.png);\"></div>
-                    <div class=\"mui-media-body\"><p class=\"title\"><b>{{ val.real_name }}</b><em class=\"active\">
-                        <span class=\"ico ico-male\"></span>{{ val.age }}</em></p><p class=\"mui-ellipsis\">发来{{ val.num }}条聊天信息</p>
+                    <div class=\"mui-media-body\"><p class=\"title\"><b>{{ val.real_name }}</b>
+                        {% if val.sex=='男' %}
+                        <em class=\"active\"><span class=\"ico ico-male\"></span>{{ val.age }}</em>
+                        {% else %}
+                        <em class=\"\"><span class=\"ico ico-female\"></span>{{ val.age }}</em>
+                        {% endif %}
+                    </p><p class=\"mui-ellipsis\">发来{{ val.num }}条聊天信息</p>
                         <label>{{ val.createtime }}</label>
                     </div>
                 </a>

@@ -7,7 +7,6 @@ class pictureModel extends model
     public $table="picture";
     public function all($id)
     {
-
         return $this->select($this->table,'*',[
               'u_id'=>$id
             ]);

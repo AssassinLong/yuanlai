@@ -5,11 +5,15 @@
    use app\model\shengModel;
    use app\model\basicdataModel;
    use app\model\monoModel;
+   use app\model\userModel;
    session_start();
    class fossaCtrl extends \core\imooc
    {
        public function dubai()
        {
+
+
+
            if(post('monolog')){
                $data['text']=post('monolog');
                $data['datatime']=date('Y-m-d H:i:s',time());

@@ -41,6 +41,11 @@ class userModel extends model
                //dump($arr);die
                return $arr;
         }
+    //修改魅力值
+    public function save_dubai($update,$where)
+    {
+        return $this->update($this->table,$update,$where);
+    }
         
 }
 ?>

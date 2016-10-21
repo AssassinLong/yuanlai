@@ -157,48 +157,48 @@ class homeCtrl extends \core\imooc
     //上传相册
     public function upload()
     {
-        /*//unset($_SESSION['imgfile']);
+        //unset($_SESSION['imgfile']);
         if(isset($_SESSION['imgfile'])){
             var_dump($_SESSION['imgfile']);
         }elseif(isset($_FILES['imgfile'])){
             $_SESSION['imgfile']=$_FILES['imgfile'];
         }else{
             echo '未上传文件';
-        }*/
-
-        if(isset($_FILES['imgfile'])){
-
-            //$_FILES['imgfile'];
-           $filepath='./web/upimg/';
-           if(!file_exists($filepath)){
-               mkdir($filepath);;
-           }
-           $imgpaths=$filepath.time().$_FILES['imgfile']['name'];
-           move_uploaded_file($_FILES['imgfile']['tmp_name'],$imgpaths);
-           $data['u_id']=$_SESSION['id'];
-           $data['u_name']=$_SESSION['username'];
-           $data['path']=$imgpaths;
-           $data['date']=date('Y-m-d H:i:s',time());
-           $data['show']='1';
-            $model=new pictureModel();
-            // $model->addOne($data);
-            $id=$_SESSION['id'];
-           $arr=$model->all($id);
-           $arr1=count($arr);
-           //dump($arr1);die;
-           if($arr1==1){
-               // echo 1;die;
-               $aaa=$model->up($id);
-               $aaa1=$model->ad($id);
-               $aaa2=$model->ren($id);
-           }else{
-              // echo 2;die;
-               $aaa=$model->up1($id);
-               $aaa1=$model->ad1($id);
-           }
-       }else{
-            echo '文件未上传';
         }
+
+       //  if(isset($_FILES['imgfile'])){
+
+       //      //$_FILES['imgfile'];
+       //     $filepath='./web/upimg/';
+       //     if(!file_exists($filepath)){
+       //         mkdir($filepath);;
+       //     }
+       //     $imgpaths=$filepath.time().$_FILES['imgfile']['name'];
+       //     move_uploaded_file($_FILES['imgfile']['tmp_name'],$imgpaths);
+       //     $data['u_id']=$_SESSION['id'];
+       //     $data['u_name']=$_SESSION['username'];
+       //     $data['path']=$imgpaths;
+       //     $data['date']=date('Y-m-d H:i:s',time());
+       //     $data['show']='1';
+       //      $model=new pictureModel();
+       //      // $model->addOne($data);
+       //      $id=$_SESSION['id'];
+       //     $arr=$model->all($id);
+       //     $arr1=count($arr);
+       //     //dump($arr1);die;
+       //     if($arr1==1){
+       //         // echo 1;die;
+       //         $aaa=$model->up($id);
+       //         $aaa1=$model->ad($id);
+       //         $aaa2=$model->ren($id);
+       //     }else{
+       //        // echo 2;die;
+       //         $aaa=$model->up1($id);
+       //         $aaa1=$model->ad1($id);
+       //     }
+       // }else{
+       //      echo '文件未上传';
+       //  }
     }
     public function shaixuan()
     {
