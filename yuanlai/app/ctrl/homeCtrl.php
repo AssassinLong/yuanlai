@@ -191,6 +191,7 @@ class homeCtrl extends \core\imooc
                 $aaa=$model->up($id);
                 $aaa1=$model->ad($id);
                 $aaa2=$model->ren($id);
+                //dump($aaa2);die;
             }else{
                // echo 2;die;
                 $aaa=$model->up1($id);
