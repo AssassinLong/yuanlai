@@ -155,7 +155,7 @@ class monoModel extends model
 
     public function day($id, $time)
     {
-        return $this->query("select u_id,sum(m_num) as m_num from meiri WHERE u_id=$id and date='$time' group by u_id  ")->fetchAll();
+        return $this->query("select u_id,sum(m_num) as m_num from meiri WHERE u_id=$id and date='$time'")->fetchAll();
         //return $this->select('meiri','*',['AND'=>$data]);
     }
 }

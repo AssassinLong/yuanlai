@@ -285,9 +285,13 @@ class homeCtrl extends \core\imooc
     	$base=new monoModel();
     	$arr=$base->renwu($id);
         $meiri=$base->day($id,$time);
+        if($meiri[0]['u_id']!=0){
+            $data['m_num']=$meiri[0]['m_num'];
+        }else{
+            $data['m_num']='0';
+        }
     	//dump($meiri);die;
-        $data['m_num']=$meiri[0]['m_num'];
-        //p($data);
+        //p($arr);
     	$this->assign('data',$data);
         $this->assign('arr',$arr);
         $this->display('renwu.html');
