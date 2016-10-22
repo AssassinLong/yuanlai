@@ -42,7 +42,7 @@ class monoModel extends model
             'b_id' => $u_id
         ]);
     }
-
+   /*查询粉丝*/
     public function guan_sel($u_id)
     {
         return $this->select('guan', '*', [
@@ -51,14 +51,23 @@ class monoModel extends model
         ]);
     }
 
+    /*魅力值*/
+    public function meili($u_id){
+        return $this->select('user','*',[
+
+            'id'=>$u_id
+        ]);
+    }
     public function zi_guan($id)
     {
 
         //echo $id;
-        return $this->select('guan', '*', [
 
-            's_id' => $id
-        ]);
+      return  $this->select('guan','*',[
+
+                'b_id'=>$id
+            ]);
+
     }
 
     public function sta($aa)
@@ -142,6 +151,7 @@ class monoModel extends model
             'm_name' => '每日日志'
         ]);
     }
+
 
     public function day($id, $time)
     {

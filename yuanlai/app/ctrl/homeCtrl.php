@@ -24,6 +24,7 @@ class homeCtrl extends \core\imooc
             'xinqing' => '?r=home/xinqing',
             'suggest' => '?r=home/suggest',
             'renwu'   => '?r=home/renwu',
+            'paihangbang' => '?r=home/paihangbang',
         );}else{
         $url=array(
             'fossa'   => '?r=index/login',
@@ -31,6 +32,7 @@ class homeCtrl extends \core\imooc
             'xinqing' => '?r=index/login',
             'suggest' => '?r=index/login',
             'renwu'   =>'?r=index/login',
+            'paihangbang' => '?r=index/login',
         );
         }
       $this->assign('url',$url);
@@ -104,9 +106,9 @@ class homeCtrl extends \core\imooc
             $this->assign('imgs',$imgs);
             $ar=$mono->guan_sel($id);
             $ar1=count($ar);
-            
-            
-            
+            $meili = $mono->meili($id);
+            $m=$meili[0]['usercp'];
+            $this->assign('m',$m);
             $this->assign('ar1',$ar1);
             $data=$mono->zi_guan($id);
             $data1=count($data);
@@ -239,15 +241,39 @@ class homeCtrl extends \core\imooc
          $id=$_SESSION['id'];
          $u_id=post('u_id');
          $base=new monoModel();
-         $arr=$base->guan($id,$u_id);
-         $ar=$base->guan_sel($u_id);
-         $ar1=count($ar);
-         if($arr){
-             echo $ar1;  
-         }else{
-            echo 0;
-         }
+        $arrs=array('s_id'=>$id,'b_id'=>$u_id);
+        $arr=$base->quxiao($arrs);
+//        print_r($arr);die;
+        if($arr){
+         $arr=$base->delall($arrs);
+            $ar=$base->guan_sel($u_id);
+            $ar1=count($ar);
+
+            if($arr){
+
+                $array=array('a'=>1,'f'=>$ar1);
+                $json=json_encode($array);
+                echo $json;
+            }else{
+                echo 0;
+            }
+        }else{
+        $arr=$base->guan($id,$u_id);
+            $ar=$base->guan_sel($u_id);
+            $ar1=count($ar);
+
+            if($arr){
+                $array=array('a'=>2,'f'=>$ar1);
+                $json=json_encode($array);
+                echo $json;
+            }else{
+                echo 0;
+            }
+        }
+
+
     }
+
 
     public function renwu()
     {
@@ -266,6 +292,30 @@ class homeCtrl extends \core\imooc
         $this->assign('arr',$arr);
         $this->display('renwu.html');
     }
+
+    public function paihangbang()
+    {
+        $model=new basicdataModel();
+        $arr=$model->sel();
+        $s=$arr[0];
+        $s1=$arr[1];
+        $s2=$arr[2];
+        $this->assign('s',$s);
+        $this->assign('s1',$s1);
+        $this->assign('s2',$s2);
+        $s3=$arr[3];
+        $usercp=$s3['usercp'];
+        $aa=$model->sells($usercp);
+        //p($aa);
+        $this->assign('aa',$aa);
+        $this->display('paihangbang.html');
+    }
+    public function aa(){
+        $this->display('a.html');
+    }
+
+
+
 }
      
 
