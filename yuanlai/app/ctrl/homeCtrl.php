@@ -278,32 +278,8 @@ class homeCtrl extends \core\imooc
     public function paihangbang()
     {
         $model=new basicdataModel();
-        $arr=$model->sel();
-        $s=$arr[0];
-        $s1=$arr[1];
-        $s2=$arr[2];
-//        print_r($arr);die;
-        $this->assign('s',$s);
-        $this->assign('s1',$s1);
-        $this->assign('s2',$s2);
-        $s3=$arr[3];
-//        array()
-        $usercp=$s3['usercp'];
-        $aa=$model->sells($usercp);
-//        print_r($aa);die;
-        $s4=$aa[0];
-        $s5=$aa[1];
-        $s6=$aa[2];
-        $s7=$aa[3];
-        $s8=$aa[4];
-        $s9=$aa[5];
-        $this->assign('s3',$s3);
-        $this->assign('s4',$s4);
-        $this->assign('s5',$s5);
-        $this->assign('s6',$s6);
-        $this->assign('s7',$s7);
-        $this->assign('s8',$s8);
-        $this->assign('s9',$s9);
+        //$arr=$model->sel();
+        
 
         $this->display('paihangbang.html');
     }
