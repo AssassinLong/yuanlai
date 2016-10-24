@@ -34,7 +34,7 @@ class monoModel extends model
         return $this->query("select * from user INNER JOIN mono on user.id=mono.u_id ORDER BY mono.datatime DESC ")->fetchAll();
     }
 
-    public function guan($id, $u_id)
+    public function guan($id,$u_id)
     {
         return $this->insert('guan', [
 

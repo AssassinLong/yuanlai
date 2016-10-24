@@ -101,11 +101,11 @@ class homeCtrl extends \core\imooc
     public function fossa()
     {
         if(isset($_SESSION['username'])) {
-            
-            if(get('tid')){
-                $u_id=$_SESSION['id'];
-                $id=get('tid');
-                $model = new xiangModel();
+            $id=get('tid');
+            if($id){
+            $u_id=$_SESSION['id'];
+
+            $model = new xiangModel();
             $re = $model->xiang($id);
             if ($re) {
                 $this->assign('re', $re);
@@ -113,13 +113,10 @@ class homeCtrl extends \core\imooc
             $model = new shengModel();
             $sheng = $model->sheng_select($id);
             if ($sheng) {
-
                 $this->assign('sheng', $sheng);
             }
-            
             $model = new basicdataModel();
             $arras = $model->userOne1($id);
-            
             if ($arras) {
                 $this->assign('arras', $arras);
             }
@@ -289,41 +286,41 @@ class homeCtrl extends \core\imooc
 
     public function guan()
     {
-         $id=$_SESSION['id'];
-         $u_id=post('u_id');
-         $base=new monoModel();
-        $arrs=array('s_id'=>$id,'b_id'=>$u_id);
-        $arr=$base->quxiao($arrs);
+        $id = $_SESSION['id'];
+        $u_id = post('u_id');
+//        print_r($u_id);
+        $base = new monoModel();
+        $arrs = array('s_id' => $id, 'b_id' => $u_id);
+        $arr = $base->quxiao($arrs);
 //        print_r($arr);die;
-        if($arr){
-         $arr=$base->delall($arrs);
-            $ar=$base->guan_sel($u_id);
-            $ar1=count($ar);
+        if ($arr) {
+            $arr1 = $base->delall($arrs);
+            $ar = $base->guan_sel($u_id);
+            $ar1 = count($ar);
 
-            if($arr){
-                
-                $array=array('a'=>1,'f'=>$ar1);
-                $json=json_encode($array);
-                echo $json;
-            }else{
-                echo 0;
+            if ($arr1){
+                    $array = array('a' => 1,'f' => $ar1,'u_id'=>$u_id);
+                    $json = json_encode($array);
+                    echo $json;
+                }else{
+                    echo 0;
+                }
+            } else {
+                $arr1 = $base->guan($id,$u_id);
+                $ar = $base->guan_sel($u_id);
+                $ar1 = count($ar);
+                if ($arr1) {
+                    $array = array('a' => 2, 'f' => $ar1,'u_id'=>$u_id);
+                    $json = json_encode($array);
+                    echo $json;
+                }else{
+                    echo 0;
+                }
             }
-        }else{
-            $arr=$base->guan($id,$u_id);
-            $ar=$base->guan_sel($u_id);
-            $ar1=count($ar);
 
-            if($arr){
-                $array=array('a'=>2,'f'=>$ar1);
-                $json=json_encode($array);
-                echo $json;
-            }else{
-                echo 0;
-            }
+
         }
 
-
-    }
 
 
     public function renwu()
