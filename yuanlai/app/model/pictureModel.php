@@ -13,6 +13,11 @@ class pictureModel extends model
             'LIMIT'=>4,
         ]);
     }
+    //删除相册
+    public function delOne($id)
+    {
+        return $this->delete($this->table,['id'=>$id]);
+    }
     public function allAlbum($id)
     {
         return $this->select($this->table,'*',['u_id'=>$id,'ORDER'=>["picture.id"=>"DESC"],]);
@@ -20,9 +25,6 @@ class pictureModel extends model
     public function addOne($data)
     {
         return $this->insert($this->table,$data);
-    }
-    public function delOne()
-    {
     }
 
     public function up($id)

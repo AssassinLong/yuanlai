@@ -26,6 +26,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
         <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
 \t\t<!--标准mui.css-->
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"web/css/lv.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
         <script src=\"web/js/min.js\"  ></script>
@@ -114,11 +115,11 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
 \t\t\t<!-- 个人标签卡开始 -->
           \t\t\t\t\t";
-        // line 98
+        // line 99
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["arras"]) ? $context["arras"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["vv"]) {
-            // line 99
+            // line 100
             echo "\t\t\t<div class=\"file-area\">
 
 \t\t\t\t<div class=\"file-avatar\">
@@ -126,7 +127,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
 \t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"\">
                         <img src=\"";
-            // line 105
+            // line 106
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["imgs"]) ? $context["imgs"] : null), 0, array(), "array"), "path", array()), "html", null, true);
             echo "\">
 \t\t\t\t\t</div>
@@ -134,26 +135,15 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
                     
 \t\t\t\t\t<p>
 \t\t\t\t\t\t<b>";
-            // line 110
+            // line 111
             echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "name", array()), "html", null, true);
             echo "</b>
 
 
-\t\t\t\t\t\t<span class=\"ico ico-ident\"></span>
-
-
-
-
-\t\t\t\t\t\t<span class=\"ico ico-msg\"></span>
-
-
-
-
-\t\t\t\t\t\t<span class=\"ico ico-mobile-active\"></span>
 
 
 \t\t\t\t\t\t<br />";
-            // line 126
+            // line 116
             echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "age", array()), "html", null, true);
             echo " &nbsp;";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "native", array()), "html", null, true);
@@ -161,27 +151,27 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t</p>
                      
                      ";
-            // line 129
+            // line 119
             if ((isset($context["aaa"]) ? $context["aaa"] : null)) {
-                // line 130
+                // line 120
                 echo "\t\t\t\t\t<div id=\"u\">
                            <button id=\"";
-                // line 131
+                // line 121
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "u_id", array()), "html", null, true);
                 echo "\" onclick=\"check_a()\"  name=\"a\"   class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus-on\" ></span>已关注</button>
 \t\t\t\t\t</div>
                      ";
             } else {
-                // line 134
+                // line 124
                 echo "                     <div id=\"u\">
                     <button name=\"a\"   id=\"";
-                // line 135
+                // line 125
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "u_id", array()), "html", null, true);
                 echo "\" onclick=\"check_a()\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>
                     </div>
                     ";
             }
-            // line 138
+            // line 128
             echo "\t\t\t\t</div>
 
        
@@ -197,7 +187,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4\">
 
 \t\t\t\t\t\t\t<a href=\"#\"><b id=\"zhu\">";
-            // line 152
+            // line 142
             echo twig_escape_filter($this->env, (isset($context["data1"]) ? $context["data1"] : null), "html", null, true);
             echo "</b>关注
 
@@ -212,7 +202,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t\t\t<b id=\"meili\">
 
 \t\t\t\t\t\t\t\t";
-            // line 164
+            // line 154
             echo twig_escape_filter($this->env, (isset($context["m"]) ? $context["m"] : null), "html", null, true);
             echo "
 \t\t\t\t\t\t\t</b>魅力</a>
@@ -224,7 +214,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4\">
 
 \t\t\t\t\t\t\t<a href=\"#\"><b id=\"f\">";
-            // line 173
+            // line 163
             echo twig_escape_filter($this->env, (isset($context["ar1"]) ? $context["ar1"] : null), "html", null, true);
             echo "</b>粉丝</a>
 
@@ -243,7 +233,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t<!-- 个人照片开始 -->
             <h4>
                 <a  style=\"color: black\" href=\"?r=home/album/uid/";
-            // line 189
+            // line 179
             echo twig_escape_filter($this->env, (isset($context["uid"]) ? $context["uid"] : null), "html", null, true);
             echo "\" class=\"link\">
 
@@ -258,15 +248,15 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
 \t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
                     ";
-            // line 201
+            // line 191
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["imgs"]) ? $context["imgs"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
-                // line 202
+                // line 192
                 echo "                    <li  class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 
                         <img src=\"";
-                // line 204
+                // line 194
                 echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "path", array()), "html", null, true);
                 echo "\">
 
@@ -276,7 +266,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 208
+            // line 198
             echo "
 \t\t\t\t</ul>
 
@@ -304,7 +294,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
 \t\t\t\t\t<p class=\"mui-text-left\">
                         ";
-            // line 234
+            // line 224
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["dubai"]) ? $context["dubai"] : null), "mono", array()), "html", null, true);
             echo "
 \t\t\t\t\t</p>
@@ -314,143 +304,143 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
 
                     ";
-            // line 241
+            // line 231
             if ($this->getAttribute($context["vv"], "age", array())) {
-                // line 242
+                // line 232
                 echo "                    <p><font class=\"mui-pull-left\">年龄</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "age", array()), "html", null, true);
                 echo "</p>
                     ";
             } else {
-                // line 244
+                // line 234
                 echo "                    <p><font class=\"mui-pull-left\">年龄</font>未填写</p>
                     ";
             }
-            // line 246
+            // line 236
             echo "                    ";
             if ($this->getAttribute($context["vv"], "sex", array())) {
-                // line 247
+                // line 237
                 echo "                    <p><font class=\"mui-pull-left\">性别</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "sex", array()), "html", null, true);
                 echo "</p>
                     ";
             } else {
-                // line 249
+                // line 239
                 echo "                    <p><font class=\"mui-pull-left\">性别</font>未填写</p>
                     ";
             }
-            // line 251
+            // line 241
             echo "\t\t\t\t\t";
             if ($this->getAttribute($context["vv"], "region", array())) {
-                // line 252
+                // line 242
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">地区</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "region", array()), "html", null, true);
                 echo "</p>
 \t\t\t\t\t";
             } else {
-                // line 254
+                // line 244
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">地区</font>未填写</p>
 \t\t\t\t\t";
             }
-            // line 256
+            // line 246
             echo "\t\t\t\t\t";
             if ($this->getAttribute($context["vv"], "pay", array())) {
-                // line 257
+                // line 247
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">月薪</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "pay", array()), "html", null, true);
                 echo "</p>
 \t\t\t\t\t";
             } else {
-                // line 259
+                // line 249
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">月薪</font>未填写</p>
 \t\t\t\t\t";
             }
-            // line 261
+            // line 251
             echo "\t\t\t\t\t";
             if ($this->getAttribute($context["vv"], "constellation", array())) {
-                // line 262
+                // line 252
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">星座</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "constellation", array()), "html", null, true);
                 echo "</p>
 \t\t\t\t\t";
             } else {
-                // line 264
+                // line 254
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">星座</font>未填写</p>
 \t\t\t\t\t";
             }
-            // line 266
+            // line 256
             echo "\t\t\t\t\t";
             if ($this->getAttribute($context["vv"], "native", array())) {
-                // line 267
+                // line 257
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">籍贯</font>
 
 \t\t\t\t\t\t";
-                // line 269
+                // line 259
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "native", array()), "html", null, true);
                 echo "
 
 \t\t\t\t\t</p>
 \t\t\t\t\t";
             } else {
-                // line 273
+                // line 263
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">籍贯</font>
 
 \t\t\t\t\t\t未填写</p>
 \t\t\t\t\t";
             }
-            // line 277
+            // line 267
             echo "\t\t\t\t\t";
             if ($this->getAttribute($context["vv"], "record", array())) {
-                // line 278
+                // line 268
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">学历</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "record", array()), "html", null, true);
                 echo "</p>
 \t\t\t\t\t";
             } else {
-                // line 280
+                // line 270
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">学历</font>未填写</p>
 \t\t\t\t\t";
             }
-            // line 282
+            // line 272
             echo "\t\t\t\t\t";
             if ($this->getAttribute($context["vv"], "marital", array())) {
-                // line 283
+                // line 273
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">婚姻状况</font>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["vv"], "marital", array()), "html", null, true);
                 echo "</p>
 \t\t\t\t\t";
             } else {
-                // line 285
+                // line 275
                 echo "\t\t\t\t\t<p><font class=\"mui-pull-left\">婚姻状况</font>未填写</p>
 
 \t\t\t\t\t";
             }
-            // line 288
+            // line 278
             echo "                   ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vv'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 289
+        // line 279
         echo "
 
 
 
 \t\t\t\t\t";
-        // line 293
+        // line 283
         if ((isset($context["re"]) ? $context["re"] : null)) {
-            // line 294
+            // line 284
             echo "                    ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["re"]) ? $context["re"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
-                // line 295
+                // line 285
                 echo "\t\t\t\t\t<h4>详细资料<span class=\"dot dot-light-purple\"></span></h4>
 
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">生肖</font>";
-                // line 299
+                // line 289
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "nature", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -458,7 +448,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">血型</font>";
-                // line 304
+                // line 294
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "bloodtype", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -466,7 +456,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">民族</font>";
-                // line 309
+                // line 299
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "nation", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -474,7 +464,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">有无子女</font>";
-                // line 314
+                // line 304
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "children", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -482,7 +472,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">购车情况</font>";
-                // line 319
+                // line 309
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "vehicle", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -490,7 +480,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">住房情况</font>";
-                // line 324
+                // line 314
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "house", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -499,10 +489,10 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['v'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 327
+            // line 317
             echo "\t\t\t\t\t";
         } else {
-            // line 328
+            // line 318
             echo "
 \t\t\t\t\t <h4>详细资料<span class=\"dot dot-light-purple\"></span></h4>
 
@@ -538,19 +528,19 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
                     ";
         }
-        // line 362
+        // line 352
         echo "
 
 
                     ";
-        // line 365
+        // line 355
         if ((isset($context["sheng"]) ? $context["sheng"] : null)) {
-            // line 366
+            // line 356
             echo "                    ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["sheng"]) ? $context["sheng"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
-                // line 367
+                // line 357
                 echo "                      <h4>生活描述<span class=\"dot dot-light-purple\"></span></h4>
 
 
@@ -560,7 +550,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">是否吸烟</font>";
-                // line 375
+                // line 365
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "smoke", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -568,7 +558,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">是否喝酒</font>";
-                // line 380
+                // line 370
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "drink", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -576,7 +566,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">是否锻炼</font>";
-                // line 385
+                // line 375
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "fitness", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -584,7 +574,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">作息习惯</font>";
-                // line 390
+                // line 380
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "rest", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -592,7 +582,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">喜欢制造浪漫</font>";
-                // line 395
+                // line 385
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "askchild", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -600,7 +590,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<p>
 
 \t\t\t\t\t\t<font class=\"mui-pull-left\">生活技能</font>";
-                // line 400
+                // line 390
                 echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "lifeskill", array()), "html", null, true);
                 echo "
 \t\t\t\t\t</p>
@@ -610,10 +600,10 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['v'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 404
+            // line 394
             echo "\t\t\t\t\t";
         } else {
-            // line 405
+            // line 395
             echo "\t\t\t\t\t<h4>生活描述<span class=\"dot dot-light-purple\"></span></h4>
 
 
@@ -655,7 +645,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
                     ";
         }
-        // line 445
+        // line 435
         echo "
 \t\t\t\t</div>
 
@@ -779,7 +769,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 //\t\t\t\t\t\t\t\t   alert(msg)
 \t\t\t\t\t\t\t      if(json.a==1){
 \t\t\t\t\t\t\t\t\t  var html='<button name=\"a\" id=\"";
-        // line 567
+        // line 557
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["vv"]) ? $context["vv"] : null), "u_id", array()), "html", null, true);
         echo "\"  onclick=\"check_a()\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"\" dialog=\"加关注成功\"><span class=\"ico ico-focus\"></span>加关注</button>';
 \t\t\t\t\t\t\t\t\t  \$('#u').html(html);
@@ -789,7 +779,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t\t\t\t   }else if(json.a==2){
 
 \t\t\t\t\t\t\t\t\t   var html = '<button name=\"b\" id=\"";
-        // line 574
+        // line 564
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["vv"]) ? $context["vv"] : null), "u_id", array()), "html", null, true);
         echo "\" onclick=\"check_a()\" class=\"mui-btn mui-btn-warning mui-btn-outlined do-ajax\" type=\"button\" ajax-url=\"?r=home/qu\" dialog=\"加关注成功\"><span class=\"ico ico-focus-on\"></span>已关注</button>';
 
@@ -832,7 +822,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
     public function getDebugInfo()
     {
-        return array (  793 => 574,  783 => 567,  659 => 445,  617 => 405,  614 => 404,  604 => 400,  596 => 395,  588 => 390,  580 => 385,  572 => 380,  564 => 375,  554 => 367,  549 => 366,  547 => 365,  542 => 362,  506 => 328,  503 => 327,  494 => 324,  486 => 319,  478 => 314,  470 => 309,  462 => 304,  454 => 299,  448 => 295,  443 => 294,  441 => 293,  435 => 289,  429 => 288,  424 => 285,  418 => 283,  415 => 282,  411 => 280,  405 => 278,  402 => 277,  396 => 273,  389 => 269,  385 => 267,  382 => 266,  378 => 264,  372 => 262,  369 => 261,  365 => 259,  359 => 257,  356 => 256,  352 => 254,  346 => 252,  343 => 251,  339 => 249,  333 => 247,  330 => 246,  326 => 244,  320 => 242,  318 => 241,  308 => 234,  280 => 208,  270 => 204,  266 => 202,  262 => 201,  247 => 189,  228 => 173,  216 => 164,  201 => 152,  185 => 138,  179 => 135,  176 => 134,  170 => 131,  167 => 130,  165 => 129,  157 => 126,  138 => 110,  130 => 105,  122 => 99,  118 => 98,  19 => 1,);
+        return array (  783 => 564,  773 => 557,  649 => 435,  607 => 395,  604 => 394,  594 => 390,  586 => 385,  578 => 380,  570 => 375,  562 => 370,  554 => 365,  544 => 357,  539 => 356,  537 => 355,  532 => 352,  496 => 318,  493 => 317,  484 => 314,  476 => 309,  468 => 304,  460 => 299,  452 => 294,  444 => 289,  438 => 285,  433 => 284,  431 => 283,  425 => 279,  419 => 278,  414 => 275,  408 => 273,  405 => 272,  401 => 270,  395 => 268,  392 => 267,  386 => 263,  379 => 259,  375 => 257,  372 => 256,  368 => 254,  362 => 252,  359 => 251,  355 => 249,  349 => 247,  346 => 246,  342 => 244,  336 => 242,  333 => 241,  329 => 239,  323 => 237,  320 => 236,  316 => 234,  310 => 232,  308 => 231,  298 => 224,  270 => 198,  260 => 194,  256 => 192,  252 => 191,  237 => 179,  218 => 163,  206 => 154,  191 => 142,  175 => 128,  169 => 125,  166 => 124,  160 => 121,  157 => 120,  155 => 119,  147 => 116,  139 => 111,  131 => 106,  123 => 100,  119 => 99,  19 => 1,);
     }
 
     public function getSource()
@@ -847,6 +837,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
         <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
 \t\t<!--标准mui.css-->
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"web/css/lv.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
         <script src=\"web/js/min.js\"  ></script>
@@ -949,17 +940,6 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t\t<b>{{vv.name}}</b>
 
 
-\t\t\t\t\t\t<span class=\"ico ico-ident\"></span>
-
-
-
-
-\t\t\t\t\t\t<span class=\"ico ico-msg\"></span>
-
-
-
-
-\t\t\t\t\t\t<span class=\"ico ico-mobile-active\"></span>
 
 
 \t\t\t\t\t\t<br />{{vv.age}} &nbsp;{{vv.native}}

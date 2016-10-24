@@ -19,10 +19,12 @@ class imooc
         $ctrlfile=APP.'/ctrl/'.$ctrlClass.'Ctrl.php';
         //p($ctrlfile);exit;
         $ctrlClass='\\'.MODULE.'\ctrl\\'.$ctrlClass.'Ctrl';
-//        p($action);exit();
+       //p($ctrlfile);exit();
         if(is_file($ctrlfile)){
             include $ctrlfile;;
             $ctrl=new $ctrlClass;
+            //p($ctrl);
+            //echo $action[0];exit;
             $ctrl->$action[0]();
         }else{
             throw new \Exception('找不到控制器'.$ctrlClass);

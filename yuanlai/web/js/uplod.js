@@ -52,12 +52,13 @@ function checkImgType(obj) {
             return false;
         } else {
             //alert(obj.width(width));
-            /*img = new Image();
+           /* img = new Image();
             img.src =obj.value;
-            img.onload = function ()
+           *//* img.onload = function ()
             {
+
                 document.write(img.width);
-            }
+            }*//*
 
             alert('width:'+img.width+',height'+img.height);
             return false;*/

@@ -1,6 +1,10 @@
 $(document).ready(function() {
     init()
+<<<<<<< HEAD
+    var url = 'http://www.lixiansen.site/yuanlai/yuanlai/?r=home/aa';
+=======
     var url = 'http://m.7799520.com/top/getUserCharmTop';
+>>>>>>> 8fc9bfec602efd3054da933eb24a2d85b0911bc1
     mui.ajax(url, {
         dataType: 'json',
         async: false,
@@ -21,9 +25,15 @@ $(document).ready(function() {
         }
     });
     function init() {
+<<<<<<< HEAD
+        var cheight = window.screen.availHeight; //取屏幕高度
+        var cwidth = window.screen.availWidth; //取屏幕宽度
+        //bg图750*2080,bg2 710*1270 fontpg 673*374
+=======
         var cheight = window.screen.availHeight; //鍙栧睆骞曢珮搴�
         var cwidth = window.screen.availWidth; //鍙栧睆骞曞搴�
         //bg鍥�750*2080,bg2 710*1270 fontpg 673*374
+>>>>>>> 8fc9bfec602efd3054da933eb24a2d85b0911bc1
         var bgheight = cwidth / 750 * 2100;
         var bg2width = cwidth / 750 * 710;
         var bg2height = bg2width / 710 * 1270;
@@ -44,7 +54,11 @@ $(document).ready(function() {
             top: bg3top,
             left: (cwidth - bg3width) / 2
         });
+<<<<<<< HEAD
+        //调整位置
+=======
         //璋冩暣浣嶇疆
+>>>>>>> 8fc9bfec602efd3054da933eb24a2d85b0911bc1
         var lis = $('.mlph-tbbg').find('li');
         lis.eq(1).css({
             position: 'absolute',
@@ -82,7 +96,11 @@ $(document).ready(function() {
             height: '20%',
             left: '48%',
             top: '52%',
+<<<<<<< HEAD
+            'background': 'url(/img/mlph-ico2.png) no-repeat',
+=======
             'background': 'url(http://m.7799520.com//img/mlph-ico2.png) no-repeat',
+>>>>>>> 8fc9bfec602efd3054da933eb24a2d85b0911bc1
             zIndex: 3,
             'webkitBackground-size': "100%,auto"
         });
@@ -137,7 +155,11 @@ $(document).ready(function() {
             height: '25%',
             top: '70%',
             left: '50%',
+<<<<<<< HEAD
+            'background': 'url(/img/mlph-ico1.png) no-repeat',
+=======
             'background': 'url(http://m.7799520.com//img/mlph-ico1.png) no-repeat',
+>>>>>>> 8fc9bfec602efd3054da933eb24a2d85b0911bc1
             zIndex: 3,
             'webkitBackground-size': "100%,auto"
         });
@@ -165,7 +187,11 @@ $(document).ready(function() {
             height: '20%',
             left: '48%',
             top: '52%',
+<<<<<<< HEAD
+            'background': 'url(/img/mlph-ico3.png)  no-repeat',
+=======
             'background': 'url(http://m.7799520.com//img/mlph-ico3.png)  no-repeat',
+>>>>>>> 8fc9bfec602efd3054da933eb24a2d85b0911bc1
             zIndex: 3,
             'webkitBackground-size': "100%,auto"
         });
@@ -174,4 +200,8 @@ $(document).ready(function() {
         });
     }
 
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> 8fc9bfec602efd3054da933eb24a2d85b0911bc1

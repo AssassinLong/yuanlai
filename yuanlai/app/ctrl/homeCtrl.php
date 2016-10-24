@@ -40,6 +40,19 @@ class homeCtrl extends \core\imooc
       $this->assign('url',$url);
       $this->display('index.html');
     }
+    //删除相册
+    public function albumdel()
+    {
+        $id=get('id');
+        $model=new pictureModel();
+        $str=$model->delOne($id);
+        if($str!=0){
+            echo '1';
+        }else{
+            echo '0';
+        }
+    }
+
     //相册
     public function album()
     {
@@ -49,7 +62,7 @@ class homeCtrl extends \core\imooc
             $pict=new pictureModel();
             $data=$pict->allAlbum($uid);
             if(count($data)!=0){
-                $data[0]['username']='浏览';
+                $data[0]['username']='正在浏览';
             }
             //p($data);
             if(empty($data)){
@@ -61,8 +74,9 @@ class homeCtrl extends \core\imooc
                 //p($kong);
                 $this->assign('kong',$kong);
             }
+            //p($data);
             $this->assign('data',$data);
-            $this->display('album.html');
+            $this->display('album_uid.html');
         }else{
             $id=$_SESSION['id'];
             $pict=new pictureModel();
@@ -156,7 +170,7 @@ class homeCtrl extends \core\imooc
             //p($aaa);
             $this->assign('uid',$id);
             $this->display('fossa_ta.html');
-            }  else{
+            } else{
 
                  $id=$_SESSION['id'];
                 $model = new xiangModel();
@@ -176,7 +190,7 @@ class homeCtrl extends \core\imooc
                 if ($arras) {
                     $this->assign('arras', $arras);
                 }
-//                print_r($arras);die;
+               //p($arras);die;
                 $mono = new monoModel();
                 $dubai = $mono->getOne(['u_id' => $id]);
                 $this->assign('dubai', $dubai);
@@ -257,7 +271,9 @@ class homeCtrl extends \core\imooc
                 // echo 1;die;
                 $aaa=$model->up($id);
                 $aaa1=$model->ad($id);
+
                 $aaa2=$model->sta($id);
+
             }else{
                // echo 2;die;
                 $aaa=$model->up1($id);
@@ -280,7 +296,7 @@ class homeCtrl extends \core\imooc
         $arr=$base->user_phone($u_id);
         //dump($arr);die;
         $this->assign('ars',$arr);
-        //var_dump($arr);
+        //var_dump($arr);die;
         $this->display('suggest.html');
     }
 
@@ -316,7 +332,7 @@ class homeCtrl extends \core\imooc
                 echo 0;
             }
         }else{
-        $arr=$base->guan($id,$u_id);
+            $arr=$base->guan($id,$u_id);
             $ar=$base->guan_sel($u_id);
             $ar1=count($ar);
 
@@ -328,8 +344,6 @@ class homeCtrl extends \core\imooc
                 echo 0;
             }
         }
-
-
     }
 
 
@@ -358,6 +372,7 @@ class homeCtrl extends \core\imooc
     public function paihangbang()
     {
         $model=new basicdataModel();
+
         $arr=$model->sel();
         $s=$arr[0];
         $s1=$arr[1];

@@ -254,7 +254,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t联系人热线：13012151643
 \t</p>
 \t<p>
-\t\t<a href=\"http://m.7799520.com/about\" class=\"link\">关于我们</a>|<a href=\"http://m.7799520.com/invite\" class=\"link\">人才招聘</a>|<a href=\"http://kefu5.kuaishang.cn/bs/im/67780/59167/602875.htm\" class=\"link\">帮助中心</a>|<a href=\"\">客户端</a>
+\t\t<a href=\"#\" class=\"link\">关于我们</a>|<a href=\"#\" class=\"link\">人才招聘</a>|<a href=\"#\" class=\"link\">帮助中心</a>|<a href=\"\">客户端</a>
 \t</p>
 \t<p>
 \t\t缘来社交 版权所有
@@ -512,7 +512,7 @@ class __TwigTemplate_185e0e83a9006c8f42b21f5e2f5cf56f71acb009f7418e6e66256b510fd
 \t\t联系人热线：13012151643
 \t</p>
 \t<p>
-\t\t<a href=\"http://m.7799520.com/about\" class=\"link\">关于我们</a>|<a href=\"http://m.7799520.com/invite\" class=\"link\">人才招聘</a>|<a href=\"http://kefu5.kuaishang.cn/bs/im/67780/59167/602875.htm\" class=\"link\">帮助中心</a>|<a href=\"\">客户端</a>
+\t\t<a href=\"#\" class=\"link\">关于我们</a>|<a href=\"#\" class=\"link\">人才招聘</a>|<a href=\"#\" class=\"link\">帮助中心</a>|<a href=\"\">客户端</a>
 \t</p>
 \t<p>
 \t\t缘来社交 版权所有

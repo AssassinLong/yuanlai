@@ -112,7 +112,9 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
         $context['_seq'] = twig_ensure_traversable((isset($context["data"]) ? $context["data"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
             // line 87
-            echo "            <div class=\"item\">
+            echo "            <div class=\"item ";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "id", array()), "html", null, true);
+            echo "\">
                 <div class=\"animate-box\">
                     <a href=\"";
             // line 89
@@ -120,9 +122,14 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
             echo "\" class=\"image-popup fh5co-board-img\" title=\"帅不帅\"><img src=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "path", array()), "html", null, true);
             echo "\" alt=\"Free HTML5 Bootstrap template\"></a>
+                    <br/><span>删除</span>
+                    <input type=\"hidden\" value=\"";
+            // line 91
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "id", array()), "html", null, true);
+            echo "\">
                 </div>
                 <div class=\"fh5co-desc\">上传日期:";
-            // line 91
+            // line 93
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "date", array()), "html", null, true);
             echo "</div>
             </div>
@@ -131,7 +138,7 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 94
+        // line 96
         echo "        </div>
         </div>
        </div>
@@ -163,7 +170,25 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 \t<script src=\"./web/js/salvattore.min.js\"></script>
 \t<!-- Main JS -->
 \t<script src=\"./web/js/main.js\"></script>
-
+<script>
+    \$(\"body\").on(\"click\", \"span\", function() {
+        var r=confirm('是否删除');
+        var id=\$(this).next(\"input[type='hidden']\").val();
+        if (r==true) {
+            \$.get('?r=home/albumdel',{id:id},function(str){
+                        //alert(str);
+                        if(str == 1 ){
+                            \$('.item '+id).remove();
+                        }else{
+                            alert('删除失败');
+                        }
+                    }
+            )
+        } else {
+            alert(\"确定取消删除\");
+        }
+    });
+</script>
 
 
 
@@ -184,7 +209,7 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 
     public function getDebugInfo()
     {
-        return array (  135 => 94,  126 => 91,  119 => 89,  115 => 87,  111 => 86,  90 => 70,  19 => 1,);
+        return array (  142 => 96,  133 => 93,  128 => 91,  121 => 89,  115 => 87,  111 => 86,  90 => 70,  19 => 1,);
     }
 
     public function getSource()
@@ -275,9 +300,11 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 
         <div id=\"fh5co-board\" data-columns>
             {% for val in data %}
-            <div class=\"item\">
+            <div class=\"item {{ val.id }}\">
                 <div class=\"animate-box\">
                     <a href=\"{{ val.path }}\" class=\"image-popup fh5co-board-img\" title=\"帅不帅\"><img src=\"{{val.path }}\" alt=\"Free HTML5 Bootstrap template\"></a>
+                    <br/><span>删除</span>
+                    <input type=\"hidden\" value=\"{{ val.id }}\">
                 </div>
                 <div class=\"fh5co-desc\">上传日期:{{ val.date }}</div>
             </div>
@@ -313,7 +340,25 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 \t<script src=\"./web/js/salvattore.min.js\"></script>
 \t<!-- Main JS -->
 \t<script src=\"./web/js/main.js\"></script>
-
+<script>
+    \$(\"body\").on(\"click\", \"span\", function() {
+        var r=confirm('是否删除');
+        var id=\$(this).next(\"input[type='hidden']\").val();
+        if (r==true) {
+            \$.get('?r=home/albumdel',{id:id},function(str){
+                        //alert(str);
+                        if(str == 1 ){
+                            \$('.item '+id).remove();
+                        }else{
+                            alert('删除失败');
+                        }
+                    }
+            )
+        } else {
+            alert(\"确定取消删除\");
+        }
+    });
+</script>
 
 
 
