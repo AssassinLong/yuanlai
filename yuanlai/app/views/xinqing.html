@@ -10,9 +10,9 @@
         <link rel="stylesheet" type="text/css" href="web/js/css.css">
         <!--引用Jquery-->
         <script src="web/js/jquery.js"></script>
-        <script src="web/js/min.js" /></script>
-	    <script src="web/js/core.js" /></script>
-       
+        <script src="web/js/min.js"  ></script>
+	    <script src="web/js/core.js" ></script>
+
         <script>
             $(window).ready(function () {
                 (function ($) {
@@ -54,7 +54,7 @@
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">心情微博</h1>
-			<a href="javascript:;" class="mui-btn-link mui-btn-nav mui-pull-right do-weibo-add">发布</a>
+			<a href="?r=home/fossa" class="mui-btn-link mui-btn-nav mui-pull-right ">发布</a>
 		</header>
 		<!-- 导航栏结束 -->
 
@@ -67,8 +67,8 @@
 			<div class="weibo-list" id="userid" userid="0" >
 				<div class="tabs">
 					<div class="mui-segmented-control normal">
-												
-												
+
+
 					</div>
 				</div>
 
@@ -76,12 +76,12 @@
 			</div>
 			<div class="make-upload" object="weibo" param="weibo"></div>
 			<div id="userid" class="weibo-list" userid="0">
-			
+
 			<div class="tabs">
 			<ul class="mui-table-view">
 			{% for v in arr %}
 			<li class="mui-table-view-cell mui-media">
-			<div class="mui-pull-left mui-media-object clip-bg" style="background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201610/06/374151/avatar_big.jpg);">
+			<div class="mui-pull-left mui-media-object clip-bg" style="background: url(./web/upimg/147703271252.png);">
 			<a class="link" href=""></a>
 			</div>
 			<div class="mui-media-body">
@@ -89,7 +89,7 @@
 			<b>
 			<font>{{v.name}}</font>
 			</b>
-			<span>{{ v.datatime }} . 浙江 杭州</span>
+			<span>{{ v.datatime }}</span>
 			</a>
 			</div>
 			<div>
@@ -110,7 +110,7 @@
 			</li>
 			</ul>
 			</div>
-            
-			
+
+			</body>
 
 </html>

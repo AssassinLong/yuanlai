@@ -22,7 +22,15 @@ class basicdataModel extends model
         $arr = $this->query("select * from user INNER JOIN basicdata ON user.id=basicdata.u_id where user.id=$id")->fetchAll();
         return $arr;
     }
-
+    public function setimg($id,$data)
+    {
+        $ret=$this->update($this->table,[
+        "head_img"=>$data
+    ],array(
+        'u_id'=>$id
+    ));
+        return $ret;
+    }
     public function setOne($id,$data){
         $ret=$this->update($this->table,[
             "region"=>$data['region']
@@ -117,7 +125,7 @@ class basicdataModel extends model
     }
     public function sells($usercp){
 
-        $arr = $this->query("select * from user INNER JOIN basicdata ON user.id=basicdata.u_id where user.usercp<".$usercp."  order by user.usercp desc limit 6")->fetchAll();
+        $arr = $this->query("select * from user INNER JOIN basicdata ON user.id=basicdata.u_id where user.usercp<= ".$usercp."  order by user.usercp desc limit 7")->fetchAll();
 //       print_r($usercp);die;
         return $arr;
     }

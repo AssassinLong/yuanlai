@@ -662,11 +662,11 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 \t\t\t\t\t}
 \t\t\t\t\t//上传头像
 
-\t\t\t\t\t/*\$('.file-avatar').on('tap', '.do-avatar-upload', function(event) {
+\t\t\t\t\t\$('.file-avatar').on('tap', '.do-avatar-upload', function(event) {
 
-\t\t\t\t\t\t\$('.make-upload').eq(0).find('input').click();
+\t\t\t\t\t\t\$('.make-upload').eq(1).find('input').click();
 
-\t\t\t\t\t});*/
+\t\t\t\t\t});
 
 \t\t\t\t\t//上传背景
 
@@ -1261,11 +1261,11 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 \t\t\t\t\t}
 \t\t\t\t\t//上传头像
 
-\t\t\t\t\t/*\$('.file-avatar').on('tap', '.do-avatar-upload', function(event) {
+\t\t\t\t\t\$('.file-avatar').on('tap', '.do-avatar-upload', function(event) {
 
-\t\t\t\t\t\t\$('.make-upload').eq(0).find('input').click();
+\t\t\t\t\t\t\$('.make-upload').eq(1).find('input').click();
 
-\t\t\t\t\t});*/
+\t\t\t\t\t});
 
 \t\t\t\t\t//上传背景
 

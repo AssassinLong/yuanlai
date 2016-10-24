@@ -25,6 +25,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
     <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
     <!--标准mui.css-->
     <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"web/css/lv.css\">
     <!--引用Jquery-->
     <script src=\"web/js/jquery.js\"></script>
     <script src=\"web/js/min.js\" ></script>
@@ -112,52 +113,100 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
     <div class=\"recommend-list\">
         <ul class=\"mui-table-view\">
             ";
-        // line 96
+        // line 97
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["ars"]) ? $context["ars"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["vs"]) {
-            // line 97
-            echo "            <li class=\"mui-table-view-cell mui-media\">
-                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
+            // line 98
+            echo "          
+            <li class=\"mui-table-view-cell mui-media\">
+                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(";
+            // line 100
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "head_img", array()), "html", null, true);
+            echo ");\">                   
                     <a href=\"\" class=\"link\"></a>
-                </div><div class=\"mui-media-body\">
-                <a href=\"?r=home/fossa/tid/";
-            // line 101
+                </div><a href=\"?r=home/fossa/tid/";
+            // line 102
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\" class=\"link\">
+
                     <b>";
-            // line 102
+            // line 104
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "name", array()), "html", null, true);
             echo "</b><span>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "age", array()), "html", null, true);
-            echo "岁，";
+            echo "岁<br/>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "region", array()), "html", null, true);
-            echo "，152cm</span>
+            echo "</span>
+
                     <p class=\"mui-ellipsis\">内心独白：";
-            // line 103
+            // line 106
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "mono", array()), "html", null, true);
-            echo "</p></a></div><div>
-                <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"";
-            // line 104
-            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
-            echo "\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
+            echo "</p></a>
+                ";
+            // line 107
+            if (($this->getAttribute($context["vs"], "usercp", array()) < 200)) {
+                // line 108
+                echo "                <div class=\"userlike_badge badge_lv2_1\"><div class=\"userlike_member_title\" id=\"liked_member_title\">默默无闻</div><div class=\"userlike_member_lv\">1</div>
+                ";
+            } elseif ((($this->getAttribute(            // line 109
+$context["vs"], "usercp", array()) > 200) && ($this->getAttribute($context["vs"], "usercp", array()) < 500))) {
+                // line 110
+                echo "                <div class=\"userlike_badge badge_lv2_1\"><div class=\"userlike_member_title\" id=\"liked_member_title\">亲和友善</div><div class=\"userlike_member_lv\">2</div>
+                ";
+            } elseif ((($this->getAttribute(            // line 111
+$context["vs"], "usercp", array()) > 500) && ($this->getAttribute($context["vs"], "usercp", array()) < 800))) {
+                // line 112
+                echo "                <div class=\"userlike_badge badge_lv2_1\"><div class=\"userlike_member_title\" id=\"liked_member_title\">热情好客</div><div class=\"userlike_member_lv\">3</div>
+          
+                ";
+            } elseif ((($this->getAttribute(            // line 114
+$context["vs"], "usercp", array()) > 800) && ($this->getAttribute($context["vs"], "usercp", array()) < 1100))) {
+                // line 115
+                echo "                <div class=\"userlike_badge badge_lv3\"><div class=\"userlike_member_title\" id=\"liked_member_title\">花香满屋</div><div class=\"userlike_member_lv\">4</div>
+                ";
+            } elseif ((($this->getAttribute(            // line 116
+$context["vs"], "usercp", array()) > 1100) && ($this->getAttribute($context["vs"], "usercp", array()) < 1400))) {
+                // line 117
+                echo "                <div class=\"userlike_badge badge_lv3\"><div class=\"userlike_member_title\" id=\"liked_member_title\">魅力四射</div><div class=\"userlike_member_lv\">5</div>
+                ";
+            } elseif ((($this->getAttribute(            // line 118
+$context["vs"], "usercp", array()) > 1400) && ($this->getAttribute($context["vs"], "usercp", array()) < 1700))) {
+                // line 119
+                echo "                <div class=\"userlike_badge badge_lv3\"><div class=\"userlike_member_title\" id=\"liked_member_title\">众星捧月</div><div class=\"userlike_member_lv\">6</div>
+                ";
+            } elseif (($this->getAttribute(            // line 120
+$context["vs"], "usercp", array()) > 1700)) {
+                // line 121
+                echo "                <div class=\"userlike_badge badge_lv4\"><div class=\"userlike_member_title\" id=\"liked_member_title\">万人迷</div><div class=\"userlike_member_lv\">7</div>
+                ";
+            }
+            // line 123
+            echo "                <div class=\"mui-media-body\">
+
+                </div><div>
+                
+
                 <a href=\"?r=home/advices\" objid=\"";
-            // line 105
+            // line 128
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
             echo "\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
+               
             </div>
+                
                 </li>
+                 
                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vs'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 109
-        echo "        </ul>
+        // line 135
+        echo "
+        </ul>
     </div>
 
-
-
+ 
     <!-- 会员推荐开始 -->
     <div class=\"recommend-list\">
         <ul class=\"mui-table-view\"></ul>
@@ -285,7 +334,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
 
     public function getDebugInfo()
     {
-        return array (  156 => 109,  146 => 105,  142 => 104,  138 => 103,  130 => 102,  126 => 101,  120 => 97,  116 => 96,  19 => 1,);
+        return array (  205 => 135,  192 => 128,  185 => 123,  181 => 121,  179 => 120,  176 => 119,  174 => 118,  171 => 117,  169 => 116,  166 => 115,  164 => 114,  160 => 112,  158 => 111,  155 => 110,  153 => 109,  150 => 108,  148 => 107,  144 => 106,  135 => 104,  130 => 102,  125 => 100,  121 => 98,  117 => 97,  19 => 1,);
     }
 
     public function getSource()
@@ -299,6 +348,7 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
     <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">
     <!--标准mui.css-->
     <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"web/css/lv.css\">
     <!--引用Jquery-->
     <script src=\"web/js/jquery.js\"></script>
     <script src=\"web/js/min.js\" ></script>
@@ -386,23 +436,48 @@ class __TwigTemplate_cd34925285efe292ae4b80a0f30371c66b665b13a29027ef59470ac7c8c
     <div class=\"recommend-list\">
         <ul class=\"mui-table-view\">
             {% for vs in ars %}
+          
             <li class=\"mui-table-view-cell mui-media\">
-                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201512/14/231449/avatar_big.jpg.thumb.jpg);\">
+                <div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url({{ vs.head_img }});\">                   
                     <a href=\"\" class=\"link\"></a>
-                </div><div class=\"mui-media-body\">
-                <a href=\"?r=home/fossa/tid/{{vs.u_id}}\" class=\"link\">
-                    <b>{{ vs.name }}</b><span>{{ vs.age }}岁，{{ vs.region }}，152cm</span>
-                    <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
-                <a href=\"javascript:;\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>打招呼</a>
+                </div><a href=\"?r=home/fossa/tid/{{vs.u_id}}\" class=\"link\">
+
+                    <b>{{ vs.name }}</b><span>{{ vs.age }}岁<br/>{{ vs.region }}</span>
+
+                    <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a>
+                {% if vs.usercp < 200 %}
+                <div class=\"userlike_badge badge_lv2_1\"><div class=\"userlike_member_title\" id=\"liked_member_title\">默默无闻</div><div class=\"userlike_member_lv\">1</div>
+                {% elseif vs.usercp > 200 and vs.usercp < 500 %}
+                <div class=\"userlike_badge badge_lv2_1\"><div class=\"userlike_member_title\" id=\"liked_member_title\">亲和友善</div><div class=\"userlike_member_lv\">2</div>
+                {% elseif vs.usercp > 500 and vs.usercp < 800 %}
+                <div class=\"userlike_badge badge_lv2_1\"><div class=\"userlike_member_title\" id=\"liked_member_title\">热情好客</div><div class=\"userlike_member_lv\">3</div>
+          
+                {% elseif vs.usercp > 800 and vs.usercp < 1100 %}
+                <div class=\"userlike_badge badge_lv3\"><div class=\"userlike_member_title\" id=\"liked_member_title\">花香满屋</div><div class=\"userlike_member_lv\">4</div>
+                {% elseif vs.usercp > 1100 and vs.usercp < 1400 %}
+                <div class=\"userlike_badge badge_lv3\"><div class=\"userlike_member_title\" id=\"liked_member_title\">魅力四射</div><div class=\"userlike_member_lv\">5</div>
+                {% elseif vs.usercp > 1400 and vs.usercp < 1700 %}
+                <div class=\"userlike_badge badge_lv3\"><div class=\"userlike_member_title\" id=\"liked_member_title\">众星捧月</div><div class=\"userlike_member_lv\">6</div>
+                {% elseif vs.usercp > 1700 %}
+                <div class=\"userlike_badge badge_lv4\"><div class=\"userlike_member_title\" id=\"liked_member_title\">万人迷</div><div class=\"userlike_member_lv\">7</div>
+                {% endif %}
+                <div class=\"mui-media-body\">
+
+                </div><div>
+                
+
                 <a href=\"?r=home/advices\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
+               
             </div>
+                
                 </li>
+                 
                 {% endfor %}
+
         </ul>
     </div>
 
-
-
+ 
     <!-- 会员推荐开始 -->
     <div class=\"recommend-list\">
         <ul class=\"mui-table-view\"></ul>

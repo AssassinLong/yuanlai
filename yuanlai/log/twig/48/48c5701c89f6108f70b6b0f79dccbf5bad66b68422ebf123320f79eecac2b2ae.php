@@ -28,14 +28,9 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-<<<<<<< HEAD
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
-       
-\t\t\t
-=======
-        <script src=\"web/js/min.js\" ></script>
+        <script src=\"web/js/min.js\"  ></script>
 \t    <script src=\"web/js/core.js\" ></script>
+
         <script>
             \$(window).ready(function () {
                 (function (\$) {
@@ -69,8 +64,6 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
                 }
             })
         </script>
->>>>>>> b74d7ed842b86974f23b3d784436f5ad5308c438
-
 <title></title>
 </head>
 
@@ -79,7 +72,7 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t<header class=\"mui-bar mui-bar-nav\">
 \t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
 \t\t\t<h1 class=\"mui-title\">心情微博</h1>
-\t\t\t<a href=\"javascript:;\" class=\"mui-btn-link mui-btn-nav mui-pull-right do-weibo-add\">发布</a>
+\t\t\t<a href=\"?r=home/fossa\" class=\"mui-btn-link mui-btn-nav mui-pull-right \">发布</a>
 \t\t</header>
 \t\t<!-- 导航栏结束 -->
 
@@ -92,8 +85,8 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t<div class=\"weibo-list\" id=\"userid\" userid=\"0\" >
 \t\t\t\t<div class=\"tabs\">
 \t\t\t\t\t<div class=\"mui-segmented-control normal\">
-\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t
+
+
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 
@@ -101,37 +94,37 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t</div>
 \t\t\t<div class=\"make-upload\" object=\"weibo\" param=\"weibo\"></div>
 \t\t\t<div id=\"userid\" class=\"weibo-list\" userid=\"0\">
-\t\t\t
+
 \t\t\t<div class=\"tabs\">
 \t\t\t<ul class=\"mui-table-view\">
 \t\t\t";
-        // line 89
+        // line 82
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["arr"]) ? $context["arr"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["v"]) {
-            // line 90
+            // line 83
             echo "\t\t\t<li class=\"mui-table-view-cell mui-media\">
-\t\t\t<div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201610/06/374151/avatar_big.jpg);\">
+\t\t\t<div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(./web/upimg/147703271252.png);\">
 \t\t\t<a class=\"link\" href=\"\"></a>
 \t\t\t</div>
 \t\t\t<div class=\"mui-media-body\">
 \t\t\t<a class=\"link\" href=\"\">
 \t\t\t<b>
 \t\t\t<font>";
-            // line 97
+            // line 90
             echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "name", array()), "html", null, true);
             echo "</font>
 \t\t\t</b>
 \t\t\t<span>";
-            // line 99
+            // line 92
             echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "datatime", array()), "html", null, true);
-            echo " . 浙江 杭州</span>
+            echo "</span>
 \t\t\t</a>
 \t\t\t</div>
 \t\t\t<div>
 \t\t\t<a class=\"link\" href=\"\">
 \t\t\t<p>";
-            // line 104
+            // line 97
             echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "text", array()), "html", null, true);
             echo "</p>
 \t\t\t</a>
@@ -139,11 +132,11 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t<div>
 \t\t\t<a class=\"do-collect\" href=\"javascript:;\"  objid=\"7154\">
 \t\t\t<span id=\"a\" rel=\"";
-            // line 109
+            // line 102
             echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "id", array()), "html", null, true);
             echo "\" class=\"ico ico-msg-heart\"></span>
 \t\t\t<label>";
-            // line 110
+            // line 103
             echo twig_escape_filter($this->env, $this->getAttribute($context["v"], "dian", array()), "html", null, true);
             echo "</label>
 \t\t\t</a>
@@ -156,12 +149,12 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['v'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 117
+        // line 110
         echo "\t\t\t</li>
 \t\t\t</ul>
 \t\t\t</div>
-            
-\t\t\t
+
+\t\t\t</body>
 
 </html>";
     }
@@ -178,7 +171,7 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 
     public function getDebugInfo()
     {
-        return array (  160 => 117,  147 => 110,  143 => 109,  135 => 104,  127 => 99,  122 => 97,  113 => 90,  109 => 89,  19 => 1,);
+        return array (  153 => 110,  140 => 103,  136 => 102,  128 => 97,  120 => 92,  115 => 90,  106 => 83,  102 => 82,  19 => 1,);
     }
 
     public function getSource()
@@ -195,14 +188,9 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
         <link rel=\"stylesheet\" type=\"text/css\" href=\"web/js/css.css\">
         <!--引用Jquery-->
         <script src=\"web/js/jquery.js\"></script>
-<<<<<<< HEAD
-        <script src=\"web/js/min.js\" /></script>
-\t    <script src=\"web/js/core.js\" /></script>
-       
-\t\t\t
-=======
-        <script src=\"web/js/min.js\" ></script>
+        <script src=\"web/js/min.js\"  ></script>
 \t    <script src=\"web/js/core.js\" ></script>
+
         <script>
             \$(window).ready(function () {
                 (function (\$) {
@@ -236,8 +224,6 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
                 }
             })
         </script>
->>>>>>> b74d7ed842b86974f23b3d784436f5ad5308c438
-
 <title></title>
 </head>
 
@@ -246,7 +232,7 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t<header class=\"mui-bar mui-bar-nav\">
 \t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
 \t\t\t<h1 class=\"mui-title\">心情微博</h1>
-\t\t\t<a href=\"javascript:;\" class=\"mui-btn-link mui-btn-nav mui-pull-right do-weibo-add\">发布</a>
+\t\t\t<a href=\"?r=home/fossa\" class=\"mui-btn-link mui-btn-nav mui-pull-right \">发布</a>
 \t\t</header>
 \t\t<!-- 导航栏结束 -->
 
@@ -259,8 +245,8 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t<div class=\"weibo-list\" id=\"userid\" userid=\"0\" >
 \t\t\t\t<div class=\"tabs\">
 \t\t\t\t\t<div class=\"mui-segmented-control normal\">
-\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t
+
+
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 
@@ -268,12 +254,12 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t</div>
 \t\t\t<div class=\"make-upload\" object=\"weibo\" param=\"weibo\"></div>
 \t\t\t<div id=\"userid\" class=\"weibo-list\" userid=\"0\">
-\t\t\t
+
 \t\t\t<div class=\"tabs\">
 \t\t\t<ul class=\"mui-table-view\">
 \t\t\t{% for v in arr %}
 \t\t\t<li class=\"mui-table-view-cell mui-media\">
-\t\t\t<div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(http://www.7799520.com/jiaoyou/data/attachment/avatar/201610/06/374151/avatar_big.jpg);\">
+\t\t\t<div class=\"mui-pull-left mui-media-object clip-bg\" style=\"background: url(./web/upimg/147703271252.png);\">
 \t\t\t<a class=\"link\" href=\"\"></a>
 \t\t\t</div>
 \t\t\t<div class=\"mui-media-body\">
@@ -281,7 +267,7 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t<b>
 \t\t\t<font>{{v.name}}</font>
 \t\t\t</b>
-\t\t\t<span>{{ v.datatime }} . 浙江 杭州</span>
+\t\t\t<span>{{ v.datatime }}</span>
 \t\t\t</a>
 \t\t\t</div>
 \t\t\t<div>
@@ -302,8 +288,8 @@ class __TwigTemplate_a0910579662b44da75847699554e373a8881c47dad710b133c0a5efa6fa
 \t\t\t</li>
 \t\t\t</ul>
 \t\t\t</div>
-            
-\t\t\t
+
+\t\t\t</body>
 
 </html>";
     }

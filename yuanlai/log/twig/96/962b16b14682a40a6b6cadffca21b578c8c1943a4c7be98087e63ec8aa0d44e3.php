@@ -73,7 +73,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
 \t\t\t<h1 class=\"mui-title\">
 \t\t\t\t<div class=\"logo\">
-\t\t\t\t\t<img src=\"http://img.7799520.com/img/logo.png\">
+\t\t\t\t\t<img src=\"./web/img/logo.png\">
 \t\t\t\t</div>
 \t\t\t</h1>
 \t\t\t<a href=\"\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
@@ -128,7 +128,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
         <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
 \t<div class=\"mui-slider-item mui-slider-item-duplicate\">
-\t\t<a href=\"http://m.7799520.com/top\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<img src=\"http://img.7799520.com/tmp/top1.png\">
 \t\t</a>
 \t</div>
@@ -156,9 +156,12 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t\t\t<div class=\"index-ico\">
 \t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"\" class=\"link\">
+\t\t<a href=\"";
+        // line 141
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "renwu", array()), "html", null, true);
+        echo "\" class=\"link\">
 \t\t\t<span class=\"icon-coffee\"></span>
-\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t\t<div class=\"mui-media-body\">魅力成长</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -207,7 +210,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"?r=home/suggest\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-brand\"></span>
 \t\t\t<div class=\"mui-media-body\">品牌荣耀</div>
 \t\t</a>
@@ -223,7 +226,10 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
 \t\t\t\t<!-- banner开始 -->
 \t\t\t\t<div class=\"banner\">
-\t\t\t\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t\t\t\t<a href=\"";
+        // line 193
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["url"]) ? $context["url"] : null), "suggest", array()), "html", null, true);
+        echo "\" class=\"link\">
 \t\t\t\t\t\t<img src=\"http://img.7799520.com/img/banner1.png\" />
 \t\t\t\t\t</a>
 \t\t\t\t</div>
@@ -236,22 +242,13 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
 </div>
 <!-- 切换标签结束 -->
-
-
-
-
-
-
-
-
-
 \t\t\t\t<!-- 文字内容开始 -->
 \t\t\t\t<div class=\"index-summary\">
 \t<p>
 \t\t服务<b>9</b>个城市 超过<b>900</b>万认证会员 成就<b>200</b>万情侣
 \t</p>
 \t<p class=\"hotline\">
-\t\t联系人热线：15201595926
+\t\t联系人热线：13012151643
 \t</p>
 \t<p>
 \t\t<a href=\"http://m.7799520.com/about\" class=\"link\">关于我们</a>|<a href=\"http://m.7799520.com/invite\" class=\"link\">人才招聘</a>|<a href=\"http://kefu5.kuaishang.cn/bs/im/67780/59167/602875.htm\" class=\"link\">帮助中心</a>|<a href=\"\">客户端</a>
@@ -293,7 +290,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
     public function getDebugInfo()
     {
-        return array (  203 => 171,  194 => 165,  185 => 159,  176 => 153,  167 => 147,  19 => 1,);
+        return array (  231 => 193,  206 => 171,  197 => 165,  188 => 159,  179 => 153,  170 => 147,  161 => 141,  19 => 1,);
     }
 
     public function getSource()
@@ -355,7 +352,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"></a>
 \t\t\t<h1 class=\"mui-title\">
 \t\t\t\t<div class=\"logo\">
-\t\t\t\t\t<img src=\"http://img.7799520.com/img/logo.png\">
+\t\t\t\t\t<img src=\"./web/img/logo.png\">
 \t\t\t\t</div>
 \t\t\t</h1>
 \t\t\t<a href=\"\" class=\"mui-btn-link mui-btn-nav mui-pull-right link\">
@@ -410,7 +407,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
         <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
 \t<div class=\"mui-slider-item mui-slider-item-duplicate\">
-\t\t<a href=\"http://m.7799520.com/top\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<img src=\"http://img.7799520.com/tmp/top1.png\">
 \t\t</a>
 \t</div>
@@ -438,9 +435,9 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t\t\t<div class=\"index-ico\">
 \t\t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"\" class=\"link\">
+\t\t<a href=\"{{ url.renwu }}\" class=\"link\">
 \t\t\t<span class=\"icon-coffee\"></span>
-\t\t\t<div class=\"mui-media-body\">同城交友</div>
+\t\t\t<div class=\"mui-media-body\">魅力成长</div>
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
@@ -474,7 +471,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 \t\t</a>
 \t</li>
 \t<li class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-\t\t<a href=\"?r=home/suggest\" class=\"link\">
+\t\t<a href=\"#\" class=\"link\">
 \t\t\t<span class=\"icon-brand\"></span>
 \t\t\t<div class=\"mui-media-body\">品牌荣耀</div>
 \t\t</a>
@@ -490,7 +487,7 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
 \t\t\t\t<!-- banner开始 -->
 \t\t\t\t<div class=\"banner\">
-\t\t\t\t\t<a href=\"http://m.7799520.com/recommend\" class=\"link\">
+\t\t\t\t\t<a href=\"{{ url.suggest }}\" class=\"link\">
 \t\t\t\t\t\t<img src=\"http://img.7799520.com/img/banner1.png\" />
 \t\t\t\t\t</a>
 \t\t\t\t</div>
@@ -503,22 +500,13 @@ class __TwigTemplate_7990ee3a5368c7e6faa53c30d7b65fa61a8c2dd48b101486d82fe6554fd
 
 </div>
 <!-- 切换标签结束 -->
-
-
-
-
-
-
-
-
-
 \t\t\t\t<!-- 文字内容开始 -->
 \t\t\t\t<div class=\"index-summary\">
 \t<p>
 \t\t服务<b>9</b>个城市 超过<b>900</b>万认证会员 成就<b>200</b>万情侣
 \t</p>
 \t<p class=\"hotline\">
-\t\t联系人热线：15201595926
+\t\t联系人热线：13012151643
 \t</p>
 \t<p>
 \t\t<a href=\"http://m.7799520.com/about\" class=\"link\">关于我们</a>|<a href=\"http://m.7799520.com/invite\" class=\"link\">人才招聘</a>|<a href=\"http://kefu5.kuaishang.cn/bs/im/67780/59167/602875.htm\" class=\"link\">帮助中心</a>|<a href=\"\">客户端</a>

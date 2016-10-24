@@ -92,8 +92,14 @@ class __TwigTemplate_5ed4ae6e784cb40fbbf8c52eacb0f7ceb5ad794f8b99a7513513c1eabd2
             <img src=\"http://img.7799520.com/img/bg1.png\" />
             <div class=\"sign-area-s1\">
                 <p>今日魅力值增加</p>
-                <p class=\"sign-area-s1-p2\"><span id=\"sign-area-s1-p2-total\">0</span><span id=\"sign-area-s1-p2-change\"></span></p>
-                <p>当前魅力值 : <span class=\"todaypoint\">0</span></p>
+                <p class=\"sign-area-s1-p2\"><span id=\"sign-area-s1-p2-total\">";
+        // line 77
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "m_num", array()), "html", null, true);
+        echo "</span><span id=\"sign-area-s1-p2-change\"></span></p>
+                <p>当前魅力值 : <span class=\"todaypoint\">";
+        // line 78
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["data"]) ? $context["data"] : null), 0, array(), "array"), "usercp", array()), "html", null, true);
+        echo "</span></p>
             </div>
            
         </div>
@@ -221,7 +227,7 @@ class __TwigTemplate_5ed4ae6e784cb40fbbf8c52eacb0f7ceb5ad794f8b99a7513513c1eabd2
 
     public function getDebugInfo()
     {
-        return array (  200 => 142,  191 => 138,  187 => 136,  183 => 134,  181 => 133,  176 => 131,  163 => 120,  159 => 118,  155 => 116,  153 => 115,  148 => 113,  135 => 102,  131 => 100,  127 => 98,  125 => 97,  121 => 96,  110 => 87,  106 => 86,  19 => 1,);
+        return array (  206 => 142,  197 => 138,  193 => 136,  189 => 134,  187 => 133,  182 => 131,  169 => 120,  165 => 118,  161 => 116,  159 => 115,  154 => 113,  141 => 102,  137 => 100,  133 => 98,  131 => 97,  127 => 96,  116 => 87,  112 => 86,  101 => 78,  97 => 77,  19 => 1,);
     }
 
     public function getSource()
@@ -302,8 +308,8 @@ class __TwigTemplate_5ed4ae6e784cb40fbbf8c52eacb0f7ceb5ad794f8b99a7513513c1eabd2
             <img src=\"http://img.7799520.com/img/bg1.png\" />
             <div class=\"sign-area-s1\">
                 <p>今日魅力值增加</p>
-                <p class=\"sign-area-s1-p2\"><span id=\"sign-area-s1-p2-total\">0</span><span id=\"sign-area-s1-p2-change\"></span></p>
-                <p>当前魅力值 : <span class=\"todaypoint\">0</span></p>
+                <p class=\"sign-area-s1-p2\"><span id=\"sign-area-s1-p2-total\">{{ data.m_num }}</span><span id=\"sign-area-s1-p2-change\"></span></p>
+                <p>当前魅力值 : <span class=\"todaypoint\">{{ data[0].usercp }}</span></p>
             </div>
            
         </div>

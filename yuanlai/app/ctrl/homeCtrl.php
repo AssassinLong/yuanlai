@@ -19,17 +19,19 @@ class homeCtrl extends \core\imooc
         //var_dump($_SESSION);
         if(isset($_SESSION['username'])){
         $url=array(
-            'fossa' => '?r=home/fossa',
+            'fossa'   => '?r=home/fossa',
             'advices' => '?r=home/advices',
             'xinqing' => '?r=home/xinqing',
             'suggest' => '?r=home/suggest',
+            'renwu'   => '?r=home/renwu',
             'paihangbang' => '?r=home/paihangbang',
         );}else{
         $url=array(
-            'fossa' => '?r=index/login',
+            'fossa'   => '?r=index/login',
             'advices' => '?r=index/login',
             'xinqing' => '?r=index/login',
             'suggest' => '?r=index/login',
+            'renwu'   =>'?r=index/login',
             'paihangbang' => '?r=index/login',
         );
         }
@@ -104,9 +106,9 @@ class homeCtrl extends \core\imooc
             $this->assign('imgs',$imgs);
             $ar=$mono->guan_sel($id);
             $ar1=count($ar);
-            
-            
-            
+            $meili = $mono->meili($id);
+            $m=$meili[0]['usercp'];
+            $this->assign('m',$m);
             $this->assign('ar1',$ar1);
             $data=$mono->zi_guan($id);
             $data1=count($data);
@@ -143,6 +145,8 @@ class homeCtrl extends \core\imooc
                 $picture=new pictureModel();
                 $imgs=$picture->all($id);
                 $this->assign('imgs',$imgs);
+                //p($imgs);
+
                 $ar=$mono->zi_guan($id);
                 $ar1=count($ar);
                 $data=$mono->guan_sel($id);
@@ -182,9 +186,11 @@ class homeCtrl extends \core\imooc
             $data['path']=$imgpaths;
             $data['date']=date('Y-m-d H:i:s',time());
             $data['show']='1';
+            $id=$_SESSION['id'];
             $model=new pictureModel();
               $model->addOne($data);
-              $id=$_SESSION['id'];
+            $basi=new basicdataModel();
+            $basi->setimg($id,$imgpaths);
             $arr=$model->all($id);
             $arr1=count($arr);
             //dump($arr1);die;
@@ -192,8 +198,9 @@ class homeCtrl extends \core\imooc
                 // echo 1;die;
                 $aaa=$model->up($id);
                 $aaa1=$model->ad($id);
-                $aaa2=$model->ren($id);
-                //dump($aaa2);die;
+
+                $aaa2=$model->sta($id);
+
             }else{
                // echo 2;die;
                 $aaa=$model->up1($id);
@@ -205,6 +212,8 @@ class homeCtrl extends \core\imooc
     }
     public function shaixuan()
     {
+
+
         $this->display('shaixuan.html');
     }
     public function suggest()
@@ -214,7 +223,7 @@ class homeCtrl extends \core\imooc
         $arr=$base->user_phone($u_id);
         //dump($arr);die;
         $this->assign('ars',$arr);
-        //var_dump($arr);
+        //var_dump($arr);die;
         $this->display('suggest.html');
     }
 
@@ -223,7 +232,7 @@ class homeCtrl extends \core\imooc
 
          $base=new monoModel();
          $arr=$base->sel();
-         //dump($arr);die;
+         //p($arr);die;
          $this->assign('arr',$arr);
 
     	 $this->display('xinqing.html');
@@ -241,7 +250,9 @@ class homeCtrl extends \core\imooc
          $arr=$base->delall($arrs);
             $ar=$base->guan_sel($u_id);
             $ar1=count($ar);
+
             if($arr){
+
                 $array=array('a'=>1,'f'=>$ar1);
                 $json=json_encode($array);
                 echo $json;
@@ -252,6 +263,7 @@ class homeCtrl extends \core\imooc
         $arr=$base->guan($id,$u_id);
             $ar=$base->guan_sel($u_id);
             $ar1=count($ar);
+
             if($arr){
                 $array=array('a'=>2,'f'=>$ar1);
                 $json=json_encode($array);
@@ -267,20 +279,42 @@ class homeCtrl extends \core\imooc
 
     public function renwu()
     {
+        $time=date('Y-m-d',time());
+        //echo $time;die;
     	$id=$_SESSION['id'];
+        $user=new userModel();
+        $data=$user->getOne($id);
     	$base=new monoModel();
     	$arr=$base->renwu($id);
-    	//dump($arr);die;
-    	$this->assign('arr',$arr);
+        $meiri=$base->day($id,$time);
+        if($meiri[0]['u_id']!=0){
+            $data['m_num']=$meiri[0]['m_num'];
+        }else{
+            $data['m_num']='0';
+        }
+    	//dump($meiri);die;
+        //p($arr);
+    	$this->assign('data',$data);
+        $this->assign('arr',$arr);
         $this->display('renwu.html');
     }
 
     public function paihangbang()
     {
         $model=new basicdataModel();
-        //$arr=$model->sel();
-        
 
+        $arr=$model->sel();
+        $s=$arr[0];
+        $s1=$arr[1];
+        $s2=$arr[2];
+        $this->assign('s',$s);
+        $this->assign('s1',$s1);
+        $this->assign('s2',$s2);
+        $s3=$arr[3];
+        $usercp=$s3['usercp'];
+        $aa=$model->sells($usercp);
+        //p($aa);
+        $this->assign('aa',$aa);
         $this->display('paihangbang.html');
     }
     public function aa(){

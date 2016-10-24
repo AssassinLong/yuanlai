@@ -8,6 +8,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<!--标准mui.css-->
         <link rel="stylesheet" type="text/css" href="web/js/css.css">
+        <link rel="stylesheet" type="text/css" href="web/css/lv.css">
         <!--引用Jquery-->
         <script src="web/js/jquery.js"></script>
         <script src="web/js/min.js"  ></script>
@@ -110,17 +111,6 @@
 						<b>{{vv.name}}</b>
 
 
-						<span class="ico ico-ident"></span>
-
-
-
-
-						<span class="ico ico-msg"></span>
-
-
-
-
-						<span class="ico ico-mobile-active"></span>
 
 
 						<br />{{vv.age}} &nbsp;{{vv.native}}
@@ -132,7 +122,7 @@
 					</div>
                      {% else %}
                      <div id="u">
-                    <button name="a"  onclick="check_a()" id="{{vv.u_id}}" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>
+                    <button name="a"   id="{{vv.u_id}}" onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>
                     </div>
                     {% endif %}
 				</div>
@@ -149,7 +139,7 @@
 
 						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
 
-							<a href="#"><b id="c">{{data1}}</b>关注
+							<a href="#"><b id="zhu">{{data1}}</b>关注
 
 							</a>
 
@@ -159,12 +149,12 @@
 
 							<a href="#">
 
-							<b>
+							<b id="meili">
 
-								0
-							</b>魅力</a>guan
+								{{m}}
+							</b>魅力</a>
 
-							<div></div>
+
 
 						</li>
 
@@ -562,11 +552,12 @@
 							   success: function(msg){
 
 								   json = eval( "(" + msg + ")" );
-//								   alert(json.a)
+//								   alert(msg)
 							      if(json.a==1){
 									  var html='<button name="a" id="{{vv.u_id}}"  onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>';
 									  $('#u').html(html);
 									  $('#f').html(json.f);
+									  $('#zhu').html(json.f);
 
 								   }else if(json.a==2){
 
@@ -574,6 +565,8 @@
 
 									  $('#u').html(html);
 									  $('#f').html(json.f);
+									  $('#zhu').html(json.f);
+
 								  }
 							      
 							   }
