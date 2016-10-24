@@ -46,24 +46,42 @@ function checkImgType(obj) {
         alert("请上传图片");
         return false;
     } else {
-        if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG)$/.test(obj.value)) {
+        if (!/\.(gif|jpg|png|GIF|JPG|PNG)$/.test(obj.value)) {
             alert("图片类型必须是.gif,jpeg,jpg,png中的一种");
             obj.value = "";
             return false;
-        } /*else {
-            //以下无效
-            //var img = new Image();
-            //img.src = obj.value;
-            //while (true) {
-            //	if (img.fileSize > 0) {
-            //		if (img.fileSize > 0.1 * 1024) {
-            //			alert("图片不大于10M。");
-            //			return false;
-            //		}
-            //		break;
-            //	}
-            //}
-        }*/
+        } else {
+            //alert(obj.width(width));
+            /*img = new Image();
+            img.src =obj.value;
+            img.onload = function ()
+            {
+                document.write(img.width);
+            }
+
+            alert('width:'+img.width+',height'+img.height);
+            return false;*/
+            /*if(obj.files[0].width != 800){
+                alert(obj.files[0].width);
+                return false;
+            }*/
+
+            if(obj.files[0].size >= 10000){
+                alert("图片不能大于1M");
+                return false;
+            }
+            /*var img = new Image();
+            img.src = obj.value;
+            while ('') {
+            	if (img.fileSize > 0) {
+            		if (img.fileSize > 0.1 * 1024) {
+            			alert("图片不大于200K。");
+            			return false;
+            		}
+            		break;
+            	}
+            }*/
+        }
     }
     return true;
 }

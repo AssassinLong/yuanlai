@@ -84,14 +84,15 @@
     <!-- 回信息开始 -->
     <div class="message-detail">
         <ul class="mui-table-view">
+            <input type="hidden" id="num" value="{{ arr[0].num }}">
             {% for val in arr %}
             {% if val.us_id == data.uid  %}
             <li class="mui-table-view-cell mui-media">
                 <div class="mui-slider-handle">
                     <p class="title">{{ val.createtime }}</p>
                     <span></span>
-                    <div class="clip-bg mui-media-object" style="background: url(/img/avata-1.png);">
-                        <a href="?r=home/fossa/tid/{{ val.us_id }}" class="link">{{ val.real_name }}</a>
+                    <div class="clip-bg mui-media-object" style="background: url({{ val.head_img }});">
+                        <a href="?r=home/fossa/tid/{{ val.us_id }}" class="link"></a>
                     </div>
                     <div class="mui-media-body">
                         <p>
@@ -104,8 +105,8 @@
                 <div class="mui-slider-handle">
                     <p class="title">{{ val.createtime }}</p>
                     <span></span>
-                    <div class="clip-bg mui-media-object" style="background: url(.web/img/avata-1.png););">
-                        <a href="?r=home/fossa/tid/{{ val.us_id }}" class="link">{{ val.real_name }}</a>
+                    <div class="clip-bg mui-media-object" style="background: url({{ val.head_img }}););">
+                        <a href="?r=home/fossa/tid/{{ val.us_id }}" class="link"></a>
                     </div>
                     <div class="mui-media-body">
                         <p>
@@ -116,25 +117,22 @@
             {% endif %}
             {% endfor %}
 
-            <!--<li class="mui-table-view-cell mui-media active">
-                <div class="mui-slider-handle">
-                    <p class="title">10-15 16:05</p>
-                    <span></span>
-                    <div class="clip-bg mui-media-object" style="background: url(.web/img/avata-1.png););">
-                        <a href="http://m.7799520.com/user/377537.html" class="link"></a>
-                    </div>
-                    <div class="mui-media-body">
-                        <p>
-                            蛤蛤蛤蛤蛤蛤		</p>
-                    </div>
-                </div>
-            </li>-->
-
         </ul>
     </div>
     <!-- 回信息结束 -->
 
     <script language="javascript">
+        $('.mui-media-body').ready(function(){
+            $("html").scrollTop(4000);
+            scrollTo (0,document.height ||document.body.style.height);
+            var num=$('#num').val();
+            for(var i=0;i<num;i++){
+                var txt=$(".mui-media-body p").eq(i).html();
+                var restore=emotion_exchange($.trim(txt));
+                $(".mui-media-body p").eq(i).replaceWith("<p>"+restore+"</p>");
+            }
+        });
+        //alert(emotion_exchange(txt));
         //生成表情
         var f = '';
         for (var i = 1; i <= 104; i++) {
@@ -199,7 +197,7 @@
             }
             //转义还原表情
             var e = emotion_exchange(w.val());
-            var t = '<li class="mui-table-view-cell mui-media active"><div class="mui-slider-handle"><p class="title">' + d + '</p><span></span><div class="clip-bg mui-media-object" style="background: url(/img/avata-1.png););"><a href="#" class="link"></a></div><div class="mui-media-body"><p>' + e + '</p></div></div></li>';
+            var t = '<li class="mui-table-view-cell mui-media active"><div class="mui-slider-handle"><p class="title">' + d + '</p><span></span><div class="clip-bg mui-media-object" style="background: url({{ val.head_img }}););"><a  href="?r=home/fossa/tid/{{ val.us_id }}" class="link"></a></div><div class="mui-media-body"><p>' + e + '</p></div></div></li>';
             var url = "?r=advices/addmessage";
             var userid = $(this).attr("userid");
             mui.ajax(url, {
@@ -216,6 +214,7 @@
                         $('.fix-emotion').addClass('hidden');
                         //滚屏
                         $('body').scrollTop($(document).height());
+                        $('.fix-message input').val('');
                     } else if (data == 0){
                         mui.toast('发送消息失败,请重试..');
                     } else {

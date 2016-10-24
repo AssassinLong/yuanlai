@@ -25,6 +25,7 @@ class homeCtrl extends \core\imooc
             'suggest' => '?r=home/suggest',
             'renwu'   => '?r=home/renwu',
             'paihangbang' => '?r=home/paihangbang',
+            'album'   => '?r=home/album',
         );}else{
         $url=array(
             'fossa'   => '?r=index/login',
@@ -33,10 +34,37 @@ class homeCtrl extends \core\imooc
             'suggest' => '?r=index/login',
             'renwu'   =>'?r=index/login',
             'paihangbang' => '?r=index/login',
+            'album'   => '?r=index/login',
         );
         }
       $this->assign('url',$url);
       $this->display('index.html');
+    }
+    //相册
+    public function album()
+    {
+        $uid=get('uid');
+        //p($uid);
+        if(!empty($uid)){
+            $pict=new pictureModel();
+            $data=$pict->allAlbum($uid);
+            if(count($data)!=0){
+                $data[0]['username']='浏览';
+            }
+            //p($data);
+            $this->assign('data',$data);
+            $this->display('album.html');
+        }else{
+            $id=$_SESSION['id'];
+            $pict=new pictureModel();
+            $data=$pict->allAlbum($id);
+            if(count($data)!=0){
+                $data[0]['username']='';
+            }
+            //p($data);
+            $this->assign('data',$data);
+            $this->display('album.html');
+        }
     }
     //
     public function datum()
@@ -116,6 +144,7 @@ class homeCtrl extends \core\imooc
             $aa=array('s_id'=>$u_id,'b_id'=>$id);
             $aaa=$mono->sta($aa);
             $this->assign('aaa',$aaa);
+            $this->assign('uid',$id);
             $this->display('fossa_ta.html');
             }  else{
 
@@ -181,6 +210,26 @@ class homeCtrl extends \core\imooc
             }
             $imgpaths=$filepath.time().$_FILES['imgfile']['name'];
             move_uploaded_file($_FILES['imgfile']['tmp_name'],$imgpaths);
+
+            /*//生成缩略图
+            $width=100;
+            $height=40;
+            $size=getimagesize($imgpaths);
+            if($size[2] == 1){
+                $in_in=imagecreatefrongif($imgpaths);
+            }elseif($size[2] == 2){
+                $in_in=imagecreatefronjpeg($imgpaths);
+            }elseif($size[2] == 3){
+                $in_in=imagecreaatefronpng($imgpaths);
+            }
+            $in_out=imagecreatetruecolor($width,$height);
+            imagecopyresampled($in_out,$in_in,0,0,0,0,$width,$height,$size[0],$size[1]);
+            iamgejpeg($in_out,$imgpaths);
+            chmod($imgpaths,0777);
+            imagedestroy($in_in);
+            imagedestroy($in_out);*/
+
+
             $data['u_id']=$_SESSION['id'];
             $data['u_name']=$_SESSION['username'];
             $data['path']=$imgpaths;

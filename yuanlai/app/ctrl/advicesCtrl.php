@@ -24,7 +24,9 @@ class advicesCtrl extends \core\imooc
             'id'=>$id,
             'uid'=>$uid,
         );
-        //p($data);
+        //p($arr);
+        $num=count($arr);
+        $arr[0]['num']=$num;
         $this->assign('arr',$arr);
         $this->assign('data',$data);
         $this->display('friend.html');

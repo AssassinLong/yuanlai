@@ -12,7 +12,7 @@ class messageModel extends model
     //查询所有发件人
     public function addAll($id)
     {
-        return $this->query("select *,count(u_id) as num from message INNER JOIN basicdata ON message.us_id=basicdata.u_id where a_id=".$id." and readstatus=0  GROUP BY u_id")->fetchAll();
+        return $this->query("select u_id,real_name,age,sex,head_img,count(u_id) as num,max(createtime) as maxtime from message INNER JOIN basicdata ON message.us_id=basicdata.u_id where a_id=".$id." and readstatus=0  GROUP BY u_id ORDER BY maxtime DESC")->fetchAll();
     }
     //查询单个发件人所有未读消息
     public function oneAll($uid,$id)
