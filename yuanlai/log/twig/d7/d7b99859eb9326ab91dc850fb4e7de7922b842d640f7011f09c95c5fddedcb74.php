@@ -106,7 +106,10 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
             // line 82
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "u_id", array()), "html", null, true);
             echo "\" class=\"link\">
-                    <div class=\"clip-bg mui-pull-left mui-media-object\" style=\"background: url(/img/avata-1.png);\"></div>
+                    <div class=\"clip-bg mui-pull-left mui-media-object\" style=\"background: url(";
+            // line 83
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "head_img", array()), "html", null, true);
+            echo ");\"></div>
                     <div class=\"mui-media-body\"><p class=\"title\"><b>";
             // line 84
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "real_name", array()), "html", null, true);
@@ -132,7 +135,7 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
             echo "条聊天信息</p>
                         <label>";
             // line 91
-            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "createtime", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "maxtime", array()), "html", null, true);
             echo "</label>
                     </div>
                 </a>
@@ -200,7 +203,7 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
 
     public function getDebugInfo()
     {
-        return array (  146 => 96,  135 => 91,  130 => 90,  124 => 88,  118 => 86,  116 => 85,  112 => 84,  107 => 82,  104 => 81,  100 => 80,  19 => 1,);
+        return array (  149 => 96,  138 => 91,  133 => 90,  127 => 88,  121 => 86,  119 => 85,  115 => 84,  111 => 83,  107 => 82,  104 => 81,  100 => 80,  19 => 1,);
     }
 
     public function getSource()
@@ -287,7 +290,7 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
             {% for val in arr %}
             <li class=\"mui-table-view-cell mui-media\"><div class=\"mui-slider-handle\">
                 <a href=\"?r=advices/friend/id/{{ val.u_id }}\" class=\"link\">
-                    <div class=\"clip-bg mui-pull-left mui-media-object\" style=\"background: url(/img/avata-1.png);\"></div>
+                    <div class=\"clip-bg mui-pull-left mui-media-object\" style=\"background: url({{ val.head_img }});\"></div>
                     <div class=\"mui-media-body\"><p class=\"title\"><b>{{ val.real_name }}</b>
                         {% if val.sex=='男' %}
                         <em class=\"active\"><span class=\"ico ico-male\"></span>{{ val.age }}</em>
@@ -295,7 +298,7 @@ class __TwigTemplate_8a0c64c57c349a7a55f05d38ae972e3a31f16e1d271402a0d19e559773c
                         <em class=\"\"><span class=\"ico ico-female\"></span>{{ val.age }}</em>
                         {% endif %}
                     </p><p class=\"mui-ellipsis\">发来{{ val.num }}条聊天信息</p>
-                        <label>{{ val.createtime }}</label>
+                        <label>{{ val.maxtime }}</label>
                     </div>
                 </a>
             </div></li>

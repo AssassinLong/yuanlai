@@ -9,11 +9,9 @@
    session_start();
    class fossaCtrl extends \core\imooc
    {
+       //独白
        public function dubai()
        {
-
-
-
            if(post('monolog')){
                $data['text']=post('monolog');
                $data['datatime']=date('Y-m-d H:i:s',time());

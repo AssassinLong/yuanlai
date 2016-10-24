@@ -186,7 +186,10 @@ $context["vs"], "usercp", array()) > 1700)) {
 
                 </div><div>
                 
-
+                    <p class=\"mui-ellipsis\">内心独白：";
+            // line 127
+            echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "mono", array()), "html", null, true);
+            echo "</p></a></div><div>
                 <a href=\"?r=home/advices\" objid=\"";
             // line 128
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
@@ -217,7 +220,7 @@ $context["vs"], "usercp", array()) > 1700)) {
         //        var condition = '{\"ageyear\":[\"gt\",0],\"height\":[\"gt\",0],\"salary\":[\"gt\",0],\"education\":[\"gt\",0],\"gender\":[\"eq\",2],\"avatar\":[\"neq\",\"\"],\"avatarflag\":\"1\"}';
         //
         //        //打招呼
-        \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
+      /*  \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
             //判断是否在线
             if (\$(this).hasClass('active')) {
                 mui.toast('您已经对TA打过招呼');
@@ -247,7 +250,7 @@ $context["vs"], "usercp", array()) > 1700)) {
                     }
                 });
             }
-        });
+        });*/
         //发信息弹窗
         \$('.recommend-list').on('tap', '.do-message-add', function(event) {
             // 定义全局的userid
@@ -294,6 +297,10 @@ $context["vs"], "usercp", array()) > 1700)) {
                 success: function(data) {
                     //alert(data);
                     if (data== 1) {
+                        \$('.layer-file-tips').animate({
+                            top: '-100%'
+                        }, 300);
+                        \$('.layer').fadeOut(300);
                         mui.toast('消息已发出');
                     } else if (data == 0) {
                         mui.toast('发送信息失败,请重试..');
@@ -334,7 +341,7 @@ $context["vs"], "usercp", array()) > 1700)) {
 
     public function getDebugInfo()
     {
-        return array (  205 => 135,  192 => 128,  185 => 123,  181 => 121,  179 => 120,  176 => 119,  174 => 118,  171 => 117,  169 => 116,  166 => 115,  164 => 114,  160 => 112,  158 => 111,  155 => 110,  153 => 109,  150 => 108,  148 => 107,  144 => 106,  135 => 104,  130 => 102,  125 => 100,  121 => 98,  117 => 97,  19 => 1,);
+        return array (  208 => 135,  195 => 128,  191 => 127,  185 => 123,  181 => 121,  179 => 120,  176 => 119,  174 => 118,  171 => 117,  169 => 116,  166 => 115,  164 => 114,  160 => 112,  158 => 111,  155 => 110,  153 => 109,  150 => 108,  148 => 107,  144 => 106,  135 => 104,  130 => 102,  125 => 100,  121 => 98,  117 => 97,  19 => 1,);
     }
 
     public function getSource()
@@ -465,7 +472,7 @@ $context["vs"], "usercp", array()) > 1700)) {
 
                 </div><div>
                 
-
+                    <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
                 <a href=\"?r=home/advices\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
                
             </div>
@@ -488,7 +495,7 @@ $context["vs"], "usercp", array()) > 1700)) {
         //        var condition = '{\"ageyear\":[\"gt\",0],\"height\":[\"gt\",0],\"salary\":[\"gt\",0],\"education\":[\"gt\",0],\"gender\":[\"eq\",2],\"avatar\":[\"neq\",\"\"],\"avatarflag\":\"1\"}';
         //
         //        //打招呼
-        \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
+      /*  \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
             //判断是否在线
             if (\$(this).hasClass('active')) {
                 mui.toast('您已经对TA打过招呼');
@@ -518,7 +525,7 @@ $context["vs"], "usercp", array()) > 1700)) {
                     }
                 });
             }
-        });
+        });*/
         //发信息弹窗
         \$('.recommend-list').on('tap', '.do-message-add', function(event) {
             // 定义全局的userid
@@ -565,6 +572,10 @@ $context["vs"], "usercp", array()) > 1700)) {
                 success: function(data) {
                     //alert(data);
                     if (data== 1) {
+                        \$('.layer-file-tips').animate({
+                            top: '-100%'
+                        }, 300);
+                        \$('.layer').fadeOut(300);
                         mui.toast('消息已发出');
                     } else if (data == 0) {
                         mui.toast('发送信息失败,请重试..');

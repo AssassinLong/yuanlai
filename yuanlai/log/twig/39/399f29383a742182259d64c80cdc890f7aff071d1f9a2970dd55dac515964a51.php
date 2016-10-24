@@ -126,7 +126,10 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 
 \t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"\">
-                        <img src=\"./web/upimg/1476874085(23).jpg\">
+                        <img src=\"";
+            // line 106
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["imgs"]) ? $context["imgs"] : null), 0, array(), "array"), "path", array()), "html", null, true);
+            echo "\">
 \t\t\t\t\t</div>
 
                     
@@ -228,20 +231,32 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 
 \t\t\t<!-- 个人照片开始 -->
+            <h4>
+                <a  style=\"color: black\" href=\"?r=home/album/uid/";
+            // line 179
+            echo twig_escape_filter($this->env, (isset($context["uid"]) ? $context["uid"] : null), "html", null, true);
+            echo "\" class=\"link\">
+
+                    <span class=\"mui-icon \"></span>
+
+                    个人相册
+
+                </a>
+            </h4>
 
 \t\t\t<div class=\"file-photo\">
 
 \t\t\t\t<ul class=\"mui-table-view mui-grid-view boder-none\">
                     ";
-            // line 182
+            // line 191
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["imgs"]) ? $context["imgs"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
-                // line 183
+                // line 192
                 echo "                    <li  class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 
                         <img src=\"";
-                // line 185
+                // line 194
                 echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "path", array()), "html", null, true);
                 echo "\">
 
@@ -251,17 +266,8 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 189
-            echo "\t\t\t\t\t<li  style=\"float: left\" class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"do-layer-file-upload\">
-
-\t\t\t\t\t\t\t<img src=\"web/images/file-upload.png\" />
-
-\t\t\t\t\t\t</a>
-
-\t\t\t\t\t</li>
-
+            // line 198
+            echo "
 \t\t\t\t</ul>
 
 \t\t\t</div>
@@ -816,7 +822,7 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
     public function getDebugInfo()
     {
-        return array (  777 => 564,  767 => 557,  643 => 435,  601 => 395,  598 => 394,  588 => 390,  580 => 385,  572 => 380,  564 => 375,  556 => 370,  548 => 365,  538 => 357,  533 => 356,  531 => 355,  526 => 352,  490 => 318,  487 => 317,  478 => 314,  470 => 309,  462 => 304,  454 => 299,  446 => 294,  438 => 289,  432 => 285,  427 => 284,  425 => 283,  419 => 279,  413 => 278,  408 => 275,  402 => 273,  399 => 272,  395 => 270,  389 => 268,  386 => 267,  380 => 263,  373 => 259,  369 => 257,  366 => 256,  362 => 254,  356 => 252,  353 => 251,  349 => 249,  343 => 247,  340 => 246,  336 => 244,  330 => 242,  327 => 241,  323 => 239,  317 => 237,  314 => 236,  310 => 234,  304 => 232,  302 => 231,  292 => 224,  255 => 189,  245 => 185,  241 => 183,  237 => 182,  215 => 163,  203 => 154,  188 => 142,  172 => 128,  166 => 125,  163 => 124,  157 => 121,  154 => 120,  152 => 119,  144 => 116,  136 => 111,  123 => 100,  119 => 99,  19 => 1,);
+        return array (  783 => 564,  773 => 557,  649 => 435,  607 => 395,  604 => 394,  594 => 390,  586 => 385,  578 => 380,  570 => 375,  562 => 370,  554 => 365,  544 => 357,  539 => 356,  537 => 355,  532 => 352,  496 => 318,  493 => 317,  484 => 314,  476 => 309,  468 => 304,  460 => 299,  452 => 294,  444 => 289,  438 => 285,  433 => 284,  431 => 283,  425 => 279,  419 => 278,  414 => 275,  408 => 273,  405 => 272,  401 => 270,  395 => 268,  392 => 267,  386 => 263,  379 => 259,  375 => 257,  372 => 256,  368 => 254,  362 => 252,  359 => 251,  355 => 249,  349 => 247,  346 => 246,  342 => 244,  336 => 242,  333 => 241,  329 => 239,  323 => 237,  320 => 236,  316 => 234,  310 => 232,  308 => 231,  298 => 224,  270 => 198,  260 => 194,  256 => 192,  252 => 191,  237 => 179,  218 => 163,  206 => 154,  191 => 142,  175 => 128,  169 => 125,  166 => 124,  160 => 121,  157 => 120,  155 => 119,  147 => 116,  139 => 111,  131 => 106,  123 => 100,  119 => 99,  19 => 1,);
     }
 
     public function getSource()
@@ -926,7 +932,7 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 
 \t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"\">
-                        <img src=\"./web/upimg/1476874085(23).jpg\">
+                        <img src=\"{{ imgs[0].path }}\">
 \t\t\t\t\t</div>
 
                     
@@ -998,6 +1004,15 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
 
 \t\t\t<!-- 个人照片开始 -->
+            <h4>
+                <a  style=\"color: black\" href=\"?r=home/album/uid/{{ uid }}\" class=\"link\">
+
+                    <span class=\"mui-icon \"></span>
+
+                    个人相册
+
+                </a>
+            </h4>
 
 \t\t\t<div class=\"file-photo\">
 
@@ -1009,15 +1024,6 @@ class __TwigTemplate_b2b81b92f8f84bd419bcd7744e3dfdf98b10622c70424f5b15b0d3f6ece
 
                     </li>
                     {% endfor %}
-\t\t\t\t\t<li  style=\"float: left\" class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
-
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"do-layer-file-upload\">
-
-\t\t\t\t\t\t\t<img src=\"web/images/file-upload.png\" />
-
-\t\t\t\t\t\t</a>
-
-\t\t\t\t\t</li>
 
 \t\t\t\t</ul>
 

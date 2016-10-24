@@ -143,7 +143,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                 <a href=\"#\" class=\"do-message-hi\" objid=\"";
             // line 104
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
-            echo "\"><span class=\"ico ico-msg-hi\"></span>-_-</a>
+            echo "\"><span class=\"ico ico-msg-hi\"></span>发个消息-_-</a>
                 <a href=\"?r=home/advices\" objid=\"";
             // line 105
             echo twig_escape_filter($this->env, $this->getAttribute($context["vs"], "u_id", array()), "html", null, true);
@@ -171,7 +171,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         //        var condition = '{\"ageyear\":[\"gt\",0],\"height\":[\"gt\",0],\"salary\":[\"gt\",0],\"education\":[\"gt\",0],\"gender\":[\"eq\",2],\"avatar\":[\"neq\",\"\"],\"avatarflag\":\"1\"}';
         //
         //        //打招呼
-        \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
+      /*  \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
             //判断是否在线
             if (\$(this).hasClass('active')) {
                 mui.toast('您已经对TA打过招呼');
@@ -201,7 +201,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                     }
                 });
             }
-        });
+        });*/
         //发信息弹窗
         \$('.recommend-list').on('tap', '.do-message-add', function(event) {
             // 定义全局的userid
@@ -248,6 +248,10 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                 success: function(data) {
                     //alert(data);
                     if (data== 1) {
+                        \$('.layer-file-tips').animate({
+                            top: '-100%'
+                        }, 300);
+                        \$('.layer').fadeOut(300);
                         mui.toast('消息已发出');
                     } else if (data == 0) {
                         mui.toast('发送信息失败,请重试..');
@@ -396,7 +400,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                 <a href=\"?r=home/fossa/tid/{{vs.u_id}}\" class=\"link\">
                     <b>{{ vs.name }}</b><span>{{ vs.age }}岁<br/>{{ vs.region }}</span>
                     <p class=\"mui-ellipsis\">内心独白：{{ vs.mono }}</p></a></div><div>
-                <a href=\"#\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>-_-</a>
+                <a href=\"#\" class=\"do-message-hi\" objid=\"{{ vs.u_id }}\"><span class=\"ico ico-msg-hi\"></span>发个消息-_-</a>
                 <a href=\"?r=home/advices\" objid=\"{{ vs.u_id }}\" class=\"do-message-add\"><span class=\"ico ico-msg-call\"></span>发信息</a>
             </div>
                 </li>
@@ -416,7 +420,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
         //        var condition = '{\"ageyear\":[\"gt\",0],\"height\":[\"gt\",0],\"salary\":[\"gt\",0],\"education\":[\"gt\",0],\"gender\":[\"eq\",2],\"avatar\":[\"neq\",\"\"],\"avatarflag\":\"1\"}';
         //
         //        //打招呼
-        \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
+      /*  \$('.recommend-list').on('tap', '.do-message-hi', function(event) {
             //判断是否在线
             if (\$(this).hasClass('active')) {
                 mui.toast('您已经对TA打过招呼');
@@ -446,7 +450,7 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                     }
                 });
             }
-        });
+        });*/
         //发信息弹窗
         \$('.recommend-list').on('tap', '.do-message-add', function(event) {
             // 定义全局的userid
@@ -493,6 +497,10 @@ class __TwigTemplate_0dd1612dd1b5299baf50c853d015f91db2cb7add796a48541af95e0ffbf
                 success: function(data) {
                     //alert(data);
                     if (data== 1) {
+                        \$('.layer-file-tips').animate({
+                            top: '-100%'
+                        }, 300);
+                        \$('.layer').fadeOut(300);
                         mui.toast('消息已发出');
                     } else if (data == 0) {
                         mui.toast('发送信息失败,请重试..');

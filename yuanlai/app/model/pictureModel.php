@@ -13,6 +13,10 @@ class pictureModel extends model
             'LIMIT'=>4,
         ]);
     }
+    public function allAlbum($id)
+    {
+        return $this->select($this->table,'*',['u_id'=>$id,'ORDER'=>["picture.id"=>"DESC"],]);
+    }
     public function addOne($data)
     {
         return $this->insert($this->table,$data);
