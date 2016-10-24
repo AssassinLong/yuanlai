@@ -87,6 +87,7 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 \t\t\t\t\t<a href=\"#\" class=\"fh5co-menu-btn js-fh5co-menu-btn\">菜单 <i class=\"icon-menu\"></i></a>
 \t\t\t\t\t<a class=\"navbar-brand\" href=\"#\">";
         // line 70
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["kong"]) ? $context["kong"] : null), "username", array()), "html", null, true);
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["data"]) ? $context["data"] : null), 0, array(), "array"), "username", array()), "html", null, true);
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["data"]) ? $context["data"] : null), 0, array(), "array"), "u_name", array()), "html", null, true);
         echo "的相册</a>
@@ -183,7 +184,7 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 
     public function getDebugInfo()
     {
-        return array (  134 => 94,  125 => 91,  118 => 89,  114 => 87,  110 => 86,  90 => 70,  19 => 1,);
+        return array (  135 => 94,  126 => 91,  119 => 89,  115 => 87,  111 => 86,  90 => 70,  19 => 1,);
     }
 
     public function getSource()
@@ -257,7 +258,7 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t<a href=\"#\" class=\"fh5co-menu-btn js-fh5co-menu-btn\">菜单 <i class=\"icon-menu\"></i></a>
-\t\t\t\t\t<a class=\"navbar-brand\" href=\"#\">{{ data[0].username }}{{ data[0].u_name }}的相册</a>
+\t\t\t\t\t<a class=\"navbar-brand\" href=\"#\">{{ kong.username }}{{ data[0].username }}{{ data[0].u_name }}的相册</a>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>

@@ -5,7 +5,7 @@ $(function() {
     $('body').append('<iframe name="upload" style="display:none"></iframe>');
     $('.make-upload').each(function() {
         //alert ('跳转成功');
-        $(this).append('<form id="' + $(this).attr('object') + '" action="' + upload_url + '" target="upload" method="post" enctype="multipart/form-data"><input name="imgfile" type="file" accept="image/*" ><input name="imgType" type="hidden" value="' + $(this).attr('object') + '"></form>');
+        $(this).append('<form id="' + $(this).attr('object') + '" action="' + upload_url + '" target="upload" method="post" enctype="multipart/form-data"><input name="imgfile" type="file" accept="image/*" height="800" width="600" ><input name="imgType" type="hidden" value="' + $(this).attr('object') + '"></form>');
     });
     //执行上传
     $('.make-upload input').change(function() {
@@ -65,7 +65,6 @@ function checkImgType(obj) {
                 alert(obj.files[0].width);
                 return false;
             }*/
-
             if(obj.files[0].size >= 10000){
                 alert("图片不能大于1M");
                 return false;

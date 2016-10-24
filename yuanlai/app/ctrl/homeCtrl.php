@@ -52,6 +52,15 @@ class homeCtrl extends \core\imooc
                 $data[0]['username']='浏览';
             }
             //p($data);
+            if(empty($data)){
+                $kong['username']='空';
+                //p($kong);
+                $this->assign('kong',$kong);
+            }else{
+                $kong['username']='';
+                //p($kong);
+                $this->assign('kong',$kong);
+            }
             $this->assign('data',$data);
             $this->display('album.html');
         }else{
@@ -144,6 +153,7 @@ class homeCtrl extends \core\imooc
             $aa=array('s_id'=>$u_id,'b_id'=>$id);
             $aaa=$mono->sta($aa);
             $this->assign('aaa',$aaa);
+            //p($aaa);
             $this->assign('uid',$id);
             $this->display('fossa_ta.html');
             }  else{
@@ -297,9 +307,8 @@ class homeCtrl extends \core\imooc
          $arr=$base->delall($arrs);
             $ar=$base->guan_sel($u_id);
             $ar1=count($ar);
-
             if($arr){
-
+                $arr=$base->guan($id,$u_id);
                 $array=array('a'=>1,'f'=>$ar1);
                 $json=json_encode($array);
                 echo $json;
