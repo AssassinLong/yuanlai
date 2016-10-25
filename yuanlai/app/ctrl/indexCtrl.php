@@ -20,12 +20,13 @@ class indexCtrl extends \core\imooc
         $data['username']=post('username');
         $data['password']=post('password');
         //dump($data['username']);die;
+        $pwd=md5(md5($data['password']).'6');
         if(preg_match("/^1[34578]{1}\d{9}$/",$data['username'])){
 
             $model=new userModel();
             $arr=$model->user_phone($data);
             //dump($arr);die;
-            if($arr[0]['password']==$data['password']){
+            if($arr[0]['password']==$pwd){
                 $_SESSION['username']=$arr[0]['name'];
                 $_SESSION['id']=$arr[0]['id'];
 
@@ -41,7 +42,7 @@ class indexCtrl extends \core\imooc
             $model=new userModel();
             $arr=$model->user_email($data);
             //dump($arr);die;
-            if($arr[0]['password']==$data['password']){
+            if($arr[0]['password']==$pwd){
                 $_SESSION['username']=$arr[0]['name'];
                 $_SESSION['id']=$arr[0]['id'];
                 jump('?r=home/index');
@@ -54,7 +55,7 @@ class indexCtrl extends \core\imooc
             $model=new userModel();
             $arr=$model->user_name($data);
 //            dump($arr);die;
-            if($arr[0]['password']==$data['password']){
+            if($arr[0]['password']==$pwd){
                 $_SESSION['username']=$arr[0]['name'];
                 $_SESSION['id']=$arr[0]['id'];
                 //dump($data);
@@ -72,6 +73,8 @@ class indexCtrl extends \core\imooc
             $data=post('data');
             if($data['password']==$data['password2']){
                 unset($data['password2']);
+                $pwd=$data['password'];
+                $data['password']=md5(md5($pwd).'6');
                 $data['datetime']=date('Y-m-d H:i:s',time());
                 $model=new kModel();
                 $str=$model->addOne('user',$data);
