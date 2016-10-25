@@ -130,7 +130,7 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 
                         <img src=\"";
             // line 108
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["imgs"]) ? $context["imgs"] : null), 0, array(), "array"), "path", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["headimg"]) ? $context["headimg"] : null), 0, array(), "array"), "head_img", array()), "html", null, true);
             echo "\">
 
                     </div>
@@ -904,7 +904,7 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
 
 \t\t\t\t\turl(/img/avata-1.png);\">
 
-                        <img src=\"{{ imgs[0].path }}\">
+                        <img src=\"{{ headimg[0].head_img }}\">
 
                     </div>
 

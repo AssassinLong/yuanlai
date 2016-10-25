@@ -84,7 +84,7 @@
 
         <div id="fh5co-board" data-columns>
             {% for val in data %}
-            <div class="item {{ val.id }}">
+            <div class="item" id="{{ val.id }}">
                 <div class="animate-box">
                     <a href="{{ val.path }}" class="image-popup fh5co-board-img" title="帅不帅"><img src="{{val.path }}" alt="Free HTML5 Bootstrap template"></a>
                     <br/><span>删除</span>
@@ -126,13 +126,13 @@
 	<script src="./web/js/main.js"></script>
 <script>
     $("body").on("click", "span", function() {
-        var r=confirm('是否删除');
         var id=$(this).next("input[type='hidden']").val();
+        var r=confirm('是否删除');
         if (r==true) {
             $.get('?r=home/albumdel',{id:id},function(str){
                         //alert(str);
                         if(str == 1 ){
-                            $('.item '+id).remove();
+                            $('#'+id).remove();
                         }else{
                             alert('删除失败');
                         }

@@ -153,6 +153,10 @@ class homeCtrl extends \core\imooc
             //p($imgs);
             $this->assign('imgs',$imgs);
 
+            $basi=new basicdataModel();
+            $headimg=$basi->userOne($id);
+            $this->assign('headimg',$headimg);
+
             $ar=$mono->guan_sel($id);
             $ar1=count($ar);
             $meili = $mono->meili($id);
@@ -197,7 +201,11 @@ class homeCtrl extends \core\imooc
                 $picture=new pictureModel();
                 $imgs=$picture->all($id);
                 $this->assign('imgs',$imgs);
-                //p($imgs);
+
+                $basi=new basicdataModel();
+                $headimg=$basi->userOne($id);
+                $this->assign('headimg',$headimg);
+               // p($headimg);
 
                 $ar=$mono->zi_guan($id);
                 $ar1=count($ar);
@@ -216,7 +224,7 @@ class homeCtrl extends \core\imooc
     public function upload()
     {
         //unset($_SESSION['imgfile']);
-       /* if(isset($_SESSION['imgfile'])){
+        /*if(isset($_SESSION['imgfile'])){
             var_dump($_SESSION['imgfile']);
         }elseif(isset($_FILES['imgfile'])){
             $_SESSION['imgfile']=$_FILES['imgfile'];
@@ -224,63 +232,78 @@ class homeCtrl extends \core\imooc
             echo '未上传文件';
         }*/
 
-        if(isset($_FILES['imgfile'])){
+        if($_FILES['imgfile']['error']==0){
+            if(isset($_FILES['imgfile'])){
+                //$_FILES['imgfile'];
+                $filepath='./web/upimg/';
+                if(!file_exists($filepath)){
+                    mkdir($filepath,777);
+                }
+                $time=time();
+                $imgpaths=$filepath.$time.$_FILES['imgfile']['name'];
+                move_uploaded_file($_FILES['imgfile']['tmp_name'],$imgpaths);
 
-             //$_FILES['imgfile'];
-            $filepath='./web/upimg/';
-            if(!file_exists($filepath)){
-                mkdir($filepath);;
-            }
-            $imgpaths=$filepath.time().$_FILES['imgfile']['name'];
-            move_uploaded_file($_FILES['imgfile']['tmp_name'],$imgpaths);
+                $littleimg="./web/littleimg/";
+                if(!file_exists($littleimg)){
+                    mkdir($littleimg,777);
+                }
+                $filename=$littleimg.$time.$_FILES['imgfile']['name'];
 
-            /*//生成缩略图
-            $width=100;
-            $height=40;
-            $size=getimagesize($imgpaths);
-            if($size[2] == 1){
-                $in_in=imagecreatefrongif($imgpaths);
-            }elseif($size[2] == 2){
-                $in_in=imagecreatefronjpeg($imgpaths);
-            }elseif($size[2] == 3){
-                $in_in=imagecreaatefronpng($imgpaths);
-            }
-            $in_out=imagecreatetruecolor($width,$height);
-            imagecopyresampled($in_out,$in_in,0,0,0,0,$width,$height,$size[0],$size[1]);
-            iamgejpeg($in_out,$imgpaths);
-            chmod($imgpaths,0777);
-            imagedestroy($in_in);
-            imagedestroy($in_out);*/
+                //缩略图
+//读取已经上传图片
+
+                $dstW=200;//缩略图宽
+                $dstH=200;//缩略图高
+                $imgage = getimagesize($imgpaths);
+                switch ($imgage[2]) { // 图像类型判断
+                    case 1:
+                        $src_image = imagecreatefromgif($imgpaths);
+                        break;
+                    case 2:
+                        $src_image = imagecreatefromjpeg($imgpaths);
+                        break;
+                    case 3:
+                        $src_image = imagecreatefrompng($imgpaths);
+                        break;
+                }
+                $srcW=ImageSX($src_image); //获得图片宽
+                $srcH=ImageSY($src_image); //获得图片高
+
+                $dst_image=ImageCreateTrueColor($dstW,$dstH);
+                ImageCopyResized($dst_image,$src_image,0,0,0,0,$dstW,$dstH,$srcW,$srcH);
+                ImageJpeg($dst_image,$filename);
 
 
-            $data['u_id']=$_SESSION['id'];
-            $data['u_name']=$_SESSION['username'];
-            $data['path']=$imgpaths;
-            $data['date']=date('Y-m-d H:i:s',time());
-            $data['show']='1';
-            $id=$_SESSION['id'];
-            $model=new pictureModel();
-              $model->addOne($data);
-            $basi=new basicdataModel();
-            $basi->setimg($id,$imgpaths);
-            $arr=$model->all($id);
-            $arr1=count($arr);
-            //dump($arr1);die;
-            if($arr1==1){
-                // echo 1;die;
-                $aaa=$model->up($id);
-                $aaa1=$model->ad($id);
 
-                $aaa2=$model->sta($id);
-
+                $data['u_id']=$_SESSION['id'];
+                $data['u_name']=$_SESSION['username'];
+                $data['path']=$imgpaths;
+                $data['date']=date('Y-m-d H:i:s',time());
+                $data['show']='1';
+                $id=$_SESSION['id'];
+                $model=new pictureModel();
+                $model->addOne($data);
+                $basi=new basicdataModel();
+                $basi->setimg($id,$filename);
+                $arr=$model->all($id);
+                $arr1=count($arr);
+                //dump($arr1);die;
+                if($arr1==1){
+                    // echo 1;die;
+                    $aaa=$model->up($id);
+                    $aaa1=$model->ad($id);
+                    $aaa2=$model->sta($id);
+                }else{
+                    // echo 2;die;
+                    $aaa=$model->up1($id);
+                    $aaa1=$model->ad1($id);
+                }
             }else{
-               // echo 2;die;
-                $aaa=$model->up1($id);
-                $aaa1=$model->ad1($id);
+                echo '文件未上传';
             }
-        }else{
-             echo '文件未上传';
-         }
+        }
+        //生成缩略图
+
     }
     public function shaixuan()
     {

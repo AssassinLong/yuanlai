@@ -46,7 +46,7 @@ function checkImgType(obj) {
         alert("请上传图片");
         return false;
     } else {
-        if (!/\.(gif|jpg|png|GIF|JPG|PNG)$/.test(obj.value)) {
+        if (!/\.(gif|jpeg|jpg|png|GIF|JPG|PNG)$/.test(obj.value)) {
             alert("图片类型必须是.gif,jpeg,jpg,png中的一种");
             obj.value = "";
             return false;
@@ -66,10 +66,10 @@ function checkImgType(obj) {
                 alert(obj.files[0].width);
                 return false;
             }*/
-            if(obj.files[0].size >= 10000){
-                alert("图片不能大于1M");
-                return false;
-            }
+            /*if(obj.files[0].size >= 10000){
+                alert("图片大于1M可能无法上传");
+                return true;
+            }*/
             /*var img = new Image();
             img.src = obj.value;
             while ('') {

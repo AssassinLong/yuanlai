@@ -127,7 +127,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 \t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"\">
                         <img src=\"";
             // line 105
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["imgs"]) ? $context["imgs"] : null), 0, array(), "array"), "path", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["headimg"]) ? $context["headimg"] : null), 0, array(), "array"), "head_img", array()), "html", null, true);
             echo "\">
 \t\t\t\t\t</div>
 
@@ -947,7 +947,7 @@ class __TwigTemplate_52580ab817430e7b27b3cec477173f66e393cb342943b0767d3280f926f
 
 
 \t\t\t\t\t<div class=\"clip-bg do-avatar-upload\" style=\"\">
-                        <img src=\"{{ imgs[0].path }}\">
+                        <img src=\"{{ headimg[0].head_img }}\">
 \t\t\t\t\t</div>
 
                     

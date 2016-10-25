@@ -6,7 +6,10 @@ class basicdataModel extends model
 {
     public $table="basicdata";
 
-
+    public function userOne($id)
+    {
+        return $this->select($this->table,'*',['u_id'=>$id]);
+    }
     public function user_phone($u_id)
     {
         // $model=new model();

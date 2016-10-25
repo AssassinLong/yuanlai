@@ -112,7 +112,7 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
         $context['_seq'] = twig_ensure_traversable((isset($context["data"]) ? $context["data"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
             // line 87
-            echo "            <div class=\"item ";
+            echo "            <div class=\"item\" id=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "id", array()), "html", null, true);
             echo "\">
                 <div class=\"animate-box\">
@@ -172,13 +172,13 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 \t<script src=\"./web/js/main.js\"></script>
 <script>
     \$(\"body\").on(\"click\", \"span\", function() {
-        var r=confirm('是否删除');
         var id=\$(this).next(\"input[type='hidden']\").val();
+        var r=confirm('是否删除');
         if (r==true) {
             \$.get('?r=home/albumdel',{id:id},function(str){
                         //alert(str);
                         if(str == 1 ){
-                            \$('.item '+id).remove();
+                            \$('#'+id).remove();
                         }else{
                             alert('删除失败');
                         }
@@ -300,7 +300,7 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 
         <div id=\"fh5co-board\" data-columns>
             {% for val in data %}
-            <div class=\"item {{ val.id }}\">
+            <div class=\"item\" id=\"{{ val.id }}\">
                 <div class=\"animate-box\">
                     <a href=\"{{ val.path }}\" class=\"image-popup fh5co-board-img\" title=\"帅不帅\"><img src=\"{{val.path }}\" alt=\"Free HTML5 Bootstrap template\"></a>
                     <br/><span>删除</span>
@@ -342,13 +342,13 @@ class __TwigTemplate_a93618abf272aaaab69488d1f314f9daa55271cda69900153a0a17bb5e6
 \t<script src=\"./web/js/main.js\"></script>
 <script>
     \$(\"body\").on(\"click\", \"span\", function() {
-        var r=confirm('是否删除');
         var id=\$(this).next(\"input[type='hidden']\").val();
+        var r=confirm('是否删除');
         if (r==true) {
             \$.get('?r=home/albumdel',{id:id},function(str){
                         //alert(str);
                         if(str == 1 ){
-                            \$('.item '+id).remove();
+                            \$('#'+id).remove();
                         }else{
                             alert('删除失败');
                         }
