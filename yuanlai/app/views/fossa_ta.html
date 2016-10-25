@@ -1,6 +1,5 @@
 
  <!DOCTYPE html>
-<html>
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -118,11 +117,11 @@
                      
                      {% if aaa %}
 					<div id="u">
-                           <button id="{{vv.u_id}}" onclick="check_a()"  name="a"   class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus-on" ></span>已关注</button>
+                           <button  name="a"  id="{{vv.u_id}}" onclick="check_a()"   class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus-on" ></span>已关注</button>
 					</div>
                      {% else %}
                      <div id="u">
-                    <button name="a"   id="{{vv.u_id}}" onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>
+                         <button name="a"   id="{{vv.u_id}}" onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>
                     </div>
                     {% endif %}
 				</div>
@@ -188,6 +187,7 @@
 			<div class="file-photo">
 
 				<ul class="mui-table-view mui-grid-view boder-none">
+
                     {% for val in imgs %}
                     <li  class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
 
@@ -195,8 +195,17 @@
 
                     </li>
                     {% endfor %}
+                    <li  style="" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
 
+                        <a href="javascript:;" onclick="yaoqing()" class="do-layer-file-upload">
+
+                            <img src="./web/img/file-invite.png" />
+
+                        </a>
+
+                    </li>
 				</ul>
+
 
 			</div>
 
@@ -541,8 +550,23 @@
 			</script>
 
            <script>
+               function yaoqing(){
 
-                  function check_a(){
+                   var u_id=$('button').attr('id');
+                   //alert(u_id);
+                   var mess='有人邀请你添加照片!';
+                   $.post("?r=advices/invite", {'u_id':u_id,'mess':mess},
+                           function(str){
+                               //alert(str);
+                               if(str == 1){
+                                   alert('邀请成功');
+                               }else{
+                                   alert('请不要重复邀请');
+                               }
+                           }
+                          );
+               };
+                 /* function check_a(){
 
                            var u_id=$('button').attr('id');
                            $.ajax({
@@ -551,30 +575,28 @@
 							   data: {'u_id':u_id},
 							   success: function(msg){
 
-								   json = eval( "(" + msg + ")" );
-//								   alert(msg)
-							      if(json.a==1){
-									  var html='<button name="a" id="{{vv.u_id}}"  onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button>';
+								   aa = eval( "(" + msg + ")" );
+//								   alert(aa.u_id)
+							      if(aa.a==1){
+									  var html='<div id="u"><button name="a"   id="'+aa.u_id+'" onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus"></span>加关注</button></div>';
 									  $('#u').html(html);
-									  $('#f').html(json.f);
-									  $('#zhu').html(json.f);
+									  $('#f').html(aa.f);
+									  $('#zhu').html(aa.f);
+								   }else if(aa.a==2){
 
-								   }else if(json.a==2){
-
-									   var html = '<button name="b" id="{{vv.u_id}}" onclick="check_a()" class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="?r=home/qu" dialog="加关注成功"><span class="ico ico-focus-on"></span>已关注</button>';
-
+								   var html = '<div id="u"><button  name="a" id="'+aa.u_id+'" onclick="check_a()"   class="mui-btn mui-btn-warning mui-btn-outlined do-ajax" type="button" ajax-url="" dialog="加关注成功"><span class="ico ico-focus-on" ></span>已关注</button></div>';
 									  $('#u').html(html);
-									  $('#f').html(json.f);
-									  $('#zhu').html(json.f);
+									  $('#f').html(aa.f);
+									  $('#zhu').html(aa.f);
 
 								  }
 							      
 							   }
 							});
-                   };
+                   };*/
            </script>
 
-			<script src="web/js/mui.zoom.js"></script>
+			<!--<script src="web/js/mui.zoom.js"></script>-->
 
 			<script src="web/js/previewimage.js"></script>
 
@@ -586,5 +608,5 @@
 
 
 
-
+</body>
 </html>

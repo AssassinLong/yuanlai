@@ -84,8 +84,15 @@ class indexCtrl extends \core\imooc
                     $s3=$models->adde3($str);
 //                    print_r($s1);die;
                     //echo $s1;
-                    if($s1){   
-                        jump('?r=index/login');
+                    if($s1){
+                        $phone=$data['phone'];
+                        $aa=$models->deles($phone);
+                        if($aa){
+                            jump('?r=index/login');
+                        }else{
+                            echo '注册失败';die;
+                        }
+
                     }else{
                         echo '注册失败';die;
                     }
@@ -103,16 +110,84 @@ class indexCtrl extends \core\imooc
     {
 
         $phone=post('mobile');
-        // echo $phone;die;
-        //$phone="15210014651";
         $sum=post('sum');
-        // echo $sum;die;
-        // $number=rand(1000,9999);
-        //$_SESSION['number']=$sum;
-        $url="http://api.k780.com:88/?app=sms.send&tempid=50823&param=".urlencode('code='.$sum.' ')."&phone=".$phone."&appkey=18919&sign=e8339435136d3b3f4893d404763a5568&format=json";
-        $file=file_get_contents($url);
-        //$arr=json_decode($file,true);
-        //var_dump($arr);
+        $code=post('code');
+        $models=new basicdataModel();
+        $s1=$models->useres($phone);
+        if($s1){
+        echo 1;
+        }else{
+        $cha=$models->seld($phone);
+//        print_r($cha);die;
+       if($cha){
+           $sa=$cha[0]['sum'];
+           $aas=$models->uploe($sa,$phone);
+           if($aas){
+               $as=$models->seld($phone);
+//               print_r($as);die;
+//               $counts=count($as);
+               if($as[0]['sum']>6){
+                   echo 3;
+               }else{
+
+                   $url="http://api.k780.com:88/?app=sms.send&tempid=50823&param=".urlencode('code='.$code.' ')."&phone=".$phone."&appkey=18919&sign=e8339435136d3b3f4893d404763a5568&format=json";
+                   $file=file_get_contents($url);
+
+               }
+           }else{
+               $s1=$models->aders($phone,$sum);
+//            print_r($s1);die;
+               if($s1){
+                   $as=$models->seld($phone);
+//                   print_r($as);die;
+//                   $counts=count($as);
+
+                   if($as[0]['sum']>6){
+                       echo 3;
+                   }else{
+
+
+                       $url="http://api.k780.com:88/?app=sms.send&tempid=50823&param=".urlencode('code='.$code.' ')."&phone=".$phone."&appkey=18919&sign=e8339435136d3b3f4893d404763a5568&format=json";
+                       $file=file_get_contents($url);
+
+                   }
+
+               }else{
+                   echo 2;
+               }
+           }
+       }else{
+        $s1=$models->aders($phone,$sum);
+//            print_r($s1);die;
+        if($s1){
+          $as=$models->seld($phone);
+//            print_r($as);die;
+            if($as[0]['sum']>6){
+             echo 3;
+            }else{
+
+                $url="http://api.k780.com:88/?app=sms.send&tempid=50823&param=".urlencode('code='.$code.' ')."&phone=".$phone."&appkey=18919&sign=e8339435136d3b3f4893d404763a5568&format=json";
+                $file=file_get_contents($url);
+
+            }
+
+        }else{
+         echo 2;
+        }
+       }
+        }
+    }
+    public function weiyi()
+    {
+        $mobile=post('mobile');
+        $models=new basicdataModel();
+        $s1=$models->useres($mobile);
+//        print_r($s1);die;
+        if(empty($s1)){
+        echo 1;
+        }else{
+        echo 2;
+        }
     }
 }
 

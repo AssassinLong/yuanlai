@@ -251,7 +251,7 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
             // line 202
             echo "\t\t\t\t\t<li  style=\"\" class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"do-layer-file-upload\">
+\t\t\t\t\t\t<a  class=\"do-layer-file-upload\">
 
 \t\t\t\t\t\t\t<img src=\"web/images/file-upload.png\" />
 
@@ -1000,7 +1000,7 @@ class __TwigTemplate_8c4b39236ca340f0969dafd6e2a2d807f58e1aea9db3506aa8f77bf48a4
                     {% endfor %}
 \t\t\t\t\t<li  style=\"\" class=\"mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3\">
 
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"do-layer-file-upload\">
+\t\t\t\t\t\t<a  class=\"do-layer-file-upload\">
 
 \t\t\t\t\t\t\t<img src=\"web/images/file-upload.png\" />
 

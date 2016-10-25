@@ -17,6 +17,10 @@ class basicdataModel extends model
         return $arr;
     }
 
+    public function useres($phone){
+        $arr = $this->query("select * from user  where phone=$phone")->fetchAll();
+        return $arr;
+    }
     public function userOne1($id)
     {
         $arr = $this->query("select * from user INNER JOIN basicdata ON user.id=basicdata.u_id where user.id=$id")->fetchAll();
@@ -148,6 +152,31 @@ class basicdataModel extends model
                'm_num'=>100,
                'date'=>$data
             ]);
+    }
+    public function aders($phone,$sum)
+    {
+        return $this->insert('jilu',[
+            'phone'=>$phone,
+            'sum'=>$sum
+        ]);
+    }
+    public function deles($phone){
+      return  $this->delete("jilu", [
+            "phone" => $phone
+        ]);
+    }
+    public function seld($phone)
+    {
+        $arr = $this->query("select * from jilu where phone like '%$phone%' ")->fetchAll();
+        return $arr;
+    }
+    public function uploe($sum,$phone)
+    {
+        return  $this->update("jilu", [
+            "sum" => $sum+1
+        ],[
+            "phone" => $phone
+        ]);
     }
 }
 ?>
